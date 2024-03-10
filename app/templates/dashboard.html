@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        <label for="role">Select your role:</label>
+        <select name="role" id="role">
+            <option value="admin">Admin</option>
+            <option value="employee">Employee</option>
+            <option value="client">Client</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if user.role == 'admin' %}
+        {% include 'partials/admin.html' %}
+    {% elif user.role == 'employee' %}
+        {% include 'partials/employee.html' %}
+    {% elif user.role == 'client' %}
+        {% include 'partials/client.html' %}
+    {% else %}
+        <p>Invalid role</p>
+    {% endif %}
+{% endblock %}

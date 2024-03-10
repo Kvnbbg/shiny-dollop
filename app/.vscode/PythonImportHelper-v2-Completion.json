@@ -1,0 +1,568 @@
+[
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "FlaskForm",
+        "importPath": "flask_wtf",
+        "description": "flask_wtf",
+        "isExtraImport": true,
+        "detail": "flask_wtf",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "StringField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "SubmitField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "EmailField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "DataRequired",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "EqualTo",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "Length",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "Regexp",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "Email",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "app.models",
+        "description": "app.models",
+        "isExtraImport": true,
+        "detail": "app.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "app.models",
+        "description": "app.models",
+        "isExtraImport": true,
+        "detail": "app.models",
+        "documentation": {}
+    },
+    {
+        "label": "urljoin",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "urlparse",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "get_flashed_messages",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "make_response",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "current_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "login_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "logout_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "UserMixin",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "login_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "generate_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "check_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "LoginForm",
+        "kind": 6,
+        "importPath": "auth.forms",
+        "description": "auth.forms",
+        "peekOfCode": "class LoginForm(FlaskForm):\n    username = StringField(\n        \"Username\",\n        validators=[DataRequired(), Length(min=4, max=25)],\n        render_kw={\"placeholder\": \"Username\", \"class\": \"form-control\"}\n    )\n    password = PasswordField(\n        \"Password\",\n        validators=[DataRequired(), Length(min=6)],\n        render_kw={\"placeholder\": \"Password\", \"class\": \"form-control\"}",
+        "detail": "auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "RegistrationForm",
+        "kind": 6,
+        "importPath": "auth.forms",
+        "description": "auth.forms",
+        "peekOfCode": "class RegistrationForm(FlaskForm):\n    username = StringField(\n        \"Username\",\n        validators=[\n            DataRequired(),\n            Length(min=4, max=25),\n            Regexp(\n                \"^[A-Za-z][A-Za-z0-9_.]*$\",\n                0,\n                \"Usernames must have only letters, numbers, dots or underscores\",",
+        "detail": "auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "auth.forms",
+        "description": "auth.forms",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass LoginForm(FlaskForm):\n    username = StringField(\n        \"Username\",\n        validators=[DataRequired(), Length(min=4, max=25)],\n        render_kw={\"placeholder\": \"Username\", \"class\": \"form-control\"}\n    )\n    password = PasswordField(\n        \"Password\",\n        validators=[DataRequired(), Length(min=6)],",
+        "detail": "auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "set_language",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def set_language(language):\n    # Check to ensure the language code is supported\n    supported_languages = ['en', 'fr']\n    if language in supported_languages:\n        session['lang'] = language\n    else:\n        flash(\"Unsupported language.\", \"error\")\n    return redirect(url_for('main.home'))\ndef is_safe_url(target):\n    \"\"\"",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "is_safe_url",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def is_safe_url(target):\n    \"\"\"\n    Simplified function to validate that the target URL is safe for redirection.\n    \"\"\"\n    test_url = urlparse(urljoin(request.host_url, target))\n    return test_url.hostname == request.host_url.rstrip('/')\n@auth.route(\"/login\", methods=[\"GET\", \"POST\"])\ndef login():\n    # Initialize error_present to False at the beginning\n    error_present = False",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def login():\n    # Initialize error_present to False at the beginning\n    error_present = False\n    if current_user.is_authenticated:\n        return redirect(url_for(\"main.dashboard\"))\n    form = LoginForm()\n    if form.validate_on_submit():\n        user = User.query.filter_by(username=form.username.data).first()\n        if user and user.check_password(form.password.data):\n            login_user(user)",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def logout():\n    logout_user()\n    flash(\"You have been logged out.\", \"success\")\n    return redirect(url_for(\"main.home\"))\n@auth.route(\"/register\", methods=[\"GET\", \"POST\"])\ndef register():\n    if current_user.is_authenticated:\n        return redirect(url_for(\"main.dashboard\"))\n    form = RegistrationForm()\n    if form.validate_on_submit():",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def register():\n    if current_user.is_authenticated:\n        return redirect(url_for(\"main.dashboard\"))\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(username=form.username.data, email=form.email.data if 'email' in form else None)\n        user.set_password(form.password.data)\n        db.session.add(user)\n        db.session.commit()\n        login_user(user)",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "dashboard",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def dashboard():\n    return render_template(\"dashboard.html\")\n# Flask application error handlers\n@auth.app_errorhandler(404)\ndef not_found_error(error):\n    return render_template(\"404.html\"), 404\n@auth.app_errorhandler(500)\ndef internal_error(error):\n    db.session.rollback()\n    return render_template(\"500.html\"), 500",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "not_found_error",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def not_found_error(error):\n    return render_template(\"404.html\"), 404\n@auth.app_errorhandler(500)\ndef internal_error(error):\n    db.session.rollback()\n    return render_template(\"500.html\"), 500",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "internal_error",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def internal_error(error):\n    db.session.rollback()\n    return render_template(\"500.html\"), 500",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nauth = Blueprint('auth', __name__)\n@auth.route('/set_language/<language>')\ndef set_language(language):\n    # Check to ensure the language code is supported\n    supported_languages = ['en', 'fr']\n    if language in supported_languages:\n        session['lang'] = language\n    else:\n        flash(\"Unsupported language.\", \"error\")",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "kind": 5,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "auth = Blueprint('auth', __name__)\n@auth.route('/set_language/<language>')\ndef set_language(language):\n    # Check to ensure the language code is supported\n    supported_languages = ['en', 'fr']\n    if language in supported_languages:\n        session['lang'] = language\n    else:\n        flash(\"Unsupported language.\", \"error\")\n    return redirect(url_for('main.home'))",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "set_language",
+        "kind": 2,
+        "importPath": "main.routes",
+        "description": "main.routes",
+        "peekOfCode": "def set_language(language):\n    session['lang'] = language\n    return redirect(url_for('home'))\n# Define a blueprint for your Flask application\nmain = Blueprint(\"main\", __name__)\ndef improved_home_with_maintenance_date():\n    \"\"\"\n    Renders the home page with dynamic messages and displays the duration since the maintenance started.\n    This function assumes it's being called within a Flask route.\n    \"\"\"",
+        "detail": "main.routes",
+        "documentation": {}
+    },
+    {
+        "label": "improved_home_with_maintenance_date",
+        "kind": 2,
+        "importPath": "main.routes",
+        "description": "main.routes",
+        "peekOfCode": "def improved_home_with_maintenance_date():\n    \"\"\"\n    Renders the home page with dynamic messages and displays the duration since the maintenance started.\n    This function assumes it's being called within a Flask route.\n    \"\"\"\n    # Get the current date and time\n    now = datetime.now()\n    formatted_now = now.strftime(\"%Y-%m-%d %H:%M:%S\")\n    # Predefined maintenance start date (for illustration, adjust as needed)\n    maintenance_start_date = datetime(2024, 1, 1, 0, 0, 0)",
+        "detail": "main.routes",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "main.routes",
+        "description": "main.routes",
+        "peekOfCode": "def home():\n    \"\"\"\n    Renders the home page and displays a maintenance message.\n    This function calls the improved_home_with_maintenance_date function to handle the logic.\n    \"\"\"\n    return improved_home_with_maintenance_date()",
+        "detail": "main.routes",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 5,
+        "importPath": "main.routes",
+        "description": "main.routes",
+        "peekOfCode": "main = Blueprint('main', __name__)\n@main.route('/set_language/<language>')\ndef set_language(language):\n    session['lang'] = language\n    return redirect(url_for('home'))\n# Define a blueprint for your Flask application\nmain = Blueprint(\"main\", __name__)\ndef improved_home_with_maintenance_date():\n    \"\"\"\n    Renders the home page with dynamic messages and displays the duration since the maintenance started.",
+        "detail": "main.routes",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 5,
+        "importPath": "main.routes",
+        "description": "main.routes",
+        "peekOfCode": "main = Blueprint(\"main\", __name__)\ndef improved_home_with_maintenance_date():\n    \"\"\"\n    Renders the home page with dynamic messages and displays the duration since the maintenance started.\n    This function assumes it's being called within a Flask route.\n    \"\"\"\n    # Get the current date and time\n    now = datetime.now()\n    formatted_now = now.strftime(\"%Y-%m-%d %H:%M:%S\")\n    # Predefined maintenance start date (for illustration, adjust as needed)",
+        "detail": "main.routes",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "class User(UserMixin, db.Model):\n    __tablename__ = 'user'\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(64), index=True, unique=True, nullable=False)\n    email = db.Column(db.String(120), index=True, unique=True, nullable=True)\n    password_hash = db.Column(db.String(128), nullable=False)\n    def __init__(self, username, email=None, password=None):\n        self.username = username\n        self.email = email\n        if password:",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "create_user_table",
+        "kind": 2,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "def create_user_table():\n    sql = \"\"\"\n    CREATE TABLE IF NOT EXISTS user (\n        id INTEGER PRIMARY KEY AUTOINCREMENT,\n        username VARCHAR(64) NOT NULL UNIQUE,\n        email VARCHAR(120) UNIQUE,\n        password_hash VARCHAR(128) NOT NULL\n    );\n    \"\"\"\n    # Assuming you have a connection and a cursor to your SQLite database",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "login_user_with_expiration",
+        "kind": 2,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "def login_user_with_expiration(user, remember=True):\n    # Log in the user as usual\n    login_user(user, remember=remember)\n    # Set session expiration date to 1 year from now\n    session.permanent = True\n    app.permanent_session_lifetime = timedelta(days=365)",
+        "detail": "models",
+        "documentation": {}
+    }
+]

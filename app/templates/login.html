@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Conditional script for redirection on login error -->
+{% if error_present %}
+<script>
+    if (confirm("Login Unsuccessful. 😕 Would you like to be redirected to the registration page?")) {
+      const flashContainer = document.createElement("ul");
+      flashContainer.classList.add("flashes", "fanimation");
+      flashContainer.innerHTML = `
+          <li class="info">Redirecting to registration... 🔄</li>
+      `;
+      document.body.appendChild(flashContainer);
+
+      setTimeout(function() {
+          window.location.href = "{{ url_for('auth.register') }}";
+      }, 2000);
+
+      setTimeout(() => {
+          document.body.removeChild(flashContainer);
+      }, 2000);
+  }
+</script>
+{% endif %}
+
+<!-- Login Section -->
+<section id="login" class="py-5">
+    <div class="container">
+        <form action="{{ url_for('auth.login') }}" method="POST">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.username.label(class="font-weight-bold") }} {{ form.username(class="form-control") }}
+            </div>
+            <div class="form-group position-relative">
+                {{ form.password.label(class="font-weight-bold") }}
+                {{ form.password(class="form-control", id="password") }}
+                <i class="fas fa-eye position-absolute right-0 top-50 translate-middle-y mr-3" style="cursor: pointer;" onclick="togglePasswordVisibility()"></i>
+            </div>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Language Switch and Registration Prompt -->
+<section class="text-center mt-4">
+  <div class="container">
+    {% if session['lang'] == 'fr' %}
+      <p>🚀 Pas encore inscrit ?</p>
+      <a href="{{ url_for('auth.register') }}" class="btn btn-outline-primary">S'inscrire ici</a>
+    {% else %}
+      <p>🚀 Not registered yet?</p>
+      <a href="{{ url_for('auth.register') }}" class="btn btn-outline-primary">Register here</a>
+    {% endif %}
+  </div>
+</section>
+
+<!-- Password Visibility Toggle Script -->
+<script>
+    function togglePasswordVisibility() {
+        const password = document.getElementById("password");
+        const icon = document.querySelector('.fa-eye');
+        if (password.type === "password") {
+            password.type = "text";
+            icon.classList.add('fa-eye-slash');
+            icon.classList.remove('fa-eye');
+        } else {
+            password.type = "password";
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+        }
+    }
+</script>
+{% endblock %}

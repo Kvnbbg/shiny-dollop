@@ -1,0 +1,110 @@
+/* Base Styles */
+body {
+  font-family: "Poppins", sans-serif; /* Updated to Poppins for a cleaner look */
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+  background: #007bff;
+  color: #fff;
+  padding: 20px 0;
+  border-bottom: 3px solid #6c757d;
+  transition: all 0.5s ease; /* Smooth transition for hover effects */
+}
+
+header:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Navigation Styles */
+.navbar {
+  padding: 0 20px; /* Ensures padding is present */
+}
+
+.nav-link {
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-link:hover, .navbar-brand:hover {
+  color: #d1ecf1; /* Lighter shade on hover */
+}
+
+/* Image Hover Scale */
+img:hover {
+  transform: scale(1.05); /* Scales the image on hover */
+  transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+/* Container Styles */
+.container, .container-fluid {
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 15px; /* Provides padding on the sides */
+}
+
+/* Button Styles */
+.btn {
+  background: #28a745;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #218838; /* Slightly darker green */
+}
+
+/* Form Styles */
+form input, form button {
+  margin: 10px 0; /* Ensures spacing between form elements */
+}
+
+/* Utility Classes */
+.mt-20, .mb-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 992px) {
+  header {
+    padding: 15px 0;
+  }
+
+  .navbar {
+    padding: 0 10px; /* Adjust padding for smaller screens */
+  }
+
+  .container, .container-fluid {
+    padding: 0 10px; /* Adjust container padding */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: block; /* Ensure toggler is visible */
+  }
+
+  .navbar-collapse {
+    text-align: center; /* Center navigation items */
+  }
+}
+
+/* Flash Messages Styles */
+.flashes {
+  position: fixed;
+  top: 10%; /* Adjusted for better visibility */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2000;
+  width: auto;
+  max-width: 90%; /* Ensures it doesn't extend too wide */
+}
+
+.flashes li {
+  margin-bottom: 5px; /* Reduced gap between messages */
+}

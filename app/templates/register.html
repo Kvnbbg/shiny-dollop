@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Registration Section -->
+<section class="registration-section text-center mt-4">
+  <div class="container">
+    <div class="heading">
+      {% if session['lang'] == 'fr' %}
+        <h2>📝 Inscription</h2>
+        <p>Rejoignez-nous pour une expérience personnalisée !</p>
+      {% else %}
+        <h2>📝 Register Now</h2>
+        <p>Join us for a tailored experience!</p>
+      {% endif %}
+    </div>
+
+    <div class="register-form-wrapper mt-4">
+      <form method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+          {{ form.username.label(class="form-label font-weight-bold") }}
+          {{ form.username(class="form-control", placeholder=( "Username" if session['lang'] != 'fr' else "Nom d'utilisateur" )) }}
+          {% if form.username.errors %}
+            {% for error in form.username.errors %}
+              <div class="alert alert-danger">{{ error }}</div>
+            {% endfor %}
+          {% endif %}
+        </div>
+
+        <div class="form-group position-relative">
+          {{ form.password.label(class="form-label font-weight-bold") }}
+          {{ form.password(class="form-control", id="password", placeholder="Password") }}
+          <i class="fas fa-eye position-absolute right-0 top-50 translate-middle-y mr-3" style="cursor: pointer;" onclick="togglePasswordVisibility('password', this)"></i>
+        </div>
+
+        <div class="form-group position-relative">
+          {{ form.confirm_password.label(class="form-label font-weight-bold") }}
+          {{ form.confirm_password(class="form-control", id="confirm_password", placeholder="Confirm Password") }}
+          <i class="fas fa-eye position-absolute right-0 top-50 translate-middle-y mr-3" style="cursor: pointer;" onclick="togglePasswordVisibility('confirm_password', this)"></i>
+        </div>
+
+        <div class="form-group">
+          {{ form.email.label(class="form-label font-weight-bold") }} (Optional)
+          {{ form.email(class="form-control", placeholder="Email (Optional)") }}
+          {% if form.email.errors %}
+            {% for error in form.email.errors %}
+              <div class="alert alert-danger">{{ error }}</div>
+            {% endfor %}
+          {% endif %}
+        </div>
+
+        <div class="form-group">
+          {{ form.submit(class="btn btn-primary") }}
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  function togglePasswordVisibility(id, icon) {
+    const passwordInput = document.getElementById(id);
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      icon.classList.replace("fa-eye", "fa-eye-slash");
+    } else {
+      passwordInput.type = "password";
+      icon.classList.replace("fa-eye-slash", "fa-eye");
+    }
+  }
+</script>
+{% endblock %}
