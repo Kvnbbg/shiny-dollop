@@ -581,7 +581,7 @@
         "documentation": {}
     },
     {
-        "label": "url_for",
+        "label": "session",
         "importPath": "flask",
         "description": "flask",
         "isExtraImport": true,
@@ -589,7 +589,15 @@
         "documentation": {}
     },
     {
-        "label": "session",
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
         "importPath": "flask",
         "description": "flask",
         "isExtraImport": true,
@@ -714,6 +722,15 @@
         "description": "datetime",
         "isExtraImport": true,
         "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
         "documentation": {}
     },
     {
@@ -1900,20 +1917,29 @@
         "documentation": {}
     },
     {
-        "label": "set_language",
+        "label": "load_questions",
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def set_language(language):\n    session['lang'] = language\n    return redirect(url_for('home'))\n# Define a blueprint for your Flask application\nmain = Blueprint(\"main\", __name__)\ndef improved_home_with_maintenance_date():\n    \"\"\"\n    Renders the home page with dynamic messages and displays the duration since the maintenance started.\n    This function assumes it's being called within a Flask route.\n    \"\"\"",
+        "peekOfCode": "def load_questions():\n    with open(os.path.join(os.path.dirname(__file__), 'questions.json'), 'r', encoding='utf-8') as file:\n        return json.load(file)\n@main.route(\"/quiz\", methods=[\"GET\", \"POST\"])\ndef quiz():\n    questions = load_questions()\n    # Initialize or update remaining questions in session\n    if \"remaining_questions\" not in session or request.method == \"GET\":\n        session[\"remaining_questions\"] = list(range(len(questions)))  # Store indices of questions\n    if request.method == \"POST\":",
         "detail": "app.main.routes",
         "documentation": {}
     },
     {
-        "label": "improved_home_with_maintenance_date",
+        "label": "quiz",
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def improved_home_with_maintenance_date():\n    \"\"\"\n    Renders the home page with dynamic messages and displays the duration since the maintenance started.\n    This function assumes it's being called within a Flask route.\n    \"\"\"\n    # Get the current date and time\n    now = datetime.now()\n    formatted_now = now.strftime(\"%Y-%m-%d %H:%M:%S\")\n    # Predefined maintenance start date (for illustration, adjust as needed)\n    maintenance_start_date = datetime(2024, 1, 1, 0, 0, 0)",
+        "peekOfCode": "def quiz():\n    questions = load_questions()\n    # Initialize or update remaining questions in session\n    if \"remaining_questions\" not in session or request.method == \"GET\":\n        session[\"remaining_questions\"] = list(range(len(questions)))  # Store indices of questions\n    if request.method == \"POST\":\n        user_answer = request.form.get(\"choice\")\n        question_id = int(request.form.get(\"question_id\", 0))\n        question = questions[question_id]\n        # Language-aware feedback",
+        "detail": "app.main.routes",
+        "documentation": {}
+    },
+    {
+        "label": "set_language",
+        "kind": 2,
+        "importPath": "app.main.routes",
+        "description": "app.main.routes",
+        "peekOfCode": "def set_language(language):\n    session['lang'] = language\n    redirect_url = url_for('.quiz') if 'quiz' in request.referrer else url_for('.home')\n    return redirect(redirect_url)\n@main.route(\"/\")\n@main.route(\"/home\")\ndef home():\n    return render_template(\"home.html\")",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -1922,7 +1948,7 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def home():\n    \"\"\"\n    Renders the home page and displays a maintenance message.\n    This function calls the improved_home_with_maintenance_date function to handle the logic.\n    \"\"\"\n    return improved_home_with_maintenance_date()",
+        "peekOfCode": "def home():\n    return render_template(\"home.html\")",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -1931,16 +1957,7 @@
         "kind": 5,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "main = Blueprint('main', __name__)\n@main.route('/set_language/<language>')\ndef set_language(language):\n    session['lang'] = language\n    return redirect(url_for('home'))\n# Define a blueprint for your Flask application\nmain = Blueprint(\"main\", __name__)\ndef improved_home_with_maintenance_date():\n    \"\"\"\n    Renders the home page with dynamic messages and displays the duration since the maintenance started.",
-        "detail": "app.main.routes",
-        "documentation": {}
-    },
-    {
-        "label": "main",
-        "kind": 5,
-        "importPath": "app.main.routes",
-        "description": "app.main.routes",
-        "peekOfCode": "main = Blueprint(\"main\", __name__)\ndef improved_home_with_maintenance_date():\n    \"\"\"\n    Renders the home page with dynamic messages and displays the duration since the maintenance started.\n    This function assumes it's being called within a Flask route.\n    \"\"\"\n    # Get the current date and time\n    now = datetime.now()\n    formatted_now = now.strftime(\"%Y-%m-%d %H:%M:%S\")\n    # Predefined maintenance start date (for illustration, adjust as needed)",
+        "peekOfCode": "main = Blueprint(\"main\", __name__)\n# Load questions from a JSON file\ndef load_questions():\n    with open(os.path.join(os.path.dirname(__file__), 'questions.json'), 'r', encoding='utf-8') as file:\n        return json.load(file)\n@main.route(\"/quiz\", methods=[\"GET\", \"POST\"])\ndef quiz():\n    questions = load_questions()\n    # Initialize or update remaining questions in session\n    if \"remaining_questions\" not in session or request.method == \"GET\":",
         "detail": "app.main.routes",
         "documentation": {}
     },

@@ -124,3 +124,18 @@ form input, form button {
 .flashes li {
   margin-bottom: 5px;
 }
+
+/* Footer Styles */
+footer {
+  background: #343a40;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 3px solid #6c757d;
+  transition: all 0.5s ease;
+}
+
+footer:hover {
+  background-color: #23272b;
+}
+

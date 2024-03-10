@@ -1,51 +1,58 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container">
-  <!-- Quiz Title -->
-  <h2>
-    {{ "Quiz Full Stack" if session['lang'] == 'en' else "Quiz Complet" }}
-  </h2>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to automatically submit the form after 5 seconds
+    let timeout = setTimeout(function() {
+        document.getElementById("nextQuestionForm").submit();
+    }, 15000);
 
-  <!-- Feedback Display -->
+    // Function to stop the automatic submission if the user selects an option
+    document.querySelectorAll('input[name="choice"]').forEach(function(input) {
+        input.addEventListener('change', function() {
+            clearTimeout(timeout);
+        });
+    });
+});
+
+function validateForm() {
+    let radios = document.getElementsByName('choice');
+    let formValid = false;
+
+    let i = 0;
+    while (!formValid && i < radios.length) {
+        if (radios[i].checked) formValid = true;
+        i++;        
+    }
+
+    if (!formValid) alert("{{ 'Please select an option.' if session['lang'] == 'en' else 'Veuillez sélectionner une option.' }}");
+    return formValid;
+}
+</script>
+
+<div class="container">
+  <h2>{{ "Quiz Full Stack" if session['lang'] == 'en' else "Quiz Complet" }}</h2>
+
   {% if feedback %}
-  <div class="alert alert-info" role="alert">{{ feedback }}</div>
+  <div class="alert {{ 'alert-success' if feedback.startswith("Correct answer") or feedback.startswith("Bonne réponse") else 'alert-danger' }}" role="alert">{{ feedback }}</div>
   {% endif %}
 
-  <!-- Quiz Form -->
-  <form action="{{ url_for('main.quiz') }}" method="post">
+  <form id="nextQuestionForm" action="{{ url_for('main.quiz') }}" method="post" onsubmit="return validateForm()">
+    {{ form.csrf_token }}
     <div class="mb-3">
-      <!-- Question Label -->
-      <label class="form-label" for="quizQuestion"
-        >{{ question.question }}</label
-      >
+      <label class="form-label" for="quizQuestion">{{ question.question }}</label>
       <fieldset id="quizQuestion">
         {% for choice in question.choices %}
         <div class="form-check">
-          <!-- Radio Button for Each Choice -->
-          <input
-            class="form-check-input"
-            type="radio"
-            name="choice"
-            id="choice{{ loop.home }}"
-            value="{{ choice }}"
-            required
-          />
-          <label class="form-check-label" for="choice{{ loop.home }}">
-            {{ choice }}
-          </label>
+          <input class="form-check-input" type="radio" name="choice" id="choice{{ loop.index }}" value="{{ choice }}" required>
+          <label class="form-check-label" for="choice{{ loop.index }}">{{ choice }}</label>
         </div>
         {% endfor %}
       </fieldset>
     </div>
-    <!-- Hidden Input for Question ID -->
     <input type="hidden" name="question_id" value="{{ question_id }}" />
-    <!-- Submit Button -->
-    <button type="submit" class="btn btn-primary">
-      {{ "Submit" if session['lang'] == 'en' else "Soumettre" }}
-    </button>
+    <button type="submit" class="btn btn-primary">{{ "Submit" if session['lang'] == 'en' else "Soumettre" }}</button>
   </form>
 </div>
 {% endblock %}
-
-

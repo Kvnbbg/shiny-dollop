@@ -1,27 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<!-- Tips for Avoiding Stress and Staying Focused Section -->
-<section id="tips" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">{{ 'Tips for Avoiding Stress and Staying Focused' if session['lang'] == 'en' else 'Conseils pour Éviter le Stress et Rester Concentré' }}</h2>
-    <div class="row">
-      <!-- Tip 1 -->
-      <div class="col-md-4 mb-4">
-        <img src="{{ url_for('static', filename='images/vehicule4.jpg') }}" alt="Mindfulness Image" class="img-fluid mb-3" />
-      </div>
-      <!-- Tip 2 -->
-      <div class="col-md-4 mb-4">
-        <img src="{{ url_for('static', filename='images/vehicule5.jpg') }}" alt="Healthy Lifestyle Image" class="img-fluid mb-3" />
-      </div>
-      <!-- Tip 3 -->
-      <div class="col-md-4 mb-4">
-        <img src="{{ url_for('static', filename='images/service-example2.jpg') }}" alt="Time Management Image" class="img-fluid mb-3" />
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Quiz Section with Bootstrap Collapse -->
 <div class="container my-4">
   <p>
