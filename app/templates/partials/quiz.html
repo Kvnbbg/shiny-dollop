@@ -1,0 +1,39 @@
+<div class="container">
+  <!-- Quiz Title -->
+  <h2>Quiz Full Stack</h2>
+
+  <!-- Feedback Display -->
+  {% if feedback %}
+  <div class="alert alert-info" role="alert">{{ feedback }}</div>
+  {% endif %}
+
+  <!-- Quiz Form -->
+  <form action="/" method="post">
+    <div class="mb-3">
+      <!-- Question Label -->
+      <label class="form-label" for="quizQuestion"
+        >{{ question.question }}</label
+      >
+      <fieldset id="quizQuestion">
+        {% for choice in question.choices %}
+        <div class="form-check">
+          <!-- Radio Button for Each Choice -->
+          <input
+            class="form-check-input"
+            type="radio"
+            name="choice"
+            id="choice{{ loop.index }}"
+            value="{{ choice }}"
+            required
+          />
+          <label class="form-check-label" for="choice{{ loop.index }}">
+            {{ choice }}
+          </label>
+        </div>
+        {% endfor %}
+      </fieldset>
+    </div>
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

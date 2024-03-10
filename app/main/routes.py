@@ -2,7 +2,8 @@ from datetime import datetime
 from flask import Blueprint, flash, make_response, redirect, render_template, request, url_for, session, Flask
 import random
 
-main = Blueprint('main', __name__)
+# Define a blueprint for your Flask application
+main = Blueprint("main", __name__)
 
 # Les questions du quiz
 questions = [
@@ -40,8 +41,7 @@ def set_language(language):
     return redirect(url_for('home'))
 
 
-# Define a blueprint for your Flask application
-main = Blueprint("main", __name__)
+
 
 def improved_home_with_maintenance_date():
     """

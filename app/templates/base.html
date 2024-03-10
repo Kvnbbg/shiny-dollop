@@ -4,10 +4,10 @@
   <!-- Basic Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kevin Marville alias kvnbbg on GitHub is the Python developer of this quiz app.">
+  <meta name="description" content="Kevin Marville alias kvnbbg on GitHub is the Python developer of this quizz app.">
   <meta name="keywords" content="Garage V. Parrot, Kevin Marville, kvnbbg, Python Developer, Quizz,Quick">
   <meta name="author" content="Kevin Marville">
-  <title>Garage V. Parrot</title>
+  <title>Quiz Full Stack</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="{{ url_for('static', filename='/images/favicon.ico') }}" type="image/x-icon">
@@ -29,17 +29,17 @@
   <script type="application/ld+json">
   {
     "@context": "http://schema.org",
-    "@type": "AutoRepair",
-    "name": "Garage V. Parrot",
-    "url": "https://au-garage-92dd5c42a6c4.herokuapp.com",
+    "@type": "Quizz",
+    "name": "Quiz Full Stack",
+    "url": "https://github.com/Kvnbbg",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "123 Example Street",
-      "addressLocality": "Toulouse",
-      "postalCode": "31000",
+      "addressLocality": "Lyon",
+      "postalCode": "69000",
       "addressCountry": "FR"
     },
-    "telephone": "+33123456789"
+    "telephone": "+33634160418"
   }
   </script>
 </head>
@@ -68,17 +68,17 @@
   <div class="text-center my-5">
     {% if session['lang'] == 'fr' %}
       <h1 class="text-white" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)">
-        Bienvenue au Garage V. Parrot
+        Bienvenue sur Quizz App Full Stack 
       </h1>
       <h2 class="text-white-50" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)">
-        Votre centre de service automobile de confiance à Toulouse
+        Votre app pour apprendre et tester vos connaissances en Full Stack Development ! 
       </h2>
     {% else %}
       <h1 class="text-white" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)">
-        Welcome to Garage V. Parrot
+        Welcome to Quizz App Full Stack 
       </h1>
       <h2 class="text-white-50" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)">
-        Your trusted automobile service center in Toulouse
+        Your app to learn and test your knowledge in Full Stack Development!
       </h2>
     {% endif %}
   </div>
