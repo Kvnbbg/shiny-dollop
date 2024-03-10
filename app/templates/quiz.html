@@ -1,6 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
 <div class="container">
   <!-- Quiz Title -->
-  <h2>Quiz Full Stack</h2>
+  <h2>
+    {{ "Quiz Full Stack" if session['lang'] == 'en' else "Quiz Complet" }}
+  </h2>
 
   <!-- Feedback Display -->
   {% if feedback %}
@@ -8,7 +13,7 @@
   {% endif %}
 
   <!-- Quiz Form -->
-  <form action="/" method="post">
+  <form action="{{ url_for('main.quiz') }}" method="post">
     <div class="mb-3">
       <!-- Question Label -->
       <label class="form-label" for="quizQuestion"
@@ -22,18 +27,25 @@
             class="form-check-input"
             type="radio"
             name="choice"
-            id="choice{{ loop.index }}"
+            id="choice{{ loop.home }}"
             value="{{ choice }}"
             required
           />
-          <label class="form-check-label" for="choice{{ loop.index }}">
+          <label class="form-check-label" for="choice{{ loop.home }}">
             {{ choice }}
           </label>
         </div>
         {% endfor %}
       </fieldset>
     </div>
+    <!-- Hidden Input for Question ID -->
+    <input type="hidden" name="question_id" value="{{ question_id }}" />
     <!-- Submit Button -->
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">
+      {{ "Submit" if session['lang'] == 'en' else "Soumettre" }}
+    </button>
   </form>
 </div>
+{% endblock %}
+
+

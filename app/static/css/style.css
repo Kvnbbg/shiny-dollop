@@ -1,6 +1,6 @@
 /* Base Styles */
 body {
-  font-family: "Poppins", sans-serif; /* Updated to Poppins for a cleaner look */
+  font-family: "Poppins", sans-serif;
   background-color: #f0f0f0;
   color: #333;
   margin: 0;
@@ -14,37 +14,54 @@ header {
   color: #fff;
   padding: 20px 0;
   border-bottom: 3px solid #6c757d;
-  transition: all 0.5s ease; /* Smooth transition for hover effects */
+  transition: all 0.5s ease;
 }
 
 header:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+  background-color: #0056b3;
 }
 
 /* Navigation Styles */
 .navbar {
-  padding: 0 20px; /* Ensures padding is present */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
-.nav-link {
-  transition: color 0.3s ease; /* Smooth color transition */
+.nav-link, .navbar-brand {
+  color: #fff;
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover, .navbar-brand:hover {
-  color: #d1ecf1; /* Lighter shade on hover */
+  color: #d1ecf1;
+}
+
+/* Ensures the nav items are properly aligned and spaced in mobile view */
+.navbar-nav {
+  display: flex;
+  padding-left: 0; /* Removes padding for list items */
+  margin-bottom: 0; /* Removes margin for list items */
+  list-style: none; /* Removes list style */
+}
+
+.nav-item {
+  padding: 0.5rem 1rem; /* Adds padding for touch targets */
 }
 
 /* Image Hover Scale */
 img:hover {
-  transform: scale(1.05); /* Scales the image on hover */
-  transition: transform 0.3s ease; /* Smooth scaling transition */
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 /* Container Styles */
 .container, .container-fluid {
   max-width: 1140px;
   margin: auto;
-  padding: 0 15px; /* Provides padding on the sides */
+  padding: 0 15px;
 }
 
 /* Button Styles */
@@ -52,15 +69,18 @@ img:hover {
   background: #28a745;
   color: #fff;
   transition: background-color 0.3s ease;
+  padding: 0.375rem 0.75rem; /* Increased padding for easier interaction */
+  border-radius: 0.25rem; /* Rounded corners */
 }
 
 .btn:hover {
-  background-color: #218838; /* Slightly darker green */
+  background-color: #218838;
 }
 
 /* Form Styles */
 form input, form button {
-  margin: 10px 0; /* Ensures spacing between form elements */
+  margin: 10px 0;
+  width: 100%; /* Ensures full width on smaller screens */
 }
 
 /* Utility Classes */
@@ -71,40 +91,36 @@ form input, form button {
 
 /* Responsive Design Adjustments */
 @media (max-width: 992px) {
-  header {
-    padding: 15px 0;
-  }
-
-  .navbar {
-    padding: 0 10px; /* Adjust padding for smaller screens */
-  }
-
-  .container, .container-fluid {
-    padding: 0 10px; /* Adjust container padding */
+  header, .navbar, .container, .container-fluid {
+    padding: 15px 10px; /* Unified padding adjustment for smaller screens */
   }
 }
 
 @media (max-width: 768px) {
   .navbar-toggler {
-    display: block; /* Ensure toggler is visible */
+    display: block;
   }
 
   .navbar-collapse {
-    text-align: center; /* Center navigation items */
+    text-align: center;
+  }
+  
+  .nav-item {
+    display: block; /* Stack nav items vertically in mobile view */
   }
 }
 
 /* Flash Messages Styles */
 .flashes {
   position: fixed;
-  top: 10%; /* Adjusted for better visibility */
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2000;
   width: auto;
-  max-width: 90%; /* Ensures it doesn't extend too wide */
+  max-width: 90%;
 }
 
 .flashes li {
-  margin-bottom: 5px; /* Reduced gap between messages */
+  margin-bottom: 5px;
 }

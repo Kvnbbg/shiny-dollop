@@ -1,21 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<!-- Quiz Section with Bootstrap Collapse -->
-<div class="container my-4">
-    <p>
-        <a class="btn btn-primary" data-toggle="collapse" href="#quizCollapse" role="button" aria-expanded="false" aria-controls="quizCollapse">
-            Take our Stress Management Quiz!
-        </a>
-    </p>
-    <div class="collapse" id="quizCollapse">
-        <div class="card card-body">
-          {% include 'partials/quiz.html' %}
-        </div>
-    </div>
-</div>
-
 <!-- Tips for Avoiding Stress and Staying Focused Section -->
 <section id="tips" class="py-5">
   <div class="container">
@@ -24,29 +9,34 @@
       <!-- Tip 1 -->
       <div class="col-md-4 mb-4">
         <img src="{{ url_for('static', filename='images/vehicule4.jpg') }}" alt="Mindfulness Image" class="img-fluid mb-3" />
-        <h4>{{ 'Mindfulness and Meditation' if session['lang'] == 'en' else 'Pleine Conscience et Méditation' }}</h4>
-        <p>
-          {{ 'Engaging in mindfulness and meditation can help reduce stress and improve focus.' if session['lang'] == 'en' else 'La pratique de la pleine conscience et de la méditation peut aider à réduire le stress et à améliorer la concentration.' }}
-        </p>
       </div>
       <!-- Tip 2 -->
       <div class="col-md-4 mb-4">
         <img src="{{ url_for('static', filename='images/vehicule5.jpg') }}" alt="Healthy Lifestyle Image" class="img-fluid mb-3" />
-        <h4>{{ 'Healthy Lifestyle Choices' if session['lang'] == 'en' else 'Choix de Vie Sains' }}</h4>
-        <p>
-          {{ 'Maintaining a healthy lifestyle, including regular exercise and balanced nutrition, supports focus and stress reduction.' if session['lang'] == 'en' else 'Maintenir un mode de vie sain, incluant l\'exercice régulier et une alimentation équilibrée, soutient la concentration et la réduction du stress.' }}
-        </p>
       </div>
       <!-- Tip 3 -->
       <div class="col-md-4 mb-4">
         <img src="{{ url_for('static', filename='images/service-example2.jpg') }}" alt="Time Management Image" class="img-fluid mb-3" />
-        <h4>{{ 'Effective Time Management' if session['lang'] == 'en' else 'Gestion Efficace du Temps' }}</h4>
-        <p>
-          {{ 'Adopting effective time management techniques can help you stay focused and reduce stress.' if session['lang'] == 'en' else 'Adopter des techniques efficaces de gestion du temps peut vous aider à rester concentré et à réduire le stress.' }}
-        </p>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Quiz Section with Bootstrap Collapse -->
+<div class="container my-4">
+  <p>
+      <a class="btn btn-primary" data-toggle="collapse" href="#quizCollapse" role="button" aria-expanded="false" aria-controls="quizCollapse">
+          {{ "Ready for the Quiz!" if session['lang'] == 'en' else "Prêt pour le Quiz !" }}
+      </a>
+  </p>
+  <div class="collapse" id="quizCollapse">
+      <div class="card card-body">
+        <a href="{{ url_for('main.quiz') }}" class="btn btn-primary">
+            {{ "Start Quiz" if session['lang'] == 'en' else "Commencer le Quiz" }}
+        </a>
+      </div>
+  </div>
+</div>
+
 
 {% endblock %}

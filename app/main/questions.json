@@ -1,0 +1,8 @@
+[
+    {
+        "question": "Quel est le principe fondamental des API RESTful ?",
+        "choices": ["Étatless (Sans état)", "Utiliser uniquement XML", "Conserver l'état sur le serveur"],
+        "answer": "Étatless (Sans état)"
+    }
+    
+]
