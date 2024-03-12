@@ -1,141 +1,117 @@
-/* Base Styles */
+/* Base Styles with Enhanced Eye Comfort */
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: #f7f8fa; /* Lighter and softer background */
+  color: #333; /* Darker text color for improved readability */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: 1.6; /* Enhanced readability */
 }
 
 /* Header Styles */
 header {
-  background: #007bff;
-  color: #fff;
+  background: #007bff; /* Updated to a more vibrant blue */
+  color: #ffffff; /* Bright white text for contrast */
   padding: 20px 0;
-  border-bottom: 3px solid #6c757d;
-  transition: all 0.5s ease;
-}
-
-header:hover {
-  background-color: #0056b3;
+  border-bottom: 3px solid #006fe6; /* Contrast border */
 }
 
 /* Navigation Styles */
 .navbar {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
 }
 
 .nav-link, .navbar-brand {
-  color: #fff;
-  transition: color 0.3s ease;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out; /* Smooth transition */
 }
 
 .nav-link:hover, .navbar-brand:hover {
-  color: #d1ecf1;
+  color: #cce5ff; /* Subtle hover effect */
 }
 
-/* Ensures the nav items are properly aligned and spaced in mobile view */
-.navbar-nav {
-  display: flex;
-  padding-left: 0; /* Removes padding for list items */
-  margin-bottom: 0; /* Removes margin for list items */
-  list-style: none; /* Removes list style */
-}
-
-.nav-item {
-  padding: 0.5rem 1rem; /* Adds padding for touch targets */
-}
-
-/* Image Hover Scale */
-img:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
-
-/* Container Styles */
-.container, .container-fluid {
-  max-width: 1140px;
-  margin: auto;
-  padding: 0 15px;
-}
-
-/* Button Styles */
+/* Button Styles Enhanced for Accessibility */
 .btn {
-  background: #28a745;
-  color: #fff;
-  transition: background-color 0.3s ease;
-  padding: 0.375rem 0.75rem; /* Increased padding for easier interaction */
-  border-radius: 0.25rem; /* Rounded corners */
+  background-color: #28a745; /* More accessible green */
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem; /* Increased padding for easier interaction */
+  border-radius: 0.25rem;
+  font-weight: 600; /* Bold text for clarity */
+  transition: background-color 0.2s ease-in-out; /* Smooth transition */
 }
 
 .btn:hover {
-  background-color: #218838;
+  background-color: #218838; /* Slightly darker green on hover */
 }
 
-/* Form Styles */
+/* Form Enhancements */
 form input, form button {
   margin: 10px 0;
-  width: 100%; /* Ensures full width on smaller screens */
-}
-
-/* Utility Classes */
-.mt-20, .mb-20 {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding: 15px; /* Increased padding */
+  font-size: 18px; /* Larger font for better visibility */
+  border: 2px solid #ced4da; /* Slightly thicker border */
 }
 
 /* Responsive Design Adjustments */
 @media (max-width: 992px) {
-  header, .navbar, .container, .container-fluid {
-    padding: 15px 10px; /* Unified padding adjustment for smaller screens */
+  .navbar {
+    flex-direction: column;
   }
 }
 
-@media (max-width: 768px) {
-  .navbar-toggler {
-    display: block;
-  }
-
-  .navbar-collapse {
-    text-align: center;
-  }
-  
-  .nav-item {
-    display: block; /* Stack nav items vertically in mobile view */
-  }
-}
-
-/* Flash Messages Styles */
-.flashes {
-  position: fixed;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2000;
-  width: auto;
-  max-width: 90%;
-}
-
-.flashes li {
-  margin-bottom: 5px;
-}
-
-/* Footer Styles */
+/* Footer Enhancements */
 footer {
-  background: #343a40;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-  border-top: 3px solid #6c757d;
-  transition: all 0.5s ease;
+  background-color: #212529; /* Darker for a distinct footer */
+  color: #ffffff;
+  padding: 20px;
+  border-top: 3px solid #1b1e21; /* Defined border */
 }
 
-footer:hover {
-  background-color: #23272b;
+/* Dark Mode Enhancements */
+.dark-mode {
+  background-color: #181a1b; /* Dark mode background */
+  color: #e2e2e2; /* Lighter text for dark mode */
 }
 
+/* Additional Customizations */
+.container, .container-fluid {
+  max-width: 1200px; /* Limiting maximum width for content */
+}
+
+/* Custom Scrollbar for Improved Navigation */
+::-webkit-scrollbar {
+  width: 8px; /* Narrower scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #dee2e6; /* Light track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #adb5bd; /* Neutral thumb color */
+  border-radius: 4px;
+}
+
+/* Link Enhancements for Better Readability */
+a {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Removing underline for a cleaner look */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover for distinction */
+}
+
+/* Enhancing Images for User Comfort */
+img {
+  transition: transform 0.3s ease; /* Smooth transformation */
+}
+
+img:hover {
+  transform: scale(1.05); /* Slight scale on hover */
+}

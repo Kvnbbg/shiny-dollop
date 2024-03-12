@@ -349,6 +349,14 @@
         "documentation": {}
     },
     {
+        "label": "FlaskForm",
+        "importPath": "flask_wtf",
+        "description": "flask_wtf",
+        "isExtraImport": true,
+        "detail": "flask_wtf",
+        "documentation": {}
+    },
+    {
         "label": "PasswordField",
         "importPath": "wtforms",
         "description": "wtforms",
@@ -374,6 +382,14 @@
     },
     {
         "label": "EmailField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "SubmitField",
         "importPath": "wtforms",
         "description": "wtforms",
         "isExtraImport": true,
@@ -541,30 +557,6 @@
         "documentation": {}
     },
     {
-        "label": "flash",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "make_response",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
         "label": "render_template",
         "importPath": "flask",
         "description": "flask",
@@ -589,7 +581,7 @@
         "documentation": {}
     },
     {
-        "label": "Flask",
+        "label": "redirect",
         "importPath": "flask",
         "description": "flask",
         "isExtraImport": true,
@@ -709,11 +701,12 @@
         "documentation": {}
     },
     {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
+        "label": "random",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "datetime",
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
         "documentation": {}
     },
     {
@@ -722,15 +715,6 @@
         "description": "datetime",
         "isExtraImport": true,
         "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "random",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "random",
-        "description": "random",
-        "detail": "random",
         "documentation": {}
     },
     {
@@ -1917,11 +1901,20 @@
         "documentation": {}
     },
     {
+        "label": "QuizForm",
+        "kind": 6,
+        "importPath": "app.main.routes",
+        "description": "app.main.routes",
+        "peekOfCode": "class QuizForm(FlaskForm):\n    submit = SubmitField('Submit')\ndef load_questions():\n    \"\"\"Load questions from the JSON file.\"\"\"\n    filepath = os.path.join(os.path.dirname(__file__), 'questions.json')\n    with open(filepath, 'r', encoding='utf-8') as file:\n        return json.load(file)\n@main.route(\"/quiz\", methods=[\"GET\", \"POST\"])\ndef quiz():\n    form = QuizForm()",
+        "detail": "app.main.routes",
+        "documentation": {}
+    },
+    {
         "label": "load_questions",
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def load_questions():\n    with open(os.path.join(os.path.dirname(__file__), 'questions.json'), 'r', encoding='utf-8') as file:\n        return json.load(file)\n@main.route(\"/quiz\", methods=[\"GET\", \"POST\"])\ndef quiz():\n    questions = load_questions()\n    # Initialize or update remaining questions in session\n    if \"remaining_questions\" not in session or request.method == \"GET\":\n        session[\"remaining_questions\"] = list(range(len(questions)))  # Store indices of questions\n    if request.method == \"POST\":",
+        "peekOfCode": "def load_questions():\n    \"\"\"Load questions from the JSON file.\"\"\"\n    filepath = os.path.join(os.path.dirname(__file__), 'questions.json')\n    with open(filepath, 'r', encoding='utf-8') as file:\n        return json.load(file)\n@main.route(\"/quiz\", methods=[\"GET\", \"POST\"])\ndef quiz():\n    form = QuizForm()\n    questions = load_questions()\n    if \"remaining_questions\" not in session or request.method == \"GET\":",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -1930,7 +1923,16 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def quiz():\n    questions = load_questions()\n    # Initialize or update remaining questions in session\n    if \"remaining_questions\" not in session or request.method == \"GET\":\n        session[\"remaining_questions\"] = list(range(len(questions)))  # Store indices of questions\n    if request.method == \"POST\":\n        user_answer = request.form.get(\"choice\")\n        question_id = int(request.form.get(\"question_id\", 0))\n        question = questions[question_id]\n        # Language-aware feedback",
+        "peekOfCode": "def quiz():\n    form = QuizForm()\n    questions = load_questions()\n    if \"remaining_questions\" not in session or request.method == \"GET\":\n        session[\"remaining_questions\"] = list(range(len(questions)))\n    if request.method == \"POST\":\n        user_answer = request.form.get(\"choice\")\n        question_id = int(request.form.get(\"question_id\", 0))\n        if question_id in session[\"remaining_questions\"]:\n            question = questions[question_id]",
+        "detail": "app.main.routes",
+        "documentation": {}
+    },
+    {
+        "label": "quiz_complete",
+        "kind": 2,
+        "importPath": "app.main.routes",
+        "description": "app.main.routes",
+        "peekOfCode": "def quiz_complete():\n    \"\"\"Display the quiz completion message and reset the session.\"\"\"\n    session.pop('remaining_questions', None)  # Clean up session\n    return render_template(\"quiz_complete.html\")\n@main.route('/set_language/<language>')\ndef set_language(language):\n    \"\"\"Set the preferred language in the session.\"\"\"\n    session['lang'] = language\n    return redirect(request.referrer or url_for('.home'))\n@main.route(\"/\")",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -1939,7 +1941,7 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def set_language(language):\n    session['lang'] = language\n    redirect_url = url_for('.quiz') if 'quiz' in request.referrer else url_for('.home')\n    return redirect(redirect_url)\n@main.route(\"/\")\n@main.route(\"/home\")\ndef home():\n    return render_template(\"home.html\")",
+        "peekOfCode": "def set_language(language):\n    \"\"\"Set the preferred language in the session.\"\"\"\n    session['lang'] = language\n    return redirect(request.referrer or url_for('.home'))\n@main.route(\"/\")\n@main.route(\"/home\")\ndef home():\n    \"\"\"Render the home page.\"\"\"\n    return render_template(\"home.html\")",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -1948,7 +1950,7 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def home():\n    return render_template(\"home.html\")",
+        "peekOfCode": "def home():\n    \"\"\"Render the home page.\"\"\"\n    return render_template(\"home.html\")",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -1957,7 +1959,7 @@
         "kind": 5,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "main = Blueprint(\"main\", __name__)\n# Load questions from a JSON file\ndef load_questions():\n    with open(os.path.join(os.path.dirname(__file__), 'questions.json'), 'r', encoding='utf-8') as file:\n        return json.load(file)\n@main.route(\"/quiz\", methods=[\"GET\", \"POST\"])\ndef quiz():\n    questions = load_questions()\n    # Initialize or update remaining questions in session\n    if \"remaining_questions\" not in session or request.method == \"GET\":",
+        "peekOfCode": "main = Blueprint(\"main\", __name__)\nclass QuizForm(FlaskForm):\n    submit = SubmitField('Submit')\ndef load_questions():\n    \"\"\"Load questions from the JSON file.\"\"\"\n    filepath = os.path.join(os.path.dirname(__file__), 'questions.json')\n    with open(filepath, 'r', encoding='utf-8') as file:\n        return json.load(file)\n@main.route(\"/quiz\", methods=[\"GET\", \"POST\"])\ndef quiz():",
         "detail": "app.main.routes",
         "documentation": {}
     },

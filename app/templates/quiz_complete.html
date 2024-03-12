@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h1 class="display-4">{{ "Congratulations!" if session['lang'] == 'en' else "Félicitations !" }}</h1>
+    <p class="lead my-4">
+        {{ "You have completed the quiz. Thank you for participating!" if session['lang'] == 'en' else "Vous avez terminé le quiz. Merci de votre participation !" }}
+    </p>
+    <p id="redirectNotice" class="text-muted">
+        {{ "Redirecting to home in 10 seconds..." if session['lang'] == 'en' else "Redirection vers l'accueil dans 10 secondes..." }}
+    </p>
+    <div class="mt-4">
+        <a href="{{ url_for('main.quiz') }}" class="btn btn-primary me-2">{{ "Try Again" if session['lang'] == 'en' else "Réessayer" }}</a>
+        <a href="{{ url_for('main.home') }}" class="btn btn-secondary">{{ "Go Home" if session['lang'] == 'en' else "Aller à l'accueil" }}</a>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    let countdown = 10; // seconds
+    let redirectNotice = document.getElementById('redirectNotice');
+    let countdownInterval = setInterval(() => {
+        countdown--;
+        if (countdown <= 0) {
+            clearInterval(countdownInterval);
+            window.location.href = "{{ url_for('main.home') }}";
+        } else {
+            redirectNotice.innerHTML = `{{ "Redirecting to home in " if session['lang'] == 'en' else "Redirection vers l'accueil dans " }}${countdown} ${countdown === 1 ? "{{ 'second' if session['lang'] == 'en' else 'seconde' }}" : "{{ 'seconds' if session['lang'] == 'en' else 'secondes' }}" }...`;
+        }
+    }, 1000);
+});
+</script>
+{% endblock %}

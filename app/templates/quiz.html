@@ -3,16 +3,41 @@
 {% block content %}
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    // Function to automatically submit the form after 5 seconds
-    let timeout = setTimeout(function() {
-        document.getElementById("nextQuestionForm").submit();
-    }, 15000);
+    let countdownDuration = 15; // Countdown duration in seconds
+    let countdownTimer = document.getElementById("countdownTimer");
+    let timeout;
 
-    // Function to stop the automatic submission if the user selects an option
+    function startCountdown(duration) {
+        let timeRemaining = duration;
+        countdownTimer.textContent = timeRemaining.toString();
+        timeout = setInterval(function() {
+            timeRemaining--;
+            countdownTimer.textContent = timeRemaining.toString();
+            if (timeRemaining <= 0) {
+                clearInterval(timeout);
+                document.getElementById("nextQuestionForm").submit();
+            }
+        }, 1000);
+    }
+
+    startCountdown(countdownDuration);
+
     document.querySelectorAll('input[name="choice"]').forEach(function(input) {
         input.addEventListener('change', function() {
-            clearTimeout(timeout);
+            clearInterval(timeout);
+            document.querySelectorAll('.form-check-input').forEach((input) => {
+                if(input.checked) {
+                    input.parentNode.classList.add("selected");
+                } else {
+                    input.parentNode.classList.remove("selected");
+                }
+            });
+            countdownTimer.textContent = 'Paused';
         });
+    });
+    
+    document.getElementById("submitBtn").addEventListener('click', function() {
+        validateForm() && clearInterval(timeout);
     });
 });
 
@@ -20,29 +45,37 @@ function validateForm() {
     let radios = document.getElementsByName('choice');
     let formValid = false;
 
-    let i = 0;
-    while (!formValid && i < radios.length) {
-        if (radios[i].checked) formValid = true;
-        i++;        
+    for (let radio of radios) {
+        if (radio.checked) {
+            formValid = true;
+            break;
+        }
     }
 
-    if (!formValid) alert("{{ 'Please select an option.' if session['lang'] == 'en' else 'Veuillez sélectionner une option.' }}");
+    if (!formValid) {
+        let validationAlert = document.getElementById('validationAlert');
+        validationAlert.classList.remove('d-none');
+        validationAlert.textContent = "{{ 'Please select an option.' if session['lang'] == 'en' else 'Veuillez sélectionner une option.' }}";
+    }
     return formValid;
 }
 </script>
 
-<div class="container">
-  <h2>{{ "Quiz Full Stack" if session['lang'] == 'en' else "Quiz Complet" }}</h2>
+<div class="container mt-5">
+  <h2 class="mb-4">{{ "Quiz Full Stack" if session['lang'] == 'en' else "Quiz Complet" }}</h2>
 
   {% if feedback %}
-  <div class="alert {{ 'alert-success' if feedback.startswith("Correct answer") or feedback.startswith("Bonne réponse") else 'alert-danger' }}" role="alert">{{ feedback }}</div>
+  <div class="alert {{ 'alert-success' if feedback.startswith("Correct answer") else 'alert-danger' }}" role="alert">
+    {{ feedback }}
+  </div>
   {% endif %}
 
   <form id="nextQuestionForm" action="{{ url_for('main.quiz') }}" method="post" onsubmit="return validateForm()">
     {{ form.csrf_token }}
     <div class="mb-3">
-      <label class="form-label" for="quizQuestion">{{ question.question }}</label>
-      <fieldset id="quizQuestion">
+      <label class="form-label"><strong>{{ question.question }}</strong></label>
+      <div id="validationAlert" class="alert alert-warning d-none"></div>
+      <fieldset>
         {% for choice in question.choices %}
         <div class="form-check">
           <input class="form-check-input" type="radio" name="choice" id="choice{{ loop.index }}" value="{{ choice }}" required>
@@ -52,7 +85,9 @@ function validateForm() {
       </fieldset>
     </div>
     <input type="hidden" name="question_id" value="{{ question_id }}" />
-    <button type="submit" class="btn btn-primary">{{ "Submit" if session['lang'] == 'en' else "Soumettre" }}</button>
+    <button id="submitBtn" type="submit" class="btn btn-primary">{{ "Submit" if session['lang'] == 'en' else "Soumettre" }}</button>
   </form>
+
+  <p class="mt-4">Time remaining: <span id="countdownTimer"></span> seconds</p>
 </div>
 {% endblock %}
