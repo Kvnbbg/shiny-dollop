@@ -62,7 +62,7 @@ function validateForm() {
 </script>
 
 <div class="container mt-5">
-  <h2 class="mb-4">{{ "Quiz Full Stack" if session['lang'] == 'en' else "Quiz Complet" }}</h2>
+  <h2 class="mb-4">{{ "Quiz App" if session['lang'] == 'en' else "Quiz App" }}</h2>
 
   {% if feedback %}
   <div class="alert {{ 'alert-success' if feedback.startswith("Correct answer") else 'alert-danger' }}" role="alert">
@@ -89,5 +89,7 @@ function validateForm() {
   </form>
 
   <p class="mt-4">Time remaining: <span id="countdownTimer"></span> seconds</p>
+  <p class="mt-4">{{ "Tips: Click on a question to pause the countdown" if session['lang'] == 'en' else "Tips: Vous pouvez mettre en pause en cliquant sur une question" }}</p>
+
 </div>
 {% endblock %}

@@ -1414,5 +1414,214 @@
     "Amélioration de la productivité"
   ],
   "answer": "Automatisation des tâches répétitives"
-}
+},
+{
+  "question": "Qu'est-ce que le développement agile?",
+  "choices": [
+    "Méthodologie de développement logiciel",
+    "Itérations courtes et incrémentielles",
+    "Adaptation aux changements"
+  ],
+  "answer": "Méthodologie de développement logiciel"
+},
+{
+  "question": "Qu'est-ce que le développement en cascade?",
+  "choices": [
+    "Méthodologie de développement logiciel",
+    "Phases séquentielles",
+    "Moins flexible face aux changements"
+  ],
+  "answer": "Méthodologie de développement logiciel"
+},
+{
+  "question": "Qu'est-ce que le développement incrémental?",
+  "choices": [
+    "Itérations courtes et incrémentielles",
+    "Livraison de fonctionnalités par étapes",
+    "Adaptation aux changements"
+  ],
+  "answer": "Itérations courtes et incrémentielles"
+},
+{
+  "question": "Qu'est-ce que le développement itératif?",
+  "choices": [
+    "Itérations courtes et incrémentielles",
+    "Adaptation aux changements",
+    "Livraison de fonctionnalités par étapes"
+  ],
+  "answer": "Itérations courtes et incrémentielles"
+},
+{
+  "question": "Qu'est-ce que le développement en V?",
+  "choices": [
+    "Phases de développement et de test parallèles",
+    "Validation des exigences",
+    "Vérification des spécifications"
+  ],
+  "answer": "Phases de développement et de test parallèles"
+},
+{
+  "question": "Qu'est-ce que le développement en spirale?",
+  "choices": [
+    "Itérations courtes et incrémentielles",
+    "Évaluation des risques",
+    "Adaptation aux changements"
+  ],
+  "answer": "Évaluation des risques"
+},
+{
+  "question": "Qu'est-ce que le développement RAD?",
+  "choices": [
+    "Itérations courtes et incrémentielles",
+    "Livraison rapide de fonctionnalités",
+    "Adaptation aux changements"
+  ],
+  "answer": "Livraison rapide de fonctionnalités"
+},
+{
+  "question": "Qu'est-ce que le développement en équipe?", "choices": ["Collaboration entre les membres de l'équipe", "Partage des connaissances", "Amélioration de la productivité"], "answer": "Collaboration entre les membres de l'équipe" },
+{
+  "question": "Qu'est-ce que le développement en open source?", "choices": ["Collaboration ouverte et transparente", "Partage des ressources et des connaissances", "Communauté de développeurs"], "answer": "Collaboration ouverte et transparente" },
+{
+  "question": "Qu'est-ce que le développement en pair programming?", "choices": ["Programmation en binôme", "Partage des connaissances", "Amélioration de la qualité du code"], "answer": "Programmation en binôme" },
+{
+  "question": "Qu'est-ce que le développement en TDD?", "choices": ["Développement piloté par les tests", "Écriture des tests avant le code", "Amélioration de la qualité du code"], "answer": "Développement piloté par les tests" },
+{
+  "question": "Qu'est-ce que le développement en BDD?", "choices": ["Développement piloté par le comportement", "Écriture des tests avant le code", "Amélioration de la qualité du code"], "answer": "Développement piloté par le comportement" },
+{
+  "question": "Qu'est-ce que le développement en CI/CD?", "choices": ["Intégration continue et déploiement continu", "Automatisation des tests et des déploiements", "Amélioration de la qualité du code"], "answer": "Intégration continue et déploiement continu" },
+{
+  "question": "Qu'est-ce que le développement en microservices?", "choices": ["Architecture modulaire et distribuée", "Déploiement indépendant des services", "Amélioration de la scalabilité et de la flexibilité"], "answer": "Architecture modulaire et distribuée" },
+{
+  "question": "Qu'est-ce que le développement en DevOps?", "choices": ["Collaboration entre les équipes de développement et d'opérations", "Automatisation des processus", "Amélioration de la communication et de la productivité"], "answer": "Collaboration entre les équipes de développement et d'opérations" },
+{
+  "question": "Qu'est-ce que le développement en cloud?", "choices": ["Utilisation de ressources informatiques à la demande", "Évolutivité et flexibilité", "Amélioration de l'efficacité et de la rentabilité"], "answer": "Utilisation de ressources informatiques à la demande" }, 
+{
+  "question": "Qu'est-ce que le développement en IA?", "choices": ["Utilisation de l'intelligence artificielle pour automatiser des tâches", "Apprentissage automatique et traitement du langage naturel", "Amélioration de l'efficacité et de la productivité"], "answer": "Utilisation de l'intelligence artificielle pour automatiser des tâches" },
+{
+  "question": "Qu'est-ce que le développement en IoT?", "choices": ["Utilisation de l'internet des objets pour connecter des appareils", "Collecte et analyse de données en temps réel", "Amélioration de l'efficacité et de la productivité"], "answer": "Utilisation de l'internet des objets pour connecter des appareils" },
+{
+  "question": "Qu'est-ce que le développement en blockchain?", "choices": ["Utilisation de la technologie de la blockchain pour sécuriser des transactions", "Décentralisation et transparence", "Amélioration de la sécurité et de la confiance"], "answer": "Utilisation de la technologie de la blockchain pour sécuriser des transactions" },
+{
+  "question": "Qu'est-ce que le développement en réalité virtuelle?", "choices": ["Utilisation de la technologie de la réalité virtuelle pour créer des environnements immersifs", "Expériences interactives et immersives", "Amélioration de l'engagement et de l'expérience utilisateur"], "answer": "Utilisation de la technologie de la réalité virtuelle pour créer des environnements immersifs" },
+{
+  "question": "Qu'est-ce que le développement en réalité augmentée?", "choices": ["Utilisation de la technologie de la réalité augmentée pour superposer des éléments virtuels sur le monde réel", "Expériences interactives et immersives", "Amélioration de l'engagement et de l'expérience utilisateur"], "answer": "Utilisation de la technologie de la réalité augmentée pour superposer des éléments virtuels sur le monde réel" },
+{
+  "question": "Qu'est-ce que le développement en cybersécurité?", "choices": ["Protection des systèmes informatiques et des données contre les menaces", "Détection et prévention des attaques", "Amélioration de la sécurité et de la confiance"], "answer": "Protection des systèmes informatiques et des données contre les menaces" },
+{
+  "question": "Qu'est-ce que le développement en UX/UI?", "choices": ["Conception d'expériences utilisateur et d'interfaces utilisateur", "Amélioration de l'ergonomie et de l'expérience utilisateur", "Amélioration de la satisfaction et de la fidélisation des utilisateurs"], "answer": "Conception d'expériences utilisateur et d'interfaces utilisateur" },
+{
+  "question": "Qu'est-ce que le développement en e-commerce?", "choices": ["Vente de produits et de services en ligne", "Optimisation de l'expérience d'achat", "Amélioration de la conversion et de la fidélisation des clients"], "answer": "Vente de produits et de services en ligne" },
+{
+  "question": "Qu'est-ce que le développement en marketing digital?", "choices": ["Utilisation de canaux numériques pour promouvoir des produits et des services", "Optimisation de la visibilité et de la notoriété", "Amélioration de la génération de leads et des ventes"], "answer": "Utilisation de canaux numériques pour promouvoir des produits et des services" },
+{
+  "question": "Qu'est-ce que le développement en gestion de projet?", "choices": ["Planification, suivi et gestion de projets", "Amélioration de l'efficacité et de la productivité", "Amélioration de la collaboration et de la communication"], "answer": "Planification, suivi et gestion de projets" },
+{
+  "question": "Qu'est-ce que le développement en gestion de contenu?", "choices": ["Création, gestion et publication de contenu numérique", "Amélioration de la visibilité et de l'engagement", "Amélioration de la collaboration et de la productivité"], "answer": "Création, gestion et publication de contenu numérique" },
+{
+  "question": "Qu'est-ce que le développement en gestion de données?", "choices": ["Collecte, stockage et analyse de données", "Amélioration de la prise de décision", "Amélioration de la performance et de l'efficacité"], "answer": "Collecte, stockage et analyse de données" },
+{
+  "question": "Qu'est-ce que le développement en gestion de la relation client?", "choices": ["Gestion des interactions avec les clients", "Amélioration de la satisfaction et de la fidélisation des clients", "Amélioration de la productivité et de la rentabilité"], "answer": "Gestion des interactions avec les clients" },
+{
+  "question": "Qu'est-ce que le développement en gestion des ressources humaines?", "choices": ["Gestion du recrutement, de la formation et de la rétention des employés", "Amélioration de la productivité et de la satisfaction des employés", "Amélioration de la conformité et de la rentabilité"], "answer": "Gestion du recrutement, de la formation et de la rétention des employés" },
+{
+  "question": "Qu'est-ce que le développement en gestion de la chaîne logistique?", "choices": ["Gestion de l'approvisionnement, de la production et de la distribution", "Amélioration de l'efficacité et de la rentabilité", "Amélioration de la visibilité et de la collaboration"], "answer": "Gestion de l'approvisionnement, de la production et de la distribution" },
+{
+  "question": "Qu'est-ce que le développement en gestion de la qualité?", "choices": ["Gestion de la qualité des produits et des processus", "Amélioration de la satisfaction des clients", "Amélioration de la conformité et de la rentabilité"], "answer": "Gestion de la qualité des produits et des processus" },
+{
+  "question": "Qu'est-ce que le développement en gestion de projet?", "choices": ["Planification, suivi et gestion de projets", "Amélioration de l'efficacité et de la productivité", "Amélioration de la collaboration et de la communication"], "answer": "Planification, suivi et gestion de projets" },
+{
+  "question": "Qu'est-ce que le développement en gestion de contenu?", "choices": ["Création, gestion et publication de contenu numérique", "Amélioration de la visibilité et de l'engagement", "Amélioration de la collaboration et de la productivité"], "answer": "Création, gestion et publication de contenu numérique" },
+{
+  "question": "Qu'est-ce que le développement en gestion de données?", "choices": ["Collecte, stockage et analyse de données", "Amélioration de la prise de décision", "Amélioration de la performance et de l'efficacité"], "answer": "Collecte, stockage et analyse de données "},
+  {
+    "question": "Que comprend le développement en gestion de données ?",
+    "choices": [
+      "Collecte, stockage et analyse de données",
+      "Amélioration des processus décisionnels",
+      "Amélioration de la performance et de l'efficacité"
+    ],
+    "answer": "Collecte, stockage et analyse de données"
+  },
+  {
+    "question": "Quel est le principal objectif de React dans le développement frontend ?",
+    "choices": [
+      "Gérer la base de données",
+      "Faciliter le développement d'applications riches en interactions",
+      "Automatiser les tests de performance"
+    ],
+    "answer": "Faciliter le développement d'applications riches en interactions"
+  },
+  {
+    "question": "Quel framework Node.js est le plus utilisé pour créer des services RESTful API ?",
+    "choices": [
+      "Angular",
+      "Express",
+      "React"
+    ],
+    "answer": "Express"
+  },
+  {
+    "question": "Quel est l'avantage principal de l'intégration continue dans le cycle de développement logiciel ?",
+    "choices": [
+      "Réduire le coût de développement",
+      "Détecter les problèmes de code plus tôt",
+      "Améliorer l'interface utilisateur"
+    ],
+    "answer": "Détecter les problèmes de code plus tôt"
+  },
+  {
+    "question": "Quelle est la meilleure pratique pour sécuriser les données sensibles dans une application web ?",
+    "choices": [
+      "Chiffrer les données au repos et en transit",
+      "Utiliser des cookies pour stocker les données sensibles",
+      "Stocker toutes les données dans une base de données locale"
+    ],
+    "answer": "Chiffrer les données au repos et en transit"
+  },
+  {
+    "question": "Qu'est-ce qu'un modèle de conception Singleton garantit dans le développement logiciel ?",
+    "choices": [
+      "Qu'une classe ait une seule instance et fournisse un point d'accès global à cette instance",
+      "La séparation des préoccupations dans une application",
+      "L'équilibre de charge entre différents serveurs"
+    ],
+    "answer": "Qu'une classe ait une seule instance et fournisse un point d'accès global à cette instance"
+  },
+  {
+    "question": "Quelle est la caractéristique principale de la programmation fonctionnelle ?",
+    "choices": [
+      "L'utilisation d'héritage et de classes",
+      "L'immutabilité des données et l'utilisation de fonctions comme citoyens de première classe",
+      "Le focus sur les changements d'état et les mutations"
+    ],
+    "answer": "L'immutabilité des données et l'utilisation de fonctions comme citoyens de première classe"
+  },
+  {
+    "question": "Quel type de test examine le comportement d'une application dans des conditions similaires à la production ?",
+    "choices": [
+      "Test unitaire",
+      "Test d'intégration",
+      "Test d'acceptation utilisateur"
+    ],
+    "answer": "Test d'acceptation utilisateur"
+  },
+  {
+    "question": "Quel est le principal objectif de la méthodologie Agile dans le développement logiciel ?",
+    "choices": [
+      "Planification détaillée à long terme",
+      "Adaptabilité et réponse rapide aux changements",
+      "Suivi strict des exigences initiales"
+    ],
+    "answer": "Adaptabilité et réponse rapide aux changements"
+  },
+  {
+    "question": "Quel service cloud permet la mise à l'échelle automatique des applications en fonction de la demande ?",
+    "choices": [
+      "Infrastructure as a Service (IaaS)",
+      "Platform as a Service (PaaS)",
+      "Software as a Service (SaaS)"
+    ],
+    "answer": "Platform as a Service (PaaS)"
+  }
 ]
