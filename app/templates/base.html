@@ -38,10 +38,9 @@
       href="{{ url_for('static', filename='css/style.css') }}"
     />
     <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -194,19 +193,16 @@
     </main>
 <!-- Footer Section -->
 <footer class="py-5 bg-dark">
-  <div class="container">
-    <p class="mb-0 text-center text-white">
+  <div class="container text-center">
+    <p class="mb-0 text-white">
       Copyright &copy; Kevin Josué MARVILLE 2024
     </p>
     <!-- Trigger/Button for Modal -->
-    <div class="text-center">
-      <button type="button" class="btn btn-warning mt-3" data-bs-toggle="modal" data-bs-target="#bugAdviceModal">
-        {{ "Notice" if session['lang'] == 'en' else "Avis" }}
-      </button>
-    </div>
+    <button type="button" class="btn btn-warning mt-3" data-bs-toggle="modal" data-bs-target="#bugAdviceModal">
+      {{ "Notice" if session['lang'] == 'en' else "Avis" }}
+    </button>
   </div>
 </footer>
-
 <!-- Modal Structure -->
 <div class="modal fade" id="bugAdviceModal" tabindex="-1" aria-labelledby="bugAdviceModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
@@ -232,14 +228,11 @@
 </div>
 
 
-
     <script src="{{ url_for('static', filename='/js/script.js') }}"></script>
     <scrip src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
