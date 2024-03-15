@@ -57,7 +57,10 @@ def create_app():
     from .main.routes import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
-    # Optional: Exempt specific routes from CSRF protection if necessary
-    csrf.exempt('main.home')
+    # Exempt specific routes from CSRF protection if necessary
+    # Ensure to import the view function directly if you need to exempt it
+    # Example:
+    # from .main.views import home_view
+    # csrf.exempt(home_view)
 
     return app

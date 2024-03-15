@@ -397,6 +397,14 @@
         "documentation": {}
     },
     {
+        "label": "StringField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
         "label": "RadioField",
         "importPath": "wtforms",
         "description": "wtforms",
@@ -1979,7 +1987,7 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def quiz():\n    form = QuizForm()\n    questions = session.get('questions')\n    if 'filter' in request.args or not questions:\n        question_file = request.args.get('filter', 'questions.json')\n        questions = load_questions(question_file)\n        session['questions'] = questions\n        session['current_index'] = 0\n        session.modified = True\n    current_index = session.get('current_index', 0)",
+        "peekOfCode": "def quiz():\n    form = QuizForm()\n    questions = session.get('questions')\n    if 'filter' in request.args:\n        question_file = request.args.get('filter', 'questions.json')\n        questions = load_questions(question_file)\n        session['questions'] = questions\n        session['current_index'] = 0\n        session.modified = True\n    current_index = session.get('current_index', 0)",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -2024,7 +2032,7 @@
         "kind": 5,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "main = Blueprint(\"main\", __name__)\n# Assuming CSRF is initialized elsewhere in your application\ncsrf = CSRFProtect()\nclass QuizForm(FlaskForm):\n    choice = RadioField('Choices', coerce=str, validators=[DataRequired(message=\"Please make a selection.\")])\n    question_id = HiddenField()\n    submit = SubmitField('Submit')\n    skip = SubmitField('Skip')\ndef load_questions(filename=\"questions.json\"):\n    base_dir = os.path.abspath(os.path.dirname(__file__))",
+        "peekOfCode": "main = Blueprint(\"main\", __name__)\n# Ensure CSRF is initialized and applied to your application in the main app file\ncsrf = CSRFProtect()\nclass QuizForm(FlaskForm):\n    choice = RadioField('Choices', coerce=str, validators=[DataRequired(message=\"Please make a selection.\")])\n    question_id = HiddenField()\n    submit = SubmitField('Submit')\n    skip = SubmitField('Skip')\ndef load_questions(filename=\"questions.json\"):\n    base_dir = os.path.abspath(os.path.dirname(__file__))",
         "detail": "app.main.routes",
         "documentation": {}
     },

@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, render_template, request, session, redirect, url_for, flash, current_app
 from flask_wtf import FlaskForm, CSRFProtect
-from wtforms import RadioField, HiddenField, SubmitField
+from wtforms import StringField, RadioField, HiddenField, SubmitField
 from wtforms.validators import DataRequired
 import os
 import json
@@ -8,7 +8,7 @@ import random
 
 main = Blueprint("main", __name__)
 
-# Assuming CSRF is initialized elsewhere in your application
+# Ensure CSRF is initialized and applied to your application in the main app file
 csrf = CSRFProtect()
 
 class QuizForm(FlaskForm):
@@ -37,7 +37,7 @@ def quiz():
     form = QuizForm()
     questions = session.get('questions')
     
-    if 'filter' in request.args or not questions:
+    if 'filter' in request.args:
         question_file = request.args.get('filter', 'questions.json')
         questions = load_questions(question_file)
         session['questions'] = questions
@@ -52,18 +52,21 @@ def quiz():
     current_question = questions[current_index]
     form.choice.choices = [(str(i), choice) for i, choice in enumerate(current_question.get('choices', []))]
 
+    if request.method == 'POST' and 'skip' in request.form:
+        session['skipped_answers'] = session.get('skipped_answers', 0) + 1
+        session['current_index'] = current_index + 1
+        session.modified = True
+        return redirect(url_for('.quiz'))
+
     if form.validate_on_submit():
         correct_answer = str(current_question['answer'])
-        if form.skip.data:
-            session['skipped_answers'] = session.get('skipped_answers', 0) + 1
-            feedback = "🚲 . . ."
-        elif form.choice.data == correct_answer:
+        if form.choice.data == correct_answer:
             session['correct_answers'] = session.get('correct_answers', 0) + 1
-            feedback = "🥳 Correct 🪩"
+            feedback = "🥳 Correct!"
         else:
             session['wrong_answers'] = session.get('wrong_answers', 0) + 1
-            feedback = f"🛹💥 {correct_answer} !"
-        flash(feedback)
+            feedback = f"❌ Incorrect, the correct answer was {correct_answer}."
+        flash(feedback, 'info')
         session['current_index'] = current_index + 1
         session.modified = True
         return redirect(url_for('.quiz'))

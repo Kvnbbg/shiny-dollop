@@ -27,20 +27,20 @@ header, footer {
 header {
   background-color: #0056b3;
   border-bottom: 3px solid #004494;
-  position: relative;
+  position: sticky; /* Ensures the header is always at the top of the page */
 }
 
 footer {
   background-color: #343a40;
   color: #ced4da;
   border-top: 3px solid #212529;
-  position: absolute; /* Stays at the bottom of the viewport */
   bottom: 0;
   left: 0;
   width: 100%;
   padding: 5px 0; /* Tiny vertical padding */
   text-align: center; /* Ensures any text in the footer is centered */
   margin-bottom: 0; /* Ensures no margin at the bottom */
+  position: absolute; /* Ensures the footer is always at the bottom of the page */
 }
 
 
@@ -52,7 +52,7 @@ footer {
   max-width: 1200px;
   width: 100%; /* Ensure content does not exceed the viewport width */
   margin: 0 auto; /* Center content */
-  position: relative;
+  position: relative; /* Ensure z-index works as expected */
 }
 
 /* Navigation */
