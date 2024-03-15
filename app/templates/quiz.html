@@ -53,115 +53,59 @@
       startCountdown();
     });
   </script>
-  
-<div class="container my-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="text-center mb-4">
-        <h2>
-          {{ "Good luck!" if session['lang'] == 'en' else "Bonne chance!" }}
-        </h2>
-      </div>
-
-      <!-- Dynamic filter form for question sets -->
-      <div class="card mb-3">
-        <div class="card-body">
-          <form action="{{ url_for('main.quiz') }}" method="get">
-            {{ form.hidden_tag() }}
-            <div class="form-group">
-              <select
-                name="filter"
-                class="form-select"
-                onchange="this.form.submit()"
-              >
-                <option value="questions.json">
-                  {{ "Default Set" if session['lang'] == 'en' else "Jeu par
-                  défaut" }}
-                </option>
-                <option value="questions2.json">
-                  {{ "Set 2" if session['lang'] == 'en' else "Jeu 2" }}
-                </option>
-                <option value="questions3.json">
-                  {{ "Set 3" if session['lang'] == 'en' else "Jeu 3" }}
-                </option>
-              </select>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <!-- Quiz Form -->
-      <div class="card">
-        <div class="card-body">
-          <form
-            id="nextQuestionForm"
-            action="{{ url_for('main.quiz') }}"
-            method="post"
-            onsubmit="return validateForm();"
-          >
-          {{ form.hidden_tag() }}
-            <fieldset class="mb-4">
-              <legend class="form-label">
-                <strong>{{ question.question }}</strong>
-              </legend>
-              <div
-                id="validationAlert"
-                class="alert alert-warning d-none"
-              ></div>
-              {% for choice in form.choice %}
-              <div class="form-check">
-                {{ choice(class_="form-check-input") }}
-                <label class="form-check-label" for="{{ choice.id }}">
-                  {{ choice.label.text }}
-                </label>
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="text-center mb-5">{{ "Good luck!" if session['lang'] == 'en' else "Bonne chance!" }}</h2>
+        
+        <!-- Filter Form for Question Sets -->
+        <div class="card mb-4">
+          <div class="card-header">
+            <h4 class="mb-0">{{ "Select Question Set" if session['lang'] == 'en' else "Sélectionnez le jeu de questions" }}</h4>
+          </div>
+          <div class="card-body">
+            <form action="{{ url_for('main.quiz') }}" method="get">
+              {{ form.hidden_tag() }}
+              <div class="d-flex justify-content-between">
+                <select name="filter" class="form-select" onchange="this.form.submit()">
+                  <option value="questions.json">{{ "Default Set" if session['lang'] == 'en' else "Jeu par défaut" }}</option>
+                  <option value="questions2.json">{{ "Set 2" if session['lang'] == 'en' else "Jeu 2" }}</option>
+                  <option value="questions3.json">{{ "Set 3" if session['lang'] == 'en' else "Jeu 3" }}</option>
+                </select>
               </div>
-              {% endfor %}
-            </fieldset>
-            {{ form.question_id }}
-            <div class="d-flex justify-content-between align-items-center">
-              {{ form.submit(class="btn btn-primary") }}
-              <!-- Skip button -->
-              <button type="button" id="skipBtn" class="btn btn-secondary">
-                {{ "Skip" if session['lang'] == 'en' else "Passer" }}
-              </button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
-      </div>
-<!--
-      <div class="card mb-3">
-        <div class="card-body">
-          <h3>
-            {{ "Your score is:" if session['lang'] == 'en' else "Votre score est
-            :" }} {{ session.get('score', 0) }}
-          </h3>
-          <p>
-            {{ "Number of correct answers:" if session['lang'] == 'en' else
-            "Nombre de bonnes réponses :" }} {{ session.get('correct_answers',
-            0) }}
-          </p>
-          <p>
-            {{ "Number of wrong answers:" if session['lang'] == 'en' else
-            "Nombre de mauvaises réponses :" }} {{ session.get('wrong_answers',
-            0) }}
-          </p>
-          <p>
-            {{ "Number of skipped questions:" if session['lang'] == 'en' else
-            "Nombre de questions passées :" }} {{ session.get('skipped_answers',
-            0) }}
-          </p>
+  
+        <!-- Quiz Form -->
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <form id="nextQuestionForm" action="{{ url_for('main.quiz') }}" method="post" onsubmit="return validateForm();">
+              {{ form.hidden_tag() }}
+              <fieldset class="mb-3">
+                <legend class="form-label mb-3">{{ question.question }}</legend>
+                <div id="validationAlert" class="alert alert-warning d-none"></div>
+                {% for choice in form.choice %}
+                <div class="form-check">
+                  {{ choice(class_="form-check-input") }}
+                  <label class="form-check-label" for="{{ choice.id }}">{{ choice.label.text }}</label>
+                </div>
+                {% endfor %}
+              </fieldset>
+              {{ form.question_id }}
+              <div class="d-flex justify-content-between">
+                {{ form.submit(class="btn btn-primary") }}
+                <button type="button" id="skipBtn" class="btn btn-outline-secondary">{{ "Skip" if session['lang'] == 'en' else "Passer" }}</button>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-    -->
-      <div class="mt-4 text-center">
-        <p>⏱️ <span id="countdownTimer"></span></p>
-        <!-- <p>
-          {{ "Tips: Selecting an option will not pause the countdown." if
-          session['lang'] == 'en' else "Conseil : Sélectionner une option ne
-          mettra pas en pause le compte à rebours." }}
-        </p> -->
+        
+        <div class="text-center mt-4">
+          <p>⏱️ <span id="countdownTimer"></span></p>
+        </div>
       </div>
     </div>
   </div>
-</div>
-{% endblock %}
+  {% endblock %}
+  
