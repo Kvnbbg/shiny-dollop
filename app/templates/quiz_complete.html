@@ -4,17 +4,63 @@
 <div class="container text-center mt-5">
     <h1 class="display-4">{{ "Congratulations!" if session['lang'] == 'en' else "Félicitations !" }}</h1>
     <p class="lead my-4">
-        {{ "You have completed the quiz. Thank you for participating!" if session['lang'] == 'en' else "Vous avez terminé le quiz. Merci de votre participation !" }}
+        {{ "You have completed the quiz. Here's how you did!" if session['lang'] == 'en' else "Vous avez terminé le quiz. Voici vos résultats !" }}
     </p>
-    <p id="redirectNotice" class="text-muted">
+
+    <!-- Enhanced Quiz Results Summary -->
+    <div class="quiz-results mt-4">
+        <h2>{{ "Your Quiz Results" if session['lang'] == 'en' else "Vos résultats au quiz" }}</h2>
+        <div class="results-container my-4">
+            <div class="result-item correct-answers">
+                <span class="result-count">{{ correct_answers }}</span>
+                <span class="result-text">{{ "Correct Answers" if session['lang'] == 'en' else "Bonnes Réponses" }}</span>
+            </div>
+            <div class="result-item wrong-answers">
+                <span class="result-count">{{ wrong_answers }}</span>
+                <span class="result-text">{{ "Wrong Answers" if session['lang'] == 'en' else "Mauvaises Réponses" }}</span>
+            </div>
+            <div class="result-item skipped-questions">
+                <span class="result-count">{{ skipped_answers }}</span>
+                <span class="result-text">{{ "Skipped Questions" if session['lang'] == 'en' else "Questions Passées" }}</span>
+            </div>
+        </div>
+    </div>
+
+    <p id="redirectNotice" class="text-muted mt-4">
         {{ "Redirecting to home in 10 seconds..." if session['lang'] == 'en' else "Redirection vers l'accueil dans 10 secondes..." }}
     </p>
-    <div class="mt-4">
+    <div class="action-buttons mt-4">
         <a href="{{ url_for('main.quiz') }}" class="btn btn-primary me-2">{{ "Try Again" if session['lang'] == 'en' else "Réessayer" }}</a>
         <a href="{{ url_for('main.home') }}" class="btn btn-secondary">{{ "Go Home" if session['lang'] == 'en' else "Aller à l'accueil" }}</a>
     </div>
 </div>
-
+<div class="card card-body text-black-50">
+    <h3>
+        {{ "Availaible ressources" if session['lang'] == 'en' else "Ressources disponible" }}
+    </h3>
+    <p>
+    {{ "You can also practice your coding skills with the following resources:" if session['lang'] == 'en' else "Vous pouvez également pratiquer vos compétences en programmation avec les ressources suivantes :" }}
+    </p>
+    <ul>
+      <li>
+          <a class="nav-item nav-link" href="https://www.codewars.com/">Codewars</a>
+        </li>
+        <li>
+            <a class="nav-item nav-link" href="https://www.hackerrank.com/">HackerRank</a>
+        </li>
+        <li>
+            <a class="nav-item nav-link" href="https://www.codingame.com/start">CodinGame</a>
+        </li>
+        <li>
+            <a class="nav-item nav-link" href="https://www.codecademy.com/">Codecademy</a>
+        </li>
+        <li>
+      <a class="nav-item nav-link" href="https://learn.codesignal.com/course-paths/14">Practice</a>
+      <li>
+          <a class="nav-item nav-link" href="https://app.daily.dev/">News</a>
+      </li>
+    </ul>
+</div>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     let countdown = 10; // seconds

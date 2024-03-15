@@ -1,53 +1,37 @@
-{% extends 'base.html' %}
-
-{% block content %}
-<!-- Quiz IT Section with Bootstrap Collapse -->
+{% extends 'base.html' %} {% block content %}
+<!-- Quizz Game Section with Bootstrap Collapse -->
 <div class="container my-4">
   <p>
-      <a class="btn btn-primary" data-toggle="collapse" href="#quizITCollapse" role="button" aria-expanded="false" aria-controls="quizITCollapse">
-          {{ "Ready for the Quiz!" if session['lang'] == 'en' else "Prêt pour le Quiz !" }}
-      </a>
+    <a
+      class="btn btn-primary"
+      data-toggle="collapse"
+      href="#quizCollapse"
+      role="button"
+      aria-expanded="false"
+      aria-controls="quizCollapse"
+    >
+      {{ "Ready for the Quiz!" if session['lang'] == 'en' else "Prêt pour le
+      Quiz !" }}
+    </a>
   </p>
-  <div class="collapse" id="quizITCollapse">
-      <div class="card card-body">
-        <p>
-            {{ "The quiz is a multiple choice test with 10 questions. You will have 20 minutes to complete it. Good luck!" if session['lang'] == 'en' else "Le quiz est un test à choix multiples avec 10 questions. Vous aurez 20 minutes pour le compléter. Bonne chance !" }}
-        </p>
-        <p>
-            {{ "You can start the quiz by clicking the button below." if session['lang'] == 'en' else "Vous pouvez commencer le quiz en cliquant sur le bouton ci-dessous." }}
-        </p>
-        <a href="{{ url_for('main.quiz') }}" class="btn btn-primary">
-            {{ "Start Quiz" if session['lang'] == 'en' else "Commencer le Quiz IT" }}
-        </a>
-        <a class="nav-item nav-link" href="https://learn.codesignal.com/course-paths/14">Practice</a>
-        <a class="nav-item nav-link" href="https://app.daily.dev/">News</a>
-      </div>
-  </div>
-</div>
-  <!-- Quiz Game Section with Bootstrap Collapse -->
-<div class="container my-4">
-  <p>
-      <a class="btn btn-primary" data-toggle="collapse" href="#quizGameCollapse" role="button" aria-expanded="false" aria-controls="quizGameCollapse">
-          {{ "Ready for the Quiz!" if session['lang'] == 'en' else "Prêt pour le Quiz !" }}
-      </a>
-  </p>
-  <div class="collapse" id="quizGameCollapse">
-    <div class="card card-body">
+  <div class="collapse" id="quizCollapse">
+    <div class="card card-body text-black-50">
       <p>
-          {{ "The quiz is a multiple choice test with 10 questions. You will have 20 minutes to complete it. Good luck!" if session['lang'] == 'en' else "Le quiz est un test à choix multiples avec 10 questions. Vous aurez 20 minutes pour le compléter. Bonne chance !" }}
+        {{ "The quiz is a multiple choice test with a lot of questions. You will
+        have 35 second to complete it. Good luck!" if session['lang'] == 'en'
+        else "Le quiz est un test à choix multiples avec plusieurs questions.
+        Vous aurez 35 secondes pour le compléter. Bonne chance !" }}
       </p>
       <p>
-          {{ "You can start the quiz by clicking the button below." if session['lang'] == 'en' else "Vous pouvez commencer le quiz en cliquant sur le bouton ci-dessous." }}
+        {{ "You can start the quiz by clicking the button below." if
+        session['lang'] == 'en' else "Vous pouvez commencer le quiz en cliquant
+        sur le bouton ci-dessous." }}
       </p>
       <a href="{{ url_for('main.quiz') }}" class="btn btn-primary">
-          {{ "Start Quiz" if session['lang'] == 'en' else "Commencer le Quiz Game" }}
+        {{ "Start" if session['lang'] == 'en' else "Commencer" }}
       </a>
     </div>
   </div>
 </div>
-
-
-</div>
-
-
-{% endblock %}
+  <!-- End Quiz Game Section -->
+  {% endblock %}

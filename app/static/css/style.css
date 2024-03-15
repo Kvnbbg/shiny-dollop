@@ -1,24 +1,49 @@
-/* Base Styles with Enhanced Eye Comfort */
+/* Ensure the HTML and body elements take up full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #007bff; /* Fallback for browsers that don't support gradients */
+}
+
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: #f7f8fa; /* Lighter and softer background */
-  color: #333; /* Darker text color for improved readability */
+  font-family: "Ubuntu", sans-serif;
+  color: #333;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  line-height: 1.6; /* Enhanced readability */
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column; /* New: Makes body flex container with column direction */
 }
 
-/* Header Styles */
+/* Stretch header to take all horizontal space */
 header {
-  background: #007bff; /* Updated to a more vibrant blue */
-  color: #ffffff; /* Bright white text for contrast */
+  color: #ffffff;
+  color-scheme: light dark;
   padding: 20px 0;
-  border-bottom: 3px solid #006fe6; /* Contrast border */
+  border-bottom: 3px solid #006fe6;
+  width: 100%; /* Ensure it takes the full width */
+}
+
+/* Adjust footer to be at the bottom */
+footer {
+  background-color: #3c5d7e;
+  color: #7f7f7f;
+  padding: 20px;
+  border-top: 3px solid #1b1e21;
+  text-align: center;
+  margin-top: auto; /* New: Pushes footer to the bottom */
+}
+
+/* For the main content area to be responsive and well-adjusted */
+.content {
+  flex-grow: 1; /* New: Allows content to expand and fill available space */
+  padding: 20px; /* Add padding for spacing */
 }
 
 /* Navigation Styles */
 .navbar {
+  background-color: #acd4ff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,6 +95,8 @@ footer {
   color: #ffffff;
   padding: 20px;
   border-top: 3px solid #1b1e21; /* Defined border */
+  text-align: center;
+  margin-bottom: 0; /* No margin at the bottom */
 }
 
 /* Dark Mode Enhancements */
@@ -105,6 +132,7 @@ a {
 
 a:hover {
   text-decoration: underline; /* Underline on hover for distinction */
+  transition: transform 0.3s ease; /* Smooth transformation */
 }
 
 /* Enhancing Images for User Comfort */
@@ -114,4 +142,39 @@ img {
 
 img:hover {
   transform: scale(1.05); /* Slight scale on hover */
+}
+
+/* Customizing Lists for Improved Readability */
+ul {
+  padding: 0;
+  list-style: none; /* Removing default list styles */
+}
+
+li {
+  margin: 10px 0;
+  color: #006fe6; /* Blue color for list items */
+  transition: color 0.1s ease, background-color 0.2s; /* Smooth transition for color and background */
+  cursor: pointer; /* Changes cursor to pointer to indicate clickable items */
+  outline: none; /* Remove outline to use custom focus styles */
+}
+
+li:hover, li:focus {
+  color: #0056b3; /* Darker blue on hover */
+  background-color: #e6f0ff; /* Light background on hover for more emphasis */
+}
+
+li:active {
+  animation: flashAnimation 0.1s ease infinite; /* Animation on click */
+}
+
+@keyframes flashAnimation {
+  0% {
+    background-color: #202223; /* Starting color */
+  }
+  50% {
+    background-color: #374355; /* Middle flash color */
+  }
+  100% {
+    background-color: #374355; /* End color */
+  }
 }

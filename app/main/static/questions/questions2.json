@@ -1,0 +1,341 @@
+[
+    {
+    "question": "En quelle date Louis XVI est-il mort ?",
+    "choices": [
+      "21 janvier 1793",
+      "14 juillet 1789",
+      "5 mai 1789",
+      "9 thermidor an II (27 juillet 1794)"
+    ],
+    "answer": "21 janvier 1793"
+  },
+  {
+    "question": "Quelle est la distance entre la Terre et la Lune ?",
+    "choices": [
+      "384 400 km",
+      "459 km",
+      "6492 km"
+    ],
+    "answer": "384 400 km"
+  },
+  {
+    "question": "Quelle est la capitale de l'Espagne ?",
+    "choices": [
+      "Madrid",
+      "Barcelone",
+      "Valence",
+      "Séville"
+    ],
+    "answer": "Madrid"
+  },
+  {
+    "question": "Quelle est la capitale de l'Allemagne ?",
+    "choices": [
+      "Berlin",
+      "Munich",
+      "Hambourg",
+      "Francfort"
+    ],
+    "answer": "Berlin"
+  },
+  {
+    "question": "Quelle est la capitale de l'Italie ?",
+    "choices": [
+      "Rome",
+      "Milan",
+      "Naples",
+      "Turin"
+    ],
+    "answer": "Rome"
+  },
+  {
+    "question": "Quelle est la capitale de la Russie ?",
+    "choices": [
+      "Moscou",
+      "Saint-Pétersbourg",
+      "Kazan",
+      "Nijni Novgorod"
+    ],
+    "answer": "Moscou"
+  },
+  {
+    "question": "Quelle est la capitale de la Chine ?",
+    "choices": [
+      "Pékin",
+      "Shanghai",
+      "Canton",
+      "Shenzhen"
+    ],
+    "answer": "Pékin"
+  },
+  {
+    "question": "Quelle est la capitale de l'Inde ?",
+    "choices": [
+      "New Delhi",
+      "Bombay",
+      "Calcutta",
+      "Bangalore"
+    ],
+    "answer": "New Delhi"
+  },
+  {
+    "question": "Quelle est la capitale du Brésil ?",
+    "choices": [
+      "Brasilia",
+      "Rio de Janeiro",
+      "Sao Paulo",
+      "Salvador"
+    ],
+    "answer": "Brasilia"
+  },
+  {
+    "question": "Quelle est la capitale de l'Australie ?",
+    "choices": [
+      "Canberra",
+      "Sydney",
+      "Melbourne",
+      "Brisbane"
+    ],
+    "answer": "Canberra"
+  },
+    {
+        "question": "Quelle est la capitale du Canada ?",
+        "choices": [
+        "Ottawa",
+        "Toronto",
+        "Montréal",
+        "Vancouver"
+        ],
+        "answer": "Ottawa"
+    },
+    {
+        "question": "Quelle est la capitale de l'Argentine ?",
+        "choices": [
+        "Buenos Aires",
+        "Cordoba",
+        "Rosario",
+        "Mendoza"
+        ],
+        "answer": "Buenos Aires"
+    },
+    {
+        "question": "Quelle est la capitale de l'Egypte ?",
+        "choices": [
+        "Le Caire",
+        "Alexandrie",
+        "Gizeh",
+        "Port-Saïd"
+        ],
+        "answer": "Le Caire"
+    },
+    {
+        "question": "Quelle est la capitale de l'Afrique du Sud ?",
+        "choices": [
+        "Pretoria",
+        "Le Cap",
+        "Johannesburg",
+        "Durban"
+        ],
+        "answer": "Pretoria"
+    },
+    {
+        "question": "Quelle est la capitale de l'Algérie ?",
+        "choices": [
+        "Alger",
+        "Oran",
+        "Constantine",
+        "Annaba"
+        ],
+        "answer": "Alger"
+    },
+    {
+        "question": "Quelle est la capitale de la Tunisie ?",
+        "choices": [
+        "Tunis",
+        "Sfax",
+        "Sousse",
+        "Kairouan"
+        ],
+        "answer": "Tunis"
+    },
+    {
+        "question": "Quelle est la capitale du Maroc ?",
+        "choices": [
+        "Rabat",
+        "Casablanca",
+        "Fès",
+        "Marrakech"
+        ],
+        "answer": "Rabat"
+    },
+    {
+        "question": "Quelle est la capitale de l'Arabie Saoudite ?",
+        "choices": [
+        "Riyad",
+        "Djeddah",
+        "La Mecque",
+        "Médine"
+        ],
+        "answer": "Riyad"
+    },
+    {
+        "question": "Quelle est l'équation de la relativité restreinte d'Einstein ?",
+        "choices": [
+        "E=mc²",
+        "E=mc³",
+        "E=mc⁴",
+        "E=mc⁵"
+        ],
+        "answer": "E=mc²"
+    },
+        {
+          "question": "Quelle est considérée comme la première qualité des bons communicateurs ?",
+          "choices": [
+            "Excellentes compétences en prise de parole en public",
+            "Capacité à bien écrire",
+            "Compétences d'écoute",
+            "Présence sur les réseaux sociaux"
+          ],
+          "answer": "Compétences d'écoute"
+        },
+        {
+          "question": "Quel est l'objectif principal de l'activation des réseaux d'insertion sociale et professionnelle ?",
+          "choices": [
+            "Augmenter le nombre d'abonnés sur les réseaux sociaux",
+            "Faciliter l'échange d'informations et d'idées pour l'identification des opportunités",
+            "Organiser des événements sociaux",
+            "Créer du contenu en ligne"
+          ],
+          "answer": "Faciliter l'échange d'informations et d'idées pour l'identification des opportunités"
+        },
+        {
+          "question": "Lequel des éléments suivants n'est PAS une méthode mentionnée pour l'insertion sociale et professionnelle ?",
+          "choices": [
+            "S'engager dans le réseautage professionnel",
+            "Développer des compétences sociales et professionnelles",
+            "S'isoler des réseaux professionnels",
+            "Utiliser des mesures éducatives et économiques pour l'insertion"
+          ],
+          "answer": "S'isoler des réseaux professionnels"
+        },
+        {
+          "question": "Quelle est l'importance de l'écoute active dans la communication efficace ?",
+          "choices": [
+            "Elle permet de mieux argumenter en retour",
+            "Elle est cruciale pour comprendre véritablement et intégrer l'information",
+            "Elle est utile uniquement dans les débats",
+            "Elle sert à impressionner l'interlocuteur"
+          ],
+          "answer": "Elle est cruciale pour comprendre véritablement et intégrer l'information"
+        },
+        {
+          "question": "Comment le réseautage professionnel peut-il aider dans l'insertion professionnelle ?",
+          "choices": [
+            "En augmentant la visibilité sur les réseaux sociaux",
+            "En permettant l'accès à des offres d'emploi 'cachées'",
+            "En créant des opportunités de loisirs",
+            "En fournissant des recommandations pour des restaurants"
+          ],
+          "answer": "En permettant l'accès à des offres d'emploi 'cachées'"
+        },
+        {
+          "question": "Pourquoi la patience est-elle importante dans le développement des compétences d'écoute ?",
+          "choices": [
+            "Pour attendre que les autres finissent de parler avant de répondre",
+            "Pour montrer de l'intérêt envers l'orateur même sans comprendre",
+            "Pour permettre une réponse plus rapide",
+            "Pour impressionner l'orateur avec le silence"
+          ],
+          "answer": "Pour attendre que les autres finissent de parler avant de répondre"
+        },
+        {
+          "question": "Quel rôle les réseaux sociaux numériques jouent-ils dans l'insertion professionnelle ?",
+          "choices": [
+            "Ils servent principalement à partager des photos personnelles",
+            "Ils permettent d'ajouter de nouveaux contacts professionnels et de participer à des forums de discussion",
+            "Ils sont utiles uniquement pour suivre des célébrités",
+            "Ils sont conçus exclusivement pour le divertissement"
+          ],
+          "answer": "Ils permettent d'ajouter de nouveaux contacts professionnels et de participer à des forums de discussion"
+        },  
+        {
+            "question": "Quelle action n'est PAS recommandée pour écouter activement ?",
+            "choices": [
+              "Faire preuve d'empathie",
+              "Couper la parole",
+              "Poser des questions pertinentes",
+              "Résumer ce que l'autre a dit pour assurer la compréhension"
+            ],
+            "answer": "Couper la parole"
+          },
+          {
+            "question": "Quel est l'un des avantages principaux du réseautage professionnel ?",
+            "choices": [
+              "Obtenir des conseils de mode",
+              "Partager des recettes de cuisine",
+              "Recevoir des recommandations et avis professionnels",
+              "Organiser des rencontres sportives"
+            ],
+            "answer": "Recevoir des recommandations et avis professionnels"
+          },
+          {
+            "question": "Quelle est l'importance de la socialisation secondaire pour l'insertion sociale ?",
+            "choices": [
+              "Elle permet de mieux jouer au football",
+              "Elle concerne uniquement les interactions familiales",
+              "Elle aide à intégrer les valeurs et normes professionnelles",
+              "Elle est importante uniquement pour les enfants"
+            ],
+            "answer": "Elle aide à intégrer les valeurs et normes professionnelles"
+          },
+          {
+            "question": "Comment les entreprises d'insertion contribuent-elles à l'insertion professionnelle ?",
+            "choices": [
+              "En offrant des services exclusivement en ligne",
+              "En proposant des activités de loisirs",
+              "En favorisant l'accès à l'emploi des personnes en difficulté",
+              "En se concentrant uniquement sur le secteur de la haute technologie"
+            ],
+            "answer": "En favorisant l'accès à l'emploi des personnes en difficulté"
+          },
+          {
+            "question": "Quelle est la meilleure façon de démontrer de l'empathie dans une conversation ?",
+            "choices": [
+              "Parler constamment de soi",
+              "Ignorer les émotions de l'autre",
+              "Essayer de comprendre le point de vue et les émotions de l'autre",
+              "Changer de sujet fréquemment"
+            ],
+            "answer": "Essayer de comprendre le point de vue et les émotions de l'autre"
+          },
+          {
+            "question": "Quel est le rôle des missions locales 'jeunes' dans l'insertion professionnelle des jeunes ?",
+            "choices": [
+              "Organiser des vacances",
+              "Coordonner des jeux vidéo compétitifs",
+              "Favoriser l'insertion professionnelle et sociale",
+              "Promouvoir exclusivement l'entrepreneuriat"
+            ],
+            "answer": "Favoriser l'insertion professionnelle et sociale"
+          },
+          {
+            "question": "Quelle est la contribution des réseaux sociaux numériques à l'insertion professionnelle ?",
+            "choices": [
+              "Augmenter le nombre de likes sur des photos personnelles",
+              "Faciliter la diffusion de vidéos humoristiques",
+              "Permettre la création et le renforcement de réseaux professionnels",
+              "Offrir une plateforme pour partager uniquement des opinions politiques"
+            ],
+            "answer": "Permettre la création et le renforcement de réseaux professionnels"
+          },
+          {
+            "question": "Pourquoi est-il important d'éviter de parler lorsqu'on écoute quelqu'un ?",
+            "choices": [
+              "Pour préparer mentalement sa réponse",
+              "Pour donner l'impression d'être occupé",
+              "Pour mieux comprendre et intégrer l'information partagée",
+              "Pour éviter toute interaction sociale"
+            ],
+            "answer": "Pour mieux comprendre et intégrer l'information partagée"
+          }  
+]

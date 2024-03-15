@@ -389,6 +389,22 @@
         "documentation": {}
     },
     {
+        "label": "RadioField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "HiddenField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
         "label": "SubmitField",
         "importPath": "wtforms",
         "description": "wtforms",
@@ -446,6 +462,14 @@
     },
     {
         "label": "Optional",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "DataRequired",
         "importPath": "wtforms.validators",
         "description": "wtforms.validators",
         "isExtraImport": true,
@@ -597,6 +621,14 @@
         "documentation": {}
     },
     {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "app",
         "importPath": "flask",
         "description": "flask",
@@ -614,6 +646,14 @@
     },
     {
         "label": "current_app",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
         "importPath": "flask",
         "description": "flask",
         "isExtraImport": true,
@@ -670,22 +710,6 @@
     },
     {
         "label": "db",
-        "importPath": "app",
-        "description": "app",
-        "isExtraImport": true,
-        "detail": "app",
-        "documentation": {}
-    },
-    {
-        "label": "db",
-        "importPath": "app",
-        "description": "app",
-        "isExtraImport": true,
-        "detail": "app",
-        "documentation": {}
-    },
-    {
-        "label": "create_app",
         "importPath": "app",
         "description": "app",
         "isExtraImport": true,
@@ -1905,7 +1929,7 @@
         "kind": 6,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "class QuizForm(FlaskForm):\n    submit = SubmitField('Submit')\ndef load_questions():\n    \"\"\"Load questions from the JSON file.\"\"\"\n    filepath = os.path.join(os.path.dirname(__file__), 'questions.json')\n    with open(filepath, 'r', encoding='utf-8') as file:\n        return json.load(file)\n@main.route(\"/quiz\", methods=[\"GET\", \"POST\"])\ndef quiz():\n    form = QuizForm()",
+        "peekOfCode": "class QuizForm(FlaskForm):\n    choice = RadioField('Choices', validators=[DataRequired(message=\"Please make a selection.\")])\n    question_id = HiddenField()\n    submit = SubmitField('Submit')\n    skip = SubmitField('Skip')\n    def set_choices(self, choices):\n        self.choice.choices = choices\ndef load_questions(filename=\"questions.json\"):\n    base_dir = os.path.abspath(os.path.dirname(__file__))\n    filepath = os.path.join(base_dir, 'static', 'questions', filename)",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -1914,7 +1938,7 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def load_questions():\n    \"\"\"Load questions from the JSON file.\"\"\"\n    filepath = os.path.join(os.path.dirname(__file__), 'questions.json')\n    with open(filepath, 'r', encoding='utf-8') as file:\n        return json.load(file)\n@main.route(\"/quiz\", methods=[\"GET\", \"POST\"])\ndef quiz():\n    form = QuizForm()\n    questions = load_questions()\n    if \"remaining_questions\" not in session or request.method == \"GET\":",
+        "peekOfCode": "def load_questions(filename=\"questions.json\"):\n    base_dir = os.path.abspath(os.path.dirname(__file__))\n    filepath = os.path.join(base_dir, 'static', 'questions', filename)\n    if not os.path.exists(filepath):\n        flash(\"Question file not found. Loading default questions.\", \"warning\")\n        filepath = os.path.join(base_dir, 'static', 'questions', 'default_questions.json')\n    with open(filepath, 'r', encoding='utf-8') as file:\n        questions = json.load(file)\n    random.shuffle(questions)\n    return questions",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -1923,7 +1947,16 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def quiz():\n    form = QuizForm()\n    questions = load_questions()\n    if \"remaining_questions\" not in session or request.method == \"GET\":\n        session[\"remaining_questions\"] = list(range(len(questions)))\n    if request.method == \"POST\":\n        user_answer = request.form.get(\"choice\")\n        question_id = int(request.form.get(\"question_id\", 0))\n        if question_id in session[\"remaining_questions\"]:\n            question = questions[question_id]",
+        "peekOfCode": "def quiz():\n    question_file = session.get('question_file', 'questions.json')\n    questions = session.setdefault('quiz_progress', {'questions': load_questions(question_file), 'current_index': 0, 'correct_answers': 0, 'wrong_answers': 0, 'skipped_answers': 0})['questions']\n    progress = session['quiz_progress']\n    current_index = progress['current_index']\n    # Dynamic choice setting\n    if current_index < len(questions):\n        current_choices = [(str(i), choice) for i, choice in enumerate(questions[current_index]['choices'])]\n    else:\n        current_choices = []",
+        "detail": "app.main.routes",
+        "documentation": {}
+    },
+    {
+        "label": "handle_submission",
+        "kind": 2,
+        "importPath": "app.main.routes",
+        "description": "app.main.routes",
+        "peekOfCode": "def handle_submission(form, progress, questions):\n    current_index = progress['current_index']\n    current_question = questions[current_index]\n    if form.skip.data:\n        progress['skipped_answers'] += 1\n        feedback = \"Question skipped.\"\n    else:\n        user_answer = form.choice.data\n        correct_answer = str(current_question['answer'])\n        if user_answer == correct_answer:",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -1932,7 +1965,7 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def quiz_complete():\n    \"\"\"Display the quiz completion message and reset the session.\"\"\"\n    session.pop('remaining_questions', None)  # Clean up session\n    return render_template(\"quiz_complete.html\")\n@main.route('/set_language/<language>')\ndef set_language(language):\n    \"\"\"Set the preferred language in the session.\"\"\"\n    session['lang'] = language\n    return redirect(request.referrer or url_for('.home'))\n@main.route(\"/\")",
+        "peekOfCode": "def quiz_complete():\n    # Additional logic to provide a summary or cleanup as needed\n    session.pop('quiz_progress', None)  # Ensure cleanup\n    return render_template(\"quiz_complete.html\")\n@main.route('/set_language/<language>')\ndef set_language(language):\n    session['lang'] = language\n    flash(f\"Language set to {'English' if language == 'en' else 'French'}.\", \"info\")\n    return redirect(request.referrer or url_for('.home'))\n@main.route(\"/\")",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -1941,7 +1974,7 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def set_language(language):\n    \"\"\"Set the preferred language in the session.\"\"\"\n    session['lang'] = language\n    return redirect(request.referrer or url_for('.home'))\n@main.route(\"/\")\n@main.route(\"/home\")\ndef home():\n    \"\"\"Render the home page.\"\"\"\n    return render_template(\"home.html\")",
+        "peekOfCode": "def set_language(language):\n    session['lang'] = language\n    flash(f\"Language set to {'English' if language == 'en' else 'French'}.\", \"info\")\n    return redirect(request.referrer or url_for('.home'))\n@main.route(\"/\")\ndef home():\n    return render_template(\"home.html\", lang=session.get('lang', 'en'))",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -1950,7 +1983,7 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def home():\n    \"\"\"Render the home page.\"\"\"\n    return render_template(\"home.html\")",
+        "peekOfCode": "def home():\n    return render_template(\"home.html\", lang=session.get('lang', 'en'))",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -1959,7 +1992,7 @@
         "kind": 5,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "main = Blueprint(\"main\", __name__)\nclass QuizForm(FlaskForm):\n    submit = SubmitField('Submit')\ndef load_questions():\n    \"\"\"Load questions from the JSON file.\"\"\"\n    filepath = os.path.join(os.path.dirname(__file__), 'questions.json')\n    with open(filepath, 'r', encoding='utf-8') as file:\n        return json.load(file)\n@main.route(\"/quiz\", methods=[\"GET\", \"POST\"])\ndef quiz():",
+        "peekOfCode": "main = Blueprint(\"main\", __name__)\nclass QuizForm(FlaskForm):\n    choice = RadioField('Choices', validators=[DataRequired(message=\"Please make a selection.\")])\n    question_id = HiddenField()\n    submit = SubmitField('Submit')\n    skip = SubmitField('Skip')\n    def set_choices(self, choices):\n        self.choice.choices = choices\ndef load_questions(filename=\"questions.json\"):\n    base_dir = os.path.abspath(os.path.dirname(__file__))",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -2150,15 +2183,6 @@
         "description": "config",
         "peekOfCode": "class ProductionConfig(Config):\n    DEBUG = False",
         "detail": "config",
-        "documentation": {}
-    },
-    {
-        "label": "app",
-        "kind": 5,
-        "importPath": "run",
-        "description": "run",
-        "peekOfCode": "app = create_app()\nif __name__ == \"__main__\":\n    db.create_all()\n    app.run()",
-        "detail": "run",
         "documentation": {}
     }
 ]

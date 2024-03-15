@@ -1,95 +1,105 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    let countdownDuration = 15; // Countdown duration in seconds
-    let countdownTimer = document.getElementById("countdownTimer");
+$(document).ready(function() {
+    const countdownDuration = 35;
     let timeout;
 
-    function startCountdown(duration) {
-        let timeRemaining = duration;
-        countdownTimer.textContent = timeRemaining.toString();
-        timeout = setInterval(function() {
+    function startCountdown() {
+        let timeRemaining = countdownDuration;
+        updateTimerDisplay(timeRemaining);
+
+        timeout = setInterval(() => {
             timeRemaining--;
-            countdownTimer.textContent = timeRemaining.toString();
+            updateTimerDisplay(timeRemaining);
+
             if (timeRemaining <= 0) {
                 clearInterval(timeout);
-                document.getElementById("nextQuestionForm").submit();
+                document.getElementById('nextQuestionForm').submit(); // Submit form traditionally when time's up
             }
         }, 1000);
     }
 
-    startCountdown(countdownDuration);
-
-    document.querySelectorAll('input[name="choice"]').forEach(function(input) {
-        input.addEventListener('change', function() {
-            clearInterval(timeout);
-            document.querySelectorAll('.form-check-input').forEach((input) => {
-                if(input.checked) {
-                    input.parentNode.classList.add("selected");
-                } else {
-                    input.parentNode.classList.remove("selected");
-                }
-            });
-            countdownTimer.textContent = 'Paused';
-        });
-    });
-    
-    document.getElementById("submitBtn").addEventListener('click', function() {
-        validateForm() && clearInterval(timeout);
-    });
-});
-
-function validateForm() {
-    let radios = document.getElementsByName('choice');
-    let formValid = false;
-
-    for (let radio of radios) {
-        if (radio.checked) {
-            formValid = true;
-            break;
+    function updateTimerDisplay(time) {
+        $('#countdownTimer').text(`${time} ${time > 1 ? 'seconds' : 'second'}`);
+        if(time <= 0) {
+            $('#countdownTimer').text("{{ 'Time\'s up!' if session['lang'] == 'en' else 'Temps écoulé !' }}");
         }
     }
 
-    if (!formValid) {
-        let validationAlert = document.getElementById('validationAlert');
+    startCountdown();
+});
+
+function validateForm() {
+    const validationAlert = document.getElementById('validationAlert');
+    if (!document.querySelector('input[name="choice"]:checked')) {
         validationAlert.classList.remove('d-none');
         validationAlert.textContent = "{{ 'Please select an option.' if session['lang'] == 'en' else 'Veuillez sélectionner une option.' }}";
+        return false;
     }
-    return formValid;
+    validationAlert.classList.add('d-none');
+    return true;
 }
+
+document.getElementById('skipBtn').addEventListener('click', function() {
+    document.getElementById('nextQuestionForm').submit();
+});
 </script>
+<div class="container my-5 quiz-container">
+    <h2 class="mb-3">{{ "Quiz Game" if session['lang'] == 'en' else "Jeu Quiz" }}</h2>
+  
+    <!-- Dynamic filter form for question sets -->
+    <form action="{{ url_for('main.quiz') }}" method="get" class="mb-3">
+        {{ form.csrf_token }}
+        <select name="filter" class="form-select" onchange="this.form.submit()">
+            <option value="questions.json">{{ "Default Set" if session['lang'] == 'en' else "Jeu par défaut" }}</option>
+            <option value="questions2.json">{{ "Set 2" if session['lang'] == 'en' else "Jeu 2" }}</option>
+            <option value="questions3.json">{{ "Set 3" if session['lang'] == 'en' else "Jeu 3" }}</option>
+        </select>
+    </form>
 
-<div class="container mt-5">
-  <h2 class="mb-4">{{ "Quiz App" if session['lang'] == 'en' else "Quiz App" }}</h2>
-
-  {% if feedback %}
-  <div class="alert {{ 'alert-success' if feedback.startswith("Correct answer") else 'alert-danger' }}" role="alert">
-    {{ feedback }}
-  </div>
-  {% endif %}
-
-  <form id="nextQuestionForm" action="{{ url_for('main.quiz') }}" method="post" onsubmit="return validateForm()">
-    {{ form.csrf_token }}
-    <div class="mb-3">
-      <label class="form-label"><strong>{{ question.question }}</strong></label>
-      <div id="validationAlert" class="alert alert-warning d-none"></div>
-      <fieldset>
-        {% for choice in question.choices %}
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="choice" id="choice{{ loop.index }}" value="{{ choice }}" required>
-          <label class="form-check-label" for="choice{{ loop.index }}">{{ choice }}</label>
-        </div>
-        {% endfor %}
-      </fieldset>
+    {% if feedback %}
+    <div class="alert {{ 'alert-success' if feedback.startswith("Correct answer") else 'alert-danger' }}" role="alert">
+        {{ feedback }}
     </div>
-    <input type="hidden" name="question_id" value="{{ question_id }}" />
-    <button id="submitBtn" type="submit" class="btn btn-primary">{{ "Submit" if session['lang'] == 'en' else "Soumettre" }}</button>
-  </form>
+    {% endif %}
+    <form id="nextQuestionForm" action="{{ url_for('main.quiz') }}" method="post" onsubmit="return validateForm();">
+        {{ form.csrf_token }}
+        <fieldset class="mb-4">
+            <legend class="form-label"><strong>{{ question.question }}</strong></legend>
+            <div id="validationAlert" class="alert alert-warning d-none"></div>
+            {% for choice in form.choice %}
+            <div class="form-check">
+                {{ choice(class_="form-check-input") }}
+                <!-- Correctly associate the label with the input using choice.id -->
+                <label class="form-check-label" for="{{ choice.id }}">
+                    {{ choice.label.text }} <!-- Render the text of the choice -->
+                </label>
+            </div>
+            {% endfor %}
+        </fieldset>
+        {{ form.question_id }}
+        <div class="d-flex justify-content-between align-items-center">
+            {{ form.submit(class="btn btn-primary") }}
+            <button type="button" id="skipBtn" class="btn btn-secondary">{{ "Skip" if session['lang'] == 'en' else "Passer" }}</button>
+        </div>
+    </form>
+    
 
-  <p class="mt-4">Time remaining: <span id="countdownTimer"></span> seconds</p>
-  <p class="mt-4">{{ "Tips: Click on a question to pause the countdown" if session['lang'] == 'en' else "Tips: Vous pouvez mettre en pause en cliquant sur une question" }}</p>
+        <div class="mt-4">
+            <p>Time remaining: <span id="countdownTimer"></span></p>
+            <p>{{ "Tips: Selecting an option will not pause the countdown." if session['lang'] == 'en' else "Conseil : Sélectionner une option ne mettra pas en pause le compte à rebours." }}</p>
 
+        </div>
+<!--
+            <div>{{ "Number of correct answers:" if session['lang'] == 'en' else "Nombre de bonnes réponses :" }} {{ session.get('correct_answers', 0) }}</div>
+            <div>{{ "Number of wrong answers:" if session['lang'] == 'en' else "Nombre de mauvaises réponses :" }} {{ session.get('wrong_answers', 0) }}</div>
+            <div>{{ "Number of skipped questions:" if session['lang'] == 'en' else "Nombre de questions passées :" }} {{ session.get('skipped_answers', 0) }}</div>
+        </div>
+-->
+    
 </div>
 {% endblock %}

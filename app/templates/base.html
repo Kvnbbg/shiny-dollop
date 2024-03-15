@@ -1,120 +1,242 @@
-<!DOCTYPE html>  
+<!doctype html>
 <html lang="{{ session['lang'] or 'en' }}">
-<head>
-  <!-- Basic Meta Tags -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kevin Josué Marville alias kvnbbg on GitHub is the Python developer of this quizz app.">
-  <meta name="keywords" content="Quizz App, Kevin Josué Marville, Kvnbbg, Python Developer, Learn, Game, Quick">
-  <meta name="author" content="Kevin Marville">
-  <title>Quiz App</title>
+  <head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="{{ url_for('static', filename='/images/favicon.ico') }}" type="image/x-icon">
+    <!-- SEO Optimized Meta Description -->
+    <meta
+      name="description"
+      content="Kevin Josué Marville, aka Kvnbbg, introduces Shiny Dollop - a cutting-edge Quiz App designed for learning and entertainment in music, games, and more, available in English and French."
+    />
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <!-- Comprehensive Meta Keywords -->
+    <meta
+      name="keywords"
+      content="Kevin Josué Marville, Kvnbbg, Music, Entertainment, Gaming, Quiz, Fullstack Developer, Lyon, France, IT Education, EEMI, Martinique, Caribbean, French, English, Best Quiz App"
+    />
 
-  <!-- Bootstrap Bundle with Popper -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Author Meta Tag -->
+    <meta name="author" content="Kevin Marville, Kvnbbg" />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- SEO Enhanced Title -->
+    <title>
+      Shiny Dollop by Kvnbbg - The Premier Quiz App for Music, Gaming & More
+    </title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Favicon for Brand Consistency -->
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/favicon.ico') }}"
+      type="image/x-icon"
+    />
 
-  <!-- Structured Data for Rich Snippets -->
-  <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Quizz",
-    "name": "Quiz",
-    "url": "https://github.com/Kvnbbg",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Example Street",
-      "addressLocality": "Lyon",
-      "postalCode": "69000",
-      "addressCountry": "FR"
-    },
-    "telephone": "+33634160418"
-  }
-  </script>
-</head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="{{ url_for('main.home') }}">
-      <img src="{{ url_for('static', filename='/images/logo.png') }}" alt="Logo" style="height: 30px;">
-    </a><h1>Quizz</h1>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link" href="{{ url_for('auth.set_language', language='en') }}">🇺🇸 English</a>
-        <a class="nav-item nav-link" href="{{ url_for('auth.set_language', language='fr') }}">🇫🇷 Français</a>
- 
+    <!-- External CSS and Frameworks -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Canonical URL to Avoid Duplicate Content Issues -->
+    <link
+      rel="canonical"
+      href="https://shiny-dollop-quizz-da86060a8495.herokuapp.com/"
+    />
+
+    <!-- Open Graph Tags for Social Media Sharing -->
+    <meta
+      property="og:title"
+      content="Shiny Dollop by Kvnbbg: Master Your Interests with Top Quizzes"
+    />
+    <meta
+      property="og:description"
+      content="Embark on an immersive quizzing journey with Shiny Dollop. Designed by Kevin Marville (Kvnbbg), this app offers the best in music, entertainment, and gaming quizzes in both English and French."
+    />
+    <meta
+      property="og:image"
+      content="{{ url_for('static', filename='images/og-image.jpg') }}"
+    />
+    <meta
+      property="og:url"
+      content="https://shiny-dollop-quizz-da86060a8495.herokuapp.com/"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Meta Tags for Sharing -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@kvnbbg" />
+    <meta name="twitter:creator" content="@kvnbbg" />
+    <meta
+      name="twitter:title"
+      content="Shiny Dollop by Kvnbbg: Master Your Interests with Top Quizzes"
+    />
+    <meta
+      name="twitter:description"
+      content="Embark on an immersive quizzing journey with Shiny Dollop. Designed by Kevin Marville (Kvnbbg), this app offers the best in music, entertainment, and gaming quizzes in both English and French."
+    />
+    <meta
+      name="twitter:image"
+      content="{{ url_for('static', filename='images/og-image.jpg') }}"
+    />
+
+    <!-- CSRF Token for Form Security -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+
+    <!-- Google AdSense Verification -->
+    <meta name="google-site-verification" content="@kvnbbg" />
+    <meta name="google-adsense" content="ca-pub-3003427346654770" />
+    <meta name="google-adsense-client" content="ca-pub-3003427346654770" />
+    <meta name="google-adsense-ad-client" content="ca-pub-3003427346654770" />
+    <meta name="google-adsense-ad-slot" content="ca-pub-3003427346654770" />
+    <meta name="google-adsense-ad-format" content="auto" />
+    <meta name="google-adsense-ad-layout" content="in-article" />
+    <meta name="google-adsense-ad-layout-key" content="auto" />
+    <meta name="google-adsense-account" content="ca-pub-3003427346654770" />
+    <!-- Structured Data Markup for Enhanced Search Engine Representation -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "Shiny Dollop",
+        "url": "https://shiny-dollop-quizz-da86060a8495.herokuapp.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://shiny-dollop-quizz-da86060a8495.herokuapp.com/search?query={search_term_string}",
+          "query-input": "required name=search_term_string"
+        },
+        "inLanguage": ["en-US", "fr-FR"],
+        "author": {
+          "@type": "Person",
+          "name": "Kevin Josué Marville",
+          "sameAs": ["https://github.com/Kvnbbg"]
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Shiny Dollop",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "{{ url_for('static', filename='images/logo.png') }}"
+          }
+        },
+        "description": "A full-stack quiz app with a focus on music, entertainment, and gaming. Engage in quizzes in both English and French and expand your knowledge while having fun."
+      }
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="{{ url_for('main.home') }}">
+        🔙 Quizz Game</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a
+            class="nav-item nav-link"
+            href="{{ url_for('auth.set_language', language='en') }}"
+            >🇺🇸 English</a
+          >
+          <a
+            class="nav-item nav-link"
+            href="{{ url_for('auth.set_language', language='fr') }}"
+            >🇫🇷 Français</a
+          >
+        </div>
       </div>
-    </div>
-  </nav>
-<!-- Header and Main Content Here -->
-<header class="py-5" style="background-color: blue">
-  <div class="text-center my-5">
-    {% if session['lang'] == 'fr' %}
-      <h1 class="text-white" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)">
-        Bienvenue sur Quizz
-      </h1>
-      <h2 class="text-white-50" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)">
-        Votre app pour apprendre et tester vos connaissances! 
-      </h2>
-    {% else %}
-      <h1 class="text-white" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)">
-        Welcome to Quizz
-      </h1>
-      <h2 class="text-white-50" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)">
-        Your app to learn and test your knowledge!
-      </h2>
-    {% endif %}
-  </div>
-</header>
-
-    <!-- Dynamic content injected here from child templates -->
-    <main>
+    </nav>
+    <!-- Header and Main Content Here -->
+    <header class="py-5" style="background-image: url('{{ url_for('static', filename='images/vehicule1.jpg') }}');">
+      <div class="text-center my-5">
+        {% if session['lang'] == 'fr' %}
+        <h1
+          class="text-white"
+          style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
+        >
+          Bienvenue sur Shiny Dollop!
+        </h1>
+        <h2
+          class="text-white-50"
+          style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
+        >
+          Votre app pour apprendre et tester vos connaissances!
+        </h2>
+        {% else %}
+        <h1
+          class="text-white"
+          style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
+        >
+          Welcome to Shiny Dollop!
+        </h1>
+        <h2
+          class="text-white-50"
+          style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
+        >
+          Your app to learn and test your knowledge!
+        </h2>
+        {% endif %}
+      </div>
       <section>
         <div class="container">
           <div class="row">
             <div class="col-lg-6">
               {% with messages = get_flashed_messages(with_categories=true) %}
-                {% if messages %}
-                  {% for category, message in messages %}
-                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
-                      <strong>{{ category.title() }}:</strong> {{ message }}
-                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                  {% endfor %}
-                {% endif %}
-              {% endwith %}
+              {% if messages %} {% for category, message in messages %}
+              <div
+                class="alert alert-{{ category }} alert-dismissible fade show"
+                role="alert"
+              >
+                <strong>{{ category.title() }}:</strong> {{ message }}
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="alert"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              {% endfor %} {% endif %} {% endwith %}
             </div>
           </div>
         </div>
       </section>
-      
-      {% block content %} {% endblock %}</main>
+      {% block content %} {% endblock %}
+    </header>
 
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Kevin Josué MARVILLE 2024</p>
-    </div>
-  </footer>
+<!-- Footer Section -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="mb-0 text-center text-white">
+          Copyright &copy; Kevin Josué MARVILLE 2024
+        </p>
+      </div>
+    </footer>
 
-  <script src="{{ url_for('static', filename='/js/script.js') }}"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-</body>
+    <script src="{{ url_for('static', filename='/js/script.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>
