@@ -1970,7 +1970,7 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def load_questions(filename=\"questions.json\"):\n    base_dir = os.path.abspath(os.path.dirname(__file__))\n    filepath = os.path.join(base_dir, 'static', 'questions', filename)\n    if not os.path.exists(filepath):\n        flash(\"Question file not found. Loading default questions.\", \"warning\")\n        filepath = os.path.join(base_dir, 'static', 'questions', 'default_questions.json')\n    with open(filepath, 'r', encoding='utf-8') as file:\n        questions = json.load(file)\n    random.shuffle(questions)\n    return questions",
+        "peekOfCode": "def load_questions(filename=\"questions.json\"):\n    base_dir = os.path.abspath(os.path.dirname(__file__))\n    filepath = os.path.join(base_dir, 'static', 'questions', filename)\n    if not os.path.exists(filepath):\n        flash(\"Question file not found. Loading default questions.\", \"warning\")\n        filepath = os.path.join(base_dir, 'static', 'questions', 'default_questions.json')\n    try:\n        with open(filepath, 'r', encoding='utf-8') as file:\n            questions = json.load(file)\n    except json.JSONDecodeError:",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -1979,7 +1979,7 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def quiz():\n    form = QuizForm()\n    questions = session.get('questions')\n    if 'filter' in request.args or not questions:\n        question_file = request.args.get('filter', 'questions.json')\n        questions = load_questions(question_file)\n        session['questions'] = questions\n        session['current_index'] = 0\n    current_index = session.get('current_index', 0)\n    if current_index >= len(questions):",
+        "peekOfCode": "def quiz():\n    form = QuizForm()\n    questions = session.get('questions')\n    if 'filter' in request.args or not questions:\n        question_file = request.args.get('filter', 'questions.json')\n        questions = load_questions(question_file)\n        session['questions'] = questions\n        session['current_index'] = 0\n        session.modified = True\n    current_index = session.get('current_index', 0)",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -1988,7 +1988,7 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def quiz_complete():\n    results = {key: session.pop(key, 0) for key in ['correct_answers', 'wrong_answers', 'skipped_answers']}\n    session.pop('questions', None)\n    session.pop('current_index', None)\n    return render_template(\"quiz_complete.html\", **results)\n@main.route('/donate')\ndef donate():\n    return render_template(\"donate.html\")\n@main.route('/set_language/<language>')\ndef set_language(language):",
+        "peekOfCode": "def quiz_complete():\n    results = {key: session.pop(key, 0) for key in ['correct_answers', 'wrong_answers', 'skipped_answers']}\n    session.pop('questions', None)\n    session.pop('current_index', None)\n    session.modified = True\n    return render_template(\"quiz_complete.html\", **results)\n@main.route('/donate')\ndef donate():\n    return render_template(\"donate.html\")\n@main.route('/set_language/<language>')",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -1997,7 +1997,7 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def donate():\n    return render_template(\"donate.html\")\n@main.route('/set_language/<language>')\ndef set_language(language):\n    session['lang'] = language\n    flash(f\"Language set to {'English' if language == 'en' else 'French'}.\", \"info\")\n    return redirect(request.referrer or url_for('.home'))\n@main.route(\"/\")\ndef home():\n    return render_template(\"home.html\", lang=session.get('lang', 'en'))",
+        "peekOfCode": "def donate():\n    return render_template(\"donate.html\")\n@main.route('/set_language/<language>')\ndef set_language(language):\n    session['lang'] = language\n    flash(f\"Language set to {'English' if language == 'en' else 'French'}.\", \"info\")\n    session.modified = True\n    return redirect(request.referrer or url_for('.home'))\n@main.route(\"/\")\ndef home():",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -2006,7 +2006,7 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def set_language(language):\n    session['lang'] = language\n    flash(f\"Language set to {'English' if language == 'en' else 'French'}.\", \"info\")\n    return redirect(request.referrer or url_for('.home'))\n@main.route(\"/\")\ndef home():\n    return render_template(\"home.html\", lang=session.get('lang', 'en'))",
+        "peekOfCode": "def set_language(language):\n    session['lang'] = language\n    flash(f\"Language set to {'English' if language == 'en' else 'French'}.\", \"info\")\n    session.modified = True\n    return redirect(request.referrer or url_for('.home'))\n@main.route(\"/\")\ndef home():\n    return render_template(\"home.html\", lang=session.get('lang', 'en'))",
         "detail": "app.main.routes",
         "documentation": {}
     },

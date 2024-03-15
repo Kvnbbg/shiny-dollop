@@ -23,8 +23,12 @@ def load_questions(filename="questions.json"):
     if not os.path.exists(filepath):
         flash("Question file not found. Loading default questions.", "warning")
         filepath = os.path.join(base_dir, 'static', 'questions', 'default_questions.json')
-    with open(filepath, 'r', encoding='utf-8') as file:
-        questions = json.load(file)
+    try:
+        with open(filepath, 'r', encoding='utf-8') as file:
+            questions = json.load(file)
+    except json.JSONDecodeError:
+        flash("Error loading questions. Please check the question file format.", "error")
+        return []
     random.shuffle(questions)
     return questions
 
@@ -38,6 +42,7 @@ def quiz():
         questions = load_questions(question_file)
         session['questions'] = questions
         session['current_index'] = 0
+        session.modified = True
 
     current_index = session.get('current_index', 0)
 
@@ -57,9 +62,10 @@ def quiz():
             feedback = "🥳 Correct 🪩"
         else:
             session['wrong_answers'] = session.get('wrong_answers', 0) + 1
-            feedback = f"Incorrect 🛹💥 {correct_answer} !"
+            feedback = f"🛹💥 {correct_answer} !"
         flash(feedback)
         session['current_index'] = current_index + 1
+        session.modified = True
         return redirect(url_for('.quiz'))
 
     return render_template("quiz.html", question=current_question, form=form, countdown_duration=35)
@@ -69,6 +75,7 @@ def quiz_complete():
     results = {key: session.pop(key, 0) for key in ['correct_answers', 'wrong_answers', 'skipped_answers']}
     session.pop('questions', None)
     session.pop('current_index', None)
+    session.modified = True
     return render_template("quiz_complete.html", **results)
 
 @main.route('/donate')
@@ -79,6 +86,7 @@ def donate():
 def set_language(language):
     session['lang'] = language
     flash(f"Language set to {'English' if language == 'en' else 'French'}.", "info")
+    session.modified = True
     return redirect(request.referrer or url_for('.home'))
 
 @main.route("/")
