@@ -1,5 +1,5 @@
-from flask import Blueprint, render_template, request, session, redirect, url_for, flash
-from flask_wtf import FlaskForm
+from flask import Blueprint, jsonify, render_template, request, session, redirect, url_for, flash, current_app
+from flask_wtf import FlaskForm, CSRFProtect
 from wtforms import RadioField, HiddenField, SubmitField
 from wtforms.validators import DataRequired
 import os
@@ -8,14 +8,14 @@ import random
 
 main = Blueprint("main", __name__)
 
+# Assuming CSRF is initialized elsewhere in your application
+csrf = CSRFProtect()
+
 class QuizForm(FlaskForm):
     choice = RadioField('Choices', validators=[DataRequired(message="Please make a selection.")])
     question_id = HiddenField()
     submit = SubmitField('Submit')
     skip = SubmitField('Skip')
-
-    def set_choices(self, choices):
-        self.choice.choices = choices
 
 def load_questions(filename="questions.json"):
     base_dir = os.path.abspath(os.path.dirname(__file__))
@@ -30,68 +30,56 @@ def load_questions(filename="questions.json"):
 
 @main.route("/quiz", methods=["GET", "POST"])
 def quiz():
-    question_file = session.get('question_file', 'questions.json')
-    questions = session.setdefault('quiz_progress', {'questions': load_questions(question_file), 'current_index': 0, 'correct_answers': 0, 'wrong_answers': 0, 'skipped_answers': 0})['questions']
-    progress = session['quiz_progress']
-    current_index = progress['current_index']
-
-    # Dynamic choice setting
-    if current_index < len(questions):
-        current_choices = [(str(i), choice) for i, choice in enumerate(questions[current_index]['choices'])]
-    else:
-        current_choices = []
-
     form = QuizForm()
-    form.set_choices(current_choices)
-
-    if 'filter' in request.args:
-        question_file = request.args.get('filter')
+    # Load questions just once or when the filter changes
+    if 'filter' in request.args or 'questions' not in session:
+        question_file = request.args.get('filter', session.get('question_file', 'questions.json'))
+        questions = load_questions(question_file)
+        session['questions'] = questions
+        session['current_index'] = 0
+        session['correct_answers'] = 0
+        session['wrong_answers'] = 0
+        session['skipped_answers'] = 0
         session['question_file'] = question_file
-        # Reset progress on filter change
-        session.pop('quiz_progress', None)
         return redirect(url_for('.quiz'))
 
-    if form.validate_on_submit():
-        feedback = handle_submission(form, progress, questions)
-        flash(feedback, 'info')
-        if current_index >= len(questions):
-            return redirect(url_for('.quiz_complete'))
-    else:
-        form.set_choices(current_choices)  # Ensure choices are updated if form is not submitted
-
+    current_index = session.get('current_index', 0)
+    questions = session.get('questions', [])
     if current_index < len(questions):
         current_question = questions[current_index]
+        form.choice.choices = [(str(i), choice) for i, choice in enumerate(current_question['choices'])]
     else:
         return redirect(url_for('.quiz_complete'))
 
-    return render_template("quiz.html", question=current_question, form=form, countdown_duration=35)
-
-def handle_submission(form, progress, questions):
-    current_index = progress['current_index']
-    current_question = questions[current_index]
-    
-    if form.skip.data:
-        progress['skipped_answers'] += 1
-        feedback = "Question skipped."
-    else:
-        user_answer = form.choice.data
-        correct_answer = str(current_question['answer'])
-        if user_answer == correct_answer:
-            progress['correct_answers'] += 1
-            feedback = "Correct answer!"
+    if form.validate_on_submit():
+        if form.skip.data:
+            session['skipped_answers'] += 1
+            feedback = "Question skipped."
         else:
-            progress['wrong_answers'] += 1
-            feedback = f"Wrong answer! The correct answer was: {correct_answer}"
-            
-    progress['current_index'] += 1
-    session['quiz_progress'] = progress  # Ensure progress is updated in session
-    return feedback
+            correct_answer = current_question['answer']
+            if form.choice.data == str(correct_answer):
+                session['correct_answers'] += 1
+                feedback = "Correct answer!"
+            else:
+                session['wrong_answers'] += 1
+                feedback = f"Wrong answer! The correct answer was: {correct_answer}."
+        flash(feedback)
+        session['current_index'] += 1
+        return redirect(url_for('.quiz'))
+
+    return render_template("quiz.html", question=current_question, form=form, countdown_duration=35)
 
 @main.route('/quiz_complete')
 def quiz_complete():
-    # Additional logic to provide a summary or cleanup as needed
-    session.pop('quiz_progress', None)  # Ensure cleanup
-    return render_template("quiz_complete.html")
+    quiz_results = {
+        'correct_answers': session.pop('correct_answers', 0),
+        'wrong_answers': session.pop('wrong_answers', 0),
+        'skipped_answers': session.pop('skipped_answers', 0),
+    }
+    # Clear quiz-specific session data
+    session.pop('questions', None)
+    session.pop('current_index', None)
+    return render_template("quiz_complete.html", **quiz_results)
 
 @main.route('/set_language/<language>')
 def set_language(language):

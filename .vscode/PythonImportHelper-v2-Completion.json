@@ -357,6 +357,14 @@
         "documentation": {}
     },
     {
+        "label": "CSRFProtect",
+        "importPath": "flask_wtf",
+        "description": "flask_wtf",
+        "isExtraImport": true,
+        "detail": "flask_wtf",
+        "documentation": {}
+    },
+    {
         "label": "PasswordField",
         "importPath": "wtforms",
         "description": "wtforms",
@@ -581,6 +589,14 @@
         "documentation": {}
     },
     {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "render_template",
         "importPath": "flask",
         "description": "flask",
@@ -622,6 +638,14 @@
     },
     {
         "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "current_app",
         "importPath": "flask",
         "description": "flask",
         "isExtraImport": true,
@@ -1937,7 +1961,7 @@
         "kind": 6,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "class QuizForm(FlaskForm):\n    choice = RadioField('Choices', validators=[DataRequired(message=\"Please make a selection.\")])\n    question_id = HiddenField()\n    submit = SubmitField('Submit')\n    skip = SubmitField('Skip')\n    def set_choices(self, choices):\n        self.choice.choices = choices\ndef load_questions(filename=\"questions.json\"):\n    base_dir = os.path.abspath(os.path.dirname(__file__))\n    filepath = os.path.join(base_dir, 'static', 'questions', filename)",
+        "peekOfCode": "class QuizForm(FlaskForm):\n    choice = RadioField('Choices', validators=[DataRequired(message=\"Please make a selection.\")])\n    question_id = HiddenField()\n    submit = SubmitField('Submit')\n    skip = SubmitField('Skip')\ndef load_questions(filename=\"questions.json\"):\n    base_dir = os.path.abspath(os.path.dirname(__file__))\n    filepath = os.path.join(base_dir, 'static', 'questions', filename)\n    if not os.path.exists(filepath):\n        flash(\"Question file not found. Loading default questions.\", \"warning\")",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -1955,16 +1979,7 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def quiz():\n    question_file = session.get('question_file', 'questions.json')\n    questions = session.setdefault('quiz_progress', {'questions': load_questions(question_file), 'current_index': 0, 'correct_answers': 0, 'wrong_answers': 0, 'skipped_answers': 0})['questions']\n    progress = session['quiz_progress']\n    current_index = progress['current_index']\n    # Dynamic choice setting\n    if current_index < len(questions):\n        current_choices = [(str(i), choice) for i, choice in enumerate(questions[current_index]['choices'])]\n    else:\n        current_choices = []",
-        "detail": "app.main.routes",
-        "documentation": {}
-    },
-    {
-        "label": "handle_submission",
-        "kind": 2,
-        "importPath": "app.main.routes",
-        "description": "app.main.routes",
-        "peekOfCode": "def handle_submission(form, progress, questions):\n    current_index = progress['current_index']\n    current_question = questions[current_index]\n    if form.skip.data:\n        progress['skipped_answers'] += 1\n        feedback = \"Question skipped.\"\n    else:\n        user_answer = form.choice.data\n        correct_answer = str(current_question['answer'])\n        if user_answer == correct_answer:",
+        "peekOfCode": "def quiz():\n    form = QuizForm()\n    # Load questions just once or when the filter changes\n    if 'filter' in request.args or 'questions' not in session:\n        question_file = request.args.get('filter', session.get('question_file', 'questions.json'))\n        questions = load_questions(question_file)\n        session['questions'] = questions\n        session['current_index'] = 0\n        session['correct_answers'] = 0\n        session['wrong_answers'] = 0",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -1973,7 +1988,7 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def quiz_complete():\n    # Additional logic to provide a summary or cleanup as needed\n    session.pop('quiz_progress', None)  # Ensure cleanup\n    return render_template(\"quiz_complete.html\")\n@main.route('/set_language/<language>')\ndef set_language(language):\n    session['lang'] = language\n    flash(f\"Language set to {'English' if language == 'en' else 'French'}.\", \"info\")\n    return redirect(request.referrer or url_for('.home'))\n@main.route(\"/\")",
+        "peekOfCode": "def quiz_complete():\n    quiz_results = {\n        'correct_answers': session.pop('correct_answers', 0),\n        'wrong_answers': session.pop('wrong_answers', 0),\n        'skipped_answers': session.pop('skipped_answers', 0),\n    }\n    # Clear quiz-specific session data\n    session.pop('questions', None)\n    session.pop('current_index', None)\n    return render_template(\"quiz_complete.html\", **quiz_results)",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -2000,7 +2015,16 @@
         "kind": 5,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "main = Blueprint(\"main\", __name__)\nclass QuizForm(FlaskForm):\n    choice = RadioField('Choices', validators=[DataRequired(message=\"Please make a selection.\")])\n    question_id = HiddenField()\n    submit = SubmitField('Submit')\n    skip = SubmitField('Skip')\n    def set_choices(self, choices):\n        self.choice.choices = choices\ndef load_questions(filename=\"questions.json\"):\n    base_dir = os.path.abspath(os.path.dirname(__file__))",
+        "peekOfCode": "main = Blueprint(\"main\", __name__)\n# Assuming CSRF is initialized elsewhere in your application\ncsrf = CSRFProtect()\nclass QuizForm(FlaskForm):\n    choice = RadioField('Choices', validators=[DataRequired(message=\"Please make a selection.\")])\n    question_id = HiddenField()\n    submit = SubmitField('Submit')\n    skip = SubmitField('Skip')\ndef load_questions(filename=\"questions.json\"):\n    base_dir = os.path.abspath(os.path.dirname(__file__))",
+        "detail": "app.main.routes",
+        "documentation": {}
+    },
+    {
+        "label": "csrf",
+        "kind": 5,
+        "importPath": "app.main.routes",
+        "description": "app.main.routes",
+        "peekOfCode": "csrf = CSRFProtect()\nclass QuizForm(FlaskForm):\n    choice = RadioField('Choices', validators=[DataRequired(message=\"Please make a selection.\")])\n    question_id = HiddenField()\n    submit = SubmitField('Submit')\n    skip = SubmitField('Skip')\ndef load_questions(filename=\"questions.json\"):\n    base_dir = os.path.abspath(os.path.dirname(__file__))\n    filepath = os.path.join(base_dir, 'static', 'questions', filename)\n    if not os.path.exists(filepath):",
         "detail": "app.main.routes",
         "documentation": {}
     },
