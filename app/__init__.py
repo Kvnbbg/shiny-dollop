@@ -58,7 +58,7 @@ def create_app():
     app.register_blueprint(main_blueprint)
 
     # Optional: Exempt specific routes from CSRF protection if necessary
-    csrf.exempt('main.home')
-    csrf.exempt('main.quiz')
+    # csrf.exempt('main.home')
+    # csrf.exempt('main.quiz')
 
     return app
