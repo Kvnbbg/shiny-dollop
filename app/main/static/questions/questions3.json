@@ -9,7 +9,7 @@
       "@Injectable()"
     ],
     "answer": "@Component()"
-  },  
+  },
   {
     "question": "What is the purpose of Angular's dependency injection?",
     "choices": [

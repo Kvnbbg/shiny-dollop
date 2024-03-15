@@ -1,5 +1,4 @@
 [
-
   {
     "question": "Quels sont les inconvénients de la méthode heuristique?",
     "choices": [
@@ -2279,7 +2278,7 @@
       "Diminuer le taux de chômage en France de manière significative"
     ],
     "answer": "Faciliter le suivi individualisé des chômeurs et des précaires"
-  }
+  },
     {
     "question": "En quelle date Louis XVI est-il mort ?",
     "choices": [
