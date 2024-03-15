@@ -8,7 +8,7 @@ from flask_session import Session
 from flask_wtf import CSRFProtect
 from config import DevelopmentConfig, ProductionConfig, TestingConfig
 
-# Create extension instances but don't initialize them yet
+# Initialize Flask extensions (but don't instantiate them yet)
 db = SQLAlchemy()
 migrate = Migrate()
 login_manager = LoginManager()
@@ -19,12 +19,11 @@ def create_app():
     app = Flask(__name__)
 
     # Dynamically load the appropriate configuration
-    env_config = os.getenv('FLASK_ENV', 'development')
     config_class = {
         "development": DevelopmentConfig,
         "testing": TestingConfig,
         "production": ProductionConfig
-    }.get(env_config, DevelopmentConfig)
+    }.get(os.getenv('FLASK_ENV', 'development'), DevelopmentConfig)
     app.config.from_object(config_class)
 
     # Initialize Flask extensions with the app instance
@@ -33,31 +32,32 @@ def create_app():
     login_manager.init_app(app)
     mail.init_app(app)
     
-    # CSRF protection
+    # Configure CSRF
     csrf.init_app(app)
 
-    # Flask-Session configuration for server-side session management
-    app.config.setdefault('SESSION_TYPE', 'filesystem')
+    # Configure server-side session management (if using Flask-Session)
+    app.config['SESSION_TYPE'] = 'filesystem'
     Session(app)
 
-    # Configure Flask-Login
+    # Flask-Login configuration
     login_manager.login_view = 'auth.login'
     login_manager.login_message_category = 'info'
-    
+
+    # User loader callback for Flask-Login
     @login_manager.user_loader
     def load_user(user_id):
-        # Delayed import to avoid circular dependencies
-        from .models import User
+        from your_application.models import User  # Adjust import as necessary
         return User.query.get(int(user_id))
 
-    # Register blueprints
-    from .auth.routes import auth as auth_blueprint
+    # Blueprint registration
+    from your_application.auth.routes import auth as auth_blueprint
     app.register_blueprint(auth_blueprint, url_prefix='/auth')
     
-    from .main.routes import main as main_blueprint
+    from your_application.main.routes import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
-    # Optional: Exempt specific routes from CSRF protection if necessary
-    csrf.exempt('main.quiz')
+    # Optionally, if you have specific routes or blueprints that don't require CSRF protection,
+    # you can exempt them as shown below:
+    # csrf.exempt(your_blueprint_or_view_function)
 
     return app
