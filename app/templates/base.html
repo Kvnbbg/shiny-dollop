@@ -14,7 +14,7 @@
     <!-- Comprehensive Meta Keywords -->
     <meta
       name="keywords"
-      content="Kevin Josué Marville, Kvnbbg, Music, Entertainment, Gaming, Quiz, Fullstack Developer, Lyon, France, IT Education, EEMI, Martinique, Caribbean, French, English, Best Quiz App"
+      content="Kevin Josué Marville, Kvnbbg, Music, Entertainment, Gaming, Quiz, Fullstack Developer, Lyon, France, IT Education, Martinique, Caribbean, French, English, Best Quiz App, Night Game, Friend, Family, Fun, Learning, Knowledge, Trivia, Questions, Answers, Quizzing, Mastering, Interests, Shiny Dollop, Premier, Top, Best, Immersive, Journey, App, Web, Mobile, Responsive, SEO, Social Media, Sharing, Open Graph, Twitter, Structured Data, Schema, JSON, CSRF, Token, Security, Canonical, URL, Favicon, Brand, Consistency, External, CSS, Frameworks, Bootstrap, Font Awesome, Google Fonts, Author, Publisher, Logo, Image, Enhanced, Search Engine, Representation, Title, Author, WebSite, Organization, Description, Context, Type, URL, PotentialAction, InLanguage, SameAs, Publisher, Logo, ImageObject, Target, Query-Input, SearchAction, Twitter, Card, Site, Creator, Title, Description, Image, CSRF, Token, Form, Security, Canonical, URL, Open Graph, Tags, Social, Media, Sharing, Twitter, Meta, Tags, Sharing, Structured, Data, Markup, Enhanced, Search, Engine, Representation"
     />
 
     <!-- Author Meta Tag -->
@@ -38,9 +38,10 @@
       href="{{ url_for('static', filename='css/style.css') }}"
     />
     <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
-    />
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -192,13 +193,45 @@
 
     </main>
 <!-- Footer Section -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="mb-0 text-center text-white">
-          Copyright &copy; Kevin Josué MARVILLE 2024
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="mb-0 text-center text-white">
+      Copyright &copy; Kevin Josué MARVILLE 2024
+    </p>
+    <!-- Trigger/Button for Modal -->
+    <div class="text-center">
+      <button type="button" class="btn btn-warning mt-3" data-bs-toggle="modal" data-bs-target="#bugAdviceModal">
+        {{ "Notice" if session['lang'] == 'en' else "Avis" }}
+      </button>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal Structure -->
+<div class="modal fade" id="bugAdviceModal" tabindex="-1" aria-labelledby="bugAdviceModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="bugAdviceModalLabel">{{ "Bug Notice" if session['lang'] == 'en' else "Avis de Bug" }}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {{ "We are facing bugs and are currently working on this, so if you see a bad request, please refresh the page until the content reappears. Sorry for the inconvenience." if session['lang'] == 'en' else "Nous rencontrons des bugs et travaillons actuellement à leur résolution. Si vous constatez une mauvaise requête, veuillez rafraîchir la page jusqu'à ce que le contenu réapparaisse. Nous nous excusons pour le désagrément." }}
+        <div class="text-center">
+          <img src="{{ url_for('static', filename='images/reload.gif') }}" alt="Reload" class="img-fluid" style="max-width: 100px;">
+        </div>
+        <p class="mt-2">
+          {{ "Or use the refresh button in your browser." if session['lang'] == 'en' else "Ou utilisez le bouton de rafraîchissement de votre navigateur." }}
         </p>
       </div>
-    </footer>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ "Close" if session['lang'] == 'en' else "Fermer" }}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
     <script src="{{ url_for('static', filename='/js/script.js') }}"></script>
     <scrip src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
@@ -206,5 +239,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
