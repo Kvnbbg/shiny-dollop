@@ -54,15 +54,15 @@ def quiz():
     if form.validate_on_submit():
         if form.skip.data:
             session['skipped_answers'] += 1
-            feedback = "Question skipped."
+            feedback = "Question skipped . . . 🤷🏽‍♂️"
         else:
             correct_answer = current_question['answer']
             if form.choice.data == str(correct_answer):
                 session['correct_answers'] += 1
-                feedback = "Correct !"
+                feedback = "Correct 🥳 !"
             else:
                 session['wrong_answers'] += 1
-                feedback = f"{correct_answer}."
+                feedback = f"🚲 {correct_answer}."
         flash(feedback)
         session['current_index'] += 1
         return redirect(url_for('.quiz'))

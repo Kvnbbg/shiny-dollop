@@ -1,4 +1,1305 @@
 [
+  
+  {
+    "question": "Quelle est la principale fonction de l'ordre du jour dans une réunion de travail?",
+    "choices": [
+      "Répartir les pauses café",
+      "Identifier les éléments à discuter pour préparer les interventions et discussions",
+      "Lister les participants",
+      "Choisir la salle de réunion"
+    ],
+    "answer": "Identifier les éléments à discuter pour préparer les interventions et discussions"
+  },
+  {
+    "question": "Quel rôle est chargé de veiller à l'activité et à l'équilibre des participations pendant la réunion?",
+    "choices": [
+      "Le maître de la gestion du temps",
+      "Le catalyseur de décisions",
+      "Le facilitateur",
+      "Le scribe"
+    ],
+    "answer": "Le facilitateur"
+  },
+  {
+    "question": "Quel est le meilleur moment pour planifier une réunion de travail afin de ne pas interrompre les tâches opérationnelles?",
+    "choices": [
+      "En plein milieu de la journée",
+      "Juste avant la pause déjeuner",
+      "En début ou en fin de demi-journée",
+      "Tard le soir"
+    ],
+    "answer": "En début ou en fin de demi-journée"
+  },
+  {
+    "question": "Quel outil est indispensable pour une réunion interactive et pourquoi?",
+    "choices": [
+      "Un tableau digital pour brainstormer",
+      "Un téléphone portable pour les appels d'urgence",
+      "Un stylo et un bloc-notes pour prendre des notes personnelles",
+      "Des chaises confortables pour une meilleure écoute"
+    ],
+    "answer": "Un tableau digital pour brainstormer"
+  },
+  {
+    "question": "Quel est le rôle du scribe dans une réunion?",
+    "choices": [
+      "Animer la réunion",
+      "Prendre des notes et rédiger le compte-rendu",
+      "Contrôler le temps de parole",
+      "Faire le café"
+    ],
+    "answer": "Prendre des notes et rédiger le compte-rendu"
+  },
+  {
+    "question": "Quelle est l'importance de la cybersécurité dans le monde numérique actuel?",
+    "choices": [
+      "Protéger les ordinateurs contre les virus informatiques uniquement",
+      "Assurer la sécurité des informations personnelles et professionnelles sur internet",
+      "Augmenter la vitesse de connexion internet",
+      "Améliorer le design des sites web"
+    ],
+    "answer": "Assurer la sécurité des informations personnelles et professionnelles sur internet"
+  },
+  {
+    "question": "Qu'est-ce que l'économie circulaire?",
+    "choices": [
+      "Un système économique visant à réduire l'utilisation des ressources et la production de déchets",
+      "Une nouvelle monnaie digitale",
+      "Un concept de marketing pour les entreprises de l'industrie automobile",
+      "Une stratégie pour augmenter la circulation des biens dans une économie locale"
+    ],
+    "answer": "Un système économique visant à réduire l'utilisation des ressources et la production de déchets"
+  },
+  {
+    "question": "Pourquoi les énergies renouvelables sont-elles importantes pour l'avenir?",
+    "choices": [
+      "Elles permettent de voyager plus rapidement",
+      "Elles réduisent la dépendance aux combustibles fossiles et diminuent l'impact sur le changement climatique",
+      "Elles augmentent la consommation d'énergie",
+      "Elles sont plus coûteuses à produire que les énergies traditionnelles"
+    ],
+    "answer": "Elles réduisent la dépendance aux combustibles fossiles et diminuent l'impact sur le changement climatique"
+  },
+  {
+    "question": "Qu'est-ce que la réalité augmentée (RA) et comment est-elle utilisée?",
+    "choices": [
+      "Une technologie pour augmenter la réalité physique en y superposant des éléments virtuels, utilisée dans les jeux, l'éducation et le commerce",
+      "Un nouveau genre de réalité télévisée",
+      "Une technique chirurgicale avancée",
+      "Un concept philosophique sur la perception de la réalité"
+    ],
+    "answer": "Une technologie pour augmenter la réalité physique en y superposant des éléments virtuels, utilisée dans les jeux, l'éducation et le commerce"
+  },
+  {
+    "question": "Quels sont les enjeux de l'intelligence artificielle (IA) dans la société moderne?",
+    "choices": [
+      "Remplacer tous les emplois par des robots",
+      "Améliorer l'efficacité dans divers domaines tout en posant des questions éthiques sur la vie privée et la prise de décision automatisée",
+      "Créer une nouvelle forme de vie",
+      "Exclusivement augmenter les profits des entreprises technologiques"
+    ],
+    "answer": "Améliorer l'efficacité dans divers domaines tout en posant des questions éthiques sur la vie privée et la prise de décision automatisée"
+  },
+  {
+    "question": "Quelle est la capitale de la France?",
+    "choices": [
+      "Marseille",
+      "Lyon",
+      "Paris",
+      "Nice"
+    ],
+    "answer": "Paris"
+  },
+  {
+    "question": "Qui a peint la Joconde?",
+    "choices": [
+      "Vincent Van Gogh",
+      "Leonardo da Vinci",
+      "Pablo Picasso",
+      "Claude Monet"
+    ],
+    "answer": "Leonardo da Vinci"
+  },
+  {
+    "question": "Quel est le plus long fleuve du monde?",
+    "choices": [
+      "Le Nil",
+      "L'Amazone",
+      "Le Mississippi",
+      "Le Yangtsé"
+    ],
+    "answer": "L'Amazone"
+  },
+  {
+    "question": "Quelle mer borde la ville de Nice en France?",
+    "choices": [
+      "La Mer Baltique",
+      "La Mer Noire",
+      "La Mer Rouge",
+      "La Mer Méditerranée"
+    ],
+    "answer": "La Mer Méditerranée"
+  },
+  {
+    "question": "En quelle année l'homme a-t-il marché sur la Lune pour la première fois?",
+    "choices": [
+      "1959",
+      "1969",
+      "1979",
+      "1989"
+    ],
+    "answer": "1969"
+  },
+  {
+    "question": "Qu'est-ce qu'une réunion d'information collective?",
+    "choices": [
+      "Une rencontre pour évaluer les compétences des participants",
+      "Une présentation détaillée d'un produit spécifique",
+      "Une séance pour présenter l'activité d'une organisation et son fonctionnement à un grand nombre de personnes",
+      "Une formation obligatoire pour les nouveaux employés"
+    ],
+    "answer": "Une séance pour présenter l'activité d'une organisation et son fonctionnement à un grand nombre de personnes"
+  },
+  {
+    "question": "Quel est l'objectif principal d'une réunion d'information?",
+    "choices": [
+      "Encourager les échanges interactifs entre les participants",
+      "Transmettre des informations détaillées à toutes les personnes concernées",
+      "Former les participants sur un nouveau logiciel",
+      "Organiser des activités de team-building"
+    ],
+    "answer": "Transmettre des informations détaillées à toutes les personnes concernées"
+  },
+  {
+    "question": "Quel rôle joue l'animateur dans une réunion d'information collective?",
+    "choices": [
+      "Évaluer les compétences des participants",
+      "Donner des informations et s'assurer de la compréhension par tous",
+      "Faciliter les activités de groupe",
+      "Distribuer les ressources et les documents nécessaires"
+    ],
+    "answer": "Donner des informations et s'assurer de la compréhension par tous"
+  },
+  {
+    "question": "Quels sont les bénéfices d'organiser une réunion d'information collective lors d'un processus de recrutement?",
+    "choices": [
+      "Sélectionner les meilleurs candidats pour le poste",
+      "Donner une vision réaliste de l'organisation aux candidats potentiels",
+      "Formaliser le contrat de travail avec les nouveaux employés",
+      "Évaluer les compétences sociales des participants"
+    ],
+    "answer": "Donner une vision réaliste de l'organisation aux candidats potentiels"
+  },
+  {
+    "question": "Quelle est la meilleure manière de préparer une réunion d'information collective?",
+    "choices": [
+      "Préparer une liste exhaustive de toutes les tâches à accomplir",
+      "Définir les objectifs de la réunion et construire un ordre du jour clair",
+      "Planifier des pauses café toutes les heures",
+      "Inviter des conférenciers externes pour parler de sujets non liés"
+    ],
+    "answer": "Définir les objectifs de la réunion et construire un ordre du jour clair"
+  },
+  {
+    "question": "Quel psychologue américain est le précurseur des techniques d'écoute active?",
+    "choices": [
+      "Sigmund Freud",
+      "Carl Rogers",
+      "B.F. Skinner",
+      "Albert Bandura"
+    ],
+    "answer": "Carl Rogers"
+  },
+  {
+    "question": "Quel est l'objectif principal des associations œuvrant dans le secteur de l'Insertion par l'Activité Économique (IAE)?",
+    "choices": [
+      "Maximiser les profits",
+      "Fournir des formations académiques",
+      "Accompagner les personnes éloignées du marché du travail vers un emploi pérenne",
+      "Promouvoir le travail indépendant"
+    ],
+    "answer": "Accompagner les personnes éloignées du marché du travail vers un emploi pérenne"
+  },
+  {
+    "question": "Quel est le pourcentage de jeunes non-diplômés au chômage trois ans après la fin de leurs études en 2013?",
+    "choices": [
+      "50%",
+      "65%",
+      "10%",
+      "25%"
+    ],
+    "answer": "50%"
+  },
+  {
+    "question": "Quel dispositif de formation et d'insertion sur le marché de l’emploi s'articule autour d’un volet théorique et d'un volet pratique en entreprise?",
+    "choices": [
+      "Service civique",
+      "Contrat à durée indéterminée",
+      "Alternance",
+      "Stage professionnel"
+    ],
+    "answer": "Alternance"
+  },
+  {
+    "question": "Quelle démarche personnelle donne accès à un ensemble de mesures favorisant l'insertion professionnelle et le maintien dans l'emploi pour les personnes en situation de handicap?",
+    "choices": [
+      "Inscription à Pôle emploi",
+      "Demande de RQTH",
+      "Adhésion à une association",
+      "Inscription à une université"
+    ],
+    "answer": "Demande de RQTH"
+  },
+  {
+    "question": "Quel est le principal objectif d'un groupe d'analyse de la pratique professionnelle?",
+    "choices": [
+      "Maximiser les bénéfices de l'entreprise",
+      "Promouvoir la formation continue des employés",
+      "Aborder des situations professionnelles complexes de manière commune et interdisciplinaire",
+      "Encourager le travail indépendant"
+    ],
+    "answer": "Aborder des situations professionnelles complexes de manière commune et interdisciplinaire"
+  },
+  {
+    "question": "Quelle est la méthode utilisée pour structurer la découverte des besoins clients en rendez-vous commercial?",
+    "choices": [
+      "La méthode QQOQCP",
+      "La méthode SPIN Selling",
+      "La méthode SNAP Selling",
+      "La méthode AIDA"
+    ],
+    "answer": "La méthode QQOQCP"
+  },
+  {
+    "question": "Qui est considéré comme le père de la rhétorique, ayant développé la méthode QQOQCP au 1er siècle après J.C.?",
+    "choices": [
+      "Aristote",
+      "Platon",
+      "Quintilien",
+      "Cicéron"
+    ],
+    "answer": "Quintilien"
+  },
+  {
+    "question": "Quel article du Code du travail français rend illégale la discrimination à l'embauche?",
+    "choices": [
+      "Article L1132-1",
+      "Article 225-1 du Code pénal",
+      "Article L1233-1",
+      "Article L1221-1"
+    ],
+    "answer": "Article L1132-1"
+  },
+  {
+    "question": "Quelle sanction maximale encourt une personne physique pour discrimination à l'embauche en France?",
+    "choices": [
+      "45 000 euros d'amende et 3 ans de prison",
+      "15 000 euros d'amende et 1 an de prison",
+      "100 000 euros d'amende et 5 ans de prison",
+      "75 000 euros d'amende et 2 ans de prison"
+    ],
+    "answer": "45 000 euros d'amende et 3 ans de prison"
+  },
+  {
+    "question": "En cas de discrimination à l'embauche, quelle est l'amende maximale qu'une personne morale peut encourir en France?",
+    "choices": [
+      "225 000 euros d'amende",
+      "500 000 euros d'amende",
+      "100 000 euros d'amende",
+      "75 000 euros d'amende"
+    ],
+    "answer": "225 000 euros d'amende"
+  },
+  {
+    "question": "Qu'est-ce qui est considéré comme un délit en cas d'accusation à tort d'un employeur de discrimination à l'embauche?",
+    "choices": [
+      "Délit de dénonciation calomnieuse",
+      "Délit de diffamation",
+      "Délit d'abus de droit",
+      "Délit de faux témoignage"
+    ],
+    "answer": "Délit de dénonciation calomnieuse"
+  },
+  {
+    "question": "Quelles sont les deux principales voies de recours en cas de discrimination à l'embauche en France?",
+    "choices": [
+      "Le recours pénal devant le tribunal correctionnel et le recours civil devant le conseil des prud'hommes",
+      "Le recours administratif devant le préfet et le recours pénal devant la cour d'assises",
+      "La médiation par le Défenseur des droits et la saisie de la Commission européenne",
+      "La plainte auprès de l'Inspection du travail et la requête au tribunal de grande instance"
+    ],
+    "answer": "Le recours pénal devant le tribunal correctionnel et le recours civil devant le conseil des prud'hommes"
+  },
+  {
+    "question": "Quelle est la sanction maximale pour une personne physique reconnue coupable de discrimination à l'embauche en France?",
+    "choices": [
+      "45 000 euros d'amende et 3 ans de prison",
+      "15 000 euros d'amende et 1 an de prison",
+      "100 000 euros d'amende et 5 ans de prison",
+      "75 000 euros d'amende et 2 ans de prison"
+    ],
+    "answer": "45 000 euros d'amende et 3 ans de prison"
+  },
+  {
+    "question": "Que risque une personne morale reconnue coupable de discrimination à l'embauche en France?",
+    "choices": [
+      "225 000 euros d'amende",
+      "500 000 euros d'amende",
+      "100 000 euros d'amende",
+      "75 000 euros d'amende"
+    ],
+    "answer": "225 000 euros d'amende"
+  },
+  {
+    "question": "Quelle loi française interdit spécifiquement la discrimination à l'embauche, en énumérant une série de critères illégaux?",
+    "choices": [
+      "Code du Travail (art. L1132-1)",
+      "Loi n° 2008-496 du 27 mai 2008",
+      "Code pénal (article 225-1)",
+      "Loi n° 2014-173 du 21 février 2014"
+    ],
+    "answer": "Code du Travail (art. L1132-1)"
+  },
+  {
+    "question": "Quel délit est constitué en cas d'accusation à tort d'un employeur de discrimination à l'embauche, et quelle est la sanction?",
+    "choices": [
+      "Délit de dénonciation calomnieuse, amende pouvant aller jusqu’à 45 000 euros et 5 ans de prison",
+      "Délit de diffamation, amende de 15 000 euros",
+      "Délit de fausse accusation, amende de 30 000 euros et 3 ans de prison",
+      "Délit d'abus de droit, amende de 20 000 euros et 2 ans de prison"
+    ],
+    "answer": "Délit de dénonciation calomnieuse, amende pouvant aller jusqu’à 45 000 euros et 5 ans de prison"
+  },
+  {
+    "question": "Quelle est la date de la Révolution française qui a vu l'assaut de la Bastille?",
+    "choices": [
+      "14 juillet 1789",
+      "5 mai 1789",
+      "9 novembre 1799",
+      "26 août 1789"
+    ],
+    "answer": "14 juillet 1789"
+  },
+  {
+    "question": "Quel traité a fondé l'Union Européenne en intégrant des principes de non-discrimination?",
+    "choices": [
+      "Traité de Rome",
+      "Traité de Maastricht",
+      "Traité de Lisbonne",
+      "Traité de Versailles"
+    ],
+    "answer": "Traité de Lisbonne"
+  },
+  {
+    "question": "Qui est considéré comme le père des lois sur le handicap en France, ayant contribué à l'adoption de plusieurs lois importantes?",
+    "choices": [
+      "Charles de Gaulle",
+      "Jacques Chirac",
+      "François Mitterrand",
+      "Emmanuel Macron"
+    ],
+    "answer": "Jacques Chirac"
+  },
+  {
+    "question": "En quelle année la loi garantissant le droit de vote à tous les handicapés, sans exception, a-t-elle été adoptée en France?",
+    "choices": [
+      "2005",
+      "2015",
+      "2017",
+      "2020"
+    ],
+    "answer": "2017"
+  },
+  {
+    "question": "Quel événement annuel en France vise à augmenter la visibilité et l'intégration des personnes handicapées et d'autres minorités exclues?",
+    "choices": [
+      "La Marche des Fiertés",
+      "Le Carnaval de Nice",
+      "La Fête de la Musique",
+      "MAD Pride"
+    ],
+    "answer": "MAD Pride"
+  },
+    {
+      "question": "Qu'est-ce que la discrimination directe?",
+      "choices": [
+        "Un traitement basé sur des stéréotypes inconscients",
+        "Un traitement équitable pour tous sans exception",
+        "Un traitement délibérément moins favorable basé sur des critères illégitimes",
+        "Une mesure apparemment neutre ayant des effets discriminatoires indirects"
+      ],
+      "answer": "Un traitement délibérément moins favorable basé sur des critères illégitimes"
+    },
+    {
+      "question": "Quelle loi interdit toute distinction entre salariés basée sur des critères comme l'origine ou le sexe?",
+      "choices": [
+        "Code Civil",
+        "Code du Commerce",
+        "Code du Travail",
+        "Code Pénal"
+      ],
+      "answer": "Code du Travail"
+    },
+    {
+      "question": "Quel pourcentage des demandeurs d'emploi estiment que les discriminations à l'embauche sont fréquentes?",
+      "choices": [
+        "45%",
+        "55%",
+        "75%",
+        "85%"
+      ],
+      "answer": "85%"
+    },
+    {
+      "question": "Quel critère est le plus discriminant à l'embauche selon les sondés?",
+      "choices": [
+        "Être enceinte",
+        "Avoir plus de 55 ans",
+        "Être handicapé",
+        "Avoir un nom à consonance étrangère"
+      ],
+      "answer": "Avoir plus de 55 ans"
+    },
+    {
+      "question": "Quel recours existe pour une victime de discrimination à l'embauche?",
+      "choices": [
+        "Recours administratif uniquement",
+        "Recours pénal devant le tribunal correctionnel",
+        "Plainte auprès du conseil des prud'hommes",
+        "Aucun recours n'est disponible"
+      ],
+      "answer": "Recours pénal devant le tribunal correctionnel"
+    },  
+  {
+    "question": "Quel est le fleuve le plus long du monde ?",
+    "choices": [
+      "Le Nil",
+      "L'Amazone",
+      "Le Mississippi",
+      "Le Yangtsé"
+    ],
+    "answer": "L'Amazone"
+  },
+  {
+    "question": "Qui a écrit 'Les Misérables' ?",
+    "choices": [
+      "Victor Hugo",
+      "Alexandre Dumas",
+      "Émile Zola",
+      "Gustave Flaubert"
+    ],
+    "answer": "Victor Hugo"
+  },
+  {
+    "question": "Quelle est la capitale du Japon ?",
+    "choices": [
+      "Kyoto",
+      "Osaka",
+      "Tokyo",
+      "Nagasaki"
+    ],
+    "answer": "Tokyo"
+  },
+  {
+    "question": "Qui a peint la Joconde ?",
+    "choices": [
+      "Leonardo da Vinci",
+      "Michel-Ange",
+      "Raphaël",
+      "Donatello"
+    ],
+    "answer": "Leonardo da Vinci"
+  },
+  {
+    "question": "Quel est l'élément chimique le plus abondant dans l'univers ?",
+    "choices": [
+      "Oxygène",
+      "Carbone",
+      "Hydrogène",
+      "Azote"
+    ],
+    "answer": "Hydrogène"
+  },
+  {
+    "question": "Qu'est-ce que la discrimination directe ?",
+    "choices": [
+      "Un traitement égalitaire envers tous sans distinction",
+      "Une distinction basée sur des critères neutres et objectifs",
+      "Un traitement moins favorable délibéré fondé sur un critère interdit par la loi",
+      "Une mesure d'ajustement pour favoriser l'égalité"
+    ],
+    "answer": "Un traitement moins favorable délibéré fondé sur un critère interdit par la loi"
+  },
+  {
+    "question": "Quelle est la différence entre discrimination directe et indirecte ?",
+    "choices": [
+      "La discrimination indirecte est toujours légale",
+      "La discrimination directe est basée sur des critères objectifs",
+      "La discrimination indirecte se produit quand une mesure neutre a un effet défavorable basé sur un critère interdit",
+      "Il n'y a pas de différence entre les deux"
+    ],
+    "answer": "La discrimination indirecte se produit quand une mesure neutre a un effet défavorable basé sur un critère interdit"
+  },
+  {
+    "question": "Quels comportements peuvent constituer du harcèlement ?",
+    "choices": [
+      "Des compliments sur le travail bien fait",
+      "Des remarques ou gestes vexatoires répétés sachant qu'ils sont importuns",
+      "Une promotion basée sur le mérite",
+      "Des discussions neutres sur des sujets non liés au travail"
+    ],
+    "answer": "Des remarques ou gestes vexatoires répétés sachant qu'ils sont importuns"
+  },
+  {
+    "question": "Qu'est-ce que le profilage racial ?",
+    "choices": [
+      "Une analyse statistique basée sur la performance économique",
+      "Une mesure de sécurité basée sur des critères objectifs",
+      "Une discrimination basée sur des stéréotypes raciaux pour des raisons de sûreté",
+      "Un programme d'aide basé sur l'origine ethnique"
+    ],
+    "answer": "Une discrimination basée sur des stéréotypes raciaux pour des raisons de sûreté"
+  },
+  {
+    "question": "Quel est le rôle de l'adaptation dans la prévention de la discrimination ?",
+    "choices": [
+      "Elle vise à maintenir des normes discriminatoires",
+      "Elle permet de répondre aux besoins spécifiques des individus pour éviter la discrimination",
+      "Elle n'a aucun impact sur la discrimination",
+      "Elle encourage la discrimination indirecte"
+    ],
+    "answer": "Elle permet de répondre aux besoins spécifiques des individus pour éviter la discrimination"
+  },
+  {
+    "question": "Qu'est-ce que l'intelligence artificielle (IA) ?",
+    "choices": [
+      "Une branche de la biologie étudiant l'évolution des espèces",
+      "Un domaine de l'informatique qui vise à créer des machines capables d'imiter l'intelligence humaine",
+      "Une théorie philosophique sur la conscience",
+      "Un genre de musique électronique"
+    ],
+    "answer": "Un domaine de l'informatique qui vise à créer des machines capables d'imiter l'intelligence humaine"
+  },
+  {
+    "question": "Quel est le principal objectif des énergies renouvelables ?",
+    "choices": [
+      "Augmenter la consommation d'énergies fossiles",
+      "Fournir une source d'énergie inépuisable et moins polluante",
+      "Diminuer la population mondiale",
+      "Ralentir le progrès technologique"
+    ],
+    "answer": "Fournir une source d'énergie inépuisable et moins polluante"
+  },
+  {
+    "question": "En quelle année le premier iPhone a-t-il été lancé par Apple ?",
+    "choices": [
+      "2000",
+      "2005",
+      "2007",
+      "2010"
+    ],
+    "answer": "2007"
+  },
+  {
+    "question": "Quelle technologie est essentielle pour la réalité virtuelle (VR) ?",
+    "choices": [
+      "Les casques VR permettant une immersion dans un environnement généré par ordinateur",
+      "Les imprimantes 3D pour la création d'objets physiques",
+      "Les télévisions couleur pour l'affichage de vidéos",
+      "Les radios FM pour la transmission de sons"
+    ],
+    "answer": "Les casques VR permettant une immersion dans un environnement généré par ordinateur"
+  },
+  {
+    "question": "Qu'est-ce que la blockchain ?",
+    "choices": [
+      "Une nouvelle marque de chaussures de sport",
+      "Un système de paiement en ligne",
+      "Une technologie de stockage et de transmission d'informations, sécurisée et décentralisée",
+      "Un jeu vidéo populaire"
+    ],
+    "answer": "Une technologie de stockage et de transmission d'informations, sécurisée et décentralisée"
+  },
+  {
+    "question": "Quel est le but principal de la Convention de Paris sur le climat (Accord de Paris) signée en 2015 ?",
+    "choices": [
+      "Promouvoir le tourisme à Paris",
+      "Réduire les émissions de gaz à effet de serre afin de limiter le réchauffement climatique",
+      "Augmenter la production mondiale de pétrole",
+      "Réduire la population mondiale"
+    ],
+    "answer": "Réduire les émissions de gaz à effet de serre afin de limiter le réchauffement climatique"
+  },
+  {
+    "question": "Quelle habitude est essentielle pour développer l'empathie en allant au-delà des préjugés ?",
+    "choices": [
+      "Utiliser son imagination pour se mettre à la place de l'autre",
+      "S'intéresser aux motivations et au parcours de la personne",
+      "Juger rapidement basé sur les apparences",
+      "Ignorer les circonstances personnelles de l'autre"
+    ],
+    "answer": "S'intéresser aux motivations et au parcours de la personne"
+  },
+  {
+    "question": "Comment l'utilisation de l'imagination aide-t-elle à faire preuve d'empathie ?",
+    "choices": [
+      "En visualisant les difficultés de l'autre",
+      "En imaginant des scénarios irréalistes",
+      "En se concentrant uniquement sur ses propres expériences",
+      "En évitant de comprendre les émotions de l'autre"
+    ],
+    "answer": "En visualisant les difficultés de l'autre"
+  },
+  {
+    "question": "Quel est l'objectif de l'orientation professionnelle ?",
+    "choices": [
+      "Forcer les jeunes à choisir rapidement une carrière",
+      "Aider les personnes à développer un concept adéquat de soi dans le travail",
+      "Ignorer les besoins du marché du travail",
+      "Concentrer uniquement sur les attentes économiques"
+    ],
+    "answer": "Aider les personnes à développer un concept adéquat de soi dans le travail"
+  },
+  {
+    "question": "Quel élément est crucial pour la prise de décision en orientation professionnelle selon l'article ?",
+    "choices": [
+      "Suivre aveuglément les tendances du marché",
+      "Ignorer sa propre intelligence émotionnelle",
+      "Connaissance de soi via l'intelligence émotionnelle",
+      "Choisir une carrière uniquement basée sur sa rentabilité économique"
+    ],
+    "answer": "Connaissance de soi via l'intelligence émotionnelle"
+  },
+  {
+    "question": "Comment la discrimination systémique se manifeste-t-elle dans les lieux de travail ?",
+    "choices": [
+      "Par des pratiques ouvertes et intentionnelles de discrimination",
+      "À travers des politiques neutres ayant un effet discriminatoire",
+      "En encourageant l'inclusion et la diversité",
+      "En se concentrant uniquement sur les qualifications"
+    ],
+    "answer": "À travers des politiques neutres ayant un effet discriminatoire"
+  },
+    {
+      "question": "Quels sont les quatre modèles d'empathie définis par S. Bonino, A. Lo Coco et F. Tani ?",
+      "choices": [
+        "Empathie-contagion",
+        "Empathie par partage parallèle",
+        "Empathie par partage participateur",
+        "Empathie par condition générale"
+      ],
+      "answer": "Toutes les propositions sont correctes"
+    },
+    {
+      "question": "Quelle est la différence principale entre l'empathie et la sympathie selon les recherches contemporaines sur les neurones-miroir ?",
+      "choices": [
+        "La sympathie nécessite un effort cognitif plus important que l'empathie.",
+        "L'empathie se limite à partager les émotions, tandis que la sympathie implique également un partage des pensées.",
+        "L'empathie permet de comprendre et de partager les émotions d'autrui, tandis que la sympathie ne partage que les émotions.",
+        "La sympathie génère une aide plus efficace en situation de conflit."
+      ],
+      "answer": "L'empathie permet de comprendre et de partager les émotions d'autrui, tandis que la sympathie ne partage que les émotions."
+    },
+    {
+      "question": "Quels sont les risques d'un excès d'empathie dans le contexte professionnel ?",
+      "choices": [
+        "Augmentation de la motivation et de la productivité des collaborateurs.",
+        "Fatigue compassionnelle et risque de burn-out pour les professionnels de santé.",
+        "Moindre tendance des patients à poursuivre leur médecin en justice.",
+        "Amélioration systématique de la qualité des soins."
+      ],
+      "answer": "Fatigue compassionnelle et risque de burn-out pour les professionnels de santé."
+    },
+    {
+      "question": "Comment l'écoute active contribue-t-elle à l'empathie ?",
+      "choices": [
+        "En permettant une compétition plus juste entre collègues.",
+        "En favorisant la compréhension mutuelle et l'échange authentique d'informations et d'émotions.",
+        "En augmentant les conflits interpersonnels pour stimuler la résolution de problèmes.",
+        "En encourageant les réponses impulsives et rapides aux questions posées."
+      ],
+      "answer": "En favorisant la compréhension mutuelle et l'échange authentique d'informations et d'émotions."
+    },
+    {
+      "question": "Quel est le bénéfice principal de l'empathie dans les relations humaines selon les études sur les neurones-miroir ?",
+      "choices": [
+        "Elle facilite les processus décisionnels complexes.",
+        "Elle diminue l'efficacité des équipes en ralentissant les prises de décision.",
+        "Elle améliore la satisfaction et le bien-être, favorisant une meilleure coopération.",
+        "Elle incite à la prise de risque excessive en situation d'incertitude."
+      ],
+      "answer": "Elle améliore la satisfaction et le bien-être, favorisant une meilleure coopération."
+    },  
+  {
+    "question": "Quelle est la plus longue rivière du monde ?",
+    "choices": [
+      "Le Nil",
+      "L'Amazone",
+      "Le Yangtsé",
+      "Le Mississippi"
+    ],
+    "answer": "L'Amazone"
+  },
+  {
+    "question": "Qui a écrit 'L'Iliade' et 'L'Odyssée' ?",
+    "choices": [
+      "Homère",
+      "Virgile",
+      "Socrate",
+      "Platon"
+    ],
+    "answer": "Homère"
+  },
+  {
+    "question": "Quel est l'élément chimique avec le symbole 'O' ?",
+    "choices": [
+      "Or",
+      "Osmium",
+      "Oxygène",
+      "Oganesson"
+    ],
+    "answer": "Oxygène"
+  },
+  {
+    "question": "Quelle est la capitale du Japon ?",
+    "choices": [
+      "Kyoto",
+      "Osaka",
+      "Tokyo",
+      "Sapporo"
+    ],
+    "answer": "Tokyo"
+  },
+  {
+    "question": "Qui est l'auteur de la théorie de la relativité ?",
+    "choices": [
+      "Isaac Newton",
+      "Albert Einstein",
+      "Niels Bohr",
+      "Max Planck"
+    ],
+    "answer": "Albert Einstein"
+  },
+  {
+    "question": "Quelle est la planète la plus proche du Soleil ?",
+    "choices": [
+      "Mars",
+      "Vénus",
+      "Terre",
+      "Mercure"
+    ],
+    "answer": "Mercure"
+  },
+  {
+    "question": "Qui a peint 'La Joconde' ?",
+    "choices": [
+      "Vincent Van Gogh",
+      "Leonardo da Vinci",
+      "Pablo Picasso",
+      "Claude Monet"
+    ],
+    "answer": "Leonardo da Vinci"
+  },
+  {
+    "question": "Quel est l'océan le plus vaste du monde ?",
+    "choices": [
+      "Atlantique",
+      "Indien",
+      "Pacifique",
+      "Arctique"
+    ],
+    "answer": "Pacifique"
+  },
+  {
+    "question": "Dans quelle ville se trouve la statue de la Liberté ?",
+    "choices": [
+      "Paris",
+      "New York",
+      "Londres",
+      "Berlin"
+    ],
+    "answer": "New York"
+  },
+  {
+    "question": "Quel pays a pour capitale Lisbonne ?",
+    "choices": [
+      "Espagne",
+      "Portugal",
+      "Brésil",
+      "Italie"
+    ],
+    "answer": "Portugal"
+  },
+  {
+    "question": "Qu'est-ce que l'empathie dans le contexte de la communication ?",
+    "choices": [
+      "Une écoute totale, profonde et désintéressée centrée sur les vrais besoins de l'autre.",
+      "Une méthode pour influencer l'autre et orienter la qualité de l'échange.",
+      "Une compétence permettant de parler sans interruption.",
+      "Une technique pour projeter ses propres émotions sur l'autre."
+    ],
+    "answer": "Une écoute totale, profonde et désintéressée centrée sur les vrais besoins de l'autre."
+  },
+  {
+    "question": "Pourquoi utiliser l'empathie ?",
+    "choices": [
+      "Pour imposer sa vision du monde à son interlocuteur.",
+      "Pour humaniser la communication et mieux aider et accompagner les autres.",
+      "Pour obtenir des informations confidentielles de l'autre.",
+      "Pour critiquer l'expérience de l'autre."
+    ],
+    "answer": "Pour humaniser la communication et mieux aider et accompagner les autres."
+  },
+  {
+    "question": "Quelle étape n'est PAS recommandée pour pratiquer une écoute empathique ?",
+    "choices": [
+      "Être disponible, attentif, intéressé et patient.",
+      "Mettre de côté tout jugement personnel.",
+      "Interrompre fréquemment l'interlocuteur pour partager son propre avis.",
+      "Poser des questions à bon escient."
+    ],
+    "answer": "Interrompre fréquemment l'interlocuteur pour partager son propre avis."
+  },
+  {
+    "question": "Quel comportement est un obstacle à l'expression des émotions de l'autre ?",
+    "choices": [
+      "La recherche de solutions immédiates.",
+      "L'écoute des mots et du langage corporel sans sélection ni tri.",
+      "La mise de côté de tout jugement personnel.",
+      "Laisser l'interlocuteur parler sans l'interrompre."
+    ],
+    "answer": "La recherche de solutions immédiates."
+  },
+  {
+    "question": "Comment l'empathie contribue-t-elle à la communication ?",
+    "choices": [
+      "En permettant de connaître et comprendre le point de vue de l'autre, en évitant toute ambiguïté.",
+      "En offrant une solution immédiate aux problèmes de l'autre.",
+      "En mettant l'accent sur l'évaluation et le jugement des actions de l'autre.",
+      "En empêchant l'autre d'exprimer ses véritables émotions et pensées."
+    ],
+    "answer": "En permettant de connaître et comprendre le point de vue de l'autre, en évitant toute ambiguïté."
+  },
+  {
+    "question": "Quelle est la différence entre empathie et sympathie selon le texte ?",
+    "choices": [
+      "L'empathie consiste à se mettre à la place de l'autre sans éprouver ses émotions.",
+      "La sympathie et l'empathie sont identiques et peuvent être utilisées de manière interchangeable.",
+      "La sympathie nécessite une compréhension profonde des émotions de l'autre.",
+      "L'empathie est la capacité de juger les actions de l'autre sans se soucier de ses émotions."
+    ],
+    "answer": "L'empathie consiste à se mettre à la place de l'autre sans éprouver ses émotions."
+  },
+  {
+    "question": "Qu'est-ce que l'empathie selon les explications fournies ?",
+    "choices": [
+      "La capacité à imposer ses émotions aux autres.",
+      "La capacité à ressentir et comprendre les émotions et pensées d'autrui tout en distinguant ses propres émotions.",
+      "La tendance à éviter tout contact émotionnel avec les autres.",
+      "La faculté de manipuler les émotions des autres à son avantage."
+    ],
+    "answer": "La capacité à ressentir et comprendre les émotions et pensées d'autrui tout en distinguant ses propres émotions."
+  },
+  {
+    "question": "Quelle est une méthode suggérée pour renforcer l'estime de soi, selon la psychologue ?",
+    "choices": [
+      "Éviter toute forme de communication avec les autres.",
+      "Pratiquer l'exercice des 'fiertés' chaque soir.",
+      "Se concentrer uniquement sur ses échecs.",
+      "Ignorer les feedbacks constructifs."
+    ],
+    "answer": "Pratiquer l'exercice des 'fiertés' chaque soir."
+  },
+  {
+    "question": "Pourquoi est-il important de cultiver l'empathie ?",
+    "choices": [
+      "Pour mieux manipuler les gens autour de soi.",
+      "Pour renforcer les comportements d'entraide et de partage.",
+      "Pour augmenter ses chances de succès professionnel sans considération pour les autres.",
+      "L'empathie n'a aucune importance dans le développement personnel ou professionnel."
+    ],
+    "answer": "Pour renforcer les comportements d'entraide et de partage."
+  },
+  {
+    "question": "Quel est le risque de ne pas dissocier ses émotions de celles d'autrui ?",
+    "choices": [
+      "Devenir trop émotionnellement indépendant.",
+      "Surinterpréter ou mal interpréter ce que pense l'autre, pouvant mener à des conflits.",
+      "Développer une intelligence émotionnelle trop élevée.",
+      "Aucun risque, il est toujours bénéfique de fusionner ses émotions avec celles d'autrui."
+    ],
+    "answer": "Surinterpréter ou mal interpréter ce que pense l'autre, pouvant mener à des conflits."
+  },
+  {
+    "question": "Quelle pratique est recommandée pour développer son empathie envers les autres ?",
+    "choices": [
+      "Se concentrer uniquement sur ses propres besoins.",
+      "Entrer en contact avec des inconnus pour mieux les connaître.",
+      "Éviter toute forme de communication non verbale.",
+      "Refuser de prendre en compte les perspectives différentes."
+    ],
+    "answer": "Entrer en contact avec des inconnus pour mieux les connaître."
+  },
+  {
+    "question": "Quels sont les avatars de l'empathie mentionnés, conduisant à une mauvaise compréhension des autres ?",
+    "choices": [
+      "Projection, conjecture et contagion émotionnelle.",
+      "Écoute active, communication non violente et entraide.",
+      "Solitude, indifférence et compétitivité.",
+      "Optimisme, persévérance et détermination."
+    ],
+    "answer": "Projection, conjecture et contagion émotionnelle."
+  },
+  {
+    "question": "Qui est l'auteur du roman 'Les Misérables' ?",
+    "choices": [
+      "Émile Zola",
+      "Victor Hugo",
+      "Albert Camus",
+      "Gustave Flaubert"
+    ],
+    "answer": "Victor Hugo"
+  },
+  {
+    "question": "Quel mouvement littéraire du 19e siècle en France est caractérisé par l'exploration des émotions, de l'imaginaire et de la nature ?",
+    "choices": [
+      "Le classicisme",
+      "Le réalisme",
+      "Le romantisme",
+      "Le naturalisme"
+    ],
+    "answer": "Le romantisme"
+  },
+  {
+    "question": "Quel roman de Marcel Proust est considéré comme une œuvre majeure de la littérature du XXe siècle ?",
+    "choices": [
+      "À la recherche du temps perdu",
+      "L'Étranger",
+      "Madame Bovary",
+      "Les Fleurs du mal"
+    ],
+    "answer": "À la recherche du temps perdu"
+  },
+  {
+    "question": "Quelle œuvre de Gustave Flaubert critique la société bourgeoise du XIXe siècle à travers le personnage d'Emma Bovary ?",
+    "choices": [
+      "Le Rouge et le Noir",
+      "Madame Bovary",
+      "Le Père Goriot",
+      "Les Misérables"
+    ],
+    "answer": "Madame Bovary"
+  },
+  {
+    "question": "Qui est l'auteur de 'L'Étranger', un roman qui explore l'absurdité de la condition humaine ?",
+    "choices": [
+      "Jean-Paul Sartre",
+      "François Mauriac",
+      "Albert Camus",
+      "André Gide"
+    ],
+    "answer": "Albert Camus"
+  },
+  {
+    "question": "Dans quelle œuvre trouve-t-on le personnage de Jean Valjean ?",
+    "choices": [
+      "Les Misérables",
+      "Le Comte de Monte-Cristo",
+      "Cyrano de Bergerac",
+      "La Peste"
+    ],
+    "answer": "Les Misérables"
+  },
+  {
+    "question": "Quel poète symboliste français est connu pour son recueil 'Les Fleurs du mal' ?",
+    "choices": [
+      "Arthur Rimbaud",
+      "Paul Verlaine",
+      "Charles Baudelaire",
+      "Stéphane Mallarmé"
+    ],
+    "answer": "Charles Baudelaire"
+  },
+  {
+    "question": "Quelle est l'œuvre majeure de Rabelais qui narre les aventures de géants dans un style à la fois érudit et comique ?",
+    "choices": [
+      "Gargantua et Pantagruel",
+      "Les Essais",
+      "Le Cid",
+      "La Princesse de Clèves"
+    ],
+    "answer": "Gargantua et Pantagruel"
+  },
+  {
+    "question": "Pourquoi le réseau professionnel est-il important selon le témoignage présenté ?",
+    "choices": [
+      "Pour augmenter son salaire.",
+      "Pour rencontrer des personnes d’horizons différents et découvrir d'autres points de vue.",
+      "Pour éviter de travailler en équipe.",
+      "Pour avoir une excuse pour sortir du bureau."
+    ],
+    "answer": "Pour rencontrer des personnes d’horizons différents et découvrir d'autres points de vue."
+  },
+  {
+    "question": "Quel conseil est donné pour initier une démarche de networking ?",
+    "choices": [
+      "Se concentrer uniquement sur les réseaux sociaux.",
+      "Reprendre contact avec d’anciens camarades d’école et anciens collègues.",
+      "Ignorer les invitations à des événements professionnels.",
+      "Attendre que les autres vous contactent en premier."
+    ],
+    "answer": "Reprendre contact avec d’anciens camarades d’école et anciens collègues."
+  },
+  {
+    "question": "Quel est le principe fondamental à respecter dans une démarche réseau ?",
+    "choices": [
+      "Demander un emploi à chaque rencontre.",
+      "Se demander systématiquement comment on peut aider la personne rencontrée.",
+      "Eviter de partager ses contacts professionnels.",
+      "Faire des rencontres uniquement dans un contexte formel."
+    ],
+    "answer": "Se demander systématiquement comment on peut aider la personne rencontrée."
+  },
+  {
+    "question": "Quelle est la différence principale entre une approche réseau orientée business et une orientée recherche d’emploi ?",
+    "choices": [
+      "Il n'y a aucune différence entre les deux approches.",
+      "L'approche orientée business nécessite un investissement financier.",
+      "L'approche recherche d’emploi implique de définir son projet professionnel et d'obtenir du feedback.",
+      "L'approche business est réservée aux cadres supérieurs."
+    ],
+    "answer": "L'approche recherche d’emploi implique de définir son projet professionnel et d'obtenir du feedback."
+  },
+  {
+    "question": "Comment l'empathie est-elle définie par Mariette Strub-Delain ?",
+    "choices": [
+      "Comme une faiblesse dans le monde professionnel.",
+      "Comme la capacité de percevoir et de comprendre ce que ressent l'autre.",
+      "Comme un outil de manipulation émotionnelle.",
+      "Comme l'indifférence aux émotions d'autrui."
+    ],
+    "answer": "Comme la capacité de percevoir et de comprendre ce que ressent l'autre."
+  },
+  {
+    "question": "Quels sont les signes d'une personne empathique ?",
+    "choices": [
+      "Une bonne estime de soi et une capacité d'écoute développée.",
+      "L'incapacité à travailler en groupe.",
+      "Une tendance à ignorer les émotions des autres.",
+      "Une préférence pour les activités solitaires."
+    ],
+    "answer": "Une bonne estime de soi et une capacité d'écoute développée."
+  },
+  {
+    "question": "L'empathie est-elle considérée comme une qualité ou un défaut ?",
+    "choices": [
+      "Uniquement comme une qualité.",
+      "Uniquement comme un défaut.",
+      "Ni comme une qualité, ni comme un défaut, tout dépend de la mesure.",
+      "Comme un trait de personnalité neutre."
+    ],
+    "answer": "Ni comme une qualité, ni comme un défaut, tout dépend de la mesure."
+  },
+  {
+    "question": "Qu'est-ce que l'empathie selon Mariette Strub-Delain ?",
+    "choices": [
+      "La capacité de percevoir et comprendre les émotions et points de vue d'autrui tout en restant soi-même",
+      "Une méthode thérapeutique centrée sur la communication non verbale",
+      "Un trouble psychologique affectant la capacité à interagir socialement",
+      "Une technique de manipulation émotionnelle"
+    ],
+    "answer": "La capacité de percevoir et comprendre les émotions et points de vue d'autrui tout en restant soi-même"
+  },
+  {
+    "question": "Quels sont les deux niveaux d'empathie mentionnés ?",
+    "choices": [
+      "L'affective et la cognitive",
+      "La primale et la secondaire",
+      "La directe et l'indirecte",
+      "La personnelle et la professionnelle"
+    ],
+    "answer": "L'affective et la cognitive"
+  },
+  {
+    "question": "Qu'est-ce que l'empathie primale ?",
+    "choices": [
+      "La capacité à comprendre les théories psychologiques complexes",
+      "La réaction involontaire d'imiter les comportements d'autrui sans en avoir conscience",
+      "La première forme d'empathie développée chez l'humain",
+      "Un type d'empathie uniquement présent chez les animaux"
+    ],
+    "answer": "La réaction involontaire d'imiter les comportements d'autrui sans en avoir conscience"
+  },
+  {
+    "question": "Quel signe est typique d'une personne empathique selon la psychologue ?",
+    "choices": [
+      "Avoir une faible estime de soi et être très critique envers les autres",
+      "Être capable d'observer et de reproduire inconsciemment les mouvements d'autres personnes",
+      "Eviter tout contact visuel et émotionnel avec autrui",
+      "Posséder une capacité supérieure à mentir et manipuler les émotions des autres"
+    ],
+    "answer": "Être capable d'observer et de reproduire inconsciemment les mouvements d'autres personnes"
+  },
+  {
+    "question": "Quelle entreprise française est reconnue mondialement pour ses contributions dans le domaine de l'aéronautique ?",
+    "choices": [
+      "Renault",
+      "Dassault Systèmes",
+      "Airbus",
+      "Alstom"
+    ],
+    "answer": "Airbus"
+  },
+  {
+    "question": "Quel est le nom du moteur de recherche français qui se concentre sur la protection de la vie privée des utilisateurs ?",
+    "choices": [
+      "Google.fr",
+      "Bing",
+      "Qwant",
+      "Yahoo France"
+    ],
+    "answer": "Qwant"
+  },
+  {
+    "question": "En quelle année la startup française BlaBlaCar, plateforme de covoiturage, a-t-elle été fondée ?",
+    "choices": [
+      "2004",
+      "2006",
+      "2009",
+      "2012"
+    ],
+    "answer": "2006"
+  },
+  {
+    "question": "Quel événement annuel français est dédié à la célébration et à la promotion des startups et de l'innovation technologique ?",
+    "choices": [
+      "Le Web Summit",
+      "Viva Technology (VivaTech)",
+      "Le CES Las Vegas",
+      "IFA Berlin"
+    ],
+    "answer": "Viva Technology (VivaTech)"
+  },
+  {
+    "question": "Quel projet d'innovation technologique français vise à créer un ordinateur quantique à l'horizon 2030 ?",
+    "choices": [
+      "Le Plan Calcul",
+      "Le projet Qwant",
+      "Le programme Quantum",
+      "L'initiative French Tech"
+    ],
+    "answer": "Le programme Quantum"
+  },
+  {
+    "question": "Quelle société française est leader mondial dans le secteur des cartes à puce et de la sécurité numérique ?",
+    "choices": [
+      "Thales",
+      "Gemalto",
+      "Atos",
+      "Orange"
+    ],
+    "answer": "Gemalto"
+  },
+  {
+    "question": "Quelle ville française est souvent surnommée la 'French Tech Valley' en raison de sa concentration élevée de startups et d'entreprises technologiques ?",
+    "choices": [
+      "Lyon",
+      "Paris",
+      "Marseille",
+      "Toulouse"
+    ],
+    "answer": "Paris"
+  },
+  {
+    "question": "Lequel de ces instituts français est un acteur majeur de la recherche et de l'innovation dans le domaine du numérique et de l'informatique ?",
+    "choices": [
+      "L'INRIA (Institut national de recherche en informatique et en automatique)",
+      "Le CNRS (Centre national de la recherche scientifique)",
+      "L'INSERM (Institut national de la santé et de la recherche médicale)",
+      "L'INRA (Institut national de la recherche agronomique)"
+    ],
+    "answer": "L'INRIA (Institut national de recherche en informatique et en automatique)"
+  },
+  {
+    "question": "Quel est l'objectif principal en rejoignant le réseau FACE ?",
+    "choices": [
+      "Développer uniquement le réseau professionnel des dirigeants d'entreprise",
+      "Favoriser l'engagement sociétal des entreprises et la solidarité envers les personnes en situation d'exclusion",
+      "Augmenter les bénéfices des entreprises membres",
+      "Concentrer les efforts sur l'expansion commerciale à l'international"
+    ],
+    "answer": "Favoriser l'engagement sociétal des entreprises et la solidarité envers les personnes en situation d'exclusion"
+  },
+  {
+    "question": "Qu'est-ce qu'un club FACE ?",
+    "choices": [
+      "Une association sportive pour les dirigeants d'entreprise",
+      "Une structure mobilisant des entreprises et des acteurs publics contre l'exclusion sur leur territoire",
+      "Un groupe de réflexion sur les stratégies marketing",
+      "Un club de vacances pour les employés des entreprises membres"
+    ],
+    "answer": "Une structure mobilisant des entreprises et des acteurs publics contre l'exclusion sur leur territoire"
+  },
+  {
+    "question": "Quelle condition est nécessaire pour la création d'un club FACE ?",
+    "choices": [
+      "Une subvention gouvernementale obligatoire",
+      "L'engagement de dirigeantes et dirigeants d'entreprises avec des acteurs publics contre l'exclusion",
+      "Un local situé dans un quartier d'affaires",
+      "Un partenariat exclusif avec une grande école ou université"
+    ],
+    "answer": "L'engagement de dirigeantes et dirigeants d'entreprises avec des acteurs publics contre l'exclusion"
+  },
+  {
+    "question": "Comment se déroule l'intégration d'une structure associative existante au réseau FACE ?",
+    "choices": [
+      "Par un vote annuel des membres actuels",
+      "En présentant un projet économique rentable",
+      "En montrant des missions, valeurs et pratiques en cohérence avec FACE",
+      "Via une compétition entre différentes structures"
+    ],
+    "answer": "En montrant des missions, valeurs et pratiques en cohérence avec FACE"
+  },
+  {
+    "question": "Qu'est-ce que la médiation sociale au sein du réseau FACE ?",
+    "choices": [
+      "Un processus judiciaire pour résoudre les conflits internes",
+      "Une activité secondaire sans impact direct sur l'inclusion socio-économique",
+      "Une interface entre habitants, entreprises et institutions pour (re-)créer liens et synergies",
+      "Un service de conseil financier pour les personnes en situation d'exclusion"
+    ],
+    "answer": "Une interface entre habitants, entreprises et institutions pour (re-)créer liens et synergies"
+  },
+  {
+    "question": "Quel est le rôle des structures d'insertion par l'activité économique créées par FACE ?",
+    "choices": [
+      "Fournir une aide juridique aux entreprises en difficulté",
+      "Permettre à des personnes en difficulté professionnelle et sociale de bénéficier de contrats de travail",
+      "Organiser des formations exclusives en gestion d'entreprise",
+      "Promouvoir l'entrepreneuriat chez les jeunes diplômés"
+    ],
+    "answer": "Permettre à des personnes en difficulté professionnelle et sociale de bénéficier de contrats de travail"
+  },
+  {
+    "question": "Quelle est l'importance d'un réseau professionnel selon le réseau FACE ?",
+    "choices": [
+      "Un moyen de divertissement et de socialisation pour les employés",
+      "Une source inépuisable d'opportunités professionnelles et personnelles",
+      "Une structure formelle de surveillance des employés",
+      "Uniquement utile pour les cadres supérieurs et les dirigeants"
+    ],
+    "answer": "Une source inépuisable d'opportunités professionnelles et personnelles"
+  },
+  {
+    "question": "Comment FACE envisage-t-elle le développement de son réseau et de ses actions ?",
+    "choices": [
+      "Par le biais de campagnes publicitaires massives",
+      "En se focalisant uniquement sur le secteur technologique",
+      "À travers l'élaboration de projets en concertation avec les acteurs du territoire",
+      "En limitant ses activités aux grandes villes uniquement"
+    ],
+    "answer": "À travers l'élaboration de projets en concertation avec les acteurs du territoire"
+  },
   {
     "question": "Quel est le but principal du développement de l’accompagnement social dans le cadre d’aménagements de peine par le réseau FNARS ?",
     "choices": [
@@ -1167,56 +2468,6 @@
               "En se concentrant uniquement sur le secteur de la haute technologie"
             ],
             "answer": "En favorisant l'accès à l'emploi des personnes en difficulté"
-          },
-          {
-            "question": "Qui a écrit 'Les Misérables' ?",
-            "choices": [
-              "Victor Hugo",
-              "Albert Camus",
-              "Émile Zola",
-              "Jean-Paul Sartre"
-            ],
-            "answer": "Victor Hugo"
-          },
-          {
-            "question": "Quelle ville est la capitale de la France ?",
-            "choices": [
-              "Lyon",
-              "Marseille",
-              "Paris",
-              "Bordeaux"
-            ],
-            "answer": "Paris"
-          },
-          {
-            "question": "Qui a peint 'La Joconde' ?",
-            "choices": [
-              "Vincent Van Gogh",
-              "Pablo Picasso",
-              "Leonardo da Vinci",
-              "Claude Monet"
-            ],
-            "answer": "Leonardo da Vinci"
-          },
-          {
-            "question": "Quel est l'océan le plus grand du monde ?",
-            "choices": [
-              "L'océan Atlantique",
-              "L'océan Indien",
-              "L'océan Pacifique",
-              "L'océan Arctique"
-            ],
-            "answer": "L'océan Pacifique"
-          },
-          {
-            "question": "En quelle année l'homme a-t-il marché sur la Lune pour la première fois ?",
-            "choices": [
-              "1969",
-              "1973",
-              "1963",
-              "1980"
-            ],
-            "answer": "1969"
           },
           {
             "question": "Quel pays est connu comme le pays du Soleil Levant ?",
