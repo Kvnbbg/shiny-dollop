@@ -1,4 +1,724 @@
 [
+  {
+    "question": "Quel est le but principal du développement de l’accompagnement social dans le cadre d’aménagements de peine par le réseau FNARS ?",
+    "choices": [
+      "Augmenter le nombre de peines alternatives à la détention",
+      "Faciliter la réinsertion sociale et professionnelle des personnes placées sous main de justice",
+      "Réduire les coûts pour le système judiciaire",
+      "Augmenter le taux de détention dans les prisons"
+    ],
+    "answer": "Faciliter la réinsertion sociale et professionnelle des personnes placées sous main de justice"
+  },
+  {
+    "question": "Quelle proportion des personnes accueillies dans le réseau FNARS a déjà été condamnée ?",
+    "choices": [
+      "10%",
+      "25%",
+      "50%",
+      "75%"
+    ],
+    "answer": "25%"
+  },
+  {
+    "question": "Quels types de structures au sein du réseau FNARS accueillent des personnes placées sous main de justice ?",
+    "choices": [
+      "Centres d'hébergement uniquement",
+      "Accueils de jour et ateliers ou chantiers d'insertion",
+      "Universités et collèges",
+      "Centres commerciaux et entreprises privées"
+    ],
+    "answer": "Accueils de jour et ateliers ou chantiers d'insertion"
+  },
+  {
+    "question": "Quelle est la priorité des associations du réseau FNARS dans l'accompagnement des personnes placées sous main de justice ?",
+    "choices": [
+      "L'insertion professionnelle uniquement",
+      "Le développement de compétences artistiques",
+      "La prévention de l’effet de marginalisation",
+      "L'accompagnement psychologique exclusif"
+    ],
+    "answer": "La prévention de l’effet de marginalisation"
+  },
+  {
+    "question": "Quel pourcentage des entrants en prison se déclare sans ressources selon les constats du réseau FNARS ?",
+    "choices": [
+      "10%",
+      "25%",
+      "40%",
+      "55%"
+    ],
+    "answer": "25%"
+  },
+  {
+    "question": "Quelle stratégie est préconisée par le réseau FNARS pour combattre efficacement la récidive ?",
+    "choices": [
+      "L'augmentation des peines de prison",
+      "La construction progressive d’un projet d’insertion pour les détenus",
+      "La mise en place de peines plus sévères pour les récidivistes",
+      "L'isolement total des personnes condamnées"
+    ],
+    "answer": "La construction progressive d’un projet d’insertion pour les détenus"
+  },
+  {
+    "question": "Quel est l'objectif des partenariats entre le réseau FNARS et l’administration pénitentiaire ?",
+    "choices": [
+      "Augmenter le nombre de prisons en France",
+      "Développer des programmes d'éducation exclusive en prison",
+      "Préparer la sortie de détention et faciliter l'accès au droit commun",
+      "Isoler les détenus des influences extérieures"
+    ],
+    "answer": "Préparer la sortie de détention et faciliter l'accès au droit commun"
+  },
+  {
+    "question": "Quel exemple de partenariat sur un sujet compliqué a été initié par le réseau FNARS ?",
+    "choices": [
+      "L'intégration de l'IAE en détention",
+      "La création de nouvelles prisons",
+      "Le financement exclusif de projets d'art en prison",
+      "La fermeture des centres d'hébergement"
+    ],
+    "answer": "L'intégration de l'IAE en détention"
+  },
+  {
+    "question": "Quelle fédération française, créée en 1994, rassemble des groupements d'employeurs pour l'insertion et la qualification ?",
+    "choices": [
+      "La Fédération Française des GEIQ",
+      "COORACE",
+      "La Fédération des Entreprises d’Insertion",
+      "UNAI"
+    ],
+    "answer": "La Fédération Française des GEIQ"
+  },
+  {
+    "question": "Quel est l'objectif principal des Entreprises Sociales Apprenantes, regroupées depuis 1995 ?",
+    "choices": [
+      "Maximiser les profits des entreprises sociales",
+      "Fournir une formation professionnelle aux cadres d'entreprises",
+      "Définir leurs spécificités comme employeur, producteur, formateur, et acteur de développement local",
+      "Promouvoir exclusivement le recyclage et la gestion des déchets"
+    ],
+    "answer": "Définir leurs spécificités comme employeur, producteur, formateur, et acteur de développement local"
+  },
+  {
+    "question": "Quelle structure a pour mission de soutenir le développement des associations intermédiaires depuis 2001 ?",
+    "choices": [
+      "La Fédération des Entreprises d’Insertion",
+      "L'UNAI",
+      "Le CNLRQ",
+      "EMMAUS France"
+    ],
+    "answer": "L'UNAI"
+  },
+  {
+    "question": "Quelle organisation coordonne les Régies de quartier et de territoire depuis 1988 ?",
+    "choices": [
+      "Le CNLRQ",
+      "COORACE",
+      "Le Réseau Cocagne",
+      "Tissons la Solidarité"
+    ],
+    "answer": "Le CNLRQ"
+  },
+  {
+    "question": "Quelle fédération réunit plus de 500 entreprises de l'économie sociale et solidaire au service de l'emploi depuis 1985 ?",
+    "choices": [
+      "La Fédération des acteurs de la solidarité",
+      "COORACE",
+      "Le Réseau ENVIE",
+      "Le Réseau COCAGNE"
+    ],
+    "answer": "COORACE"
+  },
+  {
+    "question": "Qui fédère environ 120 SIAE autour de l'agriculture biologique et des légumes bio depuis 1999 ?",
+    "choices": [
+      "Le Réseau COCAGNE",
+      "EMMAUS France",
+      "ENVIE",
+      "Tissons la Solidarité"
+    ],
+    "answer": "Le Réseau COCAGNE"
+  },
+  {
+    "question": "Quelle initiative est centrée sur le recyclage textile et fondée par le Secours Catholique en 2004 ?",
+    "choices": [
+      "Tissons la Solidarité",
+      "Le Réseau ENVIE",
+      "EMMAUS France",
+      "Le Réseau COCAGNE"
+    ],
+    "answer": "Tissons la Solidarité"
+  },
+  {
+    "question": "Qui promeut l'accès au monde du travail des personnes éloignées de l'emploi par la rénovation et vente d'appareils électroménagers depuis 1984 ?",
+    "choices": [
+      "ENVIE",
+      "Le Réseau Cocagne",
+      "EMMAUS France",
+      "Tissons la Solidarité"
+    ],
+    "answer": "ENVIE"
+  },
+  {
+    "question": "Quelle organisation se focalise sur l'accompagnement des demandeurs d'emploi dans le secteur agricole ?",
+    "choices": [
+      "Les chambres de commerce et d'industrie",
+      "Les chambres des métiers et de l'artisanat",
+      "L'Association pour la formation professionnelle des adultes (AFPA)",
+      "Les chambres d'agriculture"
+    ],
+    "answer": "Les chambres d'agriculture"
+  },
+  {
+    "question": "Quelle institution joue un rôle clé dans l'orientation scolaire et professionnelle en France ?",
+    "choices": [
+      "L'ONISEP (Office National d'Information Sur les Enseignements et les Professions)",
+      "Le CNED (Centre National d'Enseignement à Distance)",
+      "L'INSERM (Institut National de la Santé et de la Recherche Médicale)",
+      "Le CNRS (Centre National de la Recherche Scientifique)"
+    ],
+    "answer": "L'ONISEP (Office National d'Information Sur les Enseignements et les Professions)"
+  },
+  {
+    "question": "Qui soutient l'entrepreneuriat social et l'innovation sociale en France ?",
+    "choices": [
+      "La BPI (Banque Publique d'Investissement)",
+      "L'ADIE (Association pour le Droit à l'Initiative Économique)",
+      "Le CNC (Centre National du Cinéma et de l'image animée)",
+      "L'ACOSS (Agence Centrale des Organismes de Sécurité Sociale)"
+    ],
+    "answer": "L'ADIE (Association pour le Droit à l'Initiative Économique)"
+  },
+  {
+    "question": "Quelle structure est spécialement conçue pour les travailleurs handicapés souhaitant intégrer le marché du travail ?",
+    "choices": [
+      "Les Missions locales",
+      "Le FIPHFP (Fonds pour l'Insertion des Personnes Handicapées dans la Fonction Publique)",
+      "Les GEIQ Propreté",
+      "Les Maisons de l'Emploi"
+    ],
+    "answer": "Le FIPHFP (Fonds pour l'Insertion des Personnes Handicapées dans la Fonction Publique)"
+  },
+  {
+    "question": "Dans quel domaine les 'boutiques de gestion' aident-elles les entrepreneurs ?",
+    "choices": [
+      "La gestion financière et administrative",
+      "La formation en arts et métiers",
+      "Le coaching sportif pour entrepreneurs",
+      "La médiation culturelle"
+    ],
+    "answer": "La gestion financière et administrative"
+  },
+  {
+    "question": "Quel dispositif français vise à encourager la mobilité internationale des jeunes ?",
+    "choices": [
+      "Le programme Erasmus+",
+      "Le CIDJ pour la mobilité européenne et internationale",
+      "Les Volontariats Internationaux en Entreprise (VIE)",
+      "Les échanges universitaires du CNOUS"
+    ],
+    "answer": "Les Volontariats Internationaux en Entreprise (VIE)"
+  },
+  {
+    "question": "Quelle initiative favorise l'insertion professionnelle à travers des activités artistiques et culturelles ?",
+    "choices": [
+      "Les E2C (Écoles de la 2e Chance)",
+      "Les ateliers et chantiers d’insertion (ACI) spécialisés dans la culture",
+      "Le Fonds Social Européen (FSE)",
+      "Les incubateurs de startups culturelles"
+    ],
+    "answer": "Les ateliers et chantiers d’insertion (ACI) spécialisés dans la culture"
+  },
+  {
+    "question": "Quel est le principal objectif de Prism’emploi ?",
+    "choices": [
+      "Regrouper plus de 600 entreprises de travail temporaire pour faciliter l'intérim et le recrutement",
+      "Fournir des aides financières aux entreprises en difficulté",
+      "Promouvoir le travail indépendant en France",
+      "Organiser des formations professionnelles pour les demandeurs d'emploi"
+    ],
+    "answer": "Regrouper plus de 600 entreprises de travail temporaire pour faciliter l'intérim et le recrutement"
+  },
+  {
+    "question": "Quelle structure accompagne les personnes handicapées dans leur recherche d'emploi ?",
+    "choices": [
+      "Le CCAS",
+      "L'OFII",
+      "Cap emploi",
+      "L'APEC"
+    ],
+    "answer": "Cap emploi"
+  },
+  {
+    "question": "Quelle mission est attribuée au service pénitentiaire d'insertion et de probation ?",
+    "choices": [
+      "Gérer les établissements pénitentiaires",
+      "Favoriser l'insertion ou la réinsertion des personnes détenues",
+      "Surveiller le respect des peines alternatives à l'incarcération",
+      "Organiser des formations professionnelles pour les agents pénitentiaires"
+    ],
+    "answer": "Favoriser l'insertion ou la réinsertion des personnes détenues"
+  },
+  {
+    "question": "Quel est le rôle des Missions locales pour les jeunes ?",
+    "choices": [
+      "Organiser des activités culturelles et sportives",
+      "Accompagner les jeunes de 16 à 25 ans dans leur insertion professionnelle",
+      "Proposer des logements étudiants",
+      "Délivrer des bourses d'études supérieures"
+    ],
+    "answer": "Accompagner les jeunes de 16 à 25 ans dans leur insertion professionnelle"
+  },
+  {
+    "question": "Quel organisme aide spécifiquement à la création d'entreprise ?",
+    "choices": [
+      "L'APCE",
+      "Le PJJ",
+      "Le CIDJ",
+      "Le FPSPP"
+    ],
+    "answer": "L'APCE"
+  },
+  {
+    "question": "Qui finance et prescrit des formations pour les demandeurs d'emploi ?",
+    "choices": [
+      "Les chambres des métiers et de l'artisanat",
+      "Les Missions locales",
+      "Le Cap emploi",
+      "Toutes les réponses sont correctes"
+    ],
+    "answer": "Toutes les réponses sont correctes"
+  },
+  {
+    "question": "Quelle initiative est un secteur incontournable des politiques publiques d’inclusion en France ?",
+    "choices": [
+      "L'insertion par l'activité économique (IAE)",
+      "Le service militaire volontaire",
+      "Les emplois francs",
+      "Les contrats d'avenir"
+    ],
+    "answer": "L'insertion par l'activité économique (IAE)"
+  },
+  {
+    "question": "Quel est le but des ateliers et chantiers d’insertion (ACI) ?",
+    "choices": [
+      "Offrir des stages de découverte professionnelle pour les collégiens",
+      "Permettre aux personnes les plus éloignées de l'emploi de se réinsérer professionnellement",
+      "Organiser des formations en management pour les cadres",
+      "Développer des activités économiques dans le secteur de l'industrie lourde"
+    ],
+    "answer": "Permettre aux personnes les plus éloignées de l'emploi de se réinsérer professionnellement"
+  },
+  {
+    "question": "Quelle initiative vise spécifiquement à lutter contre le décrochage scolaire et le chômage des jeunes en France ?",
+    "choices": [
+      "Les universités populaires",
+      "Les EPIDE (Établissements pour l'Insertion dans l'Emploi)",
+      "Les centres AFPA",
+      "Les CFA (Centres de Formation des Apprentis)"
+    ],
+    "answer": "Les EPIDE (Établissements pour l'Insertion dans l'Emploi)"
+  },
+  {
+    "question": "Quelle structure joue un rôle crucial dans l'accompagnement des jeunes sur les questions d'orientation et de mobilité internationale ?",
+    "choices": [
+      "Les CIDJ (Centre d'Information et de Documentation Jeunesse)",
+      "Les chambres de commerce et d'industrie",
+      "Les consulats français à l'étranger",
+      "Les mairies"
+    ],
+    "answer": "Les CIDJ (Centre d'Information et de Documentation Jeunesse)"
+  },
+  {
+    "question": "Quel plan local a pour but de faciliter l'accès à un emploi durable pour les populations éloignées du marché du travail ?",
+    "choices": [
+      "Les PLIE (Plan Local pour l'Insertion et pour l'Emploi)",
+      "Le RSA (Revenu de Solidarité Active)",
+      "Les ZEP (Zones d'Éducation Prioritaires)",
+      "Le CICE (Crédit d'Impôt pour la Compétitivité et l'Emploi)"
+    ],
+    "answer": "Les PLIE (Plan Local pour l'Insertion et pour l'Emploi)"
+  },
+  {
+    "question": "Quel organisme est chargé de l'intégration des immigrés et de la gestion de l'asile en France ?",
+    "choices": [
+      "La CNDA (Cour Nationale du Droit d'Asile)",
+      "L'OFII (Office Français de l'Immigration et de l'Intégration)",
+      "La CAF (Caisse d'Allocations Familiales)",
+      "L'OFPRA (Office Français de Protection des Réfugiés et Apatrides)"
+    ],
+    "answer": "L'OFII (Office Français de l'Immigration et de l'Intégration)"
+  },
+  {
+    "question": "Dans quel secteur les GEIQ proposent-ils des parcours d'insertion professionnelle individualisés ?",
+    "choices": [
+      "Dans le secteur de la propreté",
+      "Dans l'industrie aéronautique",
+      "Dans le secteur de l'hôtellerie",
+      "Dans l'éducation nationale"
+    ],
+    "answer": "Dans le secteur de la propreté"
+  },
+  {
+    "question": "Quel dispositif assure aux personnes en difficulté une expérience de travail et un accompagnement socioprofessionnel ?",
+    "choices": [
+      "Les SIAE (Structures d'insertion par l'activité économique)",
+      "Le PEE (Plan d'Épargne Entreprise)",
+      "Les ESS (Économie Sociale et Solidaire)",
+      "Les IAE (Insertion par l'Activité Économique)"
+    ],
+    "answer": "Les SIAE (Structures d'insertion par l'activité économique)"
+  },
+  {
+    "question": "Quelle figure historique française est reconnue pour ses contributions à la pensée sur la solidarité et l'inclusion sociale ?",
+    "choices": [
+      "Victor Hugo, à travers ses œuvres littéraires",
+      "Jean Jaurès, pour son engagement politique",
+      "Louis Pasteur, pour ses découvertes scientifiques",
+      "Gustave Eiffel, pour ses réalisations architecturales"
+    ],
+    "answer": "Victor Hugo, à travers ses œuvres littéraires"
+  },
+  {
+    "question": "Quel est le rôle principal des EPIDE (Établissements pour l'Insertion dans l'Emploi) ?",
+    "choices": [
+      "Fournir un hébergement temporaire pour les jeunes sans abri",
+      "Accueillir des jeunes de 18 à 25 ans pour les accompagner dans leur projet social et professionnel",
+      "Offrir des formations universitaires gratuites pour les étudiants étrangers",
+      "Organiser des événements sportifs pour promouvoir l'emploi chez les jeunes"
+    ],
+    "answer": "Accueillir des jeunes de 18 à 25 ans pour les accompagner dans leur projet social et professionnel"
+  },
+  {
+    "question": "Quelle est la mission des CIDJ (Centre d'Information et de Documentation Jeunesse) ?",
+    "choices": [
+      "Proposer des logements étudiants à faible coût",
+      "Informer et conseiller les jeunes sur divers sujets, notamment l'emploi et la formation",
+      "Organiser des voyages scolaires à l'étranger",
+      "Distribuer des aides financières pour les projets entrepreneuriaux des jeunes"
+    ],
+    "answer": "Informer et conseiller les jeunes sur divers sujets, notamment l'emploi et la formation"
+  },
+  {
+    "question": "Qu'est-ce que les PLIE (Plan Local pour l'Insertion et pour l'Emploi) visent à prévenir ?",
+    "choices": [
+      "L'inflation économique",
+      "L'exclusion sociale et professionnelle",
+      "La pollution dans les zones urbaines",
+      "Les conflits intergénérationnels"
+    ],
+    "answer": "L'exclusion sociale et professionnelle"
+  },
+  {
+    "question": "Quel est l'objectif principal de l'OFII (Office Français de l'Immigration et de l'Intégration) ?",
+    "choices": [
+      "Contrôler les frontières françaises",
+      "Accueillir et intégrer les immigrés autorisés à séjourner durablement en France",
+      "Promouvoir la culture française à l'étranger",
+      "Fournir des aides financières aux entreprises françaises"
+    ],
+    "answer": "Accueillir et intégrer les immigrés autorisés à séjourner durablement en France"
+  },
+  {
+    "question": "Comment les GEIQ Propreté contribuent-ils à l'emploi en France ?",
+    "choices": [
+      "En nettoyant les espaces publics gratuitement",
+      "En regroupant des entreprises pour résoudre leurs problèmes de recrutement",
+      "En offrant des formations en gestion d'entreprise",
+      "En organisant des campagnes de sensibilisation à l'hygiène"
+    ],
+    "answer": "En regroupant des entreprises pour résoudre leurs problèmes de recrutement"
+  },
+  {
+    "question": "Quel service spécialisé est en charge de l'accompagnement durable des personnes handicapées dans l'emploi ?",
+    "choices": [
+      "Les missions locales",
+      "Les Cap Emploi",
+      "Les centres AFPA",
+      "Les bureaux de l'ANACT"
+    ],
+    "answer": "Les Cap Emploi"
+  },
+    {
+      "question": "Quelle est l'importance des politiques d'insertion pour les personnes handicapées en France ?",
+      "choices": [
+        "Elles garantissent un accès exclusif à des postes de haute direction",
+        "Elles proposent des formations professionnelles uniquement en milieu protégé",
+        "Elles visent à favoriser l'égalité des chances sur le marché du travail",
+        "Elles limitent l'accès au travail des personnes handicapées aux secteurs non concurrentiels"
+      ],
+      "answer": "Elles visent à favoriser l'égalité des chances sur le marché du travail"
+    },
+    {
+      "question": "Quel philosophe français a profondément influencé la notion de solidarité sociale, fondamentale pour les politiques d'insertion ?",
+      "choices": [
+        "Jean-Paul Sartre",
+        "Émile Durkheim",
+        "Michel Foucault",
+        "René Descartes"
+      ],
+      "answer": "Émile Durkheim"
+    },
+    {
+      "question": "Dans quel contexte historique les politiques d'insertion ont-elles été particulièrement développées en France ?",
+      "choices": [
+        "Suite aux révolutions industrielles du XIXe siècle",
+        "Dans les années suivant la Seconde Guerre mondiale",
+        "Durant les Trente Glorieuses",
+        "Après la crise économique de 2008"
+      ],
+      "answer": "Durant les Trente Glorieuses"
+    },
+    {
+      "question": "Quel écrivain français a mis en lumière les difficultés sociales et l'importance de l'insertion à travers ses romans ?",
+      "choices": [
+        "Victor Hugo",
+        "Marcel Proust",
+        "Albert Camus",
+        "François Rabelais"
+      ],
+      "answer": "Victor Hugo"
+    },
+    {
+      "question": "Comment la Garantie Jeunes s'inscrit-elle dans la continuité des politiques d'insertion françaises ?",
+      "choices": [
+        "En offrant un revenu universel à tous les jeunes",
+        "En garantissant une place dans l'enseignement supérieur pour tous les lycéens",
+        "Par un accompagnement renforcé vers l'emploi pour les jeunes en situation de précarité",
+        "En créant des universités gratuites pour les jeunes sans qualification"
+      ],
+      "answer": "Par un accompagnement renforcé vers l'emploi pour les jeunes en situation de précarité"
+    },
+    {
+      "question": "Quel rôle a joué la littérature dans la sensibilisation aux enjeux de l'insertion professionnelle et sociale en France ?",
+      "choices": [
+        "Elle a été utilisée comme outil de formation professionnelle",
+        "Les écrivains ont souvent dénoncé les inégalités et encouragé la solidarité",
+        "Elle a servi principalement à promouvoir les politiques gouvernementales",
+        "La littérature n'a eu aucun impact sur l'insertion professionnelle"
+      ],
+      "answer": "Les écrivains ont souvent dénoncé les inégalités et encouragé la solidarité"
+    },  
+  {
+    "question": "Quelle est une des critiques majeures des politiques d'insertion professionnelle selon les analyses ?",
+    "choices": [
+      "Elles augmentent la quantité d'emploi disponible sur le marché",
+      "Elles ne font que redistribuer les postes entre les individus sans créer de nouveaux emplois",
+      "Elles favorisent uniquement l'insertion des personnes hautement qualifiées",
+      "Elles réduisent significativement le taux de chômage à long terme"
+    ],
+    "answer": "Elles ne font que redistribuer les postes entre les individus sans créer de nouveaux emplois"
+  },
+  {
+    "question": "Quelle critique est adressée aux politiques visant une insertion professionnelle généralisée ?",
+    "choices": [
+      "Elles sont trop coûteuses pour l'économie nationale",
+      "Elles sont inefficaces et rendent les insertions ciblées inutiles",
+      "Elles discriminent certains groupes de la population",
+      "Elles ne sont pas suffisamment soutenues par les entreprises"
+    ],
+    "answer": "Elles sont inefficaces et rendent les insertions ciblées inutiles"
+  },
+  {
+    "question": "Quelle était l'ambition de la loi LRU de 2007 concernant l'enseignement supérieur ?",
+    "choices": [
+      "Augmenter les droits de scolarité pour financer les universités",
+      "Ajouter l'insertion professionnelle aux missions de l'université",
+      "Réduire le nombre d'étudiants par classe",
+      "Favoriser l'autonomie des universités par rapport à l'État"
+    ],
+    "answer": "Ajouter l'insertion professionnelle aux missions de l'université"
+  },
+  {
+    "question": "Comment le monde de l'éducation perçoit-il l'insertion professionnelle dans les programmes scolaires ?",
+    "choices": [
+      "Comme une nécessité face à la mondialisation",
+      "Comme un moyen de sortir les élèves en échec scolaire de l'école",
+      "Comme une opportunité pour les étudiants de se préparer au marché du travail",
+      "Comme une intrusion du monde de l'entreprise dans l'éducation"
+    ],
+    "answer": "Comme un moyen de sortir les élèves en échec scolaire de l'école"
+  },
+  {
+    "question": "Quel rôle jouent les Missions Locales pour les jeunes de 16 à 25 ans ?",
+    "choices": [
+      "Offrir un enseignement secondaire alternatif",
+      "Fournir un soutien psychologique exclusivement",
+      "Accompagner les jeunes dans leur insertion professionnelle",
+      "Organiser des activités extra-scolaires"
+    ],
+    "answer": "Accompagner les jeunes dans leur insertion professionnelle"
+  },
+  {
+    "question": "Quel est l'objectif des Écoles de la 2ème Chance (E2C) ?",
+    "choices": [
+      "Préparer les jeunes adultes à des concours administratifs",
+      "Assurer l'insertion sociale, citoyenne et professionnelle des jeunes sans qualification",
+      "Proposer des cours de remise à niveau en mathématiques et en français",
+      "Offrir un hébergement aux jeunes en difficulté"
+    ],
+    "answer": "Assurer l'insertion sociale, citoyenne et professionnelle des jeunes sans qualification"
+  },
+  {
+    "question": "En quoi consiste la critique principale sur le plan général des politiques d'insertion professionnelle ?",
+    "choices": [
+      "La sur-simplification des procédures administratives",
+      "La coupure entre la sphère de l'insertion et celle de la production",
+      "L'accent mis uniquement sur les jeunes sans emploi",
+      "Le manque de financement pour les initiatives d'insertion"
+    ],
+    "answer": "La coupure entre la sphère de l'insertion et celle de la production"
+  },
+  {
+    "question": "Quelle critique est souvent faite à l'égard de l'insertion professionnelle ?",
+    "choices": [
+      "Elle est trop centrée sur les besoins des entreprises au détriment des chômeurs",
+      "Elle bénéficie uniquement aux chômeurs les plus qualifiés",
+      "Elle n'offre pas suffisamment de formations professionnelles continues",
+      "Elle ignore les problématiques de l'emploi précaire et à temps partiel"
+    ],
+    "answer": "Elle bénéficie uniquement aux chômeurs les plus qualifiés"
+  },
+  {
+    "question": "Quel a été l'un des principaux changements introduits par le RSA par rapport au RMI ?",
+    "choices": [
+      "L'introduction d'une allocation logement pour les jeunes sans emploi",
+      "L'obligation pour les allocataires de suivre une formation professionnelle",
+      "L'attribution d'une allocation complémentaire sous conditions de ressources à des travailleurs à faibles revenus",
+      "La création d'un service national d'emploi pour l'insertion des jeunes"
+    ],
+    "answer": "L'attribution d'une allocation complémentaire sous conditions de ressources à des travailleurs à faibles revenus"
+  },
+  {
+    "question": "Quelle a été la conséquence de la fusion entre l'ANPE et l'UNEDIC pour former Pôle emploi en 2008 ?",
+    "choices": [
+      "Une réduction immédiate du taux de chômage en France",
+      "La centralisation des services d'emploi au détriment des initiatives locales",
+      "La facilitation du suivi individualisé des chômeurs et des précaires jeunes ou adultes",
+      "Une augmentation significative des allocations chômage pour tous les demandeurs"
+    ],
+    "answer": "La facilitation du suivi individualisé des chômeurs et des précaires jeunes ou adultes"
+  },
+  {
+    "question": "Quel constat a mené à la création du Revenu de solidarité active (RSA) ?",
+    "choices": [
+      "L'inefficacité des politiques d'emploi précédentes dans la réduction de la pauvreté",
+      "La modification des conditions de la pauvreté, notamment due à l'augmentation du travail précaire",
+      "Le succès des initiatives d'insertion professionnelle pour les jeunes",
+      "La nécessité de réduire les dépenses publiques en matière d'aide sociale"
+    ],
+    "answer": "La modification des conditions de la pauvreté, notamment due à l'augmentation du travail précaire"
+  },
+  {
+    "question": "Quelle initiative a été prise en marge des politiques d'insertion pour soutenir des démarches plus expérimentales ?",
+    "choices": [
+      "La création d'un fonds national pour l'innovation sociale",
+      "L'introduction d'une nouvelle législation sur le travail à temps partiel",
+      "Le soutien d'opérations comme 'Nouvelles qualifications' et 'd'insertion par l'offre et la demande (IOD)'",
+      "La réforme du système éducatif pour intégrer l'enseignement professionnel dès le collège"
+    ],
+    "answer": "Le soutien d'opérations comme 'Nouvelles qualifications' et 'd'insertion par l'offre et la demande (IOD)'"
+  },
+  {
+    "question": "Quelle innovation majeure la loi du l'import sur la fortune pour les adultes chômeurs ou précaires ?",
+    "choices": [
+      "L'obligation de formation professionnelle continue",
+      "Un minimum de ressources de subsistance garanties par la loi",
+      "Un accès automatique à un emploi dans le secteur public",
+      "La création d'un service national d'emploi pour jeunes"
+    ],
+    "answer": "Un minimum de ressources de subsistance garanties par la loi"
+  },
+  {
+    "question": "Qu'est-ce que l'insertion par l'offre et la demande (IOD) ?",
+    "choices": [
+      "Une méthode de réduction des taxes pour les entreprises embauchant des chômeurs",
+      "Un programme de formation continue pour les demandeurs d'emploi",
+      "Une approche pour articuler l'offre et la demande d'emploi en se focalisant sur les besoins des entreprises",
+      "Une initiative gouvernementale pour augmenter le salaire minimum"
+    ],
+    "answer": "Une approche pour articuler l'offre et la demande d'emploi en se focalisant sur les besoins des entreprises"
+  },
+  {
+    "question": "Qui a diffusé la méthode d'insertion par l'offre et la demande (IOD) ?",
+    "choices": [
+      "Le ministère du Travail et de l'Emploi",
+      "L'association TRANSFER basée à Bordeaux",
+      "L'UNEDIC et l'ANPE",
+      "Le Conseil Économique, Social et Environnemental"
+    ],
+    "answer": "L'association TRANSFER basée à Bordeaux"
+  },
+  {
+    "question": "Quel est l'objectif principal de la loi sur le Revenu de solidarité active (RSA) introduite en 2009 ?",
+    "choices": [
+      "Fournir une formation professionnelle obligatoire aux jeunes sans emploi",
+      "Augmenter les impôts sur la fortune pour financer les politiques d'insertion",
+      "Attribuer une allocation complémentaire aux travailleurs à faibles revenus",
+      "Créer un service national d'emploi pour jeunes"
+    ],
+    "answer": "Attribuer une allocation complémentaire aux travailleurs à faibles revenus"
+  },
+  {
+    "question": "Quelle était la nouveauté de l'opération 'Nouvelles qualifications' par rapport aux approches traditionnelles d'insertion ?",
+    "choices": [
+      "L'intégration des jeunes dans des entreprises sans qualifications préalables",
+      "L'articulation entre les actions d'insertion et l'évolution des organisations du travail",
+      "La suppression des démarches administratives pour l'inscription à l'ANPE",
+      "La création d'un service national pour l'emploi des jeunes"
+    ],
+    "answer": "L'articulation entre les actions d'insertion et l'évolution des organisations du travail"
+  },
+  {
+    "question": "Quelle innovation majeure la loi du RMI de 1988 a-t-elle introduite pour les adultes chômeurs ou précaires ?",
+    "choices": [
+      "L'obligation de formation professionnelle continue",
+      "Un minimum de ressources de subsistance garanties par la loi",
+      "Un accès automatique à un emploi dans le secteur public",
+      "La création d'un service national d'emploi pour jeunes"
+    ],
+    "answer": "Un minimum de ressources de subsistance garanties par la loi"
+  },
+  {
+    "question": "Quel est le principal constat ayant mené à la création du Revenu de solidarité active (RSA) en 2009 ?",
+    "choices": [
+      "L'augmentation de la durée moyenne du chômage",
+      "La modification des conditions de pauvreté liées à l'emploi précaire et/ou à temps partiel",
+      "La baisse du nombre de bénéficiaires du RMI",
+      "L'efficacité limitée des politiques d'insertion professionnelle"
+    ],
+    "answer": "La modification des conditions de pauvreté liées à l'emploi précaire et/ou à temps partiel"
+  },
+  {
+    "question": "Quelle a été l'une des initiatives innovantes soutenues par les pouvoirs publics pour l'insertion des jeunes ?",
+    "choices": [
+      "Le programme 'Nouvelles qualifications' initié par Bertrand Schwartz",
+      "La mise en place d'un revenu universel pour les moins de 25 ans",
+      "L'instauration d'un service civique obligatoire",
+      "La création d'une application mobile pour l'emploi des jeunes"
+    ],
+    "answer": "Le programme 'Nouvelles qualifications' initié par Bertrand Schwartz"
+  },
+  {
+    "question": "Quel changement principal le RSA a-t-il introduit par rapport au RMI ?",
+    "choices": [
+      "L'attribution d'une allocation complémentaire pour les travailleurs à faibles revenus",
+      "La suppression de toute condition de ressources pour les allocataires",
+      "L'introduction d'un service de suivi personnalisé pour chaque bénéficiaire",
+      "La création d'emplois subventionnés dans le secteur non-marchand"
+    ],
+    "answer": "L'attribution d'une allocation complémentaire pour les travailleurs à faibles revenus"
+  },
+  {
+    "question": "Quel est l'objectif de la fusion de l'ANPE et de l'UNEDIC pour créer Pôle emploi en 2008 ?",
+    "choices": [
+      "Augmenter le budget alloué aux politiques d'emploi",
+      "Faciliter le suivi individualisé des chômeurs et des précaires",
+      "Créer une base de données unique pour tous les demandeurs d'emploi",
+      "Diminuer le taux de chômage en France de manière significative"
+    ],
+    "answer": "Faciliter le suivi individualisé des chômeurs et des précaires"
+  }
     {
     "question": "En quelle date Louis XVI est-il mort ?",
     "choices": [

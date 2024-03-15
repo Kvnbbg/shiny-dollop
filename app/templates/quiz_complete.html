@@ -34,33 +34,6 @@
         <a href="{{ url_for('main.home') }}" class="btn btn-secondary">{{ "Go Home" if session['lang'] == 'en' else "Aller à l'accueil" }}</a>
     </div>
 </div>
-<div class="card card-body text-black-50">
-    <h3>
-        {{ "Availaible ressources" if session['lang'] == 'en' else "Ressources disponible" }}
-    </h3>
-    <p>
-    {{ "You can also practice your coding skills with the following resources:" if session['lang'] == 'en' else "Vous pouvez également pratiquer vos compétences en programmation avec les ressources suivantes :" }}
-    </p>
-    <ul>
-      <li>
-          <a class="nav-item nav-link" href="https://www.codewars.com/">Codewars</a>
-        </li>
-        <li>
-            <a class="nav-item nav-link" href="https://www.hackerrank.com/">HackerRank</a>
-        </li>
-        <li>
-            <a class="nav-item nav-link" href="https://www.codingame.com/start">CodinGame</a>
-        </li>
-        <li>
-            <a class="nav-item nav-link" href="https://www.codecademy.com/">Codecademy</a>
-        </li>
-        <li>
-      <a class="nav-item nav-link" href="https://learn.codesignal.com/course-paths/14">Practice</a>
-      <li>
-          <a class="nav-item nav-link" href="https://app.daily.dev/">News</a>
-      </li>
-    </ul>
-</div>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     let countdown = 10; // seconds

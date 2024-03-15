@@ -59,10 +59,10 @@ def quiz():
             correct_answer = current_question['answer']
             if form.choice.data == str(correct_answer):
                 session['correct_answers'] += 1
-                feedback = "Correct answer!"
+                feedback = "Correct !"
             else:
                 session['wrong_answers'] += 1
-                feedback = f"Wrong answer! The correct answer was: {correct_answer}."
+                feedback = f"{correct_answer}."
         flash(feedback)
         session['current_index'] += 1
         return redirect(url_for('.quiz'))

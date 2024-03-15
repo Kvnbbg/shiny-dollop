@@ -1,4 +1,33 @@
 {% extends 'base.html' %} {% block content %}
+<div class="text-center my-5">
+  {% if session['lang'] == 'fr' %}
+  <h1
+    class="text-white"
+    style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
+  >
+    Bienvenue sur Shiny Dollop!
+  </h1>
+  <h2
+    class="text-white-50"
+    style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
+  >
+    Votre app pour apprendre et tester vos connaissances!
+  </h2>
+  {% else %}
+  <h1
+    class="text-white"
+    style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
+  >
+    Welcome to Shiny Dollop!
+  </h1>
+  <h2
+    class="text-white-50"
+    style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
+  >
+    Your app to learn and test your knowledge!
+  </h2>
+  {% endif %}
+</div>
 <!-- Quizz Game Section with Bootstrap Collapse -->
 <div class="container my-4">
   <p>
@@ -18,9 +47,9 @@
     <div class="card card-body text-black-50">
       <p>
         {{ "The quiz is a multiple choice test with a lot of questions. You will
-        have 35 second to complete it. Good luck!" if session['lang'] == 'en'
+        have 35 second to complete it." if session['lang'] == 'en'
         else "Le quiz est un test à choix multiples avec plusieurs questions.
-        Vous aurez 35 secondes pour le compléter. Bonne chance !" }}
+        Vous aurez 35 secondes pour le compléter." }}
       </p>
       <p>
         {{ "You can start the quiz by clicking the button below." if

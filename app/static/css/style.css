@@ -1,180 +1,203 @@
-/* Ensure the HTML and body elements take up full height */
+/* Base Styles */
 html, body {
-  height: 100%;
+  max-height: 100vh;
+  max-width: 100vw; /* Ensure the width does not exceed the viewport */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
   margin: 0;
-  background: #007bff; /* Fallback for browsers that don't support gradients */
-}
-
-body {
+  background: linear-gradient(135deg, #007bff, #002853);
   font-family: "Ubuntu", sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
+  color: #f8f9fa;
   box-sizing: border-box;
   line-height: 1.6;
   display: flex;
-  flex-direction: column; /* New: Makes body flex container with column direction */
+  flex-direction: column;
 }
 
-/* Stretch header to take all horizontal space */
-header {
-  color: #ffffff;
-  color-scheme: light dark;
-  padding: 20px 0;
-  border-bottom: 3px solid #006fe6;
-  width: 100%; /* Ensure it takes the full width */
+body {
+  padding-bottom: 40px; /* Adjust based on your footer height */
 }
 
-/* Adjust footer to be at the bottom */
-footer {
-  background-color: #3c5d7e;
-  color: #7f7f7f;
-  padding: 20px;
-  border-top: 3px solid #1b1e21;
+
+/* Header and Footer */
+header, footer {
   text-align: center;
-  margin-top: auto; /* New: Pushes footer to the bottom */
+  padding: 20px 0;
 }
 
-/* For the main content area to be responsive and well-adjusted */
+header {
+  background-color: #0056b3;
+  border-bottom: 3px solid #004494;
+  position: relative;
+}
+
+footer {
+  background-color: #343a40;
+  color: #ced4da;
+  border-top: 3px solid #212529;
+  position: fixed; /* Stays at the bottom of the viewport */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0; /* Tiny vertical padding */
+  text-align: center; /* Ensures any text in the footer is centered */
+  margin-bottom: 0; /* Ensures no margin at the bottom */
+}
+
+
+/* Main Content */
 .content {
-  flex-grow: 1; /* New: Allows content to expand and fill available space */
-  padding: 20px; /* Add padding for spacing */
+  flex-grow: 1;
+  max-height: 100vh;
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%; /* Ensure content does not exceed the viewport width */
+  margin: 0 auto; /* Center content */
+  position: relative;
 }
 
-/* Navigation Styles */
+/* Navigation */
 .navbar {
-  background-color: #acd4ff;
+  background-color: #0056b3;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  position: sticky;
 }
 
 .nav-link, .navbar-brand {
   color: #ffffff;
-  transition: color 0.3s ease-in-out; /* Smooth transition */
 }
 
 .nav-link:hover, .navbar-brand:hover {
-  color: #cce5ff; /* Subtle hover effect */
+  color: #cce5ff;
 }
 
-/* Button Styles Enhanced for Accessibility */
+/* Buttons */
 .btn {
-  background-color: #28a745; /* More accessible green */
+  background-color: #28a745;
   color: #ffffff;
-  border: none;
-  padding: 0.75rem 1.5rem; /* Increased padding for easier interaction */
+  padding: 0.75rem 1.5rem;
   border-radius: 0.25rem;
-  font-weight: 600; /* Bold text for clarity */
-  transition: background-color 0.2s ease-in-out; /* Smooth transition */
+  font-weight: 600;
+  transition: background-color 0.2s;
 }
 
 .btn:hover {
-  background-color: #218838; /* Slightly darker green on hover */
+  background-color: #218838;
 }
 
-/* Form Enhancements */
+/* Forms */
 form input, form button {
   margin: 10px 0;
-  padding: 15px; /* Increased padding */
-  font-size: 18px; /* Larger font for better visibility */
-  border: 2px solid #ced4da; /* Slightly thicker border */
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 0.25rem;
 }
 
-/* Responsive Design Adjustments */
+/* Responsive Design */
 @media (max-width: 992px) {
   .navbar {
     flex-direction: column;
   }
+
+  .content {
+    padding: 15px;
+  }
+
+  header, footer {
+    padding: 10px 0; /* Reduce padding on smaller screens */
+  }
+
+  .btn {
+    padding: 0.5rem 1rem; /* Adjust button size for easier interaction */
+  }
 }
 
-/* Footer Enhancements */
-footer {
-  background-color: #212529; /* Darker for a distinct footer */
-  color: #ffffff;
-  padding: 20px;
-  border-top: 3px solid #1b1e21; /* Defined border */
-  text-align: center;
-  margin-bottom: 0; /* No margin at the bottom */
-}
-
-/* Dark Mode Enhancements */
-.dark-mode {
-  background-color: #181a1b; /* Dark mode background */
-  color: #e2e2e2; /* Lighter text for dark mode */
-}
-
-/* Additional Customizations */
-.container, .container-fluid {
-  max-width: 1200px; /* Limiting maximum width for content */
-}
-
-/* Custom Scrollbar for Improved Navigation */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px; /* Narrower scrollbar */
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #dee2e6; /* Light track */
+  background: #dee2e6;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #adb5bd; /* Neutral thumb color */
+  background-color: #adb5bd;
   border-radius: 4px;
 }
 
-/* Link Enhancements for Better Readability */
+/* Links */
 a {
-  color: #007bff; /* Link color */
-  text-decoration: none; /* Removing underline for a cleaner look */
+  color: #17a2b8;
+  transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-  text-decoration: underline; /* Underline on hover for distinction */
-  transition: transform 0.3s ease; /* Smooth transformation */
+  color: #138496;
 }
 
-/* Enhancing Images for User Comfort */
-img {
-  transition: transform 0.3s ease; /* Smooth transformation */
-}
-
-img:hover {
-  transform: scale(1.05); /* Slight scale on hover */
-}
-
-/* Customizing Lists for Improved Readability */
+/* Lists */
 ul {
-  padding: 0;
-  list-style: none; /* Removing default list styles */
+  list-style: none;
+  padding-left: 0;
 }
 
 li {
-  margin: 10px 0;
-  color: #006fe6; /* Blue color for list items */
-  transition: color 0.1s ease, background-color 0.2s; /* Smooth transition for color and background */
-  cursor: pointer; /* Changes cursor to pointer to indicate clickable items */
-  outline: none; /* Remove outline to use custom focus styles */
+  margin-bottom: 0.5rem;
 }
 
-li:hover, li:focus {
-  color: #0056b3; /* Darker blue on hover */
-  background-color: #e6f0ff; /* Light background on hover for more emphasis */
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-li:active {
-  animation: flashAnimation 0.1s ease infinite; /* Animation on click */
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-@keyframes flashAnimation {
-  0% {
-    background-color: #202223; /* Starting color */
+/* Initially hidden elements */
+.hidden {
+  display: none;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-3, .mb-4 {
+  margin-bottom: 1rem; /* Uniform margin-bottom for simplicity */
+}
+
+@media (max-width: 768px) {
+  /* Further adjustments for smaller screens (tablets, large phones) */
+  .mb-3, .mb-4 {
+    margin-bottom: 0.75rem; /* Slightly reduce margins */
   }
-  50% {
-    background-color: #374355; /* Middle flash color */
+}
+
+@media (max-width: 576px) {
+  /* Adjustments for very small screens (phones) */
+  form input, form button {
+    padding: 10px 15px; /* Slightly reduce padding for form elements */
+    font-size: 14px; /* Reduce font size for better fit */
   }
-  100% {
-    background-color: #374355; /* End color */
+  /* Ensure text remains readable and not too large on small screens */
+  h1, h2, h3, h4 {
+    font-size: calc(1em + 1vw); /* Responsive font sizes */
   }
+}
+
+#countdownTimer {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 20px 0;
+  color:#002853;
+  background-color: #f8f9fa;
 }

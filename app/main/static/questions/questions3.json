@@ -1,5 +1,305 @@
 
 [
+    {
+      "question": "What does the term 'sharding' refer to in the context of databases like Elasticsearch and MongoDB?",
+      "choices": [
+        "Encryption of data at rest",
+        "Division of data into smaller, manageable pieces across multiple servers",
+        "Synchronous replication of data",
+        "A backup and recovery process"
+      ],
+      "answer": "Division of data into smaller, manageable pieces across multiple servers"
+    },
+    {
+      "question": "In Apache Kafka, what is a 'consumer group'?",
+      "choices": [
+        "A collection of topics to be consumed by a Kafka broker",
+        "A configuration setting for partitioning",
+        "A group of consumers acting as a single logical subscriber that partitions processing over a set of nodes",
+        "A security mechanism for message validation"
+      ],
+      "answer": "A group of consumers acting as a single logical subscriber that partitions processing over a set of nodes"
+    },
+    {
+      "question": "Which consistency model does Cassandra primarily use?",
+      "choices": [
+        "Strong consistency",
+        "Eventual consistency",
+        "Linearizability",
+        "Sequential consistency"
+      ],
+      "answer": "Eventual consistency"
+    },
+      {
+        "question": "Qu'est-ce que le 'sharding' dans le contexte des bases de données comme Elasticsearch et MongoDB ?",
+        "choices": [
+          "L'encryption des données au repos",
+          "La division des données en morceaux plus petits et gérables répartis sur plusieurs serveurs",
+          "La réplication synchrone des données",
+          "Un processus de sauvegarde et de récupération"
+        ],
+        "answer": "La division des données en morceaux plus petits et gérables répartis sur plusieurs serveurs"
+      },
+      {
+        "question": "Dans Apache Kafka, que désigne un 'groupe de consommateurs' ?",
+        "choices": [
+          "Une collection de sujets à consommer par un broker Kafka",
+          "Un paramètre de configuration pour le partitionnement",
+          "Un groupe de consommateurs agissant comme un seul abonné logique qui partage le traitement des messages sur un ensemble de nœuds",
+          "Un mécanisme de sécurité pour la validation des messages"
+        ],
+        "answer": "Un groupe de consommateurs agissant comme un seul abonné logique qui partage le traitement des messages sur un ensemble de nœuds"
+      },
+      {
+        "question": "Quel modèle de cohérence Cassandra utilise-t-il principalement ?",
+        "choices": [
+          "Cohérence forte",
+          "Cohérence éventuelle",
+          "Linéarisabilité",
+          "Cohérence séquentielle"
+        ],
+        "answer": "Cohérence éventuelle"
+      },
+      {
+        "question": "Qu'est-ce qui distingue le langage de requête AQL d'ArangoDB ?",
+        "choices": [
+          "Son utilisation d'une syntaxe similaire à SQL pour les modèles de données graph, document et clé/valeur",
+          "Sa limitation aux opérations de modèle de données clé/valeur",
+          "Son focus sur les fonctions basées sur JavaScript uniquement",
+          "Sa similitude avec le langage de requête de MongoDB"
+        ],
+        "answer": "Son utilisation d'une syntaxe similaire à SQL pour les modèles de données graph, document et clé/valeur"
+      },
+      {
+        "question": "Le framework d'agrégation de MongoDB est utilisé pour :",
+        "choices": [
+          "Effectuer la validation du schéma",
+          "Le traitement par lots de données et les opérations d'agrégation",
+          "Répliquer les données à travers des clusters",
+          "Gérer l'accès utilisateur et les rôles"
+        ],
+        "answer": "Le traitement par lots de données et les opérations d'agrégation"
+      },
+      {
+        "question": "Pourquoi PostgreSQL est-il souvent considéré comme un bon choix pour les applications complexes ?",
+        "choices": [
+          "Sa capacité à gérer nativement les types de données JSON",
+          "Son support pour une large gamme de langages de programmation",
+          "Son support étendu des fonctionnalités SQL avancées et de la compatibilité avec les normes SQL",
+          "Son support intégré pour le traitement des données graph"
+        ],
+        "answer": "Son support étendu des fonctionnalités SQL avancées et de la compatibilité avec les normes SQL"
+      },
+      {
+        "question": "Quelle est l'utilisation principale de l'extension PDO (PHP Data Objects) en PHP ?",
+        "choices": [
+          "Créer des sites web statiques",
+          "L'encryption et le décryptage des données",
+          "Accéder aux bases de données via une interface uniforme",
+          "Analyser des documents XML"
+        ],
+        "answer": "Accéder aux bases de données via une interface uniforme"
+      },
+      {
+        "question": "Quelle fonctionnalité Python est essentielle pour écrire des services backend asynchrones ?",
+        "choices": [
+          "Le Global Interpreter Lock (GIL)",
+          "Les compréhensions de liste",
+          "La syntaxe async/await",
+          "Les fonctions décorateurs"
+        ],
+        "answer": "La syntaxe async/await"
+      },
+      {
+        "question": "La liaison bidirectionnelle des données dans Angular est mise en œuvre à l'aide de quelle directive ?",
+        "choices": [
+          "ng-model",
+          "ng-bind",
+          "ng-app",
+          "ng-directive"
+        ],
+        "answer": "ng-model"
+      },
+      {
+        "question": "Quel outil est utilisé pour orchestrer des conteneurs dans une pipeline CI/CD ?",
+        "choices": [
+          "SaltStack",
+          "Docker",
+          "Jenkins",
+          "Kubernetes"
+        ],
+        "answer": "Kubernetes"
+      },
+    {
+      "question": "What distinguishes ArangoDB's AQL (ArangoDB Query Language)?",
+      "choices": [
+        "Its use of SQL-like syntax for graph, document, and key/value data models",
+        "Its limitation to key/value data model operations",
+        "Its focus on JavaScript-based functions only",
+        "Its similarity to MongoDB's query language"
+      ],
+      "answer": "Its use of SQL-like syntax for graph, document, and key/value data models"
+    },
+    {
+      "question": "MongoDB's aggregation framework is used for:",
+      "choices": [
+        "Performing schema validation",
+        "Batch processing of data and aggregation operations",
+        "Replicating data across clusters",
+        "Managing user access and roles"
+      ],
+      "answer": "Batch processing of data and aggregation operations"
+    },
+    {
+      "question": "Why is PostgreSQL often considered a good choice for complex applications?",
+      "choices": [
+        "Its ability to handle JSON data types natively",
+        "Its support for a wide range of programming languages",
+        "Its extensive support for advanced SQL features and compatibility with SQL standards",
+        "Its built-in support for graph data processing"
+      ],
+      "answer": "Its extensive support for advanced SQL features and compatibility with SQL standards"
+    },
+    {
+      "question": "What is the primary use case for PHP's PDO (PHP Data Objects) extension?",
+      "choices": [
+        "Creating static websites",
+        "Data encryption and decryption",
+        "Accessing databases through a uniform interface",
+        "Parsing XML documents"
+      ],
+      "answer": "Accessing databases through a uniform interface"
+    },
+    {
+      "question": "Which Python feature is critical for writing asynchronous backend services?",
+      "choices": [
+        "The Global Interpreter Lock (GIL)",
+        "List comprehensions",
+        "The async/await syntax",
+        "Decorator functions"
+      ],
+      "answer": "The async/await syntax"
+    },
+    {
+      "question": "Angular's two-way data binding is implemented using which directive?",
+      "choices": [
+        "ng-model",
+        "ng-bind",
+        "ng-app",
+        "ng-directive"
+      ],
+      "answer": "ng-model"
+    },
+    {
+      "question": "Which tool is used for orchestrating containers in a CI/CD pipeline?",
+      "choices": [
+        "SaltStack",
+        "Docker",
+        "Jenkins",
+        "Kubernetes"
+      ],
+      "answer": "Kubernetes"
+    },  
+  {
+    "question": "What is Elasticsearch primarily used for?",
+    "choices": [
+      "Real-time distributed search and analytics engine",
+      "Message streaming platform",
+      "NoSQL database for storing JSON documents",
+      "Graph database for complex queries"
+    ],
+    "answer": "Real-time distributed search and analytics engine"
+  },
+  {
+    "question": "Which Apache Kafka feature allows it to handle high throughput of messages?",
+    "choices": [
+      "Document-oriented storage",
+      "Graph traversal capabilities",
+      "Partitioning of message streams",
+      "Column-family data model"
+    ],
+    "answer": "Partitioning of message streams"
+  },
+  {
+    "question": "What type of database is Cassandra?",
+    "choices": [
+      "Document-based NoSQL",
+      "Key-value store",
+      "Wide-column store",
+      "Graph database"
+    ],
+    "answer": "Wide-column store"
+  },
+  {
+    "question": "Which feature distinguishes ArangoDB?",
+    "choices": [
+      "Support for SQL",
+      "Multi-model database supporting graph, document, and key/value data models",
+      "Built-in full-text search capabilities",
+      "Schema-free JSON document storage"
+    ],
+    "answer": "Multi-model database supporting graph, document, and key/value data models"
+  },
+  {
+    "question": "Which is a core feature of MongoDB?",
+    "choices": [
+      "ACID transactions in a relational model",
+      "Support for multi-model data",
+      "Document-oriented NoSQL database",
+      "Stream processing capabilities"
+    ],
+    "answer": "Document-oriented NoSQL database"
+  },
+  {
+    "question": "What is PostgreSQL best known for?",
+    "choices": [
+      "Being a wide-column store",
+      "Its capabilities as a JSON document database",
+      "Advanced SQL compliance and features",
+      "Real-time data streaming"
+    ],
+    "answer": "Advanced SQL compliance and features"
+  },
+  {
+    "question": "Which PHP syntax is correct for creating a new variable containing the text \"Hello World\"?",
+    "choices": [
+      "$helloWorld = \"Hello World\"",
+      "var helloWorld = \"Hello World\"",
+      "String helloWorld = \"Hello World\"",
+      "let helloWorld = \"Hello World\""
+    ],
+    "answer": "$helloWorld = \"Hello World\""
+  },
+  {
+    "question": "In Python, how would you automatically test a function to ensure it returns the expected output?",
+    "choices": [
+      "Using manual checks",
+      "Implementing unit tests with the unittest framework",
+      "Code reviews only",
+      "Continuous integration deployment"
+    ],
+    "answer": "Implementing unit tests with the unittest framework"
+  },
+  {
+    "question": "Which of the following best describes Angular?",
+    "choices": [
+      "Backend framework for application logic",
+      "Frontend framework for building user interfaces",
+      "Database management system",
+      "Container orchestration tool"
+    ],
+    "answer": "Frontend framework for building user interfaces"
+  },
+  {
+    "question": "What advantage do CI/CD tools like Docker and Jenkins offer in software development?",
+    "choices": [
+      "Data modeling and management",
+      "Improved search and analytics capabilities",
+      "Automated building, testing, and deployment of applications",
+      "Document-oriented storage solutions"
+    ],
+    "answer": "Automated building, testing, and deployment of applications"
+  },
   {
     "question": "Quel sera le résultat de for i in x++ ?",
     "choices": [
