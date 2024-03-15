@@ -49,16 +49,6 @@
     "answer": "Rome"
   },
   {
-    "question": "Quelle est la capitale de la Russie ?",
-    "choices": [
-      "Moscou",
-      "Saint-Pétersbourg",
-      "Kazan",
-      "Nijni Novgorod"
-    ],
-    "answer": "Moscou"
-  },
-  {
     "question": "Quelle est la capitale de la Chine ?",
     "choices": [
       "Pékin",
@@ -337,5 +327,275 @@
               "Pour éviter toute interaction sociale"
             ],
             "answer": "Pour mieux comprendre et intégrer l'information partagée"
-          }  
+          },
+          {
+            "question": "Quelle action n'est PAS recommandée pour écouter activement ?",
+            "choices": [
+              "Faire preuve d'empathie",
+              "Couper la parole",
+              "Poser des questions pertinentes",
+              "Résumer ce que l'autre a dit pour assurer la compréhension"
+            ],
+            "answer": "Couper la parole"
+          },
+          {
+            "question": "Quel est l'un des avantages principaux du réseautage professionnel ?",
+            "choices": [
+              "Obtenir des conseils de mode",
+              "Partager des recettes de cuisine",
+              "Recevoir des recommandations et avis professionnels",
+              "Organiser des rencontres sportives"
+            ],
+            "answer": "Recevoir des recommandations et avis professionnels"
+          },
+          {
+            "question": "Quelle est l'importance de la socialisation secondaire pour l'insertion sociale ?",
+            "choices": [
+              "Elle permet de mieux jouer au football",
+              "Elle concerne uniquement les interactions familiales",
+              "Elle aide à intégrer les valeurs et normes professionnelles",
+              "Elle est importante uniquement pour les enfants"
+            ],
+            "answer": "Elle aide à intégrer les valeurs et normes professionnelles"
+          },
+          {
+            "question": "Comment les entreprises d'insertion contribuent-elles à l'insertion professionnelle ?",
+            "choices": [
+              "En offrant des services exclusivement en ligne",
+              "En proposant des activités de loisirs",
+              "En favorisant l'accès à l'emploi des personnes en difficulté",
+              "En se concentrant uniquement sur le secteur de la haute technologie"
+            ],
+            "answer": "En favorisant l'accès à l'emploi des personnes en difficulté"
+          },
+          {
+            "question": "Quelle est la meilleure façon de démontrer de l'empathie dans une conversation ?",
+            "choices": [
+              "Parler constamment de soi",
+              "Ignorer les émotions de l'autre",
+              "Essayer de comprendre le point de vue et les émotions de l'autre",
+              "Changer de sujet fréquemment"
+            ],
+            "answer": "Essayer de comprendre le point de vue et les émotions de l'autre"
+          },
+          {
+            "question": "Quel est le rôle des missions locales 'jeunes' dans l'insertion professionnelle des jeunes ?",
+            "choices": [
+              "Organiser des vacances",
+              "Coordonner des jeux vidéo compétitifs",
+              "Favoriser l'insertion professionnelle et sociale",
+              "Promouvoir exclusivement l'entrepreneuriat"
+            ],
+            "answer": "Favoriser l'insertion professionnelle et sociale"
+          },
+          {
+            "question": "Quelle est la contribution des réseaux sociaux numériques à l'insertion professionnelle ?",
+            "choices": [
+              "Augmenter le nombre de likes sur des photos personnelles",
+              "Faciliter la diffusion de vidéos humoristiques",
+              "Permettre la création et le renforcement de réseaux professionnels",
+              "Offrir une plateforme pour partager uniquement des opinions politiques"
+            ],
+            "answer": "Permettre la création et le renforcement de réseaux professionnels"
+          },
+          {
+            "question": "Pourquoi est-il important d'éviter de parler lorsqu'on écoute quelqu'un ?",
+            "choices": [
+              "Pour préparer mentalement sa réponse",
+              "Pour donner l'impression d'être occupé",
+              "Pour mieux comprendre et intégrer l'information partagée",
+              "Pour éviter toute interaction sociale"
+            ],
+            "answer": "Pour mieux comprendre et intégrer l'information partagée"
+          },
+          {
+            "question": "Quelle action n'est PAS recommandée pour écouter activement ?",
+            "choices": [
+              "Faire preuve d'empathie",
+              "Couper la parole",
+              "Poser des questions pertinentes",
+              "Résumer ce que l'autre a dit pour assurer la compréhension"
+            ],
+            "answer": "Couper la parole"
+          },
+          {
+            "question": "Quel est l'un des avantages principaux du réseautage professionnel ?",
+            "choices": [
+              "Obtenir des conseils de mode",
+              "Partager des recettes de cuisine",
+              "Recevoir des recommandations et avis professionnels",
+              "Organiser des rencontres sportives"
+            ],
+            "answer": "Recevoir des recommandations et avis professionnels"
+          },
+          {
+            "question": "Quelle est l'importance de la socialisation secondaire pour l'insertion sociale ?",
+            "choices": [
+              "Elle permet de mieux jouer au football",
+              "Elle concerne uniquement les interactions familiales",
+              "Elle aide à intégrer les valeurs et normes professionnelles",
+              "Elle est importante uniquement pour les enfants"
+            ],
+            "answer": "Elle aide à intégrer les valeurs et normes professionnelles"
+          },
+          {
+            "question": "Comment les entreprises d'insertion contribuent-elles à l'insertion professionnelle ?",
+            "choices": [
+              "En offrant des services exclusivement en ligne",
+              "En proposant des activités de loisirs",
+              "En favorisant l'accès à l'emploi des personnes en difficulté",
+              "En se concentrant uniquement sur le secteur de la haute technologie"
+            ],
+            "answer": "En favorisant l'accès à l'emploi des personnes en difficulté"
+          },
+          {
+            "question": "Qui a écrit 'Les Misérables' ?",
+            "choices": [
+              "Victor Hugo",
+              "Albert Camus",
+              "Émile Zola",
+              "Jean-Paul Sartre"
+            ],
+            "answer": "Victor Hugo"
+          },
+          {
+            "question": "Quelle ville est la capitale de la France ?",
+            "choices": [
+              "Lyon",
+              "Marseille",
+              "Paris",
+              "Bordeaux"
+            ],
+            "answer": "Paris"
+          },
+          {
+            "question": "Qui a peint 'La Joconde' ?",
+            "choices": [
+              "Vincent Van Gogh",
+              "Pablo Picasso",
+              "Leonardo da Vinci",
+              "Claude Monet"
+            ],
+            "answer": "Leonardo da Vinci"
+          },
+          {
+            "question": "Quel est l'océan le plus grand du monde ?",
+            "choices": [
+              "L'océan Atlantique",
+              "L'océan Indien",
+              "L'océan Pacifique",
+              "L'océan Arctique"
+            ],
+            "answer": "L'océan Pacifique"
+          },
+          {
+            "question": "En quelle année l'homme a-t-il marché sur la Lune pour la première fois ?",
+            "choices": [
+              "1969",
+              "1973",
+              "1963",
+              "1980"
+            ],
+            "answer": "1969"
+          },
+          {
+            "question": "Quel pays est connu comme le pays du Soleil Levant ?",
+            "choices": [
+              "La Chine",
+              "Le Japon",
+              "La Corée du Sud",
+              "La Thaïlande"
+            ],
+            "answer": "Le Japon"
+          },
+          {
+            "question": "Qui a composé la symphonie n°9 'Ode à la joie' ?",
+            "choices": [
+              "Wolfgang Amadeus Mozart",
+              "Ludwig van Beethoven",
+              "Johann Sebastian Bach",
+              "Frédéric Chopin"
+            ],
+            "answer": "Ludwig van Beethoven"
+          },
+          {
+            "question": "Quel est le fleuve le plus long du monde ?",
+            "choices": [
+              "Le Nil",
+              "L'Amazone",
+              "Le Yangtsé",
+              "Le Mississippi"
+            ],
+            "answer": "L'Amazone"
+          },
+          {
+            "question": "Qui a découvert la pénicilline ?",
+            "choices": [
+              "Marie Curie",
+              "Alexander Fleming",
+              "Louis Pasteur",
+              "Albert Einstein"
+            ],
+            "answer": "Alexander Fleming"
+          },
+          {
+            "question": "Quelle est la plus grande pyramide d'Égypte ?",
+            "choices": [
+              "La pyramide de Khéops",
+              "La pyramide de Khéphren",
+              "La pyramide de Mykérinos",
+              "La pyramide de Djéser"
+            ],
+            "answer": "La pyramide de Khéops"
+          },
+          {
+            "question": "Dans quel pays se trouve le Machu Picchu ?",
+            "choices": [
+              "Le Pérou",
+              "Le Mexique",
+              "La Bolivie",
+              "L'Argentine"
+            ],
+            "answer": "Le Pérou"
+          },
+          {
+            "question": "Quel est l'élément chimique avec le symbole 'O' ?",
+            "choices": [
+              "L'Or",
+              "L'Ozone",
+              "L'Oxygène",
+              "Le Osmium"
+            ],
+            "answer": "L'Oxygène"
+          },
+          {
+            "question": "Quelle est la capitale de l'Australie ?",
+            "choices": [
+              "Sydney",
+              "Melbourne",
+              "Canberra",
+              "Perth"
+            ],
+            "answer": "Canberra"
+          },
+          {
+            "question": "Qui est l'auteur de 'L'Étranger' ?",
+            "choices": [
+              "François Mauriac",
+              "André Gide",
+              "Albert Camus",
+              "Jean-Paul Sartre"
+            ],
+            "answer": "Albert Camus"
+          },
+          {
+            "question": "Quel est le plus grand désert du monde ?",
+            "choices": [
+              "Le Sahara",
+              "Le Gobi",
+              "L'Antarctique",
+              "Le Kalahari"
+            ],
+            "answer": "L'Antarctique"
+          }
 ]
