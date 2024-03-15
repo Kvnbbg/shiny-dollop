@@ -66,6 +66,7 @@ header {
 /* Notification Styles */
 #notification {
   position: fixed;
+  height: auto;
   bottom: 20px;
   right: 20px;
   z-index: 1050; /* Ensure it appears above other content */
@@ -129,7 +130,7 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  max-height: 20px; /* Set the fixed height of the footer */
+  height: 20px; /* Set the fixed height of the footer */
   padding: 5px 0; /* Tiny vertical padding */
   text-align: center; /* Ensures any text in the footer is centered */
   margin-bottom: 0; /* Ensures no margin at the bottom */

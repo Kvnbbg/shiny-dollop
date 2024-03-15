@@ -75,9 +75,7 @@
   <div class="container py-5">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <div id="notification" class="alert alert-info d-none" role="alert">
-            <!-- Notification text will be inserted here -->
-          </div>
+
           
         <h2 class="text-center mb-5">{{ "Good luck !" if session['lang'] == 'en' else "Bonne chance !" }}</h2>
         
@@ -86,6 +84,7 @@
           <div class="card-header">
             <h4 class="mb-0">{{ "Select Question Set" if session['lang'] == 'en' else "Sélectionnez le jeu de questions" }}</h4>
           </div>
+            <div id="notification" class="alert alert-success d-none"></div>
           <div class="card-body">
             <form action="{{ url_for('main.quiz') }}" method="get">
               {{ form.hidden_tag() }}
