@@ -28,7 +28,7 @@
       const countdownTimer = document.getElementById("countdownTimer");
       countdownTimer.textContent = `${time} ${time > 1 ? "seconds" : "second"}`;
       if (time <= 0) {
-        countdownTimer.textContent = "{{ 'Time\\'s up!' if session['lang'] == 'en' else 'Temps écoulé !' | tojson }}".replace(/&quot;/g, '\"');
+        countdownTimer.textContent = "{{ 'Time is up!' if session['lang'] == 'en' else 'Temps écoulé !' | tojson }}".replace(/&quot;/g, '\"');
       }
     }
 
