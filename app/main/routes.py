@@ -35,9 +35,9 @@ def load_questions(filename="questions.json"):
 @main.route("/quiz", methods=["GET", "POST"])
 def quiz():
     form = QuizForm()
-    questions = session.get('questions')
-    
-    if 'filter' in request.args:
+    questions = session.get('questions', [])  # Default to an empty list if not found
+
+    if 'filter' in request.args or not questions:
         question_file = request.args.get('filter', 'questions.json')
         questions = load_questions(question_file)
         session['questions'] = questions
@@ -46,12 +46,14 @@ def quiz():
 
     current_index = session.get('current_index', 0)
 
-    if current_index >= len(questions):
+    # Redirect to quiz completion if there are no questions or all questions have been answered
+    if not questions or current_index >= len(questions):
         return redirect(url_for('.quiz_complete'))
 
     current_question = questions[current_index]
     form.choice.choices = [(str(i), choice) for i, choice in enumerate(current_question.get('choices', []))]
 
+    # Additional logic remains unchanged
     if request.method == 'POST' and 'skip' in request.form:
         session['skipped_answers'] = session.get('skipped_answers', 0) + 1
         session['current_index'] = current_index + 1
