@@ -1,5 +1,265 @@
 [
-  
+
+  {
+    "question": "Quels sont les inconvénients de la méthode heuristique?",
+    "choices": [
+        "Le temps d'animation est important et parfois difficile à planifier, le nombre de participants est limité (<12), nécessite une forte maîtrise du sujet par le formateur",
+        "Facilite la planification, adapté à un grand nombre de participants, garantit une compréhension directe sans sensation de flou",
+        "Réduit le temps d'animation, simplifie la participation des apprenants, minimise la nécessité d'engagement des participants",
+        "Augmente le temps d'engagement des participants, facilite la gestion du grand nombre de participants, élimine la sensation de flou"
+    ],
+    "answer": "Le temps d'animation est important et parfois difficile à planifier, le nombre de participants est limité (<12), nécessite une forte maîtrise du sujet par le formateur"
+},
+  {
+    "question": "Quels sont les avantages de la méthode heuristique?",
+    "choices": [
+        "Développe l'initiative et la créativité, l'autonomie est maximale, renforce la motivation pour l'application rapide",
+        "Diminue le temps d'animation, augmente le nombre de participants, maîtrise du sujet par le formateur non requise",
+        "Les participants n'ont pas de sensation de flou, le temps d'animation est réduit, facilité de planification",
+        "Nécessite peu de temps d'animation, adapté à un grand nombre de participants, assure une compréhension claire et directe"
+    ],
+    "answer": "Développe l'initiative et la créativité, l'autonomie est maximale, renforce la motivation pour l'application rapide"
+},
+  {
+    "question": "Quelle est la première finalité de la logistique à court terme ?",
+    "choices": [
+      "Développer de nouveaux marchés",
+      "Optimiser les flux physiques de l'amont à l'aval",
+      "Réduire les coûts de production",
+      "Améliorer la qualité des produits"
+    ],
+    "answer": "Optimiser les flux physiques de l'amont à l'aval"
+  },
+  {
+    "question": "Quelle est la principale fonction de la logistique à long terme ?",
+    "choices": [
+      "Réduire les coûts de production",
+      "Améliorer la qualité des produits",
+      "Développer de nouveaux marchés",
+      "Optimiser les flux physiques de l'amont à l'aval"
+    ],
+    "answer": "Développer de nouveaux marchés"
+  },
+  {
+    "question": "Quel est le principal objectif de la logistique dans le secteur de la santé ?",
+    "choices": [
+      "Réduire les coûts de production",
+      "Améliorer la qualité des produits",
+      "Optimiser les flux physiques de l'amont à l'aval",
+      "Développer de nouveaux marchés"
+    ],
+    "answer": "Améliorer la qualité des produits"
+  },
+  {
+    "question": "Quel élément n'est PAS une composante de la logistique selon les approches pratiques ?",
+    "choices": [
+      "Le développement de sources d'approvisionnement",
+      "La gestion de la traçabilité",
+      "La création de contenu marketing",
+      "Le stockage en entrepôt"
+    ],
+    "answer": "La création de contenu marketing"
+  },
+  {
+    "question": "Quelle technologie n'est PAS mentionnée comme un outil de la logistique ?",
+    "choices": [
+      "Code-barres EAN",
+      "Reconnaissance vocale",
+      "Technologie blockchain",
+      "Radio-identification (RFID)"
+    ],
+    "answer": "Technologie blockchain"
+  },
+  {
+    "question": "Quel est un des enjeux contemporains de la logistique ?",
+    "choices": [
+      "Augmentation des coûts de production",
+      "Réduction des émissions de CO2",
+      "Diminution de la demande des consommateurs",
+      "Concurrence sur les prix uniquement"
+    ],
+    "answer": "Réduction des émissions de CO2"
+  },
+  {
+    "question": "Quel terme est utilisé pour décrire la logistique qui se concentre sur le retour des marchandises vers le point d'origine pour réparation ou recyclage ?",
+    "choices": [
+      "Logistique inverse",
+      "Logistique directe",
+      "Logistique durable",
+      "Logistique de distribution"
+    ],
+    "answer": "Logistique inverse"
+  },
+  {
+  "question": "Quel est le principal défi d'un événement digital ?",
+  "choices": [
+    "Choisir la bonne plateforme de diffusion",
+    "Encourager les interactions entre participants",
+    "Diffuser un contenu de qualité",
+    "Assurer la sécurité informatique de l'événement"
+  ],
+  "answer": "Encourager les interactions entre participants"
+},
+{
+  "question": "Quelle méthode est suggérée pour capter l'attention des participants lors d'un événement digital ?",
+  "choices": [
+    "Envoyer des notifications fréquentes",
+    "Créer des espaces dédiés au networking",
+    "Ignorer les demandes de networking",
+    "Limiter les interactions au strict minimum"
+  ],
+  "answer": "Créer des espaces dédiés au networking"
+},
+{
+  "question": "Quel est l'objectif principal des business meetings lors d'un événement digital ?",
+  "choices": [
+    "Partager des fichiers",
+    "Générer des leads commerciaux",
+    "Jouer à des jeux en ligne",
+    "Regarder des vidéos en groupe"
+  ],
+  "answer": "Générer des leads commerciaux"
+},
+{
+  "question": "Qu'est-ce qui caractérise le networking libre sur un événement digital ?",
+  "choices": [
+    "Les échanges sont planifiés à l'avance",
+    "Les échanges sont spontanés",
+    "Les échanges sont limités aux partenaires",
+    "Aucune interaction n'est possible"
+  ],
+  "answer": "Les échanges sont spontanés"
+},
+{
+  "question": "Quel est le principe des speed meetings lors d'un événement digital ?",
+  "choices": [
+    "Rencontres longues et détaillées",
+    "Rencontres aléatoires de courte durée",
+    "Réunions formelles avec ordre du jour",
+    "Conférences thématiques"
+  ],
+  "answer": "Rencontres aléatoires de courte durée"
+},
+  {
+    "question": "Qu'est-ce que le conflit ?",
+    "choices": [
+      "Une divergence d'opinion entre deux ou plusieurs personnes",
+      "Un accord entre deux parties sur un sujet donné",
+      "Une situation où tout le monde est content",
+      "Une discussion sans désaccord ni tension"
+    ],
+    "answer": "Une divergence d'opinion entre deux ou plusieurs personnes"
+  },
+  {
+    "question": "Quels sont les principaux styles de gestion des conflits ?",
+    "choices": [
+      "Évitement, Compromis, Contrôle, Collaboration, Accommodement",
+      "Ignorance, Agression, Soumission",
+      "Seulement Collaboration et Compromis",
+      "Il n'existe qu'un seul style de gestion des conflits"
+    ],
+    "answer": "Évitement, Compromis, Contrôle, Collaboration, Accommodement"
+  },
+  {
+    "question": "Quelle est l'importance de l'expérience professionnelle dans l'insertion professionnelle ?",
+    "choices": [
+      "Elle n'a aucune importance",
+      "Elle est légèrement importante",
+      "Elle est très importante pour améliorer l'employabilité",
+      "Seuls les diplômes comptent"
+    ],
+    "answer": "Elle est très importante pour améliorer l'employabilité"
+  },
+  {
+    "question": "Comment un conseiller en insertion professionnelle peut-il aider les demandeurs d'emploi ?",
+    "choices": [
+      "En leur offrant un emploi directement",
+      "En les aidant à définir leur projet professionnel et les préparer à l'emploi",
+      "En leur donnant simplement des conseils généraux",
+      "En les ignorant"
+    ],
+    "answer": "En les aidant à définir leur projet professionnel et les préparer à l'emploi"
+  },
+  {
+    "question": "Qu'est-ce qu'un atelier dans le cadre de l'insertion professionnelle ?",
+    "choices": [
+      "Une séance de relaxation",
+      "Une séance de formation ou de sensibilisation pour aider à mieux s'insérer dans le monde du travail",
+      "Un lieu pour travailler seul",
+      "Une rencontre purement sociale"
+    ],
+    "answer": "Une séance de formation ou de sensibilisation pour aider à mieux s'insérer dans le monde du travail"
+  },
+  {
+    "question": "Quel est l'objectif principal des 6 chapeaux de la réflexion dans la gestion de réunion?",
+    "choices": [
+      "Promouvoir la créativité et améliorer l'efficacité en explorant différents modes de pensée",
+      "Réduire le temps de réunion en limitant les discussions",
+      "Établir une hiérarchie claire parmi les participants",
+      "Concentrer les discussions uniquement sur les problèmes sans chercher de solutions"
+    ],
+    "answer": "Promouvoir la créativité et améliorer l'efficacité en explorant différents modes de pensée"
+  },
+  {
+    "question": "Quel est le principal avantage du Diagramme d'Ishikawa dans la résolution de problèmes?",
+    "choices": [
+      "Il simplifie les problèmes en les représentant sous forme graphique",
+      "Il identifie les causes profondes des problèmes de manière structurée",
+      "Il permet de blâmer les responsables des problèmes",
+      "Il offre une solution immédiate et unique à tous les problèmes"
+    ],
+    "answer": "Il identifie les causes profondes des problèmes de manière structurée"
+  },
+  {
+    "question": "Quel est le but principal des réunions stand-up?",
+    "choices": [
+      "Encourager les discussions longues et détaillées",
+      "Augmenter l'efficacité en réduisant la durée des réunions",
+      "Permettre à chacun de se reposer pendant la réunion",
+      "Focus sur les présentations PowerPoint"
+    ],
+    "answer": "Augmenter l'efficacité en réduisant la durée des réunions"
+  },
+  {
+    "question": "Quel est l'objectif du brainstorming ou du reverse brainstorming dans la gestion de réunions?",
+    "choices": [
+      "Créer un environnement compétitif parmi les participants",
+      "Stimuler la pensée créative pour la résolution de problèmes ou l'innovation",
+      "Éviter toute forme de participation active",
+      "Se concentrer uniquement sur les aspects négatifs"
+    ],
+    "answer": "Stimuler la pensée créative pour la résolution de problèmes ou l'innovation"
+  },
+  {
+    "question": "Pourquoi est-il important de préparer la réunion et d'accueillir les participants correctement?",
+    "choices": [
+      "Pour impressionner les participants avec des compétences organisationnelles",
+      "Pour créer une atmosphère formelle et distante",
+      "Pour établir un cadre clair et encourager la participation active dès le début",
+      "Pour limiter la participation des participants"
+    ],
+    "answer": "Pour établir un cadre clair et encourager la participation active dès le début"
+  },
+  {
+    "question": "Quelle est la clé pour maîtriser le déroulement de la réunion?",
+    "choices": [
+      "Ignorer les avis divergents pour gagner du temps",
+      "Favoriser une circulation équilibrée de l'information et gérer les tensions",
+      "Concentrer la discussion uniquement sur les points de vue de l'animateur",
+      "Éviter de prendre des notes ou de conclure les discussions"
+    ],
+    "answer": "Favoriser une circulation équilibrée de l'information et gérer les tensions"
+  },
+  {
+    "question": "Quel est le but de clore la réunion efficacement?",
+    "choices": [
+      "Terminer la réunion aussi rapidement que possible",
+      "Récapituler les décisions prises et préparer le terrain pour les actions futures",
+      "Éviter de donner des tâches aux participants",
+      "Passer en revue tous les points sans prendre de décisions"
+    ],
+    "answer": "Récapituler les décisions prises et préparer le terrain pour les actions futures"
+  },
   {
     "question": "Quelle est la principale fonction de l'ordre du jour dans une réunion de travail?",
     "choices": [

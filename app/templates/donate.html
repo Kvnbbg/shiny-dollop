@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="text-center">
+                <h2 class="mb-4">
+                    {{ "Support Our Growth" if session['lang'] == 'en' else "Soutenez notre croissance" }}
+                </h2>
+                <p>
+                    {{ "Your support is invaluable to us. Donations help fund new app development, enhance existing features, and secure better hosting solutions. Every contribution, big or small, enables us to continue delivering high-quality code and innovations that make a difference. Thank you for considering a donation to support our journey towards improvement and expansion." if session['lang'] == 'en'
+                    else "Votre soutien nous est précieux. Les dons nous aident à financer le développement de nouvelles applications, à améliorer les fonctionnalités existantes et à sécuriser de meilleures solutions d'hébergement. Chaque contribution, grande ou petite, nous permet de continuer à fournir un code de haute qualité et des innovations qui font la différence. Merci d'envisager un don pour soutenir notre parcours vers l'amélioration et l'expansion." }}
+                </p>
+                <iframe id='kofiframe' src='https://ko-fi.com/kvnbbg/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='kvnbbg'></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

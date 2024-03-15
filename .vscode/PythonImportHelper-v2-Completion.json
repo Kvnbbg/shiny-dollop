@@ -1993,6 +1993,15 @@
         "documentation": {}
     },
     {
+        "label": "donate",
+        "kind": 2,
+        "importPath": "app.main.routes",
+        "description": "app.main.routes",
+        "peekOfCode": "def donate():\n    return render_template(\"donate.html\")\n@main.route('/set_language/<language>')\ndef set_language(language):\n    session['lang'] = language\n    flash(f\"Language set to {'English' if language == 'en' else 'French'}.\", \"info\")\n    return redirect(request.referrer or url_for('.home'))\n@main.route(\"/\")\ndef home():\n    return render_template(\"home.html\", lang=session.get('lang', 'en'))",
+        "detail": "app.main.routes",
+        "documentation": {}
+    },
+    {
         "label": "set_language",
         "kind": 2,
         "importPath": "app.main.routes",

@@ -184,18 +184,12 @@
           </div>
         </div>
       </section>
-      {% block content %} {% endblock %}
+      {% block content %}      {% block contentDonate %}
+      {% endblock %} {% endblock %}
     </header>
+    <!-- Main Section -->
     <main>
-      <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-      <script>
-        kofiWidgetOverlay.draw('kvnbbg', {
-          'type': 'floating-chat',
-          'floating-chat.donateButton.text': 'Donate',
-          'floating-chat.donateButton.background-color': '#00b9fe',
-          'floating-chat.donateButton.text-color': '#fff'
-        });
-      </script>
+
     </main>
 <!-- Footer Section -->
     <footer class="py-5 bg-dark">

@@ -81,6 +81,10 @@ def quiz_complete():
     session.pop('current_index', None)
     return render_template("quiz_complete.html", **quiz_results)
 
+@main.route('/donate')
+def donate():
+    return render_template("donate.html")
+
 @main.route('/set_language/<language>')
 def set_language(language):
     session['lang'] = language

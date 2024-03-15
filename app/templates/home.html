@@ -60,7 +60,19 @@
         {{ "Start" if session['lang'] == 'en' else "Commencer" }}
       </a>
     </div>
-  </div>
+    {% block contentDonate %}
+    <div class="card card-body text-black-50">
+      <p>
+        {{ "If you like the app and want to support our growth, you can make a
+        donation." if session['lang'] == 'en' else "Si vous aimez l'application et
+        souhaitez soutenir notre croissance, vous pouvez faire un don." }}
+      </p>
+      <a href="{{ url_for('main.donate') }}" class="btn btn-primary">
+        {{ "Donate" if session['lang'] == 'en' else "Faire un don" }}
+      </a>
+    </div>
 </div>
+{% endblock %}
+  </div>
   <!-- End Quiz Game Section -->
   {% endblock %}
