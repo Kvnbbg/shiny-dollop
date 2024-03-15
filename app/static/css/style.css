@@ -30,6 +30,41 @@ header {
   position: sticky; /* Ensures the header is always at the top of the page */
 }
 
+/* Custom styling for the advisory section */
+.advisory-section {
+  position: fixed;
+  top: 5%;
+  right: 1%;
+  z-index: 1050; /* Ensures visibility over other content */
+  max-width: 300px; /* Adjust based on your preference */
+  background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 1rem; /* Padding inside the advisory box */
+  font-size: 0.9rem; /* Smaller font size for the advisory text */
+  color: #333; /* Dark text color for readability */
+}
+
+/* Custom styles for the close button */
+.custom-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.2rem; /* Larger font size for easy interaction */
+  cursor: pointer; /* Changes cursor to pointer to indicate it's clickable */
+  border: none; /* Removes any default border */
+  background: transparent; /* No background */
+  color: #333; /* Matching the advisory text color */
+  opacity: 0.6; /* Slightly transparent to not overpower */
+}
+
+.custom-close:hover,
+.custom-close:focus {
+  opacity: 1; /* Full opacity on hover/focus for better user feedback */
+}
+
+
+
 footer {
   background-color: #343a40;
   color: #ced4da;

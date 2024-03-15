@@ -197,35 +197,8 @@
     <p class="mb-0 text-white">
       Copyright &copy; Kevin Josué MARVILLE 2024
     </p>
-    <!-- Trigger/Button for Modal -->
-    <button type="button" class="btn btn-warning mt-3" data-bs-toggle="modal" data-bs-target="#bugAdviceModal">
-      {{ "Notice" if session['lang'] == 'en' else "Avis" }}
-    </button>
   </div>
 </footer>
-<!-- Modal Structure -->
-<div class="modal fade" id="bugAdviceModal" tabindex="-1" aria-labelledby="bugAdviceModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="bugAdviceModalLabel">{{ "Bug Notice" if session['lang'] == 'en' else "Avis de Bug" }}</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        {{ "We are facing bugs and are currently working on this, so if you see a bad request, please refresh the page until the content reappears. Sorry for the inconvenience." if session['lang'] == 'en' else "Nous rencontrons des bugs et travaillons actuellement à leur résolution. Si vous constatez une mauvaise requête, veuillez rafraîchir la page jusqu'à ce que le contenu réapparaisse. Nous nous excusons pour le désagrément." }}
-        <div class="text-center">
-          <img src="{{ url_for('static', filename='images/reload.gif') }}" alt="Reload" class="img-fluid" style="max-width: 100px;">
-        </div>
-        <p class="mt-2">
-          {{ "Or use the refresh button in your browser." if session['lang'] == 'en' else "Ou utilisez le bouton de rafraîchissement de votre navigateur." }}
-        </p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ "Close" if session['lang'] == 'en' else "Fermer" }}</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
     <script src="{{ url_for('static', filename='/js/script.js') }}"></script>

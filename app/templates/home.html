@@ -1,29 +1,38 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Advisory Section with Close Functionality -->
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <h4 class="alert-heading">
+    <i class="bi bi-exclamation-triangle-fill"></i>
+    {{ "Advice" if session['lang'] == 'en' else "Conseil" }}
+  </h4>
+  <p>
+    {{ "We are currently addressing some technical issues. If you encounter a 'Bad Request', please refresh your page. We apologize for any inconvenience caused. 🔄" if session['lang'] == 'en' else "Nous résolvons actuellement quelques problèmes techniques. Si vous rencontrez une 'Mauvaise Demande', veuillez rafraîchir votre page. Nous nous excusons pour tout inconvénient causé. 🔄" }}
+  </p>
+  <div class="text-center">
+    <img src="{{ url_for('static', filename='images/reload.gif') }}" alt="Reload" style="max-width: 600px;">
+  </div>
+  <hr>
+  <p class="mb-0">
+    {{ "Tip: You can also use your browser's refresh button." if session['lang'] == 'en' else "Astuce : Vous pouvez également utiliser le bouton d'actualisation de votre navigateur." }}
+  </p>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
 <div class="text-center my-5">
   {% if session['lang'] == 'fr' %}
-  <h1
-    class="text-white"
-    style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
-  >
+  <h1 class="text-white" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)">
     Bienvenue sur Shiny Dollop!
   </h1>
-  <h2
-    class="text-white-50"
-    style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
-  >
+  <h2 class="text-white-50" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)">
     Votre app pour apprendre et tester vos connaissances!
   </h2>
   {% else %}
-  <h1
-    class="text-white"
-    style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
-  >
+  <h1 class="text-white" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)">
     Welcome to Shiny Dollop!
   </h1>
-  <h2
-    class="text-white-50"
-    style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
-  >
+  <h2 class="text-white-50" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)">
     Your app to learn and test your knowledge!
   </h2>
   {% endif %}
