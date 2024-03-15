@@ -52,10 +52,33 @@
       // Start the countdown when the document is fully loaded
       startCountdown();
     });
+
+    // Display notification message
+    document.addEventListener("DOMContentLoaded", function() {
+        const selectElement = document.querySelector('select[name="filter"]');
+        const notificationElement = document.getElementById('notification');
+      
+        selectElement.addEventListener('change', function() {
+          const selectedOptionText = selectElement.options[selectElement.selectedIndex].text;
+          
+          // Update the notification content and show it
+          notificationElement.innerHTML = `<span class="me-2">✅</span>${selectedOptionText} selected.`;
+          notificationElement.classList.remove('d-none');
+          
+          // Optionally, hide the notification after a few seconds
+          setTimeout(() => {
+            notificationElement.classList.add('d-none');
+          }, 5000);
+        });
+      });
   </script>
   <div class="container py-5">
     <div class="row justify-content-center">
       <div class="col-lg-8">
+        <div id="notification" class="alert alert-info d-none" role="alert">
+            <!-- Notification text will be inserted here -->
+          </div>
+          
         <h2 class="text-center mb-5">{{ "Good luck !" if session['lang'] == 'en' else "Bonne chance !" }}</h2>
         
         <!-- Filter Form for Question Sets -->

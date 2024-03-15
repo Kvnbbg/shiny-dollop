@@ -59,6 +59,6 @@ def create_app():
 
     # Optional: Exempt specific routes from CSRF protection if necessary
     csrf.exempt('main.home')
-    csrf.exempt('main.quiz')
+    # csrf.exempt('main.quiz')
 
     return app

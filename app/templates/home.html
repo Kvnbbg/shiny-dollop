@@ -60,13 +60,13 @@
           {{ "We are currently addressing some technical issues. If you encounter a 'Bad Request', please refresh your page. We apologize for any inconvenience caused. 🔄" if session['lang'] == 'en' else "Nous résolvons actuellement quelques problèmes techniques. Si vous rencontrez une 'Mauvaise Demande', veuillez rafraîchir votre page. Nous nous excusons pour tout inconvénient causé. 🔄" }}
         </p>
         <div class="text-center">
-          <img src="{{ url_for('static', filename='images/reload.gif') }}" alt="Reload" style="max-width: 600px;">
+          <img src="{{ url_for('static', filename='images/reload.gif') }}" alt="Reload" style="max-width: 60vw;">
         </div>
         <hr>
         <p class="mb-0">
           {{ "Tip: You can also use your browser's refresh button." if session['lang'] == 'en' else "Astuce : Vous pouvez également utiliser le bouton d'actualisation de votre navigateur." }}
         </p>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">🤏</button>
       </div>
     </div>
     {% block contentDonate %}

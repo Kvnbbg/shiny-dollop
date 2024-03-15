@@ -63,6 +63,64 @@ header {
   opacity: 1; /* Full opacity on hover/focus for better user feedback */
 }
 
+/* Notification Styles */
+#notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1050; /* Ensure it appears above other content */
+  border-left: 4px solid #007bff; /* Blue border on the left for visibility */
+  background-color: #f8f9fa; /* Light background to stand out from the page */
+  color: #343a40; /* Dark text for readability */
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+  transition: all 0.3s ease-in-out; /* Smooth transition for showing/hiding */
+  display: flex;
+  align-items: center; /* Align icon and text */
+}
+
+/* Hide notification by default */
+#notification.d-none {
+  display: none;
+}
+
+/* Notification text styles */
+#notification > span {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+/* Optional: Animation for the notification to gently slide in and out */
+@keyframes slideIn {
+  from {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+      transform: translateX(0);
+      opacity: 1;
+  }
+  to {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+}
+
+#notification.slide-in {
+  animation: slideIn 0.5s forwards;
+}
+
+#notification.slide-out {
+  animation: slideOut 0.5s forwards;
+}
+
 
 footer {
   background-color: #343a40;
