@@ -34,7 +34,7 @@ footer {
   background-color: #343a40;
   color: #ced4da;
   border-top: 3px solid #212529;
-  position: fixed; /* Stays at the bottom of the viewport */
+  position: absolute; /* Stays at the bottom of the viewport */
   bottom: 0;
   left: 0;
   width: 100%;

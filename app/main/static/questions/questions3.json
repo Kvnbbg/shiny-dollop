@@ -1,5 +1,125 @@
 
 [
+  {
+    "question": "Which decorator is used for defining metadata about an Angular component?",
+    "choices": [
+      "@Component()",
+      "@NgModule()",
+      "@Directive()",
+      "@Injectable()"
+    ],
+    "answer": "@Component()"
+  },  
+  {
+    "question": "What is the purpose of Angular's dependency injection?",
+    "choices": [
+      "To allow Angular applications to be minified and compressed for production",
+      "To make Angular applications faster by injecting dependencies at runtime",
+      "To provide a way for Angular applications to configure routing",
+      "To manage the instantiation of services and provide them to classes that need them"
+    ],
+    "answer": "To manage the instantiation of services and provide them to classes that need them"
+  },  
+  {
+    "question": "Which CLI command is used to create a new Angular component?",
+    "choices": [
+      "ng generate component <component-name>",
+      "ng create component <component-name>",
+      "angular make component <component-name>",
+      "angular new component <component-name>"
+    ],
+    "answer": "ng generate component <component-name>"
+  },  
+  {
+    "question": "In Angular, what is a service?",
+    "choices": [
+      "A template that Angular components use to render HTML output",
+      "A feature that allows the creation of reusable CSS styles",
+      "A singleton object that gets instantiated only once during the app's lifetime",
+      "An Angular module that provides middleware features for the application"
+    ],
+    "answer": "A singleton object that gets instantiated only once during the app's lifetime"
+  },  
+  {
+    "question": "Which of the following is a core feature of Angular?",
+    "choices": [
+      "Virtual DOM",
+      "Two-way data binding",
+      "Use of JSX",
+      "Server-side rendering"
+    ],
+    "answer": "Two-way data binding"
+  },
+  {
+    "question": "What is Angular primarily used for?",
+    "choices": [
+      "Building mobile applications",
+      "Developing server-side applications",
+      "Creating single-page web applications",
+      "Generating static website pages"
+    ],
+    "answer": "Creating single-page web applications"
+  },
+  {
+    "question": "In a React component, what is the correct way to set state based on the previous state?",
+    "choices": [
+      "this.setState({ count: this.state.count + 1 })",
+      "this.setState(prevState => ({ count: prevState.count + 1 }))",
+      "this.state.count = this.state.count + 1",
+      "setState({ count: count + 1 })"
+    ],
+    "answer": "this.setState(prevState => ({ count: prevState.count + 1 }))"
+  },  
+  {
+    "question": "Which of the following is true about keys in React lists?",
+    "choices": [
+      "Keys are optional and can be ignored if the list is static",
+      "Keys help React identify which items have changed, are added, or are removed",
+      "Keys must be unique only within a sibling group, not globally unique in the component",
+      "Keys are used to improve performance by eliminating the need for re-rendering"
+    ],
+    "answer": "Keys help React identify which items have changed, are added, or are removed"
+  },  
+  {
+    "question": "What is the purpose of React Router?",
+    "choices": [
+      "To manage global state in a React application",
+      "To integrate with third-party libraries like jQuery",
+      "To enable navigation among views of various components in a React Application",
+      "To synchronize component props with a global store"
+    ],
+    "answer": "To enable navigation among views of various components in a React Application"
+  },  
+  {
+    "question": "What does the 'useEffect' hook replace in class components?",
+    "choices": [
+      "ComponentDidMount, ComponentDidUpdate, and ComponentWillUnmount lifecycle methods",
+      "The render method",
+      "setState method for updating state",
+      "Event handlers like onClick"
+    ],
+    "answer": "ComponentDidMount, ComponentDidUpdate, and ComponentWillUnmount lifecycle methods"
+  },
+  {
+    "question": "How can you pass props to a component in React?",
+    "choices": [
+      "By storing them in a state and passing them as arguments",
+      "By using the 'useState' hook within the child component",
+      "By defining them as attributes when using the component",
+      "By invoking the component as a function and passing the props"
+    ],
+    "answer": "By defining them as attributes when using the component"
+  },    
+  {
+  "question": "In React, what is the primary purpose of the 'useState' hook?",
+  "choices": [
+    "To fetch data from an API",
+    "To manage state within a functional component",
+    "To handle user input in forms",
+    "To create reusable custom hooks"
+  ],
+  "answer": "To create reusable custom hooks"
+  },
     {
       "question": "What does the term 'sharding' refer to in the context of databases like Elasticsearch and MongoDB?",
       "choices": [
