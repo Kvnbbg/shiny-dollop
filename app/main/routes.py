@@ -65,7 +65,7 @@ def quiz():
             feedback = "🥳 Correct!"
         else:
             session['wrong_answers'] = session.get('wrong_answers', 0) + 1
-            feedback = f"❌ Incorrect, the correct answer was {correct_answer}."
+            feedback = f"🛹 💥 {correct_answer}."
         flash(feedback, 'info')
         session['current_index'] = current_index + 1
         session.modified = True
