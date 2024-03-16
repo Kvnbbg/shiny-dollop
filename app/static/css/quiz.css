@@ -79,14 +79,16 @@ body {
 .btn-outline-secondary {
   border-color: #007bff;
   transition: all 0.2s ease-in-out;
-  background-color: green;
-  color: white;
-  opacity: 0.5;
+  background-color: #ffffff;
+  color: #007bff;
+  opacity: 0.8;
 }
 
 .btn-outline-secondary:hover {
-  background-color: #007bff;
-  color: #ffffff;
+  background-color: #8a8a8a;
+  border-color: #1180a8;
+  color: #004691;
+  border-radius: 15%;
 }
 
 .navigation-buttons {

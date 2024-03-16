@@ -1,20 +1,24 @@
 {% extends 'base.html' %} 
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz.css') }}"> <!-- Assuming you have a CSS file for custom styles -->
-<script src="{{ url_for('static', filename='js/quiz.js') }}"></script> <!-- Externalizing JS for better structure -->
+<script src="{{ url_for('static', filename='js/quiz.js') }}"></script> 
+
+
+<!-- Externalizing JS for better structure -->
 <div class="container py-5">
   <div class="row justify-content-center">
     <div class="col-lg-8">
-
+<!--
       <div class="quiz-header d-flex justify-content-between align-items-center mb-4">
         <div class="time-remaining d-flex align-items-center">
-          <i class="bi bi-clock-history me-2"></i> <!-- Using Bootstrap Icons for aesthetics -->
+          <i class="bi bi-clock-history me-2"></i> Using Bootstrap Icons for aesthetics 
           <span id="countdownTimer">35 seconds</span>
         </div>
         <div class="refresh-quiz clickable-div" data-href="{{ url_for('main.quiz') }}">
-          <i class="bi bi-arrow-clockwise"></i> <!-- Refresh icon -->
+          <i class="bi bi-arrow-clockwise"></i>  Refresh icon
         </div>
       </div>
+    -->
 
       <div class="card quiz-info mb-4">
         <div class="card-body text-center">
@@ -25,13 +29,13 @@
 
       <div class="card filter-form mb-4">
         <div class="card-body">
-          <h4 class="mb-3">{{ "Add astronaut in the Dollop" if session['lang'] == 'en' else "Ajouter des astronautes dans le satellite Dollop" }}</h4>
+          <h4 class="mb-3">{{ "Dollops are fun, you can use the dropdown to add more dollops to your quizz." if session['lang'] == 'en' else "Les dollops sont amusants, vous pouvez utiliser le menu déroulant pour ajouter plus de dollops à votre quizz." }}</h4>
           <form action="{{ url_for('main.quiz') }}" method="get">
             {{ form.hidden_tag() }}
             <select name="filter" class="form-select" onchange="this.form.submit()">
-              <option value="questions.json">{{ "Dollop 🛰️" if session['lang'] == 'en' else "Dollop 🛰️" }}</option>
-              <option value="questions2.json">{{ "🧑‍🚀 +1 Woman" if session['lang'] == 'en' else "🧑‍🚀 +1 Femme" }}</option>
-              <option value="questions3.json">{{ "👨‍🚀 +1 Man" if session['lang'] == 'en' else "👨‍🚀 +1 Homme" }}</option>
+              <option value="questions.json">{{ "Add 🛰️" if session['lang'] == 'en' else "Ajouter 🛰️" }}</option>
+              <option value="questions2.json">{{ "🧑‍🚀 +1" if session['lang'] == 'en' else "🧑‍🚀 +1" }}</option>
+              <option value="questions3.json">{{ "👨‍🚀 +2" if session['lang'] == 'en' else "👨‍🚀 +2" }}</option>
             </select>
           </form>
         </div>
@@ -60,9 +64,9 @@
       </div>
 
       <div class="navigation-buttons mt-4">
-        <a href="{{ url_for('main.home') }}" class="btn btn-outline-secondary">{{ "🔙 Back" if session['lang'] == 'en' else "🔙 Retour" }}</a>
-        <a href="{{ url_for('main.quiz') }}" class="btn btn-outline-secondary ms-2">{{ "⏭️ Next" if session['lang'] == 'en' else "⏭️ Suivant" }}</a>
-        <a href="{{ url_for('main.donate') }}" class="btn btn-outline-secondary ms-2">{{ "💭 Donate" if session['lang'] == 'en' else "💭 Donner" }}</a>
+        <a href="{{ url_for('main.home') }}" class="btn btn-outline-secondary" style="background-color: #f0f0f0;">{{ "🏠 Home" if session['lang'] == 'en' else "🏠 Accueil" }}</a>
+        <a href="{{ url_for('main.quiz') }}" class="btn btn-outline-secondary ms-2" style="background-color: #f1f1f1;">{{ "🔄 Refresh" if session['lang'] == 'en' else "🔄 Rafraîchir" }}</a>
+        <a href="{{ url_for('main.donate') }}" class="btn btn-outline-secondary ms-2" style="background-color: #f2f2f2;">{{ "💰 Donate" if session['lang'] == 'en' else "💰 Donner" }}</a>
         <!-- <div onclick="window.location.href='{{ url_for('main.feedback') }}'" class="btn btn-outline-secondary ms-2">{{ "Feedback" if session['lang'] == 'en' else "Feedback" }}</div>-->
        <!--
         <button type="button" id="skipBtn" class="btn btn-outline-secondary ms-2">{{ "Skip" if session['lang'] == 'en' else "Sauter" }}</button>-->
