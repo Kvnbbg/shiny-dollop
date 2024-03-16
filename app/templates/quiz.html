@@ -25,7 +25,7 @@
 
       <div class="card filter-form mb-4">
         <div class="card-body">
-          <h4 class="mb-3">{{ "Add astronaut in the Dollop" if session['lang'] == 'en' else "Ajouter son astronaute Dollop" }}</h4>
+          <h4 class="mb-3">{{ "Add astronaut in the Dollop" if session['lang'] == 'en' else "Ajouter des astronautes dans le satellite Dollop" }}</h4>
           <form action="{{ url_for('main.quiz') }}" method="get">
             {{ form.hidden_tag() }}
             <select name="filter" class="form-select" onchange="this.form.submit()">
@@ -60,9 +60,11 @@
       </div>
 
       <div class="navigation-buttons mt-4">
-        <a href="{{ url_for('main.home') }}" class="btn btn-outline-secondary">{{ "Back" if session['lang'] == 'en' else "Retour" }}</a>
-        <!-- <div onclick="window.location.href='{{ url_for('main.feedback') }}'" class="btn btn-outline-secondary ms-2">{{ "Feedback" if session['lang'] == 'en' else "Feedback" }}</div>
-        <div onclick="window.location.href='{{ url_for('main.donate') }}'" class="btn btn-outline-secondary ms-2">{{ "Donate" if session['lang'] == 'en' else "Donner" }}</div>
+        <a href="{{ url_for('main.home') }}" class="btn btn-outline-secondary">{{ "🔙 Back" if session['lang'] == 'en' else "🔙 Retour" }}</a>
+        <a href="{{ url_for('main.quiz') }}" class="btn btn-outline-secondary ms-2">{{ "⏭️ Next" if session['lang'] == 'en' else "⏭️ Suivant" }}</a>
+        <a href="{{ url_for('main.donate') }}" class="btn btn-outline-secondary ms-2">{{ "💭 Donate" if session['lang'] == 'en' else "💭 Donner" }}</a>
+        <!-- <div onclick="window.location.href='{{ url_for('main.feedback') }}'" class="btn btn-outline-secondary ms-2">{{ "Feedback" if session['lang'] == 'en' else "Feedback" }}</div>-->
+       <!--
         <button type="button" id="skipBtn" class="btn btn-outline-secondary ms-2">{{ "Skip" if session['lang'] == 'en' else "Sauter" }}</button>-->
       </div>
     </div>

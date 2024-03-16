@@ -1,6 +1,76 @@
 
 [
   {
+    "question": "How does Angular handle form submission and what approach allows for easier testing and validation?",
+    "choices": [
+      "Using the ngSubmit directive with template-driven forms",
+      "Using the HttpClient module for both reactive and template-driven forms",
+      "Utilizing reactive forms with formGroup directives for a model-driven approach",
+      "Employing jQuery within Angular to manage form submission"
+    ],
+    "answer": "Utilizing reactive forms with formGroup directives for a model-driven approach"
+  },
+  {
+    "question": "In Angular, how do you pass data from a parent component to a child component?",
+    "choices": [
+      "Using the @ViewChild decorator",
+      "Employing the @Input decorator to bind data properties",
+      "Utilizing the @Output decorator to emit data",
+      "Through Angular service singletons for cross-component communication"
+    ],
+    "answer": "Employing the @Input decorator to bind data properties"
+  },
+  {
+    "question": "What is the Angular CLI command to create a service in a specific folder?",
+    "choices": [
+      "ng generate service <service-name> --path=<path-name>",
+      "ng create service <path-name>/<service-name>",
+      "ng generate service <path-name>/<service-name>",
+      "ng make service <service-name> in <path-name>"
+    ],
+    "answer": "ng generate service <path-name>/<service-name>"
+  },
+  {
+    "question": "Which Angular feature allows you to render a template conditionally?",
+    "choices": [
+      "The *ngIf directive",
+      "The *ngFor directive",
+      "The ngSwitch directive",
+      "The ng-template outlet"
+    ],
+    "answer": "The *ngIf directive"
+  },
+  {
+    "question": "How does Angular's change detection mechanism work for detecting changes within component data?",
+    "choices": [
+      "Using the Virtual DOM, similar to React",
+      "Polling data properties at set intervals",
+      "Zone.js triggers change detection whenever asynchronous operations occur",
+      "Manual triggering of change detection by the developer"
+    ],
+    "answer": "Zone.js triggers change detection whenever asynchronous operations occur"
+  },
+  {
+    "question": "What is the purpose of the async pipe in Angular?",
+    "choices": [
+      "To execute asynchronous functions in a sequential order",
+      "To automatically subscribe and unsubscribe from observable or promise-based data sources in templates",
+      "For performing HTTP requests asynchronously",
+      "To delay the execution of functions using a timer"
+    ],
+    "answer": "To automatically subscribe and unsubscribe from observable or promise-based data sources in templates"
+  },
+  {
+    "question": "How do you implement global error handling in an Angular application?",
+    "choices": [
+      "Using the try/catch blocks in each component",
+      "Implementing a global error handling service by extending the ErrorHandler class",
+      "Using the GlobalErrorInterceptor along with the HTTP_INTERCEPTORS token",
+      "Directly modifying the browser's window.onerror method"
+    ],
+    "answer": "Implementing a global error handling service by extending the ErrorHandler class"
+  },   
+  {
     "question": "Which decorator is used for defining metadata about an Angular component?",
     "choices": [
       "@Component()",

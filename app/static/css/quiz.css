@@ -78,8 +78,10 @@ body {
 
 .btn-outline-secondary {
   border-color: #007bff;
-  color: #007bff;
   transition: all 0.2s ease-in-out;
+  background-color: green;
+  color: white;
+  opacity: 0.5;
 }
 
 .btn-outline-secondary:hover {
