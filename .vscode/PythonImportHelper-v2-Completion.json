@@ -765,6 +765,15 @@
         "documentation": {}
     },
     {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
         "label": "random",
         "kind": 6,
         "isExtraImport": true,
@@ -1996,7 +2005,7 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def quiz_complete():\n    results = {key: session.pop(key, 0) for key in ['correct_answers', 'wrong_answers', 'skipped_answers']}\n    session.pop('questions', None)\n    session.pop('current_index', None)\n    session.modified = True\n    return render_template(\"quiz_complete.html\", **results)\n@main.route('/donate')\ndef donate():\n    return render_template(\"donate.html\")\n@main.route('/set_language/<language>')",
+        "peekOfCode": "def quiz_complete():\n    results = {key: session.pop(key, 0) for key in ['correct_answers', 'wrong_answers', 'skipped_answers']}\n    session.pop('questions', None)\n    session.pop('current_index', None)\n    session.modified = True\n    return render_template(\"quiz_complete.html\", **results)\n@main.route('/donate')\ndef donate():\n    return render_template(\"donate.html\")\n@main.route('/feedback', methods=['GET', 'POST'])",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -2005,7 +2014,16 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def donate():\n    return render_template(\"donate.html\")\n@main.route('/set_language/<language>')\ndef set_language(language):\n    session['lang'] = language\n    flash(f\"Language set to {'English' if language == 'en' else 'French'}.\", \"info\")\n    session.modified = True\n    return redirect(request.referrer or url_for('.home'))\n@main.route(\"/\")\ndef home():",
+        "peekOfCode": "def donate():\n    return render_template(\"donate.html\")\n@main.route('/feedback', methods=['GET', 'POST'])\ndef feedback():  # Renamed from donate to feedback\n    # Function body remains the same\n    return render_template(\"feedback.html\")\n@main.route('/set_language/<language>')\ndef set_language(language):\n    session['lang'] = language\n    flash(f\"Language set to {'English' if language == 'en' else 'French'}.\", \"info\")",
+        "detail": "app.main.routes",
+        "documentation": {}
+    },
+    {
+        "label": "feedback",
+        "kind": 2,
+        "importPath": "app.main.routes",
+        "description": "app.main.routes",
+        "peekOfCode": "def feedback():  # Renamed from donate to feedback\n    # Function body remains the same\n    return render_template(\"feedback.html\")\n@main.route('/set_language/<language>')\ndef set_language(language):\n    session['lang'] = language\n    flash(f\"Language set to {'English' if language == 'en' else 'French'}.\", \"info\")\n    session.modified = True\n    return redirect(request.referrer or url_for('.home'))\n@main.route(\"/\")",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -2014,7 +2032,7 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def set_language(language):\n    session['lang'] = language\n    flash(f\"Language set to {'English' if language == 'en' else 'French'}.\", \"info\")\n    session.modified = True\n    return redirect(request.referrer or url_for('.home'))\n@main.route(\"/\")\ndef home():\n    return render_template(\"home.html\", lang=session.get('lang', 'en'))",
+        "peekOfCode": "def set_language(language):\n    session['lang'] = language\n    flash(f\"Language set to {'English' if language == 'en' else 'French'}.\", \"info\")\n    session.modified = True\n    return redirect(request.referrer or url_for('.home'))\n@main.route(\"/\")\ndef home():\n    return render_template(\"home.html\", lang=session.get('lang', 'en'))\n# Flask application error handlers\n@main.app_errorhandler(404)",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -2023,7 +2041,34 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def home():\n    return render_template(\"home.html\", lang=session.get('lang', 'en'))",
+        "peekOfCode": "def home():\n    return render_template(\"home.html\", lang=session.get('lang', 'en'))\n# Flask application error handlers\n@main.app_errorhandler(404)\ndef not_found_error(error):\n    return render_template(\"404.html\"), 404\n@main.app_errorhandler(500)\ndef internal_error(error):\n    return render_template(\"500.html\"), 500\n@main.route('/handle_feedback', methods=['POST'])",
+        "detail": "app.main.routes",
+        "documentation": {}
+    },
+    {
+        "label": "not_found_error",
+        "kind": 2,
+        "importPath": "app.main.routes",
+        "description": "app.main.routes",
+        "peekOfCode": "def not_found_error(error):\n    return render_template(\"404.html\"), 404\n@main.app_errorhandler(500)\ndef internal_error(error):\n    return render_template(\"500.html\"), 500\n@main.route('/handle_feedback', methods=['POST'])\ndef handle_feedback():\n    emoji_feedback = request.form.get('emojiFeedback')\n    DATABASE_PATH = os.path.join(current_app.root_path, 'static', 'misc', 'feedback.db')\n    if emoji_feedback:",
+        "detail": "app.main.routes",
+        "documentation": {}
+    },
+    {
+        "label": "internal_error",
+        "kind": 2,
+        "importPath": "app.main.routes",
+        "description": "app.main.routes",
+        "peekOfCode": "def internal_error(error):\n    return render_template(\"500.html\"), 500\n@main.route('/handle_feedback', methods=['POST'])\ndef handle_feedback():\n    emoji_feedback = request.form.get('emojiFeedback')\n    DATABASE_PATH = os.path.join(current_app.root_path, 'static', 'misc', 'feedback.db')\n    if emoji_feedback:\n        try:\n            conn = sqlite3.connect(DATABASE_PATH)\n            cursor = conn.cursor()",
+        "detail": "app.main.routes",
+        "documentation": {}
+    },
+    {
+        "label": "handle_feedback",
+        "kind": 2,
+        "importPath": "app.main.routes",
+        "description": "app.main.routes",
+        "peekOfCode": "def handle_feedback():\n    emoji_feedback = request.form.get('emojiFeedback')\n    DATABASE_PATH = os.path.join(current_app.root_path, 'static', 'misc', 'feedback.db')\n    if emoji_feedback:\n        try:\n            conn = sqlite3.connect(DATABASE_PATH)\n            cursor = conn.cursor()\n            cursor.execute('INSERT INTO feedback (emoji) VALUES (?)', (emoji_feedback,))\n            conn.commit()\n            flash(\"Feedback received!\", \"success\")",
         "detail": "app.main.routes",
         "documentation": {}
     },
@@ -2043,6 +2088,15 @@
         "description": "app.main.routes",
         "peekOfCode": "csrf = CSRFProtect()\nclass QuizForm(FlaskForm):\n    choice = RadioField('Choices', coerce=str, validators=[DataRequired(message=\"Please make a selection.\")])\n    question_id = HiddenField()\n    submit = SubmitField('Submit')\n    skip = SubmitField('Skip')\ndef load_questions(filename=\"questions.json\"):\n    base_dir = os.path.abspath(os.path.dirname(__file__))\n    filepath = os.path.join(base_dir, 'static', 'questions', filename)\n    if not os.path.exists(filepath):",
         "detail": "app.main.routes",
+        "documentation": {}
+    },
+    {
+        "label": "initialize_database",
+        "kind": 2,
+        "importPath": "app.databe",
+        "description": "app.databe",
+        "peekOfCode": "def initialize_database(app):\n    DATABASE_PATH = os.path.join(app.root_path, 'static', 'misc', 'feedback.db')\n    # Ensure the directory for the database exists\n    os.makedirs(os.path.dirname(DATABASE_PATH), exist_ok=True)\n    # Create the database and table if they don't exist\n    with sqlite3.connect(DATABASE_PATH) as conn:\n        cursor = conn.cursor()\n        cursor.execute('''\n            CREATE TABLE IF NOT EXISTS feedback (\n                id INTEGER PRIMARY KEY AUTOINCREMENT,",
+        "detail": "app.databe",
         "documentation": {}
     },
     {

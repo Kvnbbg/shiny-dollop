@@ -66,8 +66,9 @@ header {
 /* Notification Styles */
 #notification {
   position: fixed;
-  height: auto;
-  bottom: 20px;
+  height: 20px;
+  border-bottom: 20px;
+  border-style: solid;
   right: 20px;
   z-index: 1050; /* Ensure it appears above other content */
   border-left: 4px solid #007bff; /* Blue border on the left for visibility */
@@ -123,19 +124,28 @@ header {
 }
 
 
-footer {
-  background-color: #343a40;
-  color: #ced4da;
-  border-top: 3px solid #212529;
+/* Footer Styles */
+.footer {
+  width: 100%;
+  background-color: #333; /* Dark background for the footer */
+  color: #fff; /* Light text color for contrast */
+  text-align: center;
+  padding: 20px 10px; /* Padding for spacing */
+  box-sizing: border-box; /* Ensures padding does not increase the box's size */
+  position: fixed; /* Makes footer stick to the bottom */
   bottom: 0;
   left: 0;
-  width: 100%;
-  height: 20px; /* Set the fixed height of the footer */
-  padding: 5px 0; /* Tiny vertical padding */
-  text-align: center; /* Ensures any text in the footer is centered */
-  margin-bottom: 0; /* Ensures no margin at the bottom */
-  position: absolute; /* Ensures the footer is always at the bottom of the page */
+  visibility: hidden; /* Hides the footer initially */
+  transition: visibility 0.3s, opacity 0.3s ease; /* Smooth transition for showing/hiding */
+  opacity: 0; /* Make the footer transparent when hidden */
 }
+
+/* Class to show the footer */
+.footer-visible {
+  visibility: visible; /* Makes the footer visible */
+  opacity: 1; /* Full opacity when shown */
+}
+
 
 
 /* Main Content */
@@ -156,7 +166,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  position: absolute;
 }
 
 .nav-link, .navbar-brand {
@@ -288,10 +298,21 @@ img {
 }
 
 #countdownTimer {
-  font-size: 2rem;
+  font-family: 'Roboto', sans-serif; /* Example: Roboto. Make sure to include the Google Fonts link in your HTML */
+  font-size: calc(1rem + 1vw); /* Responsive font size */
   font-weight: 600;
   text-align: center;
   margin: 20px 0;
-  color:#002853;
-  background-color: #f8f9fa;
+  color: #002853;
+  background: linear-gradient(135deg, #cae9ff, #f8f9fa); /* Soft blue gradient */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Enhance readability */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for interactive effects */
+}
+
+/* Optional: Add a hover effect to make the timer more interactive */
+#countdownTimer:hover {
+  transform: scale(1.05); /* Slightly enlarge the timer on hover */
 }

@@ -7,14 +7,14 @@
     Bienvenue sur Shiny Dollop!
   </h1>
   <h2 class="text-white-50" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)">
-    Votre app pour apprendre et tester vos connaissances!
+    Un jeu quizz pour apprendre et tester vos connaissances!
   </h2>
   {% else %}
   <h1 class="text-white" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)">
     Welcome to Shiny Dollop!
   </h1>
   <h2 class="text-white-50" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)">
-    Your app to learn and test your knowledge!
+    A Quizz Game to learn and test your knowledge!
   </h2>
   {% endif %}
 </div>
@@ -71,13 +71,8 @@
     </div>
     {% block contentDonate %}
     <div class="card card-body text-black-50">
-      <p>
-        {{ "If you like the app and want to support our growth, you can make a
-        donation." if session['lang'] == 'en' else "Si vous aimez l'application et
-        souhaitez soutenir notre croissance, vous pouvez faire un don." }}
-      </p>
       <a href="{{ url_for('main.donate') }}" class="btn btn-primary">
-        {{ "Donate" if session['lang'] == 'en' else "Faire un don" }}
+        {{ "Donate" if session['lang'] == 'en' else "Faire des dons" }}
       </a>
     </div>
   </div>

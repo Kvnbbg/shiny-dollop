@@ -49,6 +49,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- Canonical URL to Avoid Duplicate Content Issues -->
     <link
@@ -127,33 +128,29 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="https://allmylinks.com/kevinmarville">
-        🔙</a>
       <a class="navbar-brand" href="{{ url_for('main.home') }}">
-        Quizz Game</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+        Quizz Game
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a
-            class="nav-item nav-link"
-            href="{{ url_for('auth.set_language', language='en') }}"
-            >🇺🇸 English</a
-          >
-          <a
-            class="nav-item nav-link"
-            href="{{ url_for('auth.set_language', language='fr') }}"
-            >🇫🇷 Français</a
-          >
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Toggle language dropdown">
+              {{ '🇺🇸 English' if session['lang'] == 'en' else '🇫🇷 Français' }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              {% if session['lang'] == 'en' %}
+              <a class="dropdown-item" href="{{ url_for('auth.set_language', language='fr') }}">🇫🇷 Français</a>
+              {% else %}
+              <a class="dropdown-item" href="{{ url_for('auth.set_language', language='en') }}">🇺🇸 English</a>
+              {% endif %}
+            </div>
+          </div>
+          <a class="nav-item nav-link" href="https://allmylinks.com/kevinmarville" aria-label="{{ 'Visit App Store' if session['lang'] == 'en' else 'Visiter le magasin d’applications' }}">
+            {{ '📲 App Store' if session['lang'] == 'en' else '📲 Magasin d’application' }}
+          </a>
         </div>
       </div>
     </nav>
@@ -191,16 +188,22 @@
     <main>
 
     </main>
-<!-- Footer Section -->
-<footer class="py-5 bg-dark">
-  <div class="container text-center">
-    <p class="mb-0 text-white">
-      Copyright &copy; Kevin Josué MARVILLE 2024
-    </p>
-  </div>
-</footer>
+<!-- Example Button to Toggle Footer -->
+<button id="toggleFooterBtn">🙈</button>
 
+<!-- Footer HTML -->
+<div class="footer" id="pageFooter">
+  © 2024 Your Website Name. All Rights Reserved.
+</div>
 
+<script>
+  document.getElementById('toggleFooterBtn').addEventListener('click', function() {
+    const footer = document.getElementById('pageFooter');
+    footer.classList.toggle('footer-visible');
+  });
+</script>
+
+    <!-- External JavaScript and Frameworks -->
     <script src="{{ url_for('static', filename='/js/script.js') }}"></script>
     <scrip src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
     </script>

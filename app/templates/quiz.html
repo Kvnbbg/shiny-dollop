@@ -1,134 +1,71 @@
-{% extends 'base.html' %} {% block content %}
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const countdownDuration = 35;
-      let timeout;
-  
-      // Starts the countdown timer
-      function startCountdown() {
-        let timeRemaining = countdownDuration;
-        updateTimerDisplay(timeRemaining);
-  
-        timeout = setInterval(() => {
-          timeRemaining--;
-          updateTimerDisplay(timeRemaining);
-  
-          // Submit the form traditionally when time's up
-          if (timeRemaining <= 0) {
-            clearInterval(timeout);
-            document.getElementById("nextQuestionForm").submit();
-          }
-        }, 1000);
-      }
-  
-      // Updates the display of the countdown timer
-      function updateTimerDisplay(time) {
-        const countdownTimer = document.getElementById("countdownTimer");
-        countdownTimer.textContent = `${time} ${time > 1 ? "seconds" : "second"}`;
-        if (time <= 0) {
-          // Use |tojson filter for safe string handling
-          countdownTimer.textContent = {{ "Time is up!" if session['lang'] == 'en' else 'Temps écoulé !' | tojson }};
-        }
-      }
-  
-      // Validates the form before submitting
-      function validateForm() {
-        const validationAlert = document.getElementById("validationAlert");
-        if (!document.querySelector('input[name="choice"]:checked')) {
-          validationAlert.classList.remove("d-none");
-          // Use |tojson filter for safe string handling
-          validationAlert.textContent = {{ 'Please select an option.' if session['lang'] == 'en' else 'Veuillez sélectionner une option.' | tojson }};
-          return false;
-        }
-        validationAlert.classList.add("d-none");
-        return true;
-      }
-  
-      // Attach event listener to skip button for submitting the form
-      document.getElementById("skipBtn").addEventListener("click", function () {
-        document.getElementById("nextQuestionForm").submit();
-      });
-  
-      // Start the countdown when the document is fully loaded
-      startCountdown();
-    });
+{% extends 'base.html' %} 
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/quiz.css') }}"> <!-- Assuming you have a CSS file for custom styles -->
+<script src="{{ url_for('static', filename='js/quiz.js') }}"></script> <!-- Externalizing JS for better structure -->
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
 
-    // Display notification message
-    document.addEventListener("DOMContentLoaded", function() {
-        const selectElement = document.querySelector('select[name="filter"]');
-        const notificationElement = document.getElementById('notification');
-      
-        selectElement.addEventListener('change', function() {
-          const selectedOptionText = selectElement.options[selectElement.selectedIndex].text;
-          
-          // Update the notification content and show it
-          notificationElement.innerHTML = `<span class="me-2">✅</span>${selectedOptionText} selected.`;
-          notificationElement.classList.remove('d-none');
-          
-          // Optionally, hide the notification after a few seconds
-          setTimeout(() => {
-            notificationElement.classList.add('d-none');
-          }, 5000);
-        });
-      });
-  </script>
-  <div class="container py-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
+      <div class="quiz-header d-flex justify-content-between align-items-center mb-4">
+        <div class="time-remaining d-flex align-items-center">
+          <i class="bi bi-clock-history me-2"></i> <!-- Using Bootstrap Icons for aesthetics -->
+          <span id="countdownTimer">35 seconds</span>
+        </div>
+        <div class="refresh-quiz clickable-div" data-href="{{ url_for('main.quiz') }}">
+          <i class="bi bi-arrow-clockwise"></i> <!-- Refresh icon -->
+        </div>
+      </div>
 
-          
-        <h2 class="text-center mb-5">{{ "Good luck !" if session['lang'] == 'en' else "Bonne chance !" }}</h2>
-        
-        <!-- Filter Form for Question Sets -->
-        <div class="card mb-4">
-          <div class="card-header">
-            <h4 class="mb-0">{{ "Select Question Set" if session['lang'] == 'en' else "Sélectionnez le jeu de questions" }}</h4>
-          </div>
-            <div id="notification" class="alert alert-success d-none"></div>
-          <div class="card-body">
-            <form action="{{ url_for('main.quiz') }}" method="get">
-              {{ form.hidden_tag() }}
-              <div class="d-flex justify-content-between">
-                <select name="filter" class="form-select" onchange="this.form.submit()">
-                  <option value="questions.json">{{ "Default Set" if session['lang'] == 'en' else "Jeu par défaut" }}</option>
-                  <option value="questions2.json">{{ "Set 2" if session['lang'] == 'en' else "Jeu 2" }}</option>
-                  <option value="questions3.json">{{ "Set 3" if session['lang'] == 'en' else "Jeu 3" }}</option>
-                </select>
+      <div class="card quiz-info mb-4">
+        <div class="card-body text-center">
+          <h5 class="card-title">{{ "Good luck ! 🍀" if session['lang'] == 'en' else "Bonne chance ! 🍀" }}</h5>
+          <p class="card-text">{{ "Select the correct answer and click 'Next' to continue." if session['lang'] == 'en' else "Sélectionnez la bonne réponse et cliquez sur 'Suivant' pour continuer." }}</p>
+        </div>
+      </div>
+
+      <div class="card filter-form mb-4">
+        <div class="card-body">
+          <h4 class="mb-3">{{ "Add astronaut in the Dollop" if session['lang'] == 'en' else "Ajouter son astronaute Dollop" }}</h4>
+          <form action="{{ url_for('main.quiz') }}" method="get">
+            {{ form.hidden_tag() }}
+            <select name="filter" class="form-select" onchange="this.form.submit()">
+              <option value="questions.json">{{ "Dollop 🛰️" if session['lang'] == 'en' else "Dollop 🛰️" }}</option>
+              <option value="questions2.json">{{ "🧑‍🚀 +1 Woman" if session['lang'] == 'en' else "🧑‍🚀 +1 Femme" }}</option>
+              <option value="questions3.json">{{ "👨‍🚀 +1 Man" if session['lang'] == 'en' else "👨‍🚀 +1 Homme" }}</option>
+            </select>
+          </form>
+        </div>
+      </div>
+
+      <div class="card quiz-form shadow-sm">
+        <div class="card-body">
+          <form id="nextQuestionForm" action="{{ url_for('main.quiz') }}" method="post" onsubmit="return validateForm();">
+            {{ form.hidden_tag() }}
+            <fieldset class="mb-3">
+              <legend class="form-label mb-3">{{ question.question }}</legend>
+              <div id="validationAlert" class="alert alert-warning d-none"></div>
+              {% for choice in form.choice %}
+              <div class="form-check">
+                {{ choice(class_="form-check-input") }}
+                <label class="form-check-label" for="{{ choice.id }}">{{ choice.label.text }}</label>
               </div>
-              
-            </form>
-          </div>
+              {% endfor %}
+            </fieldset>
+            {{ form.question_id }}
+            <div class="d-flex justify-content-end">
+              {{ form.submit(class="btn btn-primary") }}
+            </div>
+          </form>
         </div>
-  
-        <!-- Quiz Form -->
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <form id="nextQuestionForm" action="{{ url_for('main.quiz') }}" method="post" onsubmit="return validateForm();">
-              {{ form.hidden_tag() }}
-              <fieldset class="mb-3">
-                <legend class="form-label mb-3">{{ question.question }}</legend>
-                <div id="validationAlert" class="alert alert-warning d-none"></div>
-                {% for choice in form.choice %}
-                <div class="form-check">
-                  {{ choice(class_="form-check-input") }}
-                  <label class="form-check-label" for="{{ choice.id }}">{{ choice.label.text }}</label>
-                </div>
-                {% endfor %}
-              </fieldset>
-              {{ form.question_id }}
-              <div class="d-flex justify-content-between">
-                {{ form.submit(class="btn btn-primary") }}
-                <button type="button" id="skipBtn" class="btn btn-outline-secondary">{{ "Skip" if session['lang'] == 'en' else "Passer" }}</button>
-              </div>
-            </form>
-          </div>
-        </div>
-        
-        <div class="text-center mt-4">
-          <p><span id="countdownTimer"></span></p>
-        </div>
+      </div>
+
+      <div class="navigation-buttons mt-4">
+        <a href="{{ url_for('main.home') }}" class="btn btn-outline-secondary">{{ "Back" if session['lang'] == 'en' else "Retour" }}</a>
+        <!-- <div onclick="window.location.href='{{ url_for('main.feedback') }}'" class="btn btn-outline-secondary ms-2">{{ "Feedback" if session['lang'] == 'en' else "Feedback" }}</div>
+        <div onclick="window.location.href='{{ url_for('main.donate') }}'" class="btn btn-outline-secondary ms-2">{{ "Donate" if session['lang'] == 'en' else "Donner" }}</div>
+        <button type="button" id="skipBtn" class="btn btn-outline-secondary ms-2">{{ "Skip" if session['lang'] == 'en' else "Sauter" }}</button>-->
       </div>
     </div>
   </div>
-  {% endblock %}
-  
+</div>
+{% endblock %}

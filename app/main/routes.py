@@ -1,3 +1,4 @@
+import sqlite3
 from flask import Blueprint, jsonify, render_template, request, session, redirect, url_for, flash, current_app
 from flask_wtf import FlaskForm, CSRFProtect
 from wtforms import StringField, RadioField, HiddenField, SubmitField
@@ -87,6 +88,12 @@ def quiz_complete():
 def donate():
     return render_template("donate.html")
 
+@main.route('/feedback', methods=['GET', 'POST'])
+def feedback():  # Renamed from donate to feedback
+    # Function body remains the same
+    return render_template("feedback.html")
+
+
 @main.route('/set_language/<language>')
 def set_language(language):
     session['lang'] = language
@@ -97,3 +104,35 @@ def set_language(language):
 @main.route("/")
 def home():
     return render_template("home.html", lang=session.get('lang', 'en'))
+
+# Flask application error handlers
+@main.app_errorhandler(404)
+def not_found_error(error):
+    return render_template("404.html"), 404
+
+
+@main.app_errorhandler(500)
+def internal_error(error):
+    return render_template("500.html"), 500
+
+@main.route('/handle_feedback', methods=['POST'])
+def handle_feedback():
+    emoji_feedback = request.form.get('emojiFeedback')
+    DATABASE_PATH = os.path.join(current_app.root_path, 'static', 'misc', 'feedback.db')
+
+    if emoji_feedback:
+        try:
+            conn = sqlite3.connect(DATABASE_PATH)
+            cursor = conn.cursor()
+            cursor.execute('INSERT INTO feedback (emoji) VALUES (?)', (emoji_feedback,))
+            conn.commit()
+            flash("Feedback received!", "success")
+        except sqlite3.Error as e:
+            current_app.logger.error(f"Database error: {e}")
+            flash("An error occurred while saving your feedback.", "error")
+        finally:
+            conn.close()
+    else:
+        flash("No feedback received. Please select an emoji.", "error")
+
+    return redirect(url_for('main.feedback'))

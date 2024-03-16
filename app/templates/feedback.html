@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block content %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const feedbackForm = document.getElementById('feedbackForm');
+    const emojiButtons = document.querySelectorAll('.emoji-btn');
+    const emojiFeedbackInput = document.getElementById('emojiFeedback');
+    const feedbackDisplay = document.getElementById('feedbackDisplay');
+  
+    emojiButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        emojiFeedbackInput.value = this.getAttribute('data-emoji');
+        // Manually submit the form for demonstration; in production, use AJAX or form submit
+        displayFeedback(emojiFeedbackInput.value);
+      });
+    });
+  
+    function displayFeedback(emoji) {
+      const feedbackItem = document.createElement('div');
+      feedbackItem.textContent = `Anonymous: ${emoji}`;
+      feedbackDisplay.appendChild(feedbackItem);
+    }
+  });
+  </script>
+  <style>
+  .emoji-selector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .emoji-options {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .emoji-btn {
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+  .emoji-btn:hover {
+    transform: scale(1.1);
+  }
+  .feedback-display {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  .feedback-display div {
+    margin-bottom: 0.5rem;
+  }
+  </style>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-6">
+      <!-- Feedback Form -->
+      <h2>{{ "Boîte à idée 💡" if session['lang'] == 'fr' else "Idea Box 💡" }}</h2>
+      <form id="feedbackForm" action="{{ url_for('main.handle_feedback') }}" method="POST">
+        {{ form.hidden_tag() }}
+        <div class="emoji-selector">
+          <label>{{ "Choose your feedback:" if session['lang'] == 'en' else "Choisissez votre retour :" }}</label>
+          <div class="emoji-options">
+            <button type="button" class="emoji-btn" data-emoji="🪄">🪄</button>
+            <button type="button" class="emoji-btn" data-emoji="✅">✅</button>
+            <button type="button" class="emoji-btn" data-emoji="🥑">🥑</button>
+            <button type="button" class="emoji-btn" data-emoji="🥭">🥭</button>
+            <button type="button" class="emoji-btn" data-emoji="❎">❎</button>
+          </div>
+          <input type="hidden" name="emojiFeedback" id="emojiFeedback">
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">{{ "Submit" if session['lang'] == 'en' else "Soumettre" }}</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <!-- Feedback Display -->
+      <h2>{{ "Feedback" if session['lang'] == 'en' else "Retours" }}</h2>
+      <div id="feedbackDisplay" class="feedback-display">
+        <!-- Feedback items will be appended here -->
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

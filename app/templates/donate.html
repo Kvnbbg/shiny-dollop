@@ -1,16 +1,85 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container my-4">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="text-center">
-                <h2 class="mb-4">
-                    {{ "Support Our Growth" if session['lang'] == 'en' else "Soutenez notre croissance" }}
-                </h2>
+<div class="card mb-4">
+    <div class="card-header">
+        <h2 class="text-center">
+            {{ "About" if session['lang'] == 'en' else "À propos" }}
+        </h2>
+    </div>
+    <div class="card-body">
+        <p>
+            {{ "This app was created by Kevin B. and is open source. You can find the source code on
+            GitHub." if session['lang'] == 'en' else "Cette application a été créée par Kevin B. et est open
+            source. Vous pouvez trouver le code source sur GitHub." }}
+        </p>
+        <p>
+            <a href="https://github.com/kvnbbg/flashcards" target="_blank">
+                {{ "Go collaborate with me on GitHub" if session['lang'] == 'en' else "Venez collaborer avec moi sur GitHub" }}
+            </a>
+        </p>
+        <p>
+            {{ "If you have any questions or suggestions, you can contact me by email." if session['lang'] == 'en' else "Si vous avez des questions ou des suggestions, vous pouvez me contacter par email." }}
+        </p>
+        <p>
+            <a href="mailto:code@kvnbbg-creations.io">email</a>
+        </p>
+        <p>
+            {{ "Thank you for using the app!" if session['lang'] == 'en' else "Merci d'utiliser l'application!" }}
+    </div>
+</div>
+<div class="card mb-4">
+    <div class="card-header">
+        <h2 class="text-center">
+            {{ "Privacy Policy" if session['lang'] == 'en' else "Politique de confidentialité" }}
+        </h2>
+    </div>
+    <div class="card-body">
+        <p>
+            {{ "This app does not collect any personal data. The data is stored in your browser and is not
+            shared with anyone." if session['lang'] == 'en' else "Cette application ne collecte aucune donnée
+            personnelle. Les données sont stockées dans votre navigateur et ne sont partagées avec personne." }}
+        </p>
+    </div>
+</div>
+<div class="card mb-4">
+    <div class="card-header">
+        <h2 class="text-center">
+            {{ "Terms of Service" if session['lang'] == 'en' else "Conditions d'utilisation" }}
+        </h2>
+    </div>
+    <div class="card-body">
+        <p>
+            {{ "This app is provided as is, without any warranty. The author is not responsible for any
+            damage caused by the use of this app." if session['lang'] == 'en' else "Cette application est
+            fournie telle quelle, sans aucune garantie. L'auteur n'est pas responsable des dommages causés par
+            l'utilisation de cette application." }}
+        </p>
+    </div>
+</div>
+<div class="card mb-4">
+    <div class="card-header">
+        <h2 class="text-center">
+                    {{ "Support Our Growth 🌱" if session['lang'] == 'en' else "Soutenir notre croissance 🌱" }}
+        </h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
                 <p>
-                    {{ "Your support is invaluable to us. Donations help fund new app development, enhance existing features, and secure better hosting solutions. Every contribution, big or small, enables us to continue delivering high-quality code and innovations that make a difference. Thank you for considering a donation to support our journey towards improvement and expansion." if session['lang'] == 'en'
-                    else "Votre soutien nous est précieux. Les dons nous aident à financer le développement de nouvelles applications, à améliorer les fonctionnalités existantes et à sécuriser de meilleures solutions d'hébergement. Chaque contribution, grande ou petite, nous permet de continuer à fournir un code de haute qualité et des innovations qui font la différence. Merci d'envisager un don pour soutenir notre parcours vers l'amélioration et l'expansion." }}
+                    {{ "If you like the app and want to support our growth, you can make a
+                    donation." if session['lang'] == 'en' else "Si vous aimez l'application et
+                    souhaitez soutenir notre croissance, vous pouvez faire une donation" }}
                 </p>
+                <p>
+                    <a href="https://ko-fi.com/kvnbbg" target="_blank">
+                        {{ "Ko-fi" if session['lang'] == 'en' else "Ko-fi" }}
+                    </a>
+                </p>
+                <p>
+                    {{ "Thank you for your support!" if session['lang'] == 'en' else "Merci pour votre soutien!" }}
+                </p>
+            </div>
+            <div class="col-md-6">
                 <iframe id='kofiframe' src='https://ko-fi.com/kvnbbg/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='kvnbbg'></iframe>
             </div>
         </div>

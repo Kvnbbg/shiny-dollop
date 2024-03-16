@@ -4,6 +4,7 @@ from flask_login import LoginManager
 from flask_mail import Mail
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
+from app.databe import initialize_database
 from flask_session import Session
 from flask_wtf import CSRFProtect
 from config import DevelopmentConfig, ProductionConfig, TestingConfig
@@ -33,6 +34,8 @@ def create_app():
     login_manager.init_app(app)
     mail.init_app(app)
     
+    # Initialize the database
+    initialize_database(app)  # Pass the Flask app object to access configurations
     # CSRF protection
     csrf.init_app(app)
 
