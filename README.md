@@ -1,10 +1,8 @@
 # Shiny Dollop: Fullstack Quiz Training Platform
 
-Welcome to Shiny Dollop, a comprehensive fullstack quiz platform designed to enhance your training experience. Dive into a world of interactive quizzes that challenge and refine your knowledge across various subjects. Shiny Dollop offers a user-friendly interface and a vast collection of quizzes to ensure an enriching learning journey.
+Welcome to Shiny Dollop, a comprehensive quizz platform designed to enhance your training experience. Surf into a world of interactive quizzes that challenge and refine your knowledge across various subjects. Shiny Dollop offers a user-friendly interface and a vast collection of quizzes to ensure an enriching learning journey.
 
 ## Getting Started
-
-Embark on your quiz journey with Shiny Dollop by visiting our platform. Whether you're looking to test your knowledge in a specific area or simply exploring new topics, our platform is tailored to meet your needs.
 
 ### Play the Quiz
 
