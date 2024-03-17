@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const countdownDuration = 5;
+    const countdownDuration = 34;
     let timeout;
 
     function startCountdown() {
