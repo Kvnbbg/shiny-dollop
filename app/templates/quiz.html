@@ -40,9 +40,9 @@
         <div class="card-body">
           <h4 class="mb-3">
             {{ "Dollops are fun, you can use the dropdown to add more dollops to
-            your quizz." if session['lang'] == 'en' else "Les dollops sont
+            your quizz and change the question." if session['lang'] == 'en' else "Les dollops sont
             amusants, vous pouvez utiliser le menu déroulant pour ajouter plus
-            de dollops à votre quizz." }}
+            de dollops à votre quizz et changer de questions." }}
           </h4>
           <form action="{{ url_for('main.quiz') }}" method="get">
             {{ form.hidden_tag() }}
@@ -52,7 +52,7 @@
               onchange="this.form.submit()"
             >
               <option value="questions.json">
-                {{ "Add 🛰️" if session['lang'] == 'en' else "Ajouter 🛰️" }}
+                {{ "Skip 🛰️" if session['lang'] == 'en' else "Passer 🛰️" }}
               </option>
               <option value="questions2.json">
                 {{ "🧑‍🚀 ⏭️" if session['lang'] == 'en' else "🧑‍🚀 ⏭️" }}
