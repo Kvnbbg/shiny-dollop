@@ -17,6 +17,21 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }, 1000);
     }
+
+      // Extends the startCountdown function to include automatic refresh feature
+    (function extendStartCountdown() {
+        const originalStartCountdown = startCountdown; // Keep a reference to the original startCountdown function
+        startCountdown = function() {
+            originalStartCountdown.apply(this, arguments); // Call the original startCountdown function
+
+            // Schedule a refresh when the timer hits 15 seconds
+            setTimeout(() => {
+                if (document.getElementById("countdownTimer").textContent.trim() === "15 seconds") {
+                    window.location.reload(); // Reload the page
+                }
+            }, (countdownDuration - 15) * 1000); // Calculate the delay until 15 seconds remain
+        };
+    })();
   
     // Updates the display of the countdown timer
     function updateTimerDisplay(time) {
