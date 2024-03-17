@@ -1,4 +1,37 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+
+{% block title %}
+{{ "Quiz" if session['lang'] == 'en' else "Quizz" }}
+{% endblock %}
+
+{% block header %}
+<div id="movableDiv" class="movable">
+  <div class="accordion">Your content here</div>
+  <span id="countdownTimer"></span>
+</div>
+{% endblock %}
+
+{% block notification %}
+          {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %} {% for category, message in messages %}
+              <div
+                class="alert alert-{{ category }} alert-dismissible fade show"
+                role="alert"
+              >
+                <strong>{{ category.title() }}:</strong> {{ message }}
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="alert"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              {% endfor %} {% endif %}
+          {% endwith %}
+{% endblock %}
+{% block content %}
 <link
   rel="stylesheet"
   href="{{ url_for('static', filename='css/quiz.css') }}"
@@ -9,14 +42,10 @@
 <!-- Externalizing JS for better structure -->
 <div class="container mt-lg-5">
   <div class="row justify-content-center">
-    <div class="col-lg-8"
+    <div class="col-lg-8">
 
       <div class="card quiz-info mb-4">
         <div class="card-body text-center">
-          <h5 class="card-title">
-            {{ "Good luck ! 🍀" if session['lang'] == 'en' else "Bonne chance !
-            🍀" }}
-          </h5>
           <p class="card-text">
             {{ "Select the correct answer and click 'Next' to continue." if
             session['lang'] == 'en' else "Sélectionnez la bonne réponse et
@@ -27,12 +56,6 @@
 
       <div class="card filter-form mb-4">
         <div class="card-body">
-          <h4 class="mb-3">
-            {{ "Dollops are fun, you can use the dropdown to add more dollops to
-            your quizz and change the question." if session['lang'] == 'en' else "Les dollops sont
-            amusants, vous pouvez utiliser le menu déroulant pour ajouter plus
-            de dollops à votre quizz et changer de questions." }}
-          </h4>
           <form action="{{ url_for('main.quiz') }}" method="get">
             {{ form.hidden_tag() }}
             <select
@@ -41,13 +64,13 @@
               onchange="this.form.submit()"
             >
               <option value="questions.json">
-                {{ "Skip 🛰️" if session['lang'] == 'en' else "Passer 🛰️" }}
+                {{ "Skip to the next question" if session['lang'] == 'en' else "Passer à la question suivante" }}
               </option>
               <option value="questions2.json">
-                {{ "🧑‍🚀 ⏭️" if session['lang'] == 'en' else "🧑‍🚀 ⏭️" }}
+                {{ "⏭️" if session['lang'] == 'en' else "⏭️" }}
               </option>
               <option value="questions3.json">
-                {{ "⏮️ 👨‍🚀" if session['lang'] == 'en' else "⏮️ 👨‍🚀" }}
+                {{ "⏮️" if session['lang'] == 'en' else "⏮️" }}
               </option>
             </select>
           </form>

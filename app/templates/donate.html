@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+
+{% block title %}
+{{ "About" if session['lang'] == 'en' else "À propos" }}
+{% endblock %}
+
 {% block content %}
 <div class="card mb-4">
     <div class="card-header">
@@ -8,8 +13,8 @@
     </div>
     <div class="card-body">
         <p>
-            {{ "This app was created by Kevin B. and is open source. You can find the source code on
-            GitHub." if session['lang'] == 'en' else "Cette application a été créée par Kevin B. et est open
+            {{ "This app was created by Kevin Josué MARVILLE and is open source. You can find the source code on
+            GitHub." if session['lang'] == 'en' else "Cette application a été créée par Kevin Josué MARVILLE et est open
             source. Vous pouvez trouver le code source sur GitHub." }}
         </p>
         <p>

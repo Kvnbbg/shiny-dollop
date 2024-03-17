@@ -423,3 +423,10 @@ img {
 #countdownTimer:hover {
   transform: scale(1.05); /* Slightly enlarge the timer on hover */
 }
+
+.movable {
+  position: absolute;
+  z-index: 1000; /* Ensure it's above other content */
+  cursor: pointer; /* Change cursor on hover to indicate movability */
+  /* Add additional styling as needed */
+}

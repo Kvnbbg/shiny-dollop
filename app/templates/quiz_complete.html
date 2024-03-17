@@ -1,5 +1,62 @@
 {% extends 'base.html' %}
 
+{% block title %}
+    {{ "Quiz Results" if session['lang'] == 'en' else "Résultats du Quiz" }}
+{% endblock %}
+
+{% block styles %}
+    <style>
+        .quiz-results {
+            text-align: left;
+        }
+
+        .results-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .result-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .result-item .result-count {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .result-item .result-text {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let countdown = 10; // seconds
+            let redirectNotice = document.getElementById('redirectNotice');
+            let countdownInterval = setInterval(() => {
+                countdown--;
+                if (countdown <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = "{{ url_for('main.home') }}";
+                } else {
+                    redirectNotice.innerHTML = `{{ "Redirecting to home in " if session['lang'] == 'en' else "Redirection vers l'accueil dans " }}${countdown} ${countdown === 1 ? "{{ 'second' if session['lang'] == 'en' else 'seconde' }}" : "{{ 'seconds' if session['lang'] == 'en' else 'secondes' }}" }...`;
+                }
+            }, 1000);
+        });
+    </script>
+{% endblock %}
 {% block content %}
 <div class="container text-center mt-5">
     <h1 class="display-4">{{ "Congratulations!" if session['lang'] == 'en' else "Félicitations !" }}</h1>
