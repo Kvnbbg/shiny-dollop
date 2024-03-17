@@ -27,7 +27,7 @@ header, footer {
 header {
   background-color: #0056b3;
   border-bottom: 3px solid #004494;
-  position: sticky; /* Ensures the header is always at the top of the page */
+  position: relative; /* Ensure z-index works as expected */
 }
 
 /* Custom styling for the advisory section */
@@ -146,8 +146,6 @@ header {
   opacity: 1; /* Full opacity when shown */
 }
 
-
-
 /* Main Content */
 .content {
   flex-grow: 1;
@@ -155,7 +153,7 @@ header {
   padding: 20px;
   max-width: 1200px;
   width: 100%; /* Ensure content does not exceed the viewport width */
-  margin: 0 auto; /* Center content */
+  margin: 1%, auto; /* Center content horizontally */
   position: relative; /* Ensure z-index works as expected */
 }
 
@@ -167,6 +165,8 @@ header {
   justify-content: space-between;
   align-items: center;
   position: absolute;
+  top: 0;
+  margin-bottom: auto; /* Ensure it doesn't overlap with the main content */
 }
 
 .nav-link, .navbar-brand {
