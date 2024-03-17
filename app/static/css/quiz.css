@@ -21,6 +21,8 @@ body {
 
 .quiz-header {
   margin-bottom: 20px;
+  margin-top: 60px;
+  pading: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
