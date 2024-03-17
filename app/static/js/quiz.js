@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const countdownDuration = 35;
+    const countdownDuration = 5;
     let timeout;
 
     function startCountdown() {
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
             timeRemaining--;
             updateTimerDisplay(timeRemaining);
 
-            if (timeRemaining === 4) {
+            if (timeRemaining === 1) {
                 // Optional: Trigger automatic refresh or any other action at a specific time.
                 // This block can be adjusted or removed based on specific requirements.
                 window.location.reload(true); // Force reload from the server, avoiding cache.
