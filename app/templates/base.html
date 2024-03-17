@@ -133,11 +133,14 @@
 
     <!-- Header and Main Content Here -->
     <section class="py-5" style="background-image: url('{{ url_for('static', filename='images/vehicule1.jpg') }}');">
-      <section>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              {% with messages = get_flashed_messages(with_categories=true) %}
+      <div class="quiz-header d-flex justify-content-between align-items-center mb-4">
+        <div class="time-remaining d-flex align-items-center">
+          <i class="bi bi-clock-history me-2"></i> 
+          <span id="countdownTimer">35 seconds</span>
+        </div>
+        <div class="container" data-href="{{ url_for('main.quiz') }}">
+          <i class="bi bi-arrow-clockwise"></i>
+          {% with messages = get_flashed_messages(with_categories=true) %}
               {% if messages %} {% for category, message in messages %}
               <div
                 class="alert alert-{{ category }} alert-dismissible fade show"
@@ -152,12 +155,9 @@
                 >
                   <span aria-hidden="true">&times;</span>
                 </button>
-              </div>
               {% endfor %} {% endif %} {% endwith %}
-            </div>
-          </div>
         </div>
-      </section>
+      </div>
       {% block content %}      {% block contentDonate %}
       {% endblock %} {% endblock %}
     </section>
