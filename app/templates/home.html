@@ -1,5 +1,49 @@
 {% extends 'base.html' %}
 
+{% block header %}
+       <!-- Heading Animation -->
+       <div class="heading-animation">
+        <h5 class="heading">
+          <!-- Update the heading text -->
+          <span class="heading-letter">Q</span>
+          <span class="heading-letter">U</span>
+          <span class="heading-letter">I</span>
+          <span class="heading-letter">Z</span>
+          <span class="heading-letter">Z</span>
+          <br />
+        </h5>
+      </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="{{ url_for('main.home') }}">
+        🎲 Game
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Toggle language dropdown">
+              {{ '🇺🇸 English' if session['lang'] == 'en' else '🇫🇷 Français' }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              {% if session['lang'] == 'en' %}
+              <a class="dropdown-item" href="{{ url_for('auth.set_language', language='fr') }}">🇫🇷 Français</a>
+              {% else %}
+              <a class="dropdown-item" href="{{ url_for('auth.set_language', language='en') }}">🇺🇸 English</a>
+              {% endif %}
+            </div>
+          </div>
+          <a class="nav-item nav-link" href="https://allmylinks.com/kevinmarville" aria-label="{{ 'Visit App Store' if session['lang'] == 'en' else 'Visiter le magasin d’applications' }}">
+            {{ '📲 Visit App Store' if session['lang'] == 'en' else '📲 Visiter le magasin d’applications' }}
+          </a>
+        </div>
+      </div>
+    </nav>
+{% endblock %}
+
 {% block content %}
 <div class="text-center my-5">
   {% if session['lang'] == 'fr' %}
@@ -20,6 +64,7 @@
 </div>
 <!-- Quizz Game Section with Bootstrap Collapse -->
 <div class="container my-4">
+  <p> {{ "Shiny Dollop is a quizz game that allows you to learn and test your knowledge, as we have said above, but also to have fun and challenge yourself. You can play the game in English or French. The game is available on the App Store and on the web. You can also make a donation to support the development of the game. We hope you enjoy the game and have fun ! We are not garantee the accuracy of the information provided in the game. 🎮" if session['lang'] == 'en' else "Shiny Dollop est un jeu quizz qui vous permet d'apprendre et de tester vos connaissances, comme nous l'avons dit ci-dessus, mais aussi de vous amuser et de vous challenger. Vous pouvez jouer au jeu en anglais ou en français. Le jeu est disponible sur l'App Store et sur le web. Vous pouvez également faire un don pour soutenir le développement du jeu. Nous espérons que vous apprécierez le jeu et vous amuserez ! Nous ne garantissons pas l'exactitude des informations fournies dans le jeu. 🎮" }} </p>
   <p>
     <a
       class="btn btn-primary"
@@ -29,21 +74,21 @@
       aria-expanded="false"
       aria-controls="quizCollapse"
     >
-      {{ "Ready for the Quiz!" if session['lang'] == 'en' else "Prêt pour le
-      Quiz !" }}
+      {{ "Ready for the Quizz !" if session['lang'] == 'en' else "Prêt pour le
+      Quizz !" }}
     </a>
   </p>
   <div class="collapse" id="quizCollapse">
     <div class="card card-body text-black-50">
       <p>
-        {{ "The quiz is a multiple choice test with a lot of questions. You will
+        {{ "The quizz is a multiple choice test with a lot of questions. You will
         have 35 second to complete it." if session['lang'] == 'en'
-        else "Le quiz est un test à choix multiples avec plusieurs questions.
+        else "Le quizz est un test à choix multiples avec plusieurs questions.
         Vous aurez 35 secondes pour le compléter." }}
       </p>
       <p>
-        {{ "You can start the quiz by clicking the button below." if
-        session['lang'] == 'en' else "Vous pouvez commencer le quiz en cliquant
+        {{ "You can start the quizz by clicking the button below." if
+        session['lang'] == 'en' else "Vous pouvez commencer le quizz en cliquant
         sur le bouton ci-dessous." }}
       </p>
       <a href="{{ url_for('main.quiz') }}" class="btn btn-primary">

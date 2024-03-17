@@ -13,11 +13,14 @@ body {
   max-height: 100vh;
   overflow-y: auto; /* Allows internal scrolling if necessary */
   padding: 20px; /* Spacing around content */
+  margin-top: 20px; /* Spacing from the top */
+  width: 100%; /* Use full width */
+  max-width: 1200px; /* Limit content width */
+  margin-bottom: auto; /* Ensure it doesn't overlap with the footer */
 }
 
 .quiz-header {
   margin-bottom: 20px;
-  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,9 +83,9 @@ body {
 .btn-outline-secondary {
   border-color: #007bff;
   transition: all 0.2s ease-in-out;
-  background-color: #ffffff;
+  background-color: #dddeff;
   color: #007bff;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .btn-outline-secondary:hover {

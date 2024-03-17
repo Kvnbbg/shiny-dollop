@@ -127,35 +127,12 @@
     </script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="{{ url_for('main.home') }}">
-        Quizz Game
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
-          <div class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Toggle language dropdown">
-              {{ '🇺🇸 English' if session['lang'] == 'en' else '🇫🇷 Français' }}
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              {% if session['lang'] == 'en' %}
-              <a class="dropdown-item" href="{{ url_for('auth.set_language', language='fr') }}">🇫🇷 Français</a>
-              {% else %}
-              <a class="dropdown-item" href="{{ url_for('auth.set_language', language='en') }}">🇺🇸 English</a>
-              {% endif %}
-            </div>
-          </div>
-          <a class="nav-item nav-link" href="https://allmylinks.com/kevinmarville" aria-label="{{ 'Visit App Store' if session['lang'] == 'en' else 'Visiter le magasin d’applications' }}">
-            {{ '📲 App Store' if session['lang'] == 'en' else '📲 Magasin d’application' }}
-          </a>
-        </div>
-      </div>
-    </nav>
+    <!-- Header -->
+{% block header %}
+{% endblock %}
+
     <!-- Header and Main Content Here -->
-    <header class="py-5" style="background-image: url('{{ url_for('static', filename='images/vehicule1.jpg') }}');">
+    <section class="py-5" style="background-image: url('{{ url_for('static', filename='images/vehicule1.jpg') }}');">
       <section>
         <div class="container">
           <div class="row">
@@ -183,17 +160,15 @@
       </section>
       {% block content %}      {% block contentDonate %}
       {% endblock %} {% endblock %}
-    </header>
-    <!-- Main Section -->
-    <main>
+    </section>
 
-    </main>
+    <!-- Footer -->
 <!-- Example Button to Toggle Footer -->
-<button id="toggleFooterBtn"> {{ '©️ Copyright' if session['lang'] == 'en' else '©️ Copyright' }}</button>
+<button id="toggleFooterBtn">{{ '©️ Copyright' if session['lang'] == 'en' else '©️ Copyright' }}</button>
 
 <!-- Footer HTML -->
-<div class="footer" id="pageFooter">
-  © 2024 Shiny Dollop. All Rights Reserved.
+<div class="footer mb-0" id="pageFooter">
+  © 2024 <a href="https://github.com/kvnbbg/shiny-dollop">Shiny Dollop</a>. All Rights Reserved.
 </div>
 
 <script>
