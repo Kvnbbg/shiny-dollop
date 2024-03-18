@@ -6,7 +6,7 @@ from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from app.databe import initialize_database
 from flask_session import Session
-from flask_wtf import CSRFProtect
+# from flask_wtf import CSRFProtect
 from config import DevelopmentConfig, ProductionConfig, TestingConfig
 
 # Create extension instances but don't initialize them yet
@@ -14,7 +14,7 @@ db = SQLAlchemy()
 migrate = Migrate()
 login_manager = LoginManager()
 mail = Mail()
-csrf = CSRFProtect()
+#  csrf = CSRFProtect()
 
 def create_app():
     app = Flask(__name__)
@@ -37,7 +37,7 @@ def create_app():
     # Initialize the database
     initialize_database(app)  # Pass the Flask app object to access configurations
     # CSRF protection
-    csrf.init_app(app)
+    # csrf.init_app(app)
 
     # Flask-Session configuration for server-side session management
     app.config.setdefault('SESSION_TYPE', 'filesystem')
@@ -61,7 +61,7 @@ def create_app():
     app.register_blueprint(main_blueprint)
 
     # Optional: Exempt specific routes from CSRF protection if necessary
-    csrf.exempt('main.home')
+    # csrf.exempt('main.home')
     # csrf.exempt('main.quiz')
 
     return app

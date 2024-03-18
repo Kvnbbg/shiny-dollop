@@ -25,7 +25,7 @@ html, body {
   flex-direction: column;
   height: 100%;
   border-color: #cae9ff; /* Light blue border color */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #fff;
   overflow-y: auto;
   background-color: whitesmoke;
@@ -374,5 +374,37 @@ img {
   /* Ensure text remains readable and not too large on small screens */
   h1, h2, h3, h4 {
     font-size: calc(1em + 1vw); /* Responsive font sizes */
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .content, header, footer, .btn {
+    /* Adjustments for content, headers, footers, and buttons */
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+    /* Adjustments for tablets and large phones */
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+  .content, header, footer, .btn {
+    /* Adjustments for content, headers, footers, and buttons */
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Adjustments for very small screens like phones */
+  form input, form button, h1, h2, h3, h4 {
+    /* Font size and padding adjustments */
+    padding: 10px;
+    font-size: large;
   }
 }

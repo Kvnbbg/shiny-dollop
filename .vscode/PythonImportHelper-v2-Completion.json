@@ -1996,7 +1996,7 @@
         "kind": 2,
         "importPath": "app.main.routes",
         "description": "app.main.routes",
-        "peekOfCode": "def quiz():\n    form = QuizForm()\n    questions = session.get('questions', [])  # Default to an empty list if not found\n    if 'filter' in request.args or not questions:\n        question_file = request.args.get('filter', 'questions.json')\n        questions = load_questions(question_file)\n        session['questions'] = questions\n        session['current_index'] = 0\n        session.modified = True\n    current_index = session.get('current_index', 0)",
+        "peekOfCode": "def quiz():\n    form = QuizForm()\n    questions = session.get('questions', [])  # Default to an empty list if not found\n    if 'filter' in request.args or not questions:\n        question_file = request.args.get('filter', 'questions.json')\n        questions = load_questions(question_file)\n        session['questions'] = questions\n        session['current_index'] = 0  # Reset the current index to 0 when loading new questions to avoid out of range errors\n        session.modified = False  # Set to False to avoid creating a new session cookie on redirect\n    current_index = session.get('current_index', 0) # Default to 0 if not found",
         "detail": "app.main.routes",
         "documentation": {}
     },

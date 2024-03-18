@@ -42,10 +42,10 @@ def quiz():
         question_file = request.args.get('filter', 'questions.json')
         questions = load_questions(question_file)
         session['questions'] = questions
-        session['current_index'] = 0
-        session.modified = True
+        session['current_index'] = 0  # Reset the current index to 0 when loading new questions to avoid out of range errors
+        session.modified = False  # Set to False to avoid creating a new session cookie on redirect
 
-    current_index = session.get('current_index', 0)
+    current_index = session.get('current_index', 0) # Default to 0 if not found
 
     # Redirect to quiz completion if there are no questions or all questions have been answered
     if not questions or current_index >= len(questions):
@@ -71,10 +71,10 @@ def quiz():
             feedback = f"💥 {correct_answer}"
         flash(feedback, 'info')
         session['current_index'] = current_index + 1
-        session.modified = True
+        session.modified = False  # Set to False to avoid creating a new session cookie on redirect
         return redirect(url_for('.quiz'))
 
-    return render_template("quiz.html", question=current_question, form=form, countdown_duration=35)
+    return render_template("quiz.html", question=current_question, form=form, countdown_duration=35, current_index=current_index + 1, total_questions=len(questions), form_name=form.__class__.__name__) # Add form_name to the context
 
 @main.route('/quiz_complete')
 def quiz_complete():
