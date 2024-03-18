@@ -18,26 +18,22 @@ html, body {
   max-width: 100vw; /* Ensure the width does not exceed the viewport */
   overflow-x: hidden; /* Prevent horizontal scrolling */
   margin: 0;
-  background: linear-gradient(135deg, #007bff, #002853);
-  font-family: "Ubuntu", sans-serif;
   font-size: 16px;
-  color: #e1e6ec;
   box-sizing: border-box;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
   height: 100%;
-  color: #343a40; /* Dark text color for readability */
+  border-color: #cae9ff; /* Light blue border color */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #fff;
+  overflow-y: auto;
+  background-color: whitesmoke;
 }
 
 body {
   padding-bottom: 40px; /* Adjust based on your footer height */
   padding-top: 4%; /* Adjust based on your header height */
-  background-image: url("./images/bg_default/bg5.jpg");
-  background-size: cover; /* Adjust based on image size */
-  background-repeat: no-repeat;
-  z-index: 1000;
-  animation: backgroundSpace infinite alternate ease-in-out;
 }
 
 .heading {
@@ -78,29 +74,6 @@ body {
   border-radius: 28%;
 }
 
-/* Your animation keyframes */
-@keyframes backgroundSpace {
-  0%, 100% {
-    opacity: 1;
-    z-index: 2;
-    background-image: url("./static/images/bg1.jpg");
-  }
-  25% {
-    opacity: 0;
-    z-index: 1;
-    background-image: url("./static/images/bg2.jpg");
-  }
-  50% {
-    opacity: 1;
-    z-index: 0;
-    background-image: url("./static/images/bg3.jpg");
-  }
-  75% {
-    opacity: 0;
-    z-index: -1;
-    background-image: url("./static/images/bg4.jpg");
-  }
-}
 
 
 @keyframes onlineAnimation {
@@ -402,31 +375,4 @@ img {
   h1, h2, h3, h4 {
     font-size: calc(1em + 1vw); /* Responsive font sizes */
   }
-}
-
-#countdownTimer {
-  font-family: 'Roboto', sans-serif; /* Example: Roboto. Make sure to include the Google Fonts link in your HTML */
-  font-size: calc(1rem + 1vw); /* Responsive font size */
-  font-weight: 600;
-  text-align: center;
-  margin: 20px 0;
-  color: #002853;
-  background: linear-gradient(135deg, #cae9ff, #f8f9fa); /* Soft blue gradient */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Enhance readability */
-  transition: transform 0.3s ease-in-out; /* Smooth transition for interactive effects */
-}
-
-/* Optional: Add a hover effect to make the timer more interactive */
-#countdownTimer:hover {
-  transform: scale(1.05); /* Slightly enlarge the timer on hover */
-}
-
-.movable {
-  position: absolute;
-  z-index: 1000; /* Ensure it's above other content */
-  cursor: pointer; /* Change cursor on hover to indicate movability */
-  /* Add additional styling as needed */
 }

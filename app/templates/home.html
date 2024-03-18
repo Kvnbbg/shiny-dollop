@@ -9,14 +9,14 @@
 <div class="text-center my-5">
   {% if session['lang'] == 'fr' %}
   <h1 class="text-white" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)">
-    Bienvenue sur Shiny Dollop!
+    Bienvenue sur Shiny Dollop !
   </h1>
   <h2 class="text-white-50" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)">
     Un jeu quizz pour apprendre et tester vos connaissances!
   </h2>
   {% else %}
   <h1 class="text-white" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)">
-    Welcome to Shiny Dollop!
+    Welcome to Shiny Dollop !
   </h1>
   <h2 class="text-white-50" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)">
     A Quizz Game to learn and test your knowledge!
@@ -25,7 +25,7 @@
 </div>
 <!-- Quizz Game Section with Bootstrap Collapse -->
 <div class="container my-4">
-  <p> {{ "Shiny Dollop is a quizz game that allows you to learn and test your knowledge, as we have said above, but also to have fun and challenge yourself. You can play the game in English or French. The game is available on the App Store and on the web. You can also make a donation to support the development of the game. We hope you enjoy the game and have fun ! We are not garantee the accuracy of the information provided in the game. 🎮" if session['lang'] == 'en' else "Shiny Dollop est un jeu quizz qui vous permet d'apprendre et de tester vos connaissances, comme nous l'avons dit ci-dessus, mais aussi de vous amuser et de vous challenger. Vous pouvez jouer au jeu en anglais ou en français. Le jeu est disponible sur l'App Store et sur le web. Vous pouvez également faire un don pour soutenir le développement du jeu. Nous espérons que vous apprécierez le jeu et vous amuserez ! Nous ne garantissons pas l'exactitude des informations fournies dans le jeu. 🎮" }} </p>
+  <p> {{ "Shiny Dollop is a quizz game that allows you to learn and test your knowledge, as we have said above, but also to have fun and challenge yourself. You can play the game in English or French. The game is available on the App Store and on the web. You can also make a donation to support the development of the game. We hope you enjoy the game and have fun ! We are not garantee the accuracy of the information provided in the game. 🚀" if session['lang'] == 'en' else "Shiny Dollop est un jeu quizz qui vous permet d'apprendre et de tester vos connaissances, comme nous l'avons dit ci-dessus, mais aussi de vous amuser et de vous challenger. Vous pouvez jouer au jeu en anglais ou en français. Le jeu est disponible sur l'App Store et sur le web. Vous pouvez également faire un don pour soutenir le développement du jeu. Nous espérons que vous apprécierez le jeu et vous amuserez ! Nous ne garantissons pas l'exactitude des informations fournies dans le jeu. 🚀" }} </p>
   <p>
     <a
       class="btn btn-primary"

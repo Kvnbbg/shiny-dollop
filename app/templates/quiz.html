@@ -27,9 +27,13 @@
               </div>
               {% endfor %} {% endif %}
           {% endwith %}
-          <span id="countdownTimer"></span>
+          <span id="countdownTimer">
+            <span class="title">{{ "Are you here ?" if session['lang'] == 'en' else "Êtes-vous là ?" }}</span>
+            <span class="emoji-insect" tabindex="0" aria-label="{{ "Click if you are here" if session['lang'] == 'en' else "Cliquez si vous êtes là" }}">🚀</span>
+            </span>
         </div>
 {% endblock %}
+
 {% block content %}
 <link
   rel="stylesheet"

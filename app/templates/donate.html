@@ -11,22 +11,21 @@
             {{ "About" if session['lang'] == 'en' else "À propos" }}
         </h2>
     </div>
-    <div class="card-body">
+    <div class="card-body text-center">
         <p>
             {{ "This app was created by Kevin Josué MARVILLE and is open source. You can find the source code on
             GitHub." if session['lang'] == 'en' else "Cette application a été créée par Kevin Josué MARVILLE et est open
             source. Vous pouvez trouver le code source sur GitHub." }}
         </p>
         <p>
-            <a href="https://github.com/kvnbbg/flashcards" target="_blank">
-                {{ "Go collaborate with me on GitHub" if session['lang'] == 'en' else "Venez collaborer avec moi sur GitHub" }}
+            <a href="https://github.com/kvnbbg/flashcards" target="_blank">ici
             </a>
         </p>
         <p>
             {{ "If you have any questions or suggestions, you can contact me by email." if session['lang'] == 'en' else "Si vous avez des questions ou des suggestions, vous pouvez me contacter par email." }}
         </p>
         <p>
-            <a href="mailto:code@kvnbbg-creations.io">email</a>
+            <a href="mailto:code@kvnbbg-creations.io">ici</a>
         </p>
         <p>
             {{ "Thank you for using the app!" if session['lang'] == 'en' else "Merci d'utiliser l'application!" }}
@@ -38,7 +37,7 @@
             {{ "Privacy Policy" if session['lang'] == 'en' else "Politique de confidentialité" }}
         </h2>
     </div>
-    <div class="card-body">
+    <div class="card-body text-center">
         <p>
             {{ "This app does not collect any personal data. The data is stored in your browser and is not
             shared with anyone." if session['lang'] == 'en' else "Cette application ne collecte aucune donnée
@@ -52,7 +51,7 @@
             {{ "Terms of Service" if session['lang'] == 'en' else "Conditions d'utilisation" }}
         </h2>
     </div>
-    <div class="card-body">
+    <div class="card-body text-center">
         <p>
             {{ "This app is provided as is, without any warranty. The author is not responsible for any
             damage caused by the use of this app." if session['lang'] == 'en' else "Cette application est
@@ -67,9 +66,7 @@
                     {{ "Support Our Growth 🌱" if session['lang'] == 'en' else "Soutenir notre croissance 🌱" }}
         </h2>
     </div>
-    <div class="card-body">
-        <div class="row">
-            <div class="col-md-6">
+    <div class="card-body text-center">
                 <p>
                     {{ "If you like the app and want to support our growth, you can make a
                     donation." if session['lang'] == 'en' else "Si vous aimez l'application et
@@ -83,11 +80,7 @@
                 <p>
                     {{ "Thank you for your support!" if session['lang'] == 'en' else "Merci pour votre soutien!" }}
                 </p>
-            </div>
-            <div class="col-md-6">
-                <iframe id='kofiframe' src='https://ko-fi.com/kvnbbg/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='kvnbbg'></iframe>
-            </div>
-        </div>
+                <iframe id='kofiframe' src='https://ko-fi.com/kvnbbg/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:auto;marging:4px;background:#f9f9f9;' height='712' title='kvnbbg'></iframe>
     </div>
 </div>
 {% endblock %}

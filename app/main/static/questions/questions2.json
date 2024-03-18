@@ -1,5 +1,55 @@
 [
   {
+    "question": "Quelle méthode utiliseriez-vous pour évaluer l'efficacité d'un atelier d'insertion professionnelle dans l'amélioration des compétences numériques des participants, en tenant compte des principes SMART ?",
+    "choices": [
+      "Mesurer l'augmentation du taux d'emploi des participants après l'atelier",
+      "Compter le nombre de participants présents à chaque session",
+      "Évaluer uniquement la satisfaction des participants à la fin de l'atelier",
+      "Organiser un quiz de compétences avant et après l'atelier pour mesurer les progrès quantitatifs"
+    ],
+    "answer": "Organiser un quiz de compétences avant et après l'atelier pour mesurer les progrès quantitatifs"
+  },
+  {
+    "question": "Comment l'approche d'ateliers d'insertion professionnelle par 'Les ateliers à la carte' pourrait-elle être optimisée pour un public ayant des compétences diverses ?",
+    "choices": [
+      "En proposant des ateliers uniques adaptés au plus grand dénominateur commun",
+      "En segmentant les ateliers en fonction des niveaux de compétence et des intérêts spécifiques",
+      "En limitant les ateliers aux compétences les plus demandées sur le marché du travail, indépendamment des besoins des participants",
+      "En offrant exclusivement des ateliers en ligne, supposant une compétence numérique uniforme"
+    ],
+    "answer": "En segmentant les ateliers en fonction des niveaux de compétence et des intérêts spécifiques"
+  },
+  {
+    "question": "Quel indicateur serait le plus pertinent pour mesurer l'impact des 'ateliers novateurs' sur l'insertion professionnelle des participants dans le long terme ?",
+    "choices": [
+      "Le taux de participation aux ateliers",
+      "Le pourcentage d'augmentation de revenus des participants après 6 mois",
+      "Le nombre de participants qui créent leur entreprise après avoir assisté aux ateliers",
+      "Le taux de placement en emploi ou en formation continue après un an"
+    ],
+    "answer": "Le taux de placement en emploi ou en formation continue après un an"
+  },
+  {
+    "question": "Dans un projet de développement logiciel appliquant le principe d'immutabilité des bases de données, quel serait le principal avantage par rapport à l'usage traditionnel des bases de données clé-valeur et orientées document ?",
+    "choices": [
+      "Facilité d'ajout de nouvelles entrées sans affecter les données existantes",
+      "Amélioration significative de la performance des requêtes",
+      "Réduction des risques de conflits de données dans les environnements distribués",
+      "Aucun avantage, car l'immutabilité complique la gestion des données"
+    ],
+    "answer": "Réduction des risques de conflits de données dans les environnements distribués"
+  },
+  {
+    "question": "Quelle stratégie d'adaptabilité serait cruciale pour un atelier d'insertion professionnelle face à une soudaine évolution du marché de l'emploi due à l'innovation technologique ?",
+    "choices": [
+      "Maintenir un programme fixe sans tenir compte des changements",
+      "Développer une veille technologique active pour intégrer rapidement de nouvelles compétences dans les ateliers",
+      "Augmenter la fréquence des ateliers sans modifier leur contenu",
+      "Limiter l'accès aux ateliers aux participants ayant déjà un niveau avancé de compétences"
+    ],
+    "answer": "Développer une veille technologique active pour intégrer rapidement de nouvelles compétences dans les ateliers"
+  },
+  {
     "question": "Quels sont les inconvénients de la méthode heuristique?",
     "choices": [
         "Le temps d'animation est important et parfois difficile à planifier, le nombre de participants est limité (<12), nécessite une forte maîtrise du sujet par le formateur",

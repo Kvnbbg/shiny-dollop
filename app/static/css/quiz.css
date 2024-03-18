@@ -1,23 +1,124 @@
-body {
-  background-color: #f5f5f5;
-  font-family: "Arial", sans-serif; /* Improved readability */
-  overflow-y: auto; /* Allows scrolling if content overflows */
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Center content vertically */
+:root {
+  --animation-duration: 3s;
+  --animation-delay: 1s;
+  --animation-slide-duration: 12s;
+  --transition-duration: 0.3s;
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  --animation-transition-background-color: 0.2s;
+  --font-base-size: 16px;
+  --border-color: #cae9ff; /* Light blue border color */
+  --background-color: #001f3f; /* Deep blue */
+  --text-color: #ffffff; /* White text */
 }
 
-/* Ensure main content is always centered and visible */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: var(--font-base-size);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Set box-sizing to border-box for all elements */
+}
+
+body {
+  margin: 0;
+  padding: 4% 0; /* Adjust based on your header and footer height */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Enable vertical scroll if necessary */
+  background-color: var(--background-color-default);
+  background-image: url("/static/images/bg1.jpg");
+  background-size: 105%;
+  background-repeat: no-repeat;
+  animation: backgroundSpace var(--animation-slide-duration) infinite alternate ease-in-out var(--animation-delay);
+  transition: background-color var(--animation-transition-background-color);
+}
+
+@keyframes backgroundSpace {
+  0%, 25% {
+    background-image: url("/static/images/bg1.jpg");
+    transform: scale(1.05);
+  }
+  25.1%, 50% {
+    background-image: url("/static/images/bg2.jpg");
+    transform: scale(1.05);
+  }
+  50.1%, 75% {
+    background-image: url("/static/images/bg3.jpg");
+    transform: scale(1.05);
+  }
+  75.1%, 100% {
+    background-image: url("/static/images/bg4.jpg");
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive and aesthetic enhancements below */
+
+
 .main-container {
   max-height: 100vh;
-  overflow-y: auto; /* Allows internal scrolling if necessary */
-  padding: 20px; /* Spacing around content */
-  margin-top: 20px; /* Spacing from the top */
-  width: 100%; /* Use full width */
-  max-width: 1200px; /* Limit content width */
-  margin-bottom: auto; /* Ensure it doesn't overlap with the footer */
+  overflow-y: auto;
+  padding: 20px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: auto;
 }
+
+/* Improved media query for enhanced responsiveness */
+@media (max-width: 1024px) {
+  /* Adjustments for tablets */
+  .main-container, .quiz-header, .navigation-buttons, .card-body {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .main-container, .quiz-header, .navigation-buttons, .btn {
+    width: 100%;
+  }
+
+  .navigation-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    margin-top: 10px;
+  }
+}
+
+/* Enhancements for hover and focus states for better user interaction feedback */
+.btn-primary:hover, .btn-outline-secondary:focus, .refresh-quiz i:hover, #countdownTimer:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  outline: none; /* Removes the default focus outline to replace it with a custom style if necessary */
+}
+
+/* Improving visual hierarchy and readability */
+.title, .card-title, .card-text {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional aesthetic enhancements could include more specific transitions, box shadows for depth, and refined animations for interactive elements. */
+
 
 .quiz-header {
   display: flex;
@@ -38,7 +139,7 @@ body {
 .quiz-info,
 .filter-form,
 .quiz-form {
-  background: #ffffff;
+  background: linear-gradient(135deg, #007bff, #002853);
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -56,13 +157,13 @@ body {
 }
 
 .card-title {
-  color: #333;
+  color: #cacfe0;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
 .card-text {
-  color: #666;
+  color: #e2e5fe;
   margin-bottom: 20px;
 }
 
@@ -75,8 +176,9 @@ body {
 }
 
 .btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #003b7b;
+  border-color: #001f3f;
+  color: whitesmoke;
 }
 
 .btn-outline-secondary {
@@ -88,31 +190,58 @@ body {
 
 .btn-outline-secondary:hover {
   background-color: #8a8a8a;
-  border-color: #1180a8;
+  border-color: #430dca;
   color: #004691;
 }
 
-.navigation-buttons {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
+
+#countdownTimer {
+  font-family: 'Roboto', sans-serif; /* Example: Roboto. Make sure to include the Google Fonts link in your HTML */
+  font-size: calc(1rem + 1vw); /* Responsive font size */
+  font-weight: 600;
+  text-align: center;
+  margin: 20px 0;
+  color: #002853;
+  background: linear-gradient(135deg, #cae9ff, #f8f9fa); /* Soft blue gradient */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Enhance readability */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for interactive effects */
 }
 
-@media (max-width: 768px) {
-  body {
-    padding: 10px; /* Adjust body padding for smaller screens */
-  }
+/* Optional: Add a hover effect to make the timer more interactive */
+#countdownTimer:hover {
+  transform: scale(1.05); /* Slightly enlarge the timer on hover */
+}
 
-  .main-container {
-    width: 100%; /* Use full width for smaller screens */
-  }
+.movable {
+  position: absolute;
+  z-index: 1000;
+  cursor: grab; /* Use 'grab' to indicate draggable feature */
+  user-select: none; /* Prevent text selection during drag */
+}
 
-  .navigation-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
+/* Optional: Add a hover effect to make the timer more interactive */
+.movable:hover {
+  cursor: grabbing; /* Change cursor to 'grabbing' on hover */
+  scale: 1.05; /* Slightly enlarge the timer on hover */
+}
 
-  .btn {
-    margin-top: 10px;
-  }
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #002853;
+  margin-bottom: 20px;
+}
+
+.emoji-insect {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.emoji-insect:hover, .emoji-insect:focus {
+  transform: scale(1.2);
+  outline: none;
 }
