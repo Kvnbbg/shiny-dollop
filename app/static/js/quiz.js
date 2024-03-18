@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("resize", centerDiv);
 
     // Countdown timer logic
-    const countdownDuration = 34;
+    const countdownDuration = 14;
 
     function startCountdown() {
         let timeRemaining = countdownDuration;
