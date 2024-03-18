@@ -2,6 +2,17 @@
 
 Welcome to Shiny Dollop, a comprehensive quizz platform designed to enhance your training experience. Surf into a world of interactive quizzes that challenge and refine your knowledge across various subjects. Shiny Dollop offers a user-friendly interface and a vast collection of quizzes to ensure an enriching learning journey.
 
+## Configuration
+
+    😊 Use of Emojis: Enabled
+    🧠 Programming Paradigm: Object-Oriented
+    🌐 Language: Python
+    📚 Project Type: Web Development
+    📖 Comment Style: Descriptive
+    🛠️ Code Structure: Modular
+    🚫 Error Handling Strategy: Robust
+    ⚡ Performance Optimization Level: Not Covered
+
 ## Getting Started
 
 ### Play the Quiz
