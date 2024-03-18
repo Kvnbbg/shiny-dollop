@@ -65,10 +65,10 @@ def quiz():
         correct_answer = str(current_question['answer'])
         if form.choice.data == correct_answer:
             session['correct_answers'] = session.get('correct_answers', 0) + 1
-            feedback = "🥳 Correct!"
+            feedback = "🥳 Correct! {correct_answer}"
         else:
             session['wrong_answers'] = session.get('wrong_answers', 0) + 1
-            feedback = f"🛹 💥 {correct_answer}."
+            feedback = f"💥 {correct_answer}"
         flash(feedback, 'info')
         session['current_index'] = current_index + 1
         session.modified = True

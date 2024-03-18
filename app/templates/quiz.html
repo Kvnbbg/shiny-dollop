@@ -5,13 +5,10 @@
 {% endblock %}
 
 {% block header %}
-<div id="movableDiv" class="movable">
-  <div class="accordion">Your content here</div>
-  <span id="countdownTimer"></span>
-</div>
 {% endblock %}
 
 {% block notification %}
+<div id="movableDiv" class="movable">
           {% with messages = get_flashed_messages(with_categories=true) %}
               {% if messages %} {% for category, message in messages %}
               <div
@@ -30,6 +27,8 @@
               </div>
               {% endfor %} {% endif %}
           {% endwith %}
+          <span id="countdownTimer"></span>
+        </div>
 {% endblock %}
 {% block content %}
 <link
