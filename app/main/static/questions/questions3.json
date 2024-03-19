@@ -1,5 +1,405 @@
 [
   {
+    "question": "Quelle fonction SQL calcule la moyenne des valeurs dans une colonne spécifique ?",
+    "choices": [
+      "MEAN()",
+      "AVERAGE()",
+      "MEDIAN()",
+      "AVG()"
+    ],
+    "answer": "AVG()"
+  },
+  {
+    "question": "Pour concaténer des chaînes de caractères de plusieurs colonnes en une seule colonne dans une requête SELECT, quelle fonction utilise-t-on ?",
+    "choices": [
+      "CONCAT()",
+      "COMBINE()",
+      "JOIN()",
+      "MERGE()"
+    ],
+    "answer": "CONCAT()"
+  },
+  {
+    "question": "Comment peut-on obtenir la liste des tables présentes dans une base de données SQL spécifique ?",
+    "choices": [
+      "SHOW TABLES;",
+      "LIST TABLES;",
+      "DISPLAY TABLES;",
+      "GET TABLES;"
+    ],
+    "answer": "SHOW TABLES;"
+  },
+  {
+    "question": "Quelle clause utilise-t-on pour filtrer les résultats d'une requête SELECT basée sur un regroupement spécifié par GROUP BY ?",
+    "choices": [
+      "HAVING",
+      "WHERE",
+      "FILTER",
+      "CHECK"
+    ],
+    "answer": "HAVING"
+  },
+  {
+    "question": "Dans une requête SQL, comment spécifie-t-on l'ordre décroissant pour trier les résultats ?",
+    "choices": [
+      "ORDER BY nom_colonne DESC;",
+      "SORT BY nom_colonne DOWN;",
+      "ARRANGE BY nom_colonne DESCENDING;",
+      "ORDER BY nom_colonne DECREASE;"
+    ],
+    "answer": "ORDER BY nom_colonne DESC;"
+  },
+  {
+    "question": "Quelle est la syntaxe correcte pour mettre à jour la valeur d'une colonne dans une table tout en utilisant une condition ?",
+    "choices": [
+      "UPDATE nom_table SET nom_colonne = 'nouvelle_valeur' WHERE condition;",
+      "CHANGE nom_table SET nom_colonne = 'nouvelle_valeur' IF condition;",
+      "MODIFY nom_table COLUMN nom_colonne TO 'nouvelle_valeur' WHEN condition;",
+      "EDIT nom_table SET nom_colonne = 'nouvelle_valeur' WHERE condition;"
+    ],
+    "answer": "UPDATE nom_table SET nom_colonne = 'nouvelle_valeur' WHERE condition;"
+  },
+  {
+    "question": "Quelle commande est utilisée pour retirer une table de la base de données ?",
+    "choices": [
+      "DROP TABLE nom_table;",
+      "DELETE TABLE nom_table;",
+      "REMOVE TABLE nom_table;",
+      "ERASE TABLE nom_table;"
+    ],
+    "answer": "DROP TABLE nom_table;"
+  },
+  {
+    "question": "Comment sélectionner tous les enregistrements d'une table 'Employés' où le nom commence par 'A' ?",
+    "choices": [
+      "SELECT * FROM Employés WHERE Nom LIKE 'A%';",
+      "SELECT * FROM Employés WHERE Nom STARTS WITH 'A';",
+      "SELECT * FROM Employés WHERE Nom = 'A*';",
+      "FIND * IN Employés WHERE Nom BEGINS WITH 'A';"
+    ],
+    "answer": "SELECT * FROM Employés WHERE Nom LIKE 'A%';"
+  },
+  {
+    "question": "Quelle instruction permet de créer une vue qui est une table virtuelle basée sur le résultat d'une requête SQL ?",
+    "choices": [
+      "CREATE VIEW ma_vue AS SELECT nom_colonne FROM nom_table;",
+      "MAKE VIEW ma_vue AS SELECT nom_colonne FROM nom_table;",
+      "BUILD VIEW ma_vue USING SELECT nom_colonne FROM nom_table;",
+      "GENERATE VIEW ma_vue AS SELECT nom_colonne FROM nom_table;"
+    ],
+    "answer": "CREATE VIEW ma_vue AS SELECT nom_colonne FROM nom_table;"
+  },
+  {
+    "question": "Quelle instruction SQL est utilisée pour ajouter une contrainte NOT NULL à une colonne existante d'une table ?",
+    "choices": [
+      "ALTER TABLE nom_table MODIFY nom_colonne NOT NULL;",
+      "UPDATE TABLE nom_table SET nom_colonne NOT NULL;",
+      "CHANGE TABLE nom_table COLUMN nom_colonne TO NOT NULL;",
+      "ALTER TABLE nom_table ALTER COLUMN nom_colonne SET NOT NULL;"
+    ],
+    "answer": "ALTER TABLE nom_table MODIFY nom_colonne NOT NULL;"
+  },
+  {
+    "question": "Quelle instruction SQL permet de renommer une colonne dans une table existante ?",
+    "choices": [
+      "ALTER TABLE NomTable RENAME COLUMN AncienNom TO NouveauNom;",
+      "CHANGE TABLE NomTable COLUMN AncienNom TO NouveauNom;",
+      "UPDATE TABLE NomTable SET COLUMN AncienNom TO NouveauNom;",
+      "RENAME COLUMN AncienNom IN TABLE NomTable TO NouveauNom;"
+    ],
+    "answer": "ALTER TABLE NomTable RENAME COLUMN AncienNom TO NouveauNom;"
+  },
+  {
+    "question": "Comment sélectionner les enregistrements d'une table où une colonne contient une chaîne de caractères spécifique ?",
+    "choices": [
+      "SELECT * FROM NomTable WHERE NomColonne CONTAINS 'Chaîne';",
+      "SELECT * FROM NomTable WHERE NomColonne = 'Chaîne';",
+      "SELECT * FROM NomTable WHERE NomColonne LIKE '%Chaîne%';",
+      "FIND * FROM NomTable WHERE NomColonne HAS 'Chaîne';"
+    ],
+    "answer": "SELECT * FROM NomTable WHERE NomColonne LIKE '%Chaîne%';"
+  },
+  {
+    "question": "Quelle commande SQL est utilisée pour créer un index sur une colonne d'une table pour améliorer les performances des requêtes ?",
+    "choices": [
+      "CREATE INDEX idx_nomColonne ON NomTable (NomColonne);",
+      "INDEX ON NomTable ADD NomColonne;",
+      "ALTER TABLE NomTable ADD INDEX (NomColonne);",
+      "SET INDEX NomColonne ON NomTable;"
+    ],
+    "answer": "CREATE INDEX idx_nomColonne ON NomTable (NomColonne);"
+  },
+  {
+    "question": "Quelle clause est utilisée avec la commande SELECT pour regrouper les lignes qui ont les mêmes valeurs dans certaines colonnes ?",
+    "choices": [
+      "GROUP BY",
+      "ORDER BY",
+      "COLLECT BY",
+      "ASSEMBLE BY"
+    ],
+    "answer": "GROUP BY"
+  },
+  {
+    "question": "Dans une jointure SQL, quelle commande permet de sélectionner toutes les lignes de deux tables, avec les lignes correspondantes dans les deux tables ?",
+    "choices": [
+      "INNER JOIN",
+      "FULL OUTER JOIN",
+      "LEFT JOIN",
+      "CROSS JOIN"
+    ],
+    "answer": "FULL OUTER JOIN"
+  },
+  {
+    "question": "Comment écrire une requête SQL pour trouver les valeurs minimales et maximales d'une colonne 'Age' de la table 'Personnes' ?",
+    "choices": [
+      "SELECT MIN(Age), MAX(Age) FROM Personnes;",
+      "FIND SMALLEST(Age) AND LARGEST(Age) IN Personnes;",
+      "SELECT LOWER(Age), UPPER(Age) FROM Personnes;",
+      "GET RANGE(Age) FROM Personnes;"
+    ],
+    "answer": "SELECT MIN(Age), MAX(Age) FROM Personnes;"
+  },
+  {
+    "question": "Quelle fonction SQL est utilisée pour retourner le nombre total d'éléments distincts dans une colonne ?",
+    "choices": [
+      "COUNT(DISTINCT NomColonne)",
+      "TOTAL(UNIQUE NomColonne)",
+      "SUM(UNIQUE NomColonne)",
+      "COUNT(UNIQUE NomColonne)"
+    ],
+    "answer": "COUNT(DISTINCT NomColonne)"
+  },
+  {
+    "question": "Comment faire pour supprimer un index nommé 'idx_nomColonne' dans la table 'NomTable' ?",
+    "choices": [
+      "DROP INDEX idx_nomColonne ON NomTable;",
+      "DELETE INDEX idx_nomColonne FROM NomTable;",
+      "REMOVE INDEX idx_nomColonne ON NomTable;",
+      "ALTER TABLE NomTable DROP INDEX idx_nomColonne;"
+    ],
+    "answer": "DROP INDEX idx_nomColonne ON NomTable;"
+  },
+  {
+    "question": "Quelle est la syntaxe correcte pour insérer la date actuelle dans une colonne de type DATE en SQL ?",
+    "choices": [
+      "INSERT INTO NomTable (NomDateColonne) VALUES (CURRENT_DATE);",
+      "ADD TO NomTable (NomDateColonne) TODAY;",
+      "INSERT INTO NomTable (NomDateColonne) VALUES (NOW());",
+      "UPDATE NomTable SET NomDateColonne = DATE(NOW());"
+    ],
+    "answer": "INSERT INTO NomTable (NomDateColonne) VALUES (CURRENT_DATE);"
+  },
+  {
+    "question": "Quelle instruction est utilisée en SQL pour limiter le nombre de lignes retournées par une requête SELECT ?",
+    "choices": [
+      "LIMIT",
+      "RESTRICT",
+      "TOP",
+      "CUT"
+    ],
+    "answer": "LIMIT"
+  },
+  {
+    "question": "Quelle fonction SQL permet de compter le nombre de lignes répondant à un critère spécifique ?",
+    "choices": [
+      "COUNT()",
+      "SUM()",
+      "MAX()",
+      "AVG()"
+    ],
+    "answer": "COUNT()"
+  },
+  {
+    "question": "Comment sélectionner uniquement les enregistrements uniques d'une colonne spécifique dans une table SQL ?",
+    "choices": [
+      "SELECT DISTINCT NomColonne FROM NomTable;",
+      "SELECT UNIQUE NomColonne FROM NomTable;",
+      "SELECT NomColonne FROM NomTable UNIQUE;",
+      "SELECT NomColonne FROM NomTable DISTINCT;"
+    ],
+    "answer": "SELECT DISTINCT NomColonne FROM NomTable;"
+  },
+  {
+    "question": "Quelle clause SQL est utilisée pour trier les résultats d'une requête par ordre croissant ou décroissant ?",
+    "choices": [
+      "SORT BY",
+      "GROUP BY",
+      "ORDER BY",
+      "ARRANGE BY"
+    ],
+    "answer": "ORDER BY"
+  },
+  {
+    "question": "Comment combiner les résultats de deux ou plusieurs requêtes SELECT ayant le même nombre de colonnes avec des types de données compatibles ?",
+    "choices": [
+      "MERGE",
+      "JOIN",
+      "UNION",
+      "LINK"
+    ],
+    "answer": "UNION"
+  },
+  {
+    "question": "Quelle instruction SQL est utilisée pour créer une nouvelle table basée sur des données d'une autre table ?",
+    "choices": [
+      "CREATE TABLE NouvelleTable AS SELECT * FROM AncienneTable;",
+      "COPY TABLE AncienneTable TO NouvelleTable;",
+      "NEW TABLE NouvelleTable FROM AncienneTable;",
+      "DUPLICATE TABLE AncienneTable AS NouvelleTable;"
+    ],
+    "answer": "CREATE TABLE NouvelleTable AS SELECT * FROM AncienneTable;"
+  },
+  {
+    "question": "Dans SQL, quelle commande est utilisée pour ajouter une contrainte de clé étrangère à une table existante ?",
+    "choices": [
+      "ALTER TABLE NomTable ADD CONSTRAINT fk_nomCléÉtrangère FOREIGN KEY (NomColonne) REFERENCES AutreTable(NomColonne);",
+      "UPDATE TABLE NomTable SET FOREIGN KEY (NomColonne) REFERENCES AutreTable(NomColonne);",
+      "MODIFY TABLE NomTable ADD FOREIGN KEY (NomColonne) LINK TO AutreTable(NomColonne);",
+      "SET TABLE NomTable ADD FOREIGN KEY (NomColonne) REFERENCES AutreTable(NomColonne);"
+    ],
+    "answer": "ALTER TABLE NomTable ADD CONSTRAINT fk_nomCléÉtrangère FOREIGN KEY (NomColonne) REFERENCES AutreTable(NomColonne);"
+  },
+  {
+    "question": "Quelle fonction SQL calcule la somme d'une colonne numérique ?",
+    "choices": [
+      "SUM()",
+      "TOTAL()",
+      "ADD()",
+      "COUNT()"
+    ],
+    "answer": "SUM()"
+  },
+  {
+    "question": "Comment insérer des données dans une table en spécifiant uniquement les valeurs pour certaines colonnes ?",
+    "choices": [
+      "INSERT INTO NomTable (Colonne1, Colonne2) VALUES (Valeur1, Valeur2);",
+      "ADD INTO NomTable (Colonne1, Colonne2) (Valeur1, Valeur2);",
+      "INSERT VALUES (Valeur1, Valeur2) INTO NomTable (Colonne1, Colonne2);",
+      "PUT INTO NomTable (Colonne1, Colonne2) VALUES (Valeur1, Valeur2);"
+    ],
+    "answer": "INSERT INTO NomTable (Colonne1, Colonne2) VALUES (Valeur1, Valeur2);"
+  },
+  {
+    "question": "Quelle syntaxe SQL permet de modifier la structure d'une table pour ajouter une nouvelle colonne ?",
+    "choices": [
+      "ALTER TABLE NomTable ADD Colonne NouveauType;",
+      "MODIFY TABLE NomTable ADD Colonne NouveauType;",
+      "CHANGE TABLE NomTable ADD Colonne NouveauType;",
+      "UPDATE TABLE NomTable ADD Colonne NouveauType;"
+    ],
+    "answer": "ALTER TABLE NomTable ADD Colonne NouveauType;"
+  },
+  {
+    "question": "Comment restreindre les résultats d'une requête SELECT aux enregistrements qui satisfont une condition complexe sur plusieurs colonnes ?",
+    "choices": [
+      "SELECT * FROM NomTable WHERE Condition1 AND/OR Condition2;",
+      "FIND * FROM NomTable WITH Condition1 AND/OR Condition2;",
+      "GET * FROM NomTable WHERE Condition1 + Condition2;",
+      "QUERY * FROM NomTable IF Condition1 AND/OR Condition2;"
+    ],
+    "answer": "SELECT * FROM NomTable WHERE Condition1 AND/OR Condition2;"
+  },
+  {
+    "question": "Quelle instruction SQL est utilisée pour ajouter une nouvelle ligne dans une table ?",
+    "choices": [
+      "ADD ROW",
+      "INSERT INTO",
+      "UPDATE SET",
+      "CREATE NEW"
+    ],
+    "answer": "INSERT INTO"
+  },
+  {
+    "question": "Comment insérer des données spécifiques dans une table nommée 'Livres' avec les champs 'Titre' et 'Auteur' ?",
+    "choices": [
+      "INSERT INTO Livres VALUES ('Titre', 'Auteur');",
+      "INSERT INTO Livres (Titre, Auteur) VALUES ('Les Misérables', 'Victor Hugo');",
+      "ADD TO Livres ('Les Misérables', 'Victor Hugo');",
+      "UPDATE Livres SET Titre='Les Misérables', Auteur='Victor Hugo';"
+    ],
+    "answer": "INSERT INTO Livres (Titre, Auteur) VALUES ('Les Misérables', 'Victor Hugo');"
+  },
+  {
+    "question": "Quelle commande SQL permet de modifier le nombre de pages d'un livre dont l'ID est 1 à 500 ?",
+    "choices": [
+      "CHANGE TABLE Livres SET NombrePages=500 WHERE ID=1;",
+      "UPDATE Livres SET NombrePages=500 WHERE ID=1;",
+      "MODIFY Livres SET NombrePages=500 ID=1;",
+      "EDIT Livres SET NombrePages=500 WHERE ID=1;"
+    ],
+    "answer": "UPDATE Livres SET NombrePages=500 WHERE ID=1;"
+  },
+  {
+    "question": "Quelle est la commande SQL pour supprimer une ligne de la table 'Auteurs' où le 'Nom' est 'Victor Hugo' ?",
+    "choices": [
+      "DELETE FROM Auteurs WHERE Nom='Victor Hugo';",
+      "REMOVE FROM Auteurs WHERE Nom='Victor Hugo';",
+      "ERASE FROM Auteurs WHERE Nom='Victor Hugo';",
+      "DELETE Auteurs WHERE Nom='Victor Hugo';"
+    ],
+    "answer": "DELETE FROM Auteurs WHERE Nom='Victor Hugo';"
+  },
+  {
+    "question": "Comment augmenter le nombre de pages de 5 pour tous les livres d'un auteur spécifique avec le code 'TA01' ?",
+    "choices": [
+      "UPDATE Livres SET NombrePages = NombrePages + 5 WHERE AuteurCode = 'TA01';",
+      "ADD TO Livres SET NombrePages = NombrePages + 5 WHERE AuteurCode = 'TA01';",
+      "INCREASE Livres SET NombrePages = NombrePages + 5 WHERE AuteurCode = 'TA01';",
+      "MODIFY Livres SET NombrePages = NombrePages + 5 WHERE AuteurCode = 'TA01';"
+    ],
+    "answer": "UPDATE Livres SET NombrePages = NombrePages + 5 WHERE AuteurCode = 'TA01';"
+  },
+  {
+    "question": "Quelle erreur est courante lors de l'utilisation de l'instruction INSERT en SQL ?",
+    "choices": [
+      "Clef primaire en double",
+      "Omission du mot-clé WHERE",
+      "Utilisation de la mauvaise table",
+      "Spécification incorrecte du type de données"
+    ],
+    "answer": "Clef primaire en double"
+  },
+  {
+    "question": "Quelle clause SQL est utilisée pour spécifier la condition de sélection des lignes à modifier ou supprimer ?",
+    "choices": [
+      "SELECT",
+      "WHERE",
+      "FROM",
+      "HAVING"
+    ],
+    "answer": "WHERE"
+  },
+  {
+    "question": "Qu'est-ce que la DML (Data Manipulation Language) en SQL ne permet pas de faire ?",
+    "choices": [
+      "Ajouter de nouvelles lignes dans une table",
+      "Modifier des données existantes",
+      "Supprimer des lignes d'une table",
+      "Créer de nouvelles tables"
+    ],
+    "answer": "Créer de nouvelles tables"
+  },
+  {
+    "question": "Quelle instruction SQL est incorrecte pour la suppression totale des lignes d'une table sans supprimer la table elle-même ?",
+    "choices": [
+      "DELETE FROM clients;",
+      "ERASE * FROM clients;",
+      "DELETE * FROM clients;",
+      "DELETE FROM clients WHERE 1=1;"
+    ],
+    "answer": "ERASE * FROM clients;"
+  },
+  {
+    "question": "En SQL, comment peut-on revenir en arrière après une suppression de données ?",
+    "choices": [
+      "En utilisant la commande UNDO",
+      "Il n'est pas possible de revenir en arrière après une suppression sans sauvegarde préalable",
+      "En utilisant la commande RESTORE",
+      "En réinsérant manuellement les données"
+    ],
+    "answer": "Il n'est pas possible de revenir en arrière après une suppression sans sauvegarde préalable"
+  },
+  {
     "question": "Expliquez le principe de l'immuabilité en programmation fonctionnelle. Pourquoi est-il considéré comme avantageux ?",
     "choices": [
       "L'immutabilité fait référence à la capacité de modifier les données, ce qui améliore la clarté du code.",
