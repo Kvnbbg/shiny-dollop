@@ -38,10 +38,10 @@ body {
   height: 100vh;
   overflow-x: hidden; /* Prevent horizontal scrolling */
   overflow-y: auto; /* Enable vertical scroll if necessary */
-  background-color: var(--background-color-default);
+  background-color: var(--background-color);
   background-image: url("/static/images/bg1.jpg");
   background-size: 105%;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   animation: backgroundSpace var(--animation-slide-duration) infinite alternate ease-in-out var(--animation-delay);
   transition: background-color var(--animation-transition-background-color);
 }

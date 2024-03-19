@@ -25,8 +25,7 @@
 </div>
 <!-- Quizz Game Section with Bootstrap Collapse -->
 <div class="container my-4">
-  <p> {{ "Shiny Dollop is a quizz game that allows you to learn and test your knowledge, as we have said above, but also to have fun and challenge yourself. You can play the game in English or French. The game is available on the App Store and on the web. You can also make a donation to support the development of the game. We hope you enjoy the game and have fun ! We are not garantee the accuracy of the information provided in the game. 🚀" if session['lang'] == 'en' else "Shiny Dollop est un jeu quizz qui vous permet d'apprendre et de tester vos connaissances, comme nous l'avons dit ci-dessus, mais aussi de vous amuser et de vous challenger. Vous pouvez jouer au jeu en anglais ou en français. Le jeu est disponible sur l'App Store et sur le web. Vous pouvez également faire un don pour soutenir le développement du jeu. Nous espérons que vous apprécierez le jeu et vous amuserez ! Nous ne garantissons pas l'exactitude des informations fournies dans le jeu. 🚀" }} </p>
-  <p>
+  <p> {{ "Shiny Dollop is a quizz game that allows you to learn and test your knowledge, as we have said above, but also to have fun and challenge yourself. You can play the game in English or French. But be careful, the game is not easy, it is a real challenge. You will have to answer a lot of questions in a limited time. So, are you ready to take up the challenge?" if session['lang'] == 'en' else "Shiny Dollop est un jeu quizz qui vous permet d'apprendre et de tester vos connaissances, comme nous l'avons dit ci-dessus, mais aussi de vous amuser et de vous challenger. Vous pouvez jouer au jeu en anglais ou en français. Mais attention, le jeu n'est pas facile, c'est un vrai défi. Vous devrez répondre à beaucoup de questions en un temps limité. Alors, êtes-vous prêt à relever le défi ?" }} </p>
     <a
       class="btn btn-primary"
       data-toggle="collapse"
