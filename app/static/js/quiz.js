@@ -81,9 +81,10 @@ document.addEventListener("DOMContentLoaded", function () {
             updateTimerDisplay(timeRemaining);
 
             if (timeRemaining <= 1) {
-                clearInterval(timeout);
-                document.getElementById("nextQuestionForm").submit(); // Example action when time is up.
                 window.location.reload(true); // Force reload to reset the countdown
+                clearInterval(timeout);
+               // document.getElementById("nextQuestionForm").submit();  Example action when time is up.
+                
             }
         }, 1000);
     }
