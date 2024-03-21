@@ -1,5 +1,405 @@
 [
   {
+    "question": "En Java, quel est le terme utilisé pour décrire un modèle de conception qui crée une instance d'une classe en encapsulant la logique de création ?",
+    "choices": [
+      "Factory Method",
+      "Singleton Pattern",
+      "Builder Pattern",
+      "Prototype Pattern"
+    ],
+    "answer": "Factory Method"
+  },
+  {
+    "question": "Quelle est la principale caractéristique d'une 'interface fonctionnelle' en Java ?",
+    "choices": [
+      "Elle peut contenir plusieurs méthodes abstraites",
+      "Elle est implémentée uniquement par des classes abstraites",
+      "Elle doit contenir une seule méthode abstraite",
+      "Elle permet de créer des méthodes statiques uniquement"
+    ],
+    "answer": "Elle doit contenir une seule méthode abstraite"
+  },
+  {
+    "question": "Quelle méthode de l'interface List en Java est utilisée pour obtenir l'élément à un index spécifique ?",
+    "choices": [
+      "get(index)",
+      "elementAt(index)",
+      "indexOf(index)",
+      "fetch(index)"
+    ],
+    "answer": "get(index)"
+  },
+  {
+    "question": "Dans le contexte des expressions lambda en Java, que signifie 'lazy evaluation' ?",
+    "choices": [
+      "Les expressions lambda sont compilées au moment de l'exécution",
+      "L'évaluation de l'expression ne se produit que si nécessaire",
+      "Les expressions lambda utilisent moins de ressources CPU",
+      "Toutes les expressions lambda sont exécutées en parallèle"
+    ],
+    "answer": "L'évaluation de l'expression ne se produit que si nécessaire"
+  },
+  {
+    "question": "Quelle affirmation sur le mot-clé 'transient' en Java est vraie ?",
+    "choices": [
+      "Il indique qu'une variable peut être sérialisée",
+      "Il est utilisé pour marquer une variable comme temporaire ou transitoire",
+      "Il empêche une variable d'être sérialisée",
+      "Il indique que la variable est volatile et peut être modifiée de manière asynchrone"
+    ],
+    "answer": "Il empêche une variable d'être sérialisée"
+  },
+  {
+    "question": "Quel est l'outil de build intégré dans l'écosystème Java pour la gestion de projet et l'automatisation ?",
+    "choices": [
+      "Maven",
+      "Ant",
+      "Gradle",
+      "Make"
+    ],
+    "answer": "Maven"
+  },
+  {
+    "question": "Quelle spécification JEE fournit une API pour la création d'applications web en Java ?",
+    "choices": [
+      "JavaServer Faces (JSF)",
+      "Enterprise JavaBeans (EJB)",
+      "Java Persistence API (JPA)",
+      "Java Message Service (JMS)"
+    ],
+    "answer": "JavaServer Faces (JSF)"
+  },
+  {
+    "question": "Quel package en Java est principalement utilisé pour le développement de l'interface graphique ?",
+    "choices": [
+      "java.awt",
+      "java.swing",
+      "java.fx",
+      "java.ui"
+    ],
+    "answer": "java.swing"
+  },
+  {
+    "question": "Comment déclarez-vous une méthode qui peut être appelée sans créer une instance d'une classe en Java ?",
+    "choices": [
+      "Avec le mot-clé 'static'",
+      "Avec le mot-clé 'final'",
+      "Avec le mot-clé 'abstract'",
+      "Avec le mot-clé 'synchronized'"
+    ],
+    "answer": "Avec le mot-clé 'static'"
+  },
+  {
+    "question": "En Java, quel est l'avantage d'utiliser des 'enum' par rapport aux constantes traditionnelles définies avec 'static final' ?",
+    "choices": [
+      "Ils consomment moins de mémoire",
+      "Ils permettent une comparaison d'identité plus rapide avec '=='",
+      "Ils fournissent un espace de noms typé, améliorant la lisibilité et la sûreté du type",
+      "Ils peuvent être modifiés à l'exécution"
+    ],
+    "answer": "Ils fournissent un espace de noms typé, améliorant la lisibilité et la sûreté du type"
+  },
+  {
+    "question": "Quel est l'objectif de l'utilisation de JUnit dans le développement d'applications Java ?",
+    "choices": [
+      "Gestion des dépendances de projet",
+      "Automatisation des builds et déploiements",
+      "Exécution de tests unitaires pour vérifier chaque partie du code",
+      "Amélioration de la performance de l'application"
+    ],
+    "answer": "Exécution de tests unitaires pour vérifier chaque partie du code"
+  },
+  {
+    "question": "Quelle technologie Java est utilisée pour le développement d'applications web côté serveur ?",
+    "choices": [
+      "JavaServer Pages (JSP)",
+      "Java Database Connectivity (JDBC)",
+      "Java Platform, Standard Edition (Java SE)",
+      "Java Message Service (JMS)"
+    ],
+    "answer": "JavaServer Pages (JSP)"
+  },
+  {
+    "question": "Dans le contexte de Java, que signifie l'acronyme 'JDBC' ?",
+    "choices": [
+      "Java Development Code Base",
+      "Java Database Connectivity",
+      "Java Data Control Block",
+      "Java Distributed Computing Base"
+    ],
+    "answer": "Java Database Connectivity"
+  },
+  {
+    "question": "Quelle API Java permet la manipulation de documents XML ?",
+    "choices": [
+      "Java API for XML Processing (JAXP)",
+      "Java API for RESTful Web Services (JAX-RS)",
+      "Java API for JSON Processing (JSON-P)",
+      "Java Architecture for XML Binding (JAXB)"
+    ],
+    "answer": "Java API for XML Processing (JAXP)"
+  },
+  {
+    "question": "Quelle interface fait partie de la collection Java Framework et est utilisée pour représenter des ensembles uniques ?",
+    "choices": [
+      "List",
+      "Map",
+      "Set",
+      "Queue"
+    ],
+    "answer": "Set"
+  },
+  {
+    "question": "Quelle assertion est vraie à propos des expressions lambda en Java ?",
+    "choices": [
+      "Elles remplacent complètement l'utilisation des classes anonymes",
+      "Elles ne peuvent être utilisées qu'avec des interfaces fonctionnelles",
+      "Elles permettent de créer des threads sans utiliser la classe Runnable",
+      "Elles introduisent un typage faible dans le langage Java"
+    ],
+    "answer": "Elles ne peuvent être utilisées qu'avec des interfaces fonctionnelles"
+  },
+  {
+    "question": "Quelle est la principale différence entre 'overloading' et 'overriding' en Java ?",
+    "choices": [
+      "Overloading permet de changer le retour d'une méthode, overriding change son comportement",
+      "Overloading se produit au moment de l'exécution, overriding au moment de la compilation",
+      "Overloading concerne la modification de la signature d'une méthode, overriding concerne sa redéfinition",
+      "Il n'y a pas de différence, ce sont des termes interchangeables"
+    ],
+    "answer": "Overloading concerne la modification de la signature d'une méthode, overriding concerne sa redéfinition"
+  },
+  {
+    "question": "Quel outil de build est largement utilisé dans les projets Java pour la gestion des dépendances et l'automatisation des builds ?",
+    "choices": [
+      "Make",
+      "Gradle",
+      "Gulp",
+      "Webpack"
+    ],
+    "answer": "Gradle"
+  },
+  {
+    "question": "Pourquoi utiliserait-on le modèle de conception Singleton en Java ?",
+    "choices": [
+      "Pour assurer qu'une classe ait une seule instance et fournir un point d'accès global à cette instance",
+      "Pour permettre la création d'objets en grande quantité de manière efficace",
+      "Pour faciliter le changement du comportement d'une méthode à l'exécution",
+      "Pour séparer la construction d'un objet complexe de sa représentation"
+    ],
+    "answer": "Pour assurer qu'une classe ait une seule instance et fournir un point d'accès global à cette instance"
+  },
+  {
+    "question": "Quelle fonctionnalité a été introduite en Java 8 pour faciliter le traitement parallèle des collections ?",
+    "choices": [
+      "Streams API",
+      "Lambda Expressions",
+      "Default Methods",
+      "Nashorn JavaScript Engine"
+    ],
+    "answer": "Streams API"
+  },
+  {
+    "question": "Quelle activité implique l'identification et la reproduction des problèmes signalés par les utilisateurs avant de procéder à leur correction ?",
+    "choices": [
+      "Rédaction de spécifications fonctionnelles",
+      "Optimisation du code",
+      "Analyse des tickets",
+      "Migration de base de données"
+    ],
+    "answer": "Analyse des tickets"
+  },
+  {
+    "question": "Pourquoi est-il important de réaliser des tests après avoir corrigé des anomalies dans le code ?",
+    "choices": [
+      "Pour vérifier que les nouvelles fonctionnalités fonctionnent comme prévu",
+      "Pour s'assurer que les corrections n'introduisent pas de nouveaux bugs",
+      "Pour améliorer la performance de l'application",
+      "Pour documenter les changements pour l'équipe de développement"
+    ],
+    "answer": "Pour s'assurer que les corrections n'introduisent pas de nouveaux bugs"
+  },
+  {
+    "question": "Quel outil de gestion de version est mentionné pour suivre les changements de code dans l'environnement de développement décrit ?",
+    "choices": [
+      "GitLab",
+      "Bitbucket",
+      "Subversion (SVN)",
+      "GitHub"
+    ],
+    "answer": "Subversion (SVN)"
+  },
+  {
+    "question": "Dans quel but utiliserait-on SonarQube dans le processus de développement de logiciels ?",
+    "choices": [
+      "Pour automatiser les déploiements",
+      "Pour la gestion de projet et le suivi des tâches",
+      "Pour l'intégration continue et la livraison continue",
+      "Pour l'analyse de la qualité du code et la détection des vulnérabilités"
+    ],
+    "answer": "Pour l'analyse de la qualité du code et la détection des vulnérabilités"
+  },
+  {
+    "question": "Quel est le principal avantage de migrer d'Informix vers PostgreSQL selon le contexte donné ?",
+    "choices": [
+      "PostgreSQL offre une meilleure intégration avec PHP",
+      "PostgreSQL est plus facile à utiliser avec Bootstrap",
+      "PostgreSQL fournit de meilleures fonctionnalités de sécurité et de performance",
+      "PostgreSQL réduit les coûts de licence par rapport à Informix"
+    ],
+    "answer": "PostgreSQL fournit de meilleures fonctionnalités de sécurité et de performance"
+  },
+  {
+    "question": "Quelle version de PHP est mentionnée comme cible pour une migration dans l'environnement de développement décrit ?",
+    "choices": [
+      "PHP 7.4",
+      "PHP 8.0",
+      "PHP 8.2",
+      "PHP 5.6"
+    ],
+    "answer": "PHP 8.2"
+  },
+  {
+    "question": "Quelle est la principale raison de migrer un code PHP de la version 5.2 vers la version 8.2 ?",
+    "choices": [
+      "Compatibilité accrue avec les anciens systèmes",
+      "Diminution du nombre de fonctions disponibles",
+      "Amélioration significative de la performance et de la sécurité",
+      "Réduction de la communauté de support PHP"
+    ],
+    "answer": "Amélioration significative de la performance et de la sécurité"
+  },
+  {
+    "question": "Quelle technologie est utilisée pour styliser l'interface utilisateur dans l'environnement de développement décrit ?",
+    "choices": [
+      "jQuery",
+      "AngularJS",
+      "Bootstrap",
+      "React"
+    ],
+    "answer": "Bootstrap"
+  },
+  {
+    "question": "Quel environnement de développement intégré (IDE) est préféré dans cet environnement de travail spécifique ?",
+    "choices": [
+      "VS Code",
+      "Eclipse",
+      "PhpStorm",
+      "Atom"
+    ],
+    "answer": "Eclipse"
+  },
+  {
+    "question": "Comment le 'MCO' (Maintien en Condition Opérationnelle) se rapporte-t-il au développement PHP dans ce contexte ?",
+    "choices": [
+      "Il s'agit de migrer les applications vers de nouvelles versions de PHP",
+      "Cela concerne la rédaction de nouvelles spécifications techniques",
+      "Il inclut l'analyse et la correction des anomalies pour assurer le bon fonctionnement de l'application",
+      "Cela implique la création de nouvelles bases de données avec PostgreSQL"
+    ],
+    "answer": "Il inclut l'analyse et la correction des anomalies pour assurer le bon fonctionnement de l'application"
+  },
+  {
+    "question": "Quelle étape est cruciale pour comprendre et définir ce que le système doit accomplir avant de commencer le développement ?",
+    "choices": [
+      "Optimisation du code existant",
+      "Analyse des besoins",
+      "Exécution des tests",
+      "Migration Informix vers PostgreSQL"
+    ],
+    "answer": "Analyse des besoins"
+  },
+  {
+    "question": "Quel outil est utilisé pour gérer les versions du code source dans l'environnement décrit ?",
+    "choices": [
+      "Git",
+      "Mercurial",
+      "Subversion (SVN)",
+      "CVS"
+    ],
+    "answer": "Subversion (SVN)"
+  },
+  {
+    "question": "Dans le cadre de la maintenance corrective, quelle activité consiste à modifier le code pour résoudre des problèmes identifiés ?",
+    "choices": [
+      "Optimisation du code existant",
+      "Exécution des tests",
+      "Correction des anomalies",
+      "Migration PHP 5.2 vers 8.2"
+    ],
+    "answer": "Correction des anomalies"
+  },
+  {
+    "question": "Quel est l'objectif principal lors de la migration d'une application de PHP 5.2 vers PHP 8.2 ?",
+    "choices": [
+      "Réduire les coûts de licence",
+      "Améliorer la performance et la sécurité",
+      "Changer l'interface utilisateur",
+      "Augmenter le volume de données traitées"
+    ],
+    "answer": "Améliorer la performance et la sécurité"
+  },
+  {
+    "question": "Quel outil est utilisé pour analyser la qualité du code et identifier les bugs et les vulnérabilités de sécurité dans l'environnement décrit ?",
+    "choices": [
+      "Jenkins",
+      "SonarQube",
+      "JIRA",
+      "Redmine"
+    ],
+    "answer": "SonarQube"
+  },
+  {
+    "question": "Lors de l'optimisation du code existant, quel est l'objectif principal ?",
+    "choices": [
+      "Ajouter de nouvelles fonctionnalités",
+      "Corriger des erreurs syntaxiques",
+      "Améliorer la performance et maintenir la lisibilité",
+      "Modifier l'architecture du système"
+    ],
+    "answer": "Améliorer la performance et maintenir la lisibilité"
+  },
+  {
+    "question": "Quelle base de données est mentionnée comme cible d'une migration dans l'environnement décrit ?",
+    "choices": [
+      "Oracle",
+      "SQL Server",
+      "PostgreSQL",
+      "MongoDB"
+    ],
+    "answer": "PostgreSQL"
+  },
+  {
+    "question": "Quel framework CSS est mentionné dans l'environnement de développement ?",
+    "choices": [
+      "Materialize",
+      "Foundation",
+      "Bootstrap",
+      "Semantic UI"
+    ],
+    "answer": "Bootstrap"
+  },
+  {
+    "question": "Pour quelles raisons réaliserait-on une migration de la base de données d'Informix vers PostgreSQL ?",
+    "choices": [
+      "Pour simplifier les requêtes SQL",
+      "Pour bénéficier de meilleures fonctionnalités de réplication",
+      "Pour améliorer la gestion et la performance de la base de données",
+      "Pour réduire l'utilisation de la mémoire"
+    ],
+    "answer": "Pour améliorer la gestion et la performance de la base de données"
+  },
+  {
+    "question": "Quel environnement de développement intégré (IDE) est utilisé dans cet environnement de développement ?",
+    "choices": [
+      "Visual Studio Code",
+      "NetBeans",
+      "Eclipse",
+      "IntelliJ IDEA"
+    ],
+    "answer": "Eclipse"
+  },
+  {
     "question": "Quelle fonction SQL calcule la moyenne des valeurs dans une colonne spécifique ?",
     "choices": [
       "MEAN()",
