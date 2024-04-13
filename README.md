@@ -1,40 +1,72 @@
-# Shiny Dollop: Fullstack Quiz Training Platform
+# Shiny Dollop: Fullstack Quiz Training Platform 🌟
 
-Welcome to Shiny Dollop, a comprehensive quizz platform designed to enhance your training experience. Surf into a world of interactive quizzes that challenge and refine your knowledge across various subjects. Shiny Dollop offers a user-friendly interface and a vast collection of quizzes to ensure an enriching learning journey.
+Welcome to **Shiny Dollop**, your comprehensive quiz platform designed to enhance and refine your learning through interactive quizzes across a variety of subjects. With a user-friendly interface and a vast collection of quizzes, Shiny Dollop ensures an enriching and enjoyable learning journey.
 
-## Configuration
+![screenshot](STUDI/screenshot.png)
 
-    😊 Use of Emojis: Enabled
-    🧠 Programming Paradigm: Object-Oriented
-    🌐 Language: Python
-    📚 Project Type: Web Development
-    📖 Comment Style: Descriptive
-    🛠️ Code Structure: Modular
-    🚫 Error Handling Strategy: Robust
-    ⚡ Performance Optimization Level: Not Covered
+## How the App Works 🚀
 
-## Getting Started
+- **Upload Your CV** 📤: 
+  - Navigate to our CV upload section to get feedback on your resume's strength and appeal.
+
+- **Analysis and Results** 🔍:
+  - Receive detailed analysis of your quiz responses with insights into areas for improvement.
+
+- **Quality Star Rating** ⭐:
+  - Rate each quiz session and view aggregated ratings to gauge the quality and difficulty of our quizzes.
+
+- **Quiz Improvement Tips** 💡:
+  - Get personalized tips on how to improve your quiz performances and learn more effectively.
+
+- **Technical Support** 🛠️:
+  - For any issues or inquiries, please reach out to our technical support team via email at [contact@kvnbbg.fr](mailto:contact@kvnbbg.fr).
+
+## Configuration 🛠️
+
+- **Programming Paradigm**: Object-Oriented
+- **Languages**: Python, Flask, HTML, CSS, JavaScript
+- **Project Type**: Web Development
+- **Comment Style**: Descriptive
+- **Code Structure**: Modular
+- **Error Handling Strategy**: Robust
+- **Performance Optimization**: High priority
+
+## Getting Started 🌟
 
 ### Play the Quiz
 
-Ready to test your skills? Click the button below to start your quiz adventure. Our quizzes are available in both English and French to accommodate a wider range of quiz enthusiasts.
+Ready to test your skills? Click below to dive into your quiz adventure! Our quizzes are available in both English and French to accommodate a diverse audience.
 
-- **[Play Quiz in English](https://shiny-dollop-quizz-da86060a8495.herokuapp.com/)**
-- **[Jouer au Quiz en Français](https://shiny-dollop-quizz-da86060a8495.herokuapp.com/)**
+## Project Management Tools 🛠️
 
-## Features
+- **Trello Board**: Monitor our project milestones and tasks via our [Trello board](https://trello.com/b/wxngDswo/kvnbbg-shiny-dollop).
+- **GitHub Repository**: Access our source code and resources on [GitHub](https://github.com/Kvnbbg/shiny-dollop).
+- **Live Application**: Experience the application live [here](https://shiny-dollop-quizz-da86060a8495.herokuapp.com/).
 
-- **Wide Range of Topics**: Explore quizzes across different subjects and discover new interests.
+## Features 🌐
+
+- **Wide Range of Topics**: Explore quizzes across multiple subjects and discover new interests.
 - **Multilingual Support**: Enjoy quizzes in both English and French.
-- **User-Friendly Interface**: Our platform is designed with simplicity and ease of use in mind, making your learning experience smooth and enjoyable.
-- **Progress Tracking**: Keep track of your quiz performance and see how your knowledge expands over time.
+- **User-Friendly Interface**: Designed for ease of use, ensuring a seamless learning experience.
+- **Progress Tracking**: Monitor your improvement and see how your knowledge expands over time.
 
-## How It Works
+## Feedback and Support 💌
 
-1. **Choose Your Language**: Select between English or French to proceed with the quizzes in your preferred language.
-2. **Select a Quiz**: Browse through our collection and pick a quiz that interests you.
-3. **Start Quizzing**: Challenge yourself with our interactive questions and receive immediate feedback.
+Your feedback is invaluable! If you have suggestions, questions, or need assistance, please don't hesitate to reach out. We're dedicated to enhancing your experience on Shiny Dollop.
 
-## Feedback
+## License 📜
 
-Your feedback is invaluable to us! If you have suggestions, questions, or feedback, please feel free to reach out. We're continuously working to enhance your quiz experience on Shiny Dollop.
+Shiny Dollop is distributed under the [Mozilla Public License 2.0](https://opensource.org/licenses/MPL-2.0). For more details, see the [LICENSE](LICENSE) file.
+
+## Contributing
+
+Interested in contributing? Great! Please refer to our contributing guidelines for detailed instructions on how you can get involved in improving Shiny Dollop.
+
+## Additional Resources 📁
+
+### STUDI Folder
+
+The STUDI folder contains essential resources for exam preparation, including:
+
+- **Study Guide**: [User Manual](STUDI/manuel_utilisateur.pdf)
+- **Flowcharts & Diagrams**: ![flowchart](STUDI/flowchart.png)
