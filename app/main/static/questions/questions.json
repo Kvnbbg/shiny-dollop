@@ -1,82 +1,102 @@
-const questions = [
+[
   {
-    question: "Quel est le résultat de l'expression '2 ** 3 ** 2' en Python, et pourquoi ?",
-    choices: [
+    "question": "Quel est le résultat de l'expression '2 ** 3 ** 2' en Python, et pourquoi ?",
+    "choices": [
       "64, parce que l'exponentiation est évaluée de droite à gauche",
       "512, parce que l'exponentiation est évaluée de gauche à droite",
       "729, parce que l'exponentiation est évaluée de droite à gauche",
       "Aucune des réponses ci-dessus"
     ],
-    answer: "512, parce que l'exponentiation est évaluée de gauche à droite"
+    "answer": "512, parce que l'exponentiation est évaluée de gauche à droite"
   },
   {
-    question: "What is the result of executing the Python list comprehension '[x**2 for x in range(5) if x%2 == 0]'?",
-    choices: [
+    "question": "What does the expression '2 ** 3 ** 2' evaluate to in Python, and why?",
+    "choices": [
+      "64, because exponentiation is evaluated from right to left",
+      "512, because exponentiation is evaluated from left to right",
+      "729, because exponentiation is evaluated from right to left",
+      "None of the above"
+    ],
+    "answer": "512, because exponentiation is evaluated from left to right"
+  },
+  {
+    "question": "What is the result of executing the Python list comprehension '[x**2 for x in range(5) if x%2 == 0]'?",
+    "choices": [
       "[0, 1, 4]",
       "[0, 4, 16]",
       "[1, 4, 9]",
       "[0, 2, 4]"
     ],
-    answer: "[0, 4, 16]"
+    "answer": "[0, 4, 16]"
   },
   {
-    question: "Quelle est la notation Big O d'un algorithme de recherche binaire ?",
-    choices: [
+    "question": "1-1 ?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "0"
+    ],
+    "answer": "0"
+  },
+  {
+    "question": "What is the Big O notation of a binary search algorithm?",
+    "choices": [
       "O(log n)",
       "O(n)",
       "O(n log n)",
       "O(n^2)"
     ],
-    answer: "O(log n)"
+    "answer": "O(log n)"
   },
   {
-    question: "En UX design, quel principe décrit l'importance de maintenir la cohérence dans une interface utilisateur ?",
-    choices: [
-      "La loi de Hick",
-      "Le principe de Pareto",
-      "La loi de Fitts",
-      "Le principe de la cohérence"
+    "question": "Which principle focuses on the importance of user-centered design in UX?",
+    "choices": [
+      "Gestalt Principles",
+      "Hick's Law",
+      "Fitts's Law",
+      "User-Centered Design"
     ],
-    answer: "Le principe de la cohérence"
+    "answer": "User-Centered Design"
   },
   {
-    question: "Qui est souvent considéré comme le père de l'informatique ?",
-    choices: [
+    "question": "Who is known as the father of the computer?",
+    "choices": [
       "Alan Turing",
       "Charles Babbage",
       "John von Neumann",
-      "Bill Gates"
+      "Ada Lovelace"
     ],
-    answer: "Charles Babbage"
+    "answer": "Charles Babbage"
   },
   {
-    question: "Quelle est la nouveauté majeure de Flutter annoncée récemment ?",
-    choices: [
-      "Le support pour le développement web",
-      "L'intégration complète avec Fuchsia",
-      "Un nouveau moteur de rendu basé sur Vulkan",
-      "La prise en charge des widgets personnalisés"
+    "question": "Which recent version of Flutter introduced support for foldable devices?",
+    "choices": [
+      "Flutter 2.0",
+      "Flutter 2.5",
+      "Flutter 2.8",
+      "Flutter 3.0"
     ],
-    answer: "L'intégration complète avec Fuchsia"
+    "answer": "Flutter 2.5"
   },
   {
-    question: "Quel est l'objectif principal du test utilisateur en UX design ?",
-    choices: [
-      "Évaluer les performances du backend",
-      "Vérifier la satisfaction et l'utilisabilité pour l'utilisateur final",
-      "Tester la sécurité de l'application",
-      "Valider les hypothèses de marché"
+    "question": "What is the primary advantage of using Flutter for cross-platform development?",
+    "choices": [
+      "Access to native device features",
+      "Single codebase for multiple platforms",
+      "High performance graphics",
+      "Large developer community"
     ],
-    answer: "Vérifier la satisfaction et l'utilisabilité pour l'utilisateur final"
+    "answer": "Single codebase for multiple platforms"
   },
   {
-    question: "En quelle année a été inventé le premier microprocesseur ?",
-    choices: [
-      "1969",
-      "1971",
-      "1973",
-      "1975"
+    "question": "In what year was the first version of Python released?",
+    "choices": [
+      "1989",
+      "1991",
+      "2000",
+      "2008"
     ],
-    answer: "1971"
+    "answer": "1991"
   }
 ]
