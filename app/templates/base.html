@@ -4,79 +4,34 @@
     <!-- Essential Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO Optimized Meta Description -->
-    <meta
-      name="description"
-      content="Kevin Josué Marville, aka Kvnbbg, introduces Shiny Dollop - a cutting-edge Quiz App designed for learning and entertainment in music, games, and more, available in English and French."
-    />
-
-    <!-- Comprehensive Meta Keywords -->
-    <meta
-      name="keywords"
-      content="Kevin Josué Marville, Kvnbbg, Music, Entertainment, Gaming, Quiz, Fullstack Developer, Lyon, France, IT Education, Martinique, Caribbean, French, English, Best Quiz App, Night Game, Friend, Family, Fun, Learning, Knowledge, Trivia, Questions, Answers, Quizzing, Mastering, Interests, Shiny Dollop, Premier, Top, Best, Immersive, Journey, App, Web, Mobile, Responsive, SEO, Social Media, Sharing, Open Graph, Twitter, Structured Data, Schema, JSON, CSRF, Token, Security, Canonical, URL, Favicon, Brand, Consistency, External, CSS, Frameworks, Bootstrap, Font Awesome, Google Fonts, Author, Publisher, Logo, Image, Enhanced, Search Engine, Representation, Title, Author, WebSite, Organization, Description, Context, Type, URL, PotentialAction, InLanguage, SameAs, Publisher, Logo, ImageObject, Target, Query-Input, SearchAction, Twitter, Card, Site, Creator, Title, Description, Image, CSRF, Token, Form, Security, Canonical, URL, Open Graph, Tags, Social, Media, Sharing, Twitter, Meta, Tags, Sharing, Structured, Data, Markup, Enhanced, Search, Engine, Representation"
-    />
-
-    <!-- Author Meta Tag -->
+    <meta name="description" content="Kevin Josué Marville, aka Kvnbbg, introduces Shiny Dollop - a cutting-edge Quiz App designed for learning and entertainment in music, games, and more, available in English and French." />
+    <meta name="keywords" content="Kevin Josué Marville, Kvnbbg, Music, Entertainment, Gaming, Quiz, Fullstack Developer, Lyon, France, IT Education, Martinique, Caribbean, French, English, Best Quiz App, Night Game, Friend, Family, Fun, Learning, Knowledge, Trivia, Questions, Answers, Quizzing, Mastering, Interests, Shiny Dollop, Premier, Top, Best, Immersive, Journey, App, Web, Mobile, Responsive, SEO, Social Media, Sharing, Open Graph, Twitter, Structured Data, Schema, JSON, CSRF, Token, Security, Canonical, URL, Favicon, Brand, Consistency, External, CSS, Frameworks, Bootstrap, Font Awesome, Google Fonts, Author, Publisher, Logo, Image, Enhanced, Search Engine, Representation, Title, Author, WebSite, Organization, Description, Context, Type, URL, PotentialAction, InLanguage, SameAs, Publisher, Logo, ImageObject, Target, Query-Input, SearchAction, Twitter, Card, Site, Creator, Title, Description, Image, CSRF, Token, Form, Security, Canonical, URL, Open Graph, Tags, Social, Media, Sharing, Twitter, Meta, Tags, Sharing, Structured, Data, Markup, Enhanced, Search, Engine, Representation" />
     <meta name="author" content="Kevin Marville, Kvnbbg" />
 
-    <!-- SEO Enhanced Title -->
     <title>
-    {% block title %}
-    🚀 Shiny Dollop by Kvnbbg - The Premier Quiz App for Music, Gaming & More 🚀
-    
-    {% endblock %}
-  </title>
-    
+      {% block title %}
+      🚀 Shiny Dollop by Kvnbbg - The Premier Quiz App for Music, Gaming & More 🚀
+      {% endblock %}
+    </title>
+
     <!-- Favicon for Brand Consistency -->
-    <link
-      rel="icon"
-      href="{{ url_for('static', filename='images/favicon.ico') }}"
-      type="image/x-icon"
-    />
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon" />
 
     <!-- External CSS and Frameworks -->
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/style.css') }}"
-    />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- Canonical URL to Avoid Duplicate Content Issues -->
-    <link
-      rel="canonical"
-      href="https://shiny-dollop-quizz-da86060a8495.herokuapp.com/"
-    />
+    <link rel="canonical" href="https://shiny-dollop-quizz-da86060a8495.herokuapp.com/" />
 
     <!-- Open Graph Tags for Social Media Sharing -->
-    <meta
-      property="og:title"
-      content="Shiny Dollop by Kvnbbg: Master Your Interests with Top Quizzes"
-    />
-    <meta
-      property="og:description"
-      content="Embark on an immersive quizzing journey with Shiny Dollop. Designed by Kevin Marville (Kvnbbg), this app offers the best in music, entertainment, and gaming quizzes in both English and French."
-    />
-    <meta
-      property="og:image"
-      content="{{ url_for('static', filename='images/og-image.jpg') }}"
-    />
-    <meta
-      property="og:url"
-      content="https://shiny-dollop-quizz-da86060a8495.herokuapp.com/"
-    />
+    <meta property="og:title" content="Shiny Dollop by Kvnbbg: Master Your Interests with Top Quizzes" />
+    <meta property="og:description" content="Embark on an immersive quizzing journey with Shiny Dollop. Designed by Kevin Marville (Kvnbbg), this app offers the best in music, entertainment, and gaming quizzes in both English and French." />
+    <meta property="og:image" content="{{ url_for('static', filename='images/og-image.jpg') }}" />
+    <meta property="og:url" content="https://shiny-dollop-quizz-da86060a8495.herokuapp.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Shiny Dollop" />
     <meta property="og:locale" content="{{ session['lang'] or 'en' }}" />
@@ -85,20 +40,12 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@kvnbbg" />
     <meta name="twitter:creator" content="@kvnbbg" />
-    <meta
-      name="twitter:title"
-      content="Shiny Dollop by Kvnbbg: Master Your Interests with Top Quizzes"
-    />
-    <meta
-      name="twitter:description"
-      content="Embark on an immersive quizzing journey with Shiny Dollop. Designed by Kevin Marville (Kvnbbg), this app offers the best in music, entertainment, and gaming quizzes in both English and French."
-    />
-    <meta
-      name="twitter:image"
-      content="{{ url_for('static', filename='images/og-image.jpg') }}"
-    />
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3003427346654770"
-     crossorigin="anonymous"></script>
+    <meta name="twitter:title" content="Shiny Dollop by Kvnbbg: Master Your Interests with Top Quizzes" />
+    <meta name="twitter:description" content="Embark on an immersive quizzing journey with Shiny Dollop. Designed by Kevin Marville (Kvnbbg), this app offers the best in music, entertainment, and gaming quizzes in both English and French." />
+    <meta name="twitter:image" content="{{ url_for('static', filename='images/og-image.jpg') }}" />
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3003427346654770" crossorigin="anonymous"></script>
+
     <!-- Structured Data Markup for Enhanced Search Engine Representation -->
     <script type="application/ld+json">
       {
@@ -132,81 +79,174 @@
   <body>
     <!-- Header -->
     {% block header %}
-    <!-- Heading Animation -->
-    <div class="heading-animation d-flex">
-     <h5 class="heading"><a href="{{ url_for('main.home') }}">
-       <!-- Update the heading text -->
-       <span class="heading-letter">Q</span>
-       <span class="heading-letter">U</span>
-       <span class="heading-letter">I</span>
-       <span class="heading-letter">Z</span>
-       <span class="heading-letter">Z</span>
-      </a>
-     </h5>
-   </div>
+    <header>
+      <div class="heading-animation d-flex">
+        <h5 class="heading"><a href="{{ url_for('main.home') }}">
+          <span class="heading-letter">Q</span>
+          <span class="heading-letter">U</span>
+          <span class="heading-letter">I</span>
+          <span class="heading-letter">Z</span>
+          <span class="heading-letter">Z</span>
+        </a></h5>
+      </div>
 
- <!-- Navbar -->
- <nav class="navbar d-flex navbar-expand-lg navbar-light bg-light">
-   <a class="navbar-brand" href="{{ url_for('main.home') }}">
-     Menu
-   </a>
-   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-     <span class="navbar-toggler-icon"></span>
-   </button>
-   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-     <div class="navbar-nav ml-auto">
-       <div class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Toggle language dropdown">
-           {{ '🇺🇸 English' if session['lang'] == 'en' else '🇫🇷 Français' }}
-         </a>
-         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-           {% if session['lang'] == 'en' %}
-           <a class="dropdown-item" href="{{ url_for('auth.set_language', language='fr') }}">🇫🇷 Français</a>
-           {% else %}
-           <a class="dropdown-item" href="{{ url_for('auth.set_language', language='en') }}">🇺🇸 English</a>
-           {% endif %}
-         </div>
-       </div>
-       <a class="nav-item nav-link" href="https://allmylinks.com/kevinmarville" aria-label="{{ 'Visit App Store' if session['lang'] == 'en' else 'Visiter le magasin d’applications' }}">
-         {{ '📲 Visit App Store' if session['lang'] == 'en' else '📲 Visiter le magasin d’applications' }}
-       </a>
-     </div>
-   </div>
- </nav>
-{% endblock %}
-
-
-
-<section class="py-5">
-  <div class="quiz-header d-flex justify-content-between align-items">
-    {% block notification %}
+      <!-- Navbar -->
+      <nav class="navbar d-flex navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{{ url_for('main.home') }}">Menu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Toggle language dropdown">
+                {{ '🇺🇸 English' if session['lang'] == 'en' else '🇫🇷 Français' }}
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                {% if session['lang'] == 'en' %}
+                <a class="dropdown-item" href="{{ url_for('auth.set_language', language='fr') }}">🇫🇷 Français</a>
+                {% else %}
+                <a class="dropdown-item" href="{{ url_for('auth.set_language', language='en') }}">🇺🇸 English</a>
+                {% endif %}
+              </div>
+            </div>
+            <a class="nav-item nav-link" href="https://allmylinks.com/kevinmarville" aria-label="{{ 'Visit App Store' if session['lang'] == 'en' else 'Visiter le magasin d’applications' }}">
+              {{ '📲 Visit App Store' if session['lang'] == 'en' else '📲 Visiter le magasin d’applications' }}
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
     {% endblock %}
-  </div>
-  <div class="quiz-body d-flex justify-content-between align-items">
-{% block content %}
-{% endblock %}
-  </div>
-</section>
+
+    <!-- Main Content Section -->
+    <main>
+      <section class="py-5">
+        <div class="quiz-header d-flex justify-content-between align-items-center">
+          {% block notification %}
+          <!-- This block is for quiz-related notifications. -->
+          {% endblock %}
+        </div>
+        <div class="quiz-body d-flex justify-content-between align-items-center">
+          {% block content %}
+          <!-- Main quiz content goes here. -->
+          {% endblock %}
+          <!-- Interactive Trivia and Conversion Game -->
+          <div class="interactive-feature">
+            <h4 class="feature-title">🎉 Fun Fact & Play: Convert Trivia into Numbers!</h4>
+            <p id="triviaFact" class="feature-description">Loading a fun fact for you...</p>
+            
+            <!-- Input field for testing the myAtoi function -->
+            <div class="input-group mb-3" style="display:none;" id="conversionGroup">
+              <input type="text" id="stringInput" class="form-control" readonly />
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button" onclick="convertString()">{{ 'Convert' if session['lang'] == 'en' else 'Convertir' }}</button>
+              </div>
+            </div>
+            <div id="result" class="alert alert-info" style="display: none;"></div>
+          </div>
+
+          
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
-<!-- Example Button to Toggle Footer -->
-<button id="toggleFooterBtn">{{ '©️ Copyright' if session['lang'] == 'en' else '©️ Copyright' }}</button>
+    <footer>
+      <!-- Example Button to Toggle Footer -->
+      <button id="toggleFooterBtn">{{ '©️ Copyright' if session['lang'] == 'en' else '©️ Copyright' }}</button>
 
-<!-- Footer HTML -->
-<div class="footer mb-0" id="pageFooter">
-  © 2024 <a href="https://github.com/kvnbbg/shiny-dollop">Shiny Dollop</a>. All Rights Reserved.
-</div>
+      <!-- Footer HTML -->
+      <div class="footer mb-0" id="pageFooter">
+        © 2024 <a href="https://github.com/kvnbbg/shiny-dollop">Shiny Dollop</a>. All Rights Reserved.
+      </div>
+    </footer>
 
-<script>
-  document.getElementById('toggleFooterBtn').addEventListener('click', function() {
-    const footer = document.getElementById('pageFooter');
-    footer.classList.toggle('footer-visible');
-  });
-</script>
+    <!-- JavaScript for Trivia and Conversion Game -->
+    <script>
+      // Function to generate random trivia facts with strings to convert
+      function getRandomFactWithInput() {
+        const facts = [
+          { fact: "{{ 'Did you know? The Eiffel Tower can be 15 cm taller during hot days.' if session['lang'] == 'en' else 'Le saviez-vous ? La tour Eiffel peut être plus haute de 15 cm pendant les jours chauds.' }}", input: "15" },
+          { fact: "{{ 'Fun fact: Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still edible.' if session['lang'] == 'en' else 'Fait amusant : Le miel ne se gâte jamais. Les archéologues ont trouvé des pots de miel dans des tombes égyptiennes anciennes vieux de plus de 3 000 ans et encore comestibles.' }}", input: "3000" },
+          { fact: "{{ 'Trivia: The shortest war in history lasted 38 minutes.' if session['lang'] == 'en' else 'Trivia : La guerre la plus courte de l\'histoire a duré 38 minutes.' }}", input: "38" },
+          { fact: "{{ 'Interesting: Octopuses have three hearts and blue blood.' if session['lang'] == 'en' else 'Intéressant : Les pieuvres ont trois cœurs et du sang bleu.' }}", input: "3" },
+          { fact: "{{ 'Curiosity: A bolt of lightning contains enough energy to toast 100,000 slices of bread.' if session['lang'] == 'en' else 'Curiosité : Un éclair contient suffisamment d\'énergie pour griller 100 000 tranches de pain.' }}", input: "100000" },
+          { fact: "{{ 'Did you know? A group of flamingos is called a \'flamboyance\'.' if session['lang'] == 'en' else 'Le saviez-vous ? Un groupe de flamants roses s\'appelle une « flamboyance ».' }}", input: "42" }, // Random fun input
+          { fact: "{{ 'Fun fact: Bananas are berries, but strawberries aren\'t.' if session['lang'] == 'en' else 'Fait amusant : Les bananes sont des baies, mais les fraises ne le sont pas.' }}", input: "1" }, // Random fun input
+          { fact: "{{ 'Trivia: The Guinness World Record for the longest hiccuping spree is 68 years.' if session['lang'] == 'en' else 'Trivia : Le record du monde Guinness pour le plus long épisode de hoquet est de 68 ans.' }}", input: "68" },
+          { fact: "{{ 'Interesting: The inventor of the frisbee was turned into a frisbee after he died.' if session['lang'] == 'en' else 'Intéressant : L\'inventeur du frisbee a été transformé en frisbee après sa mort.' }}", input: "108" }, // Random fun input
+          { fact: "{{ 'Curiosity: There are more stars in the universe than grains of sand on all the world\'s beaches.' if session['lang'] == 'en' else 'Curiosité : Il y a plus d\'étoiles dans l\'univers que de grains de sable sur toutes les plages du monde.' }}", input: "900000000" }, // Random fun input
+        ];
+        
+        // Return a random fact and input from the array
+        return facts[Math.floor(Math.random() * facts.length)];
+      }
+
+      // Function to display a random fact and set up the conversion input
+      function displayRandomFactWithInput() {
+        const trivia = getRandomFactWithInput();
+        document.getElementById('triviaFact').innerText = trivia.fact;
+        document.getElementById('stringInput').value = trivia.input;
+        document.getElementById('conversionGroup').style.display = 'flex'; // Show the conversion input
+      }
+
+      // Convert String to Integer (myAtoi)
+      function myAtoi(s) {
+          s = s.trim(); // Trim leading and trailing whitespace
+          if (!s) return 0; // Return 0 if the string is empty after trimming
+
+          let sign = 1;
+          let i = 0;
+          if (s[0] === '-') {
+              sign = -1;
+              i++;
+          } else if (s[0] === '+') {
+              i++;
+          }
+
+          let result = 0;
+          while (i < s.length && isDigit(s[i])) {
+              result = result * 10 + (s[i] - '0');
+              i++;
+          }
+
+          result *= sign;
+          const intMin = -Math.pow(2, 31);
+          const intMax = Math.pow(2, 31) - 1;
+          if (result < intMin) return intMin;
+          if (result > intMax) return intMax;
+          return result;
+      }
+
+      function isDigit(char) {
+          return char >= '0' && char <= '9';
+      }
+
+      // Function to convert the input string and display the result
+      function convertString() {
+          const input = document.getElementById('stringInput').value;
+          const result = myAtoi(input);
+          const resultElement = document.getElementById('result');
+          resultElement.innerText = "{{ 'Converted integer: ' if session['lang'] == 'en' else 'Entier converti : ' }}" + result;
+          resultElement.style.display = "block"; // Show the result
+      }
+
+      // Initial load: display the first random fact with input
+      document.addEventListener("DOMContentLoaded", function() {
+        displayRandomFactWithInput();
+      });
+
+      // Toggle footer visibility
+      document.getElementById('toggleFooterBtn').addEventListener('click', function() {
+        const footer = document.getElementById('pageFooter');
+        footer.classList.toggle('footer-visible');
+      });
+    </script>
 
     <!-- External JavaScript and Frameworks -->
     <script src="{{ url_for('static', filename='/js/script.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
