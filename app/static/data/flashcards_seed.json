@@ -1,0 +1,38 @@
+{
+  "sets": [
+    {
+      "id": "world-capitals",
+      "title": "World Capitals",
+      "description": "Learn must-know capital cities to warm up your geography skills.",
+      "difficulty": "easy",
+      "tags": ["geography", "warmup"],
+      "cards": [
+        { "front": "France", "back": "Paris" },
+        { "front": "Japan", "back": "Tokyo" },
+        { "front": "Canada", "back": "Ottawa" },
+        { "front": "Brazil", "back": "Brasília" },
+        { "front": "Kenya", "back": "Nairobi" }
+      ]
+    },
+    {
+      "id": "startup-mindset",
+      "title": "Startup Mindset",
+      "description": "A quick sprint through product, metrics, and smart iteration.",
+      "difficulty": "medium",
+      "tags": ["business", "product"],
+      "cards": [
+        { "front": "MVP", "back": "Smallest useful version to test demand fast." },
+        { "front": "North Star Metric", "back": "Primary metric that captures long-term value." },
+        { "front": "Retention", "back": "Measure of users who keep coming back." },
+        { "front": "Product-Market Fit", "back": "Clear demand with strong user pull." },
+        { "front": "Iteration Loop", "back": "Build, measure, learn, and refine quickly." }
+      ]
+    }
+  ],
+  "stats": {
+    "total_points": 0,
+    "sessions": 0,
+    "best_streak": 0,
+    "last_played": null
+  }
+}

@@ -6,6 +6,7 @@ from wtforms.validators import DataRequired
 import os
 import json
 import random
+from app.main.flashcards_storage import load_flashcard_store, save_flashcard_store
 
 main = Blueprint("main", __name__)
 
@@ -104,6 +105,61 @@ def set_language(language):
 @main.route("/")
 def home():
     return render_template("home.html", lang=session.get('lang', 'en'))
+
+
+@main.route("/flashcards")
+def flashcards():
+    return render_template("flashcards.html")
+
+
+@main.route("/api/flashcards", methods=["GET"])
+def flashcard_store():
+    return jsonify(load_flashcard_store())
+
+
+@main.route("/api/flashcards/sets", methods=["POST"])
+def create_flashcard_set():
+    payload = request.get_json(silent=True) or {}
+    title = (payload.get("title") or "").strip()
+    cards = payload.get("cards") or []
+    if not title or not isinstance(cards, list):
+        return jsonify({"error": "Title and cards are required."}), 400
+
+    store = load_flashcard_store()
+    normalized_cards = [
+        {"front": card.get("front", "").strip(), "back": card.get("back", "").strip()}
+        for card in cards
+        if card.get("front") and card.get("back")
+    ]
+    if not normalized_cards:
+        return jsonify({"error": "At least one valid card is required."}), 400
+
+    set_id = (payload.get("id") or title.lower().replace(" ", "-")).strip()
+    new_set = {
+        "id": set_id,
+        "title": title,
+        "description": (payload.get("description") or "").strip(),
+        "tags": payload.get("tags") or [],
+        "difficulty": payload.get("difficulty") or "medium",
+        "cards": normalized_cards,
+    }
+    store.setdefault("sets", []).append(new_set)
+    save_flashcard_store(store)
+    return jsonify(new_set), 201
+
+
+@main.route("/api/flashcards/progress", methods=["POST"])
+def update_flashcard_progress():
+    payload = request.get_json(silent=True) or {}
+    points = int(payload.get("points", 0))
+    streak = int(payload.get("streak", 0))
+    store = load_flashcard_store()
+    stats = store.setdefault("stats", {})
+    stats["total_points"] = int(stats.get("total_points", 0)) + points
+    stats["sessions"] = int(stats.get("sessions", 0)) + 1
+    stats["best_streak"] = max(int(stats.get("best_streak", 0)), streak)
+    save_flashcard_store(store)
+    return jsonify({"status": "ok", "stats": stats})
 
 # Flask application error handlers
 @main.app_errorhandler(404)

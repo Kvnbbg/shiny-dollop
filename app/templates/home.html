@@ -78,6 +78,14 @@
         {{ "Donation" if session['lang'] == 'en' else "Faire des dons" }}
       </a>
     </div>
+    <div class="card card-body text-black-50">
+      <p>
+        {{ "Prefer flashcards? Jump into the Flashcards Arena and build streaks while you study." if session['lang'] == 'en' else "Plutôt cartes mémoire ? Rejoins l'arène et gagne des points pendant l'étude." }}
+      </p>
+      <a href="{{ url_for('main.flashcards') }}" class="btn btn-primary">
+        {{ "Start Flashcards" if session['lang'] == 'en' else "Lancer les flashcards" }}
+      </a>
+    </div>
   </div>
   </div>
   <!-- End Quiz Game Section -->

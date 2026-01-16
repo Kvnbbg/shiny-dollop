@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ "Flashcards" if session['lang'] == 'en' else "Cartes mémoire" }}
+{% endblock %}
+
+{% block content %}
+<div class="flashcards-wrapper">
+  <div class="flashcards-header text-center text-white">
+    <h1>⚡ Flashcards Arena</h1>
+    <p class="lead">
+      {{ "Pick a deck, build your own, and score streaks while you learn." if session['lang'] == 'en' else "Choisis un deck, crée le tien, et gagne des points pendant l'apprentissage." }}
+    </p>
+  </div>
+
+  <section class="flashcards-panel" id="flashcards-panel">
+    <div class="flashcards-library" id="flashcards-library">
+      <div class="flashcards-library-header">
+        <h2>{{ "Deck Library" if session['lang'] == 'en' else "Bibliothèque" }}</h2>
+        <button class="btn btn-light" id="create-deck-btn">
+          {{ "Create a deck" if session['lang'] == 'en' else "Créer un deck" }}
+        </button>
+      </div>
+      <div class="flashcards-stats" id="flashcards-stats"></div>
+      <div class="flashcards-grid" id="flashcards-grid"></div>
+    </div>
+
+    <div class="flashcards-study d-none" id="flashcards-study">
+      <div class="flashcards-study-header">
+        <button class="btn btn-outline-light" id="back-to-library">
+          ← {{ "Back to library" if session['lang'] == 'en' else "Retour" }}
+        </button>
+        <div class="flashcards-progress" id="flashcards-progress"></div>
+      </div>
+      <div class="flashcards-card" id="flashcards-card">
+        <div class="flashcards-card-face flashcards-card-front" id="flashcards-front"></div>
+        <div class="flashcards-card-face flashcards-card-back" id="flashcards-back"></div>
+      </div>
+      <div class="flashcards-actions">
+        <button class="btn btn-secondary" id="flip-card">
+          {{ "Flip" if session['lang'] == 'en' else "Retourner" }}
+        </button>
+        <button class="btn btn-success" id="mark-known">
+          {{ "Got it" if session['lang'] == 'en' else "Je maîtrise" }}
+        </button>
+        <button class="btn btn-warning" id="mark-review">
+          {{ "Need review" if session['lang'] == 'en' else "À revoir" }}
+        </button>
+      </div>
+      <div class="flashcards-navigation">
+        <button class="btn btn-outline-light" id="prev-card">←</button>
+        <button class="btn btn-outline-light" id="next-card">→</button>
+      </div>
+    </div>
+
+    <div class="flashcards-create d-none" id="flashcards-create">
+      <div class="flashcards-study-header">
+        <button class="btn btn-outline-light" id="cancel-create">
+          ← {{ "Back to library" if session['lang'] == 'en' else "Retour" }}
+        </button>
+      </div>
+      <form id="flashcards-form">
+        <div class="form-group">
+          <label for="deck-title" class="text-white">{{ "Deck title" if session['lang'] == 'en' else "Titre du deck" }}</label>
+          <input class="form-control" id="deck-title" required />
+        </div>
+        <div class="form-group">
+          <label for="deck-description" class="text-white">{{ "Short description" if session['lang'] == 'en' else "Description" }}</label>
+          <input class="form-control" id="deck-description" />
+        </div>
+        <div class="form-group">
+          <label for="deck-tags" class="text-white">{{ "Tags (comma separated)" if session['lang'] == 'en' else "Tags (séparés par des virgules)" }}</label>
+          <input class="form-control" id="deck-tags" />
+        </div>
+        <div class="form-group">
+          <label for="deck-cards" class="text-white">{{ "Cards (one per line: Front | Back)" if session['lang'] == 'en' else "Cartes (une par ligne: Recto | Verso)" }}</label>
+          <textarea class="form-control" id="deck-cards" rows="6" required></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">
+          {{ "Save deck" if session['lang'] == 'en' else "Enregistrer" }}
+        </button>
+      </form>
+    </div>
+  </section>
+</div>
+{% endblock %}
+
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/flashcards.css') }}" />
+{% endblock %}
+
+{% block footer_scripts %}
+<script src="{{ url_for('static', filename='js/flashcards.js') }}"></script>
+{% endblock %}
